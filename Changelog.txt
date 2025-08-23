@@ -1,0 +1,228 @@
+V1.14.2
+
+Formless One: Cost 180 -> 270; Can't start awake
+Unseelie Empress: Cost 210 -> 200; 1% -> 4% x candles chance to summon Unseelie Prince; Unseelie forts will be build only in throne provinces; Can summon 1 unseelie knight/turn
+Statue of the Underworld: Will summon a Kokythiad each mid winter, additional one will be summoned for each death scale in province
+First Valkyrie: Charm of Vanhalla casts personal flight on its wielder in battle now, quickness works all the time
+Raven of the Underworld: Fixed undead summon
+Oracle: Fixed glamour boost to non glamour mages (again)
+Great Warlock: Fixed pretender creation screen error
+Void Lurker: Void Pearl lost curse tag
+Sahira: The Last Wish item mechanic rewised and fixed
+Lich Queen: Fixed double lichcraft, +2D for all transformed liches now
+Moved items IDs to 1000+
+Minor fixes
+
+V1.14.1
+
+Phoenix: Cost: 200 -> 210; Fixed not pregame mates magic paths
+Baphomet: Cost 170 -> 180; Fixed angel summoning: Fallen Angels now summons as commanders; Fallen Angel commander can be empowered in Holy if Baphomet present in province (10% chance per candles, +1 H, 4H MAX); Gained Fire Flare melee attack
+Neter of Crafts: Fixed & redesigned
+Oracle: Fixed glamour boost to non glamour mages
+
+V1.14
+
+Oracle: Gives glamour boosts, more for seers; Temple Seer 2S -> 2G, fortune teller 25 -> 50; Seer now always replased when pervious one dies at your temple
+Great Mother: Cost 280 -> 260; increases local population in friendly dominion by approx 500 each month
+Annunaki of Love & War: Provinces in strong dominion will additionaly increase local population by ~100 (Candles x 1% chance, additional checks in stronger turmoil)
+God Spider: Spider Staff lost heal and curse, now temples spawn directly to the lab
+Teotl of the Sky & Serpent of Heavenly Fires: Staff of Lightning lost curse, now temples spawn directly to the lab
+Fountain of Blood: Cost 160 -> 170; Lost summon gore tide horror as order ability, summons d3->1 when blood hunting; Gore Tide Horror: Size 9 -> 8 with all stats a little lower & While underwater, will take damage 10% -> 50% of total HP each month; Removed event records and text for blood slaves events
+Divine Anvil: May create free magic items, more powerful over time
+Idol of Thunder: Lost free magic item crafting; Air range +2; Bless grants air shield 20; Can summon size 6 air elemental each month, rarely will do it automatically, better chance in strong dominion
+Lich Queen: New lich gain +2D if it has not have any D before; Additional lichcraft rituals can be performed for spare Death gems
+Kami of the Moon: Worldwide darkness can be triggered: once a year -> every other month
+Kami of the Sun: Worldwide darkness chance 25% -> 100%
+Bronze Colossus: Cost 300 -> 270; Living statue will appear at temple forts each month
+Sahira: Cost 210 -> 220; Starts with Wish granting item that will kill it's wielder on the next turn and will be lost forever
+Allfather: Cost 250 -> 240
+Green Man: Cost 250 -> 230
+Wooden Colossus: Cost 200 -> 210
+Tiwaz of War: Cost 250 -> 230
+Idol of Sorcery: Cost 250 -> 200
+Idol of Men: Cost 230 -> 180
+Asynja: Cost 250 -> 200
+Son of the Fallen: Cost 250 -> 210
+Elephant Idol: Cost 300 -> 260
+Keeper of the Bridge: Lost fortune teller and research bonus; Gjallarhorn have 50% chanse to be used in melee
+Dragons: Sprite size toned down ~10%
+Ghost Dragon: Gaze of Death attack damage type change to paralyze
+Neter of the River: Removed event records and text for swamp tax boost events
+Grand Saurolich: Removed event text for soulless events
+Statue of Mercy: Fixed will of the fates autocasting
+Lord of the Waves: Fixed Bronze Wave Barracks spawn
+
+V1.13
+
+New pretenders: Ghost Dragon, Banefire Dracolich
+Wyrm: completely reworked
+Earth Serpent: Lost ability to randomly destroy forts, gained +100 siege strength; Cost 340 -> 230
+Drakon: Pillager 25 -> 250
+Dragons: Fixed wrong drake types; Gold amount required for drake spawn 500 -> 1000
+Lord of the Wild: Stroke Blood didn't work, now casts Growing Fury instead
+Ruk: Prot 20 -> 16, hatchling prot 18 -> 14
+First Mushussu: All attacks now magical
+Great Enchantress: Wand is using 1h slot and no longer cursed
+Fixed Serpent of Heavenly Fires & Teotl of the Sky special priest item
+Minor fixes
+
+V1.12
+
+Lord of the Waves: UW forts will gain 20 resources and 30 gold income and will be able to recruit wave warrioirs
+Dragons: New 1500+ gold events for their drakes to become commanders and gain magic boost
+Fountain of Blood: Sanguine Horror is not holy now
+Linnormr: Mother Oak owner now gain 1d6 death gems
+Unseelie Empress: Unseelie Prince summoning: 5% x candles chance -> 1% x candles chance; Unseelie Fortress now vanishes when enchantment is over
+Seelie Empress: Remade fay summoning
+Virtue: Cost 200 -> 220
+Kamadhenu: Invulnerability fixed
+Some minor tweaks
+
+V1.11
+
+Fountain of Blood: Sanguine Horror now regenerate properly and gained holy, overall a little stronger; Now summons additional Horrors if blood hunting
+Eldest Cyclops: Cost 190 -> 200; Clarified Starting Item description: Hammer of the Cyclops (Forgebonus 4, Item Spell: grants Mastersmith 1 to any target commander or increases it value by 1 max)
+Baphomet: Fallen Angel unit can become commander if Baphomet present in province (10% chance per candle)
+Father of Winters: While awake, during winter for each Winter Temple (temples counts month earlier), enemy lands will suffer Wolven Winter (5% pop kill and +3 Cold) ; PD wolves become winter spirits with 1 commander; Fixed Winter Temple spawn
+Phoenix: 190 -> 200; Second phoenix magic paths F1A1 -> F3A2
+Neter of Crafts: Starting statue commanders and summoned golems gain 1H; Added Khalkotauros to the pool; Fixed starting Crusher commander type
+Fixed Dracolich starting with Wraith Crown
+Master Lich: Starting Wraith Crown item now gain through pregame event
+
+V1.1
+
+Tathagata of Light: Now casts Solar Brilliance only in friendly dominion
+Solar Disc: Now casts Fire Storm only in friendly dominion
+Solar Eagle: Now casts Solar Brilliance only in friendly dominion
+Trimurti of Creation: Increases Growth; Trimurti of Destruction: Increases Death; Trimurti of Protection: Increases Order
+Maiden: Increases Growth; Mother: Disease Healer 1 -> 3; Crone: Fortune Teller 25 -> 50
+Norn: Fotrune Teller 20 -> 75; Inept Researcher -10 -> 0
+Sun Father: If controls Second Sun he will draw energy from it each month getting 3d6 Fire gems
+Titan of Crossroads: …ach of them may teach a priest in same province in Astral, Death or Nature magic (+1 magic path, 5% x candles chance, Max 4); Each one teaches her main path and only one such event may happen at single province each month; inital description was too big so some of less important text was deleted
+Dracolich: Path price 40 -> 80; change shape into Master Lich; dominion gets Master Lich undead summon
+Cromlech: Hidden starting site that reveals magic score graphs and brings 1S per month (2S site search to reveal); Provinces outside of the capital within friendly dominion with at least 2 Cromlechs will receive 1S income site (1 max per province)
+Spirit of Justice: Maximum order scales +2, patrol bonus 50; all three are more powerful in Order and weaker in Turmoil scales
+Hooded Spirit: Dominion increases permanent income and population in Growth scales (10% x candles chance for +10 pop and +1 permanent gold per month)
+Morrigna: Got morrigan spears and clothes; Rarely summons morrigan's in friendly dominion, higher dominion increase the chances
+Wisdom King: Lost heretic; Priests gain Amulet of Conviction (Autoblessed, Inquisitor)
+Terror of the Deep: Fixed throne consuming gem event
+Earth Serpent: Got Tremor vast area AP attack; Cost 170 -> 340
+Matrona of the Healing Spring: Cost 220 -> 260; Fixed item gain
+Brazen Bull: 190 -> 210
+Idol of Sorcery: 260 -> 250
+Skratti: 150 -> 140
+Reliquary: 210 -> 170
+Neter of Crafts: 250 -> 220
+Neter of the Moon: 200 -> 220
+Black Tortoise: 170 -> 220
+Lord of Floods: 200 -> 230
+Bull Demon King: 250 -> 260
+Kami of Storms: 250 -> 230
+Jade Emperor: 240 -> 260
+Celestial General: 250 -> 270
+Kami of the Sun: 250 -> 230
+First Valkyrie: 250 -> 210
+Ormr: 180 -> 220; Ice armor protection -> ice natural protection
+Father of Winters: 240 -> 230
+Hanging Tree: 170 -> 190
+Allfather: Dom 4 -> 3
+Lord of Mysteries: Dom 4 -> 3
+Great Stag: 150 -> 160
+Great White Stag: 140 -> 150
+Lord of the Wild: 180 -> 230
+Mother of Storms: 250 -> 240
+Lord of the Forest: 230 -> 240
+Duiu of Thunder: 230 -> 240
+Ancestral Barrow: 190 -> 160
+Tree of Hate: 190 -> 170
+Green Man: 240 -> 250
+Horned One: 220 -> 250
+Dharmapala of the Underworld: 250 -> 270
+Frost Father: 180 -> 160
+Sphinx: 130 -> 160
+Titan of Serpents and Medicine: 220 -> 230
+Titan of the Night: 260 -> 250
+Titan of War and Farming: 220 -> 260
+Chthonic Cyclops: Dom 4 -> 3
+Titan of Heaven: Dom 4 -> 3
+Spirit of Bones: 160 -> 200
+Unholy Reliquary: 220 -> 170
+Sacred Geyser: 200 -> 230
+Lord of Knowledge: 250 -> 240
+Neter of Chaos: 250 -> 240
+Great Archon: 240 -> 250
+Great Creator: 230 -> 250
+Night Hunter: 180 -> 170
+Divine Monkey: 180 -> 190
+Great Bear: 190 -> 230
+Phoenix: 160 -> 190
+Neteret of Many Names: Dom 2 -> 3; Cost 130 -> 180
+Wadjet: 190 -> 220
+Serpent of Chaos: 200 -> 230
+Solar Serpent 180 -> 230
+First Queen: 140 -> 130
+Kamadhenu: Dom 3 -> 2; Cost 210 -> 240
+Celestial Lion: Dom 3 -> 2; Cost 200 -> 220
+Statue of Creation: 240 -> 200
+Neter of Kings: Dom 4 -> 3; 240 -> 230
+Foul Statue: 230 -> 210
+Sacred Grove: 230 -> 220
+Smiling Head: 190 -> 230
+Burning Bush: 250 -> 240
+Statue of the Underworld: 190 -> 180
+Demiurge: Dom 4 -> 2; Cost 180 -> 230
+Divine Glyph: 170 -> 160
+Baphomet: 200 -> 170
+Stone Magus: 150 -> 140
+Great Camazotz: 140 -> 130
+Serpent King: 140 -> 110
+Bolon-ti-ku: 200 -> 100
+Divine Monstrous Dog: 170 -> 200
+Divine Feathered Serpent: 180 -> 190
+Great Toad: 200 -> 170
+Demilich: 150 -> 160
+Teotl of the Sky: 250 -> 230
+Teotl of the Underworld: 250 -> 230
+Hun Came: 270 -> 280
+Obsidian Butterfly: 250 -> 240
+Teotl of the Night: 250 -> 230
+Teteo Inan: 290 -> 280
+Fountain of Blood: 150 -> 160
+Idol of Watery Wisdom: 170 -> 150
+Oracle: Cost 190 -> 160
+Statue of the Silent God: 240 -> 220
+Statue of the Sun and Rain: Cost 210 -> 160
+Skull Idol: Cost 150 -> 170
+Statue of the Bloody Mother: 200 -> 170
+Monolith: 230 -> 190
+Colossal Head: 220 -> 180
+Crystal Soul: Cost 180 -> 190
+Emissary of Antrax: Cost 150 -> 230
+Spirit of the Well: Cost 170 -> 200
+Grey One: Cost 140 -> 120;
+Golden Lion: Cost 170 -> 200
+Great White Bull: Cost 250 -> 220
+Magic fangs for the rest of the sneks 
+Recuperation for Dom 2+ non-inanimate pretenders who was missing it
+Clarified some descriptions
+Fixed Pillar of Truth conflict
+
+V1.0
+
+Forked from original Spark of Divinity V2.05 mod by Red_Rob
+
+Matrona of the Healing Spring: Flask of Healing was changed (regen granting didn't work) -> regen 10%, autoblessm & recuperation; starts with one and now each month may create another Flask of Healing
+Fixed Monument: starting Dust Kings holy path
+Fixed Master: Celestial Masters EA holy boost
+Fixed Raven of the Underworld: Longdead summoning
+Fixed Lord of The Summer Plague: starting item slot
+Fixed Apkallu: starting item type
+Fixed Saurolich: LA C'tis High Priest transformation
+Fixed Megalodon: House of Bloody Morsels sites gem generating type
+Fixed The Divine Egg: underwater hatching into Solar Eagle 
+Fixed Ahura of the Oath: starting site
+Fixed Maharishi: animal priests empowering
+Fixed Mother of Storms: storm casting and staring site magic path type
+Fixed Melqart: temple blood boost
+Fixed multiple descriptions
+Removed Sacred Serpent carcass from spawn pool of Spirit of Bones

@@ -1,0 +1,19 @@
+Making Pretender Gods feel and play more uniquely without (presumably) too much powercreep. Lore friendly.  
+
+Divinitus greatly expands the variety and impact of the powers available to each Pretender. Some have gained stronger personal abilities, whilst others now have impacts across your nation. From innately casting powerful spells in battles, to effects that spread throughout their Dominion, each Pretender has been given something to differentiate them from their divine siblings and rivals. Where an effect isn't obvious from the Pretender screen, it has been detailed in the Pretender description, along with a mechanical explanation where needed.
+On the base of the great Spark of Divinity bó Red_Rob. 
+
+Known issues: Solar Disk or Solar Eagle pretenders cause messade "pretender cheated" at the game start.
+
+What's new? Look at changelog tab.
+
+Please report any bugs or balance issues you find in the corresponding thread.
+Or in our discord: https://discord.gg/TneqpzWbec
+
+Compatibility:
+Weapons changed IDs: 342, 422, 585, 713, 124, 196, 114;
+New weapon IDs: 1001-1034;
+New armor IDs: 301-302;
+New item IDs: 1000-1073;
+Spell IDs: 179-199;
+Monster IDs are all over the place for now. 
