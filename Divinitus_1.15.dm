@@ -323,11 +323,6 @@
 
 -- armors --
 
--- Why?
--- #selectarmor 49 -- Light scale armor
--- #rcost 10
--- #end
-
 #newarmor 999
 #name "Metal Kabuto"
 #type 6
@@ -346,73 +341,6 @@
 #end
 
 ---- Events
-
--- Temples
-
-#selectnation 12 -- EA Marv
-#templecost 450
-#end
-
-#selectnation 14 -- EA Pyrene
-#templecost 450
-#end
-
-#selectnation 7 -- EA Pan
-#foresttemplecost 450
-#end
-
-#selectnation 32 -- EA Rus
-#templecost 450
-#end
-
-#selectnation 23 -- EA Yomi
-#templecost 450
-#end
-
-#selectnation 41 -- EA Oceania
-#templecost 450
-#end
-
-#selectnation 57 -- MA Man
-#templecost 450
-#end
-
-#selectnation 58 -- MA Eriu
-#templecost 450
-#end
-
-#selectnation 52 -- MA Pan
-#foresttemplecost 450
-#end
-
--- #selectnation 53 -- MA Aspho
--- #foresttemplecost 450
--- #end
-
-#selectnation 81 -- MA Nidavangr
-#templecost 450
-#end
-
-#selectnation 87 -- MA Oceania
-#templecost 450
-#end
-
-#selectnation 97 -- LA Pan
-#templecost 450
-#end
-
-#selectnation 119 -- LA Feminie
-#templecost 450
-#end
-
-#selectnation 120 -- LA Piconye
-#templecost 450
-#end
-
-#selectmonster 60 -- MA Man Monk
-#gcost 50
-#end
-
 
 -- SPELLS ----
 -- new one will breake the game
@@ -955,6 +883,7 @@
 -- units --
 
 #selectmonster 727 -- Jaguar Warrior
+#rpcost 26
 #enchrebate25p 559
 #end
 
@@ -2033,7 +1962,7 @@
 
 -- Pretenders --
 
---  FENNOSCANDIA GODS
+--  FENNOSCANDIA GODS ???
 
 
 --- DOM 4

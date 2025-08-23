@@ -3,7 +3,7 @@ V1.15.0
 --- DE ---
 Weapons: OK
 Armor: OK
-Monsters: *
+Monsters: ***
 Items: OK
 Sites: OK
 Nations: * -- меньше богов доступно будет. Перекрывать нельзя, нужно содействие разрабов DE
@@ -13,6 +13,7 @@ Restricted items: OK
 Enchantments: 40 - OK - ??? 
 Sahira: Fix
 Weapons: All changes to vanilla weapons reverted
+Events: Reverted changes to vanilla temples cost
 
 V1.14.2
 
