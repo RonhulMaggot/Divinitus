@@ -4,6 +4,14 @@ V1.15.0
 Weapons: OK
 Armor: OK
 Monsters: ***
+* Emissary of Antrax -- их два
+* 5810 "Banefire Servant"
+* 6771 "Druidic Seer"
+* 6772 "Amphiprionid"
+* 6776 "Reef Guard"
+* 6815 "Greater Ancestral Spirit"
+* 5030 "Nuclear Chaos"
+* 
 Items: OK
 Sites: OK
 Nations: * -- меньше богов доступно будет. Џерекрывать нельзЯ, нужно содействие разрабов DE
@@ -12,6 +20,7 @@ Event codes: OK
 Restricted items: OK
 Enchantments: 40 - OK - ??? 
 Sahira: Fix
+Blacksteel Colossus: Summon bug
 Weapons: All changes to vanilla weapons reverted
 Events: Reverted changes to vanilla temples cost
 
