@@ -6,11 +6,13 @@ Armor: OK
 Monsters: *
 Items: OK
 Sites: OK
-Nations: *
+Nations: * -- меньше богов доступно будет. Перекрывать нельзя, нужно содействие разрабов DE
 Montags: OK
 Event codes: OK
 Restricted items: OK
-Enchantments: 40
+Enchantments: 40 - OK - ??? 
+Sahira: Fix
+Weapons: All changes to vanilla weapons reverted
 
 V1.14.2
 

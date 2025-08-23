@@ -28,37 +28,6 @@
 
 -- Weapons --
 
-#selectweapon 342 -- Poison Ink
-#aoe 6
-#end
-
-#selectweapon 422 -- Stellar bolt
-#bonus
-#end
-
-#selectweapon 585 -- Serpent Club
-#secondaryeffect 52 -- Death Poison
-#end
-
-#selectweapon 713 -- Wheel of the turning year
-#secondaryeffectalways 64 -- Decay
-#end
-
-#selectweapon 124 -- Ice Rod
-#secondaryeffect 160 -- Cold Fatigue
-#end
-
-#selectweapon 196 -- Killing Light
-#bonus
-#unrepel
-#norepel
-#ammo 1008
-#end
-
-#selectweapon "Chain Lightning"
-#bonus
-#end
-
 #newweapon 3001
 #name "Metal Katana"
 #dmg 6
@@ -340,6 +309,16 @@
 #dt_paralyze
 #undeadimmune
 #inanimateimmune
+#end
+
+#newweapon 3034
+#copyweapon 422 -- Stellar bolt
+#bonus
+#end
+
+#newweapon 3035
+#copyweapon 585 -- Serpent Club
+#secondaryeffect 52 -- Death Poison
 #end
 
 -- armors --
@@ -1584,7 +1563,7 @@
 #magicboost 5 0
 #type 8
 -- #weapon 238 -- Magic Staff
-#weapon 422 -- Stellar Bolt
+#weapon 3034 -- Stellar Bolt
 #end
 
 #selectitem 1042
@@ -21731,7 +21710,7 @@ Each year there will be an Arena held on the 12th month
 When competes in Arena, will generate 1500 gold, 9D6 Blood Slaves, summon 16-60 sacred units & a Coatl commander
 "
 #gcost 220
-#weapon 585 -- Serpent
+#weapon 3035 -- New Serpent Club
 #weapon 609 -- Grab and Swallow
 #armor 45 -- Jade Mask
 #popkill 5
@@ -22223,7 +22202,7 @@ While controls Stellar Focus, sacred Children of the Moon will appear at temples
 #montag 5166
 #magicskill 4 1
 #weapon 238 -- Magic staff
-#weapon 422 -- Stellar Bolt
+#weapon 3034 -- Stellar Bolt
 #weapon 404 -- Beak
 #nametype 113 -- C'tis Male
 #end

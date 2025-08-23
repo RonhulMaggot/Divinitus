@@ -11,7 +11,6 @@ Please report any bugs or balance issues you find in the corresponding thread.
 Or in our discord: https://discord.gg/TneqpzWbec
 
 Compatibility:
-Weapons changed IDs: 342, 422, 585, 713, 124, 196, 114;
 New weapon IDs: 3001-3034;
 New armor IDs: 998-999;
 New item IDs: 1000-1073;
