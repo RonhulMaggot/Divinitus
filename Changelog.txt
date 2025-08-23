@@ -1,3 +1,17 @@
+V1.15.0
+
+--- DE ---
+Weapons: OK
+Armor: OK
+Monsters: *
+Items: OK
+Sites: OK
+Nations: *
+Montags: OK
+Event codes: OK
+Restricted items: OK
+Enchantments: 40
+
 V1.14.2
 
 Formless One: Cost 180 -> 270; Can't start awake

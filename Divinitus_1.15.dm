@@ -328,6 +328,19 @@
 #aoe 1
 #end
 
+#newweapon 3033
+#copyweapon 719
+#name "Dragon Drain Life"
+#aoe 1
+#end
+
+#newweapon 3034
+#copyweapon 197
+#name "Gaze of Death"
+#dt_paralyze
+#undeadimmune
+#inanimateimmune
+#end
 
 -- armors --
 
@@ -336,7 +349,7 @@
 -- #rcost 10
 -- #end
 
-#newarmor 301
+#newarmor 999
 #name "Metal Kabuto"
 #type 6
 #prot 17
@@ -345,7 +358,7 @@
 #enc 0
 #end
 
-#newarmor 302
+#newarmor 998
 #copyarmor 196 -- Golden Scale
 #name "Fish Scale"
 #prot 15
@@ -26913,7 +26926,7 @@ Capital gains Temple of the Crab providing sacred Heikegani recruits
 #weapon 3001 -- Metal Katana
 #weapon 273 -- Pincer
 #armor 229 -- Metal Scale armor
-#armor 301 -- Metal Kabuto
+#armor "Metal Kabuto" -- Metal Kabuto
 #nametype 134
 #end
 
@@ -31915,8 +31928,8 @@ Whilst Pretender in capital will attract adventurers (Adventurer assassins may a
 #mapmove 20
 #invulnerable 10
 #lizard
-#weapon 1033
-#weapon 1034
+#weapon 3033
+#weapon 3034
 #dragonlord 1
 #fear 15
 #magicskill 5 2
@@ -31929,20 +31942,6 @@ Whilst Pretender in capital will attract adventurers (Adventurer assassins may a
 #diseaseres 100
 #homerealm 10 -- Default
 #itemslots 17571840
-#end
-
-#newweapon 1033
-#copyweapon 719
-#name "Dragon Drain Life"
-#aoe 1
-#end
-
-#newweapon 1034
-#copyweapon 197
-#name "Gaze of Death"
-#dt_paralyze
-#undeadimmune
-#inanimateimmune
 #end
 
 #newsite 1998
