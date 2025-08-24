@@ -1478,7 +1478,7 @@
 #cursed
 #nofind
 #mr 2
-#templetrainer -5182 -- Random Oni
+#templetrainer -1260 -- Random Oni
 #end
 
 #selectitem 1041
@@ -2476,7 +2476,7 @@ Blessing gains Poison Resist 15 when Awakens
 #req_godismnr 8340 -- Nehushtan
 #req_godismnr 654 -- Serpent King
 #req_godismnr 779 -- Rams Head Serpent
-#req_godismnr 5064 -- Great Toad
+#req_godismnr 8373 -- Great Toad
 #req_pretawake 1
 #req_pregame
 #req_owncapital 1
@@ -2526,11 +2526,11 @@ Blessing gains Poison Resist 15 when Awakens
 #req_godismnr 8340 -- Nehushtan
 #req_godismnr 654 -- Serpent King
 #req_godismnr 779 -- Rams Head Serpent
-#req_godismnr 5064 -- Great Toad
+#req_godismnr 8373 -- Great Toad
 #req_targmnr 8340 -- Nehushtan
 #req_targmnr 654 -- Serpent King
 #req_targmnr 779 -- Rams Head Serpent
-#req_targmnr 5064 -- Great Toad
+#req_targmnr 8373 -- Great Toad
 #req_owncapital 1
 #req_freesites 1
 #req_nositenbr 1959
@@ -2544,11 +2544,11 @@ Blessing gains Poison Resist 15 when Awakens
 
 #newevent
 #rarity 5
-#req_godismnr 5064 -- Great Toad
+#req_godismnr 8373 -- Great Toad
 #req_godismnr 2801 -- Linnormr
 #req_godismnr 2802 -- Svartalf Mastersmith
 #req_godismnr 2803 -- Svartalf Mastersmith
-#req_targmnr 5064 -- Great Toad
+#req_targmnr 8373 -- Great Toad
 #req_targmnr 2801 -- Linnormr
 #req_targmnr 2802 -- Svartalf Mastersmith
 #req_targmnr 2803 -- Svartalf Mastersmith
@@ -3144,9 +3144,9 @@ Heat scale limit increased by 2
 #newevent
 #rarity 5
 #req_godismnr 8449 -- Idol of the Sun
-#req_godismnr 8957 -- Tahagata of Light
+#req_godismnr 8376 -- Tahagata of Light
 #req_targmnr 8449 -- Idol of the Sun
-#req_targmnr 8957 -- Tahagata of Light
+#req_targmnr 8376 -- Tahagata of Light
 #req_pregame
 #req_owncapital 1
 #req_freesites 1
@@ -3175,7 +3175,7 @@ Heat scale limit increased by 2
 #newevent
 #rarity 5
 #req_godismnr 8449 -- Idol of the Sun
-#req_godismnr 8957 -- Tahagata of Light
+#req_godismnr 8376 -- Tahagata of Light
 #req_pretawake 1
 #req_owncapital 1
 #req_freesites 1
@@ -3187,6 +3187,26 @@ Heat scale limit increased by 2
 #notext
 #nolog
 #addsite 1947
+#end
+
+#newmonster
+#copystats 744 -- Diabolist
+#clearweapons
+#clearmagic
+#spr1 "./ExtraPretenders/EEBaneAdept.tga"
+#spr2 "./ExtraPretenders/EEBaneAdept2.tga"
+#name "Banefire Servant"
+#descr "Banefire Servants serve the Emissary of Antrax in the hopes of learning more about the Underworld. Sometimes an exceptional individual will achieve true mastery over the deathly fires. Each month they can summon forth a Banefire Child from the Underworld whilst at a temple."
+#humanoid
+#gcost 10040
+#magicskill 0 1
+#magicskill 5 1
+#custommagic 4224 100 -- 100% DF
+#custommagic 4224 10 -- 10% DF
+#holy
+#rpcost 2
+#weapon 730 -- Banefire
+#templetrainer 7421 -- Banefire Child
 #end
 
 #newmonster 8450
@@ -3231,6 +3251,7 @@ If Antrax present with Emissary, breaks free from summoning circle (becomes mobi
 #moregrowth -1
 #batstartsum1d6 7421 -- Banefire Child
 #battlesum1 7421 -- Banefire Child
+#battlesum1 "Banefire Servant"
 #poisonres 25
 #fireres 25
 #neednoteat
@@ -3250,7 +3271,7 @@ If Antrax present with Emissary, breaks free from summoning circle (becomes mobi
 #gems 0 1
 #gems 5 1
 #look 5
-#homecom 5810 -- Banefire Servant
+#homecom "Banefire Servant" -- Banefire Servant
 #summon 7421 -- Banefire Child
 #summon 7421 -- Banefire Child
 #summon 7421 -- Banefire Child
@@ -3384,26 +3405,6 @@ If control Antrax will break free from summoning circle (becomes mobile) and gai
 #mapmove 16
 #startage 28
 #maxage 100
-#end
-
-#newmonster 5810
-#copystats 744 -- Diabolist
-#clearweapons
-#clearmagic
-#spr1 "./ExtraPretenders/EEBaneAdept.tga"
-#spr2 "./ExtraPretenders/EEBaneAdept2.tga"
-#name "Banefire Servant"
-#descr "Banefire Servants serve the Emissary of Antrax in the hopes of learning more about the Underworld. Sometimes an exceptional individual will achieve true mastery over the deathly fires. Each month they can summon forth a Banefire Child from the Underworld whilst at a temple."
-#humanoid
-#gcost 10040
-#magicskill 0 1
-#magicskill 5 1
-#custommagic 4224 100 -- 100% DF
-#custommagic 4224 10 -- 10% DF
-#holy
-#rpcost 2
-#weapon 730 -- Banefire
-#templetrainer 7421 -- Banefire Child
 #end
 
 #newmonster 8451
@@ -5605,8 +5606,8 @@ Thrones in Dominion summon 1 Thing that Should Not Be each month
 #rarity 5
 #req_godismnr 8468 -- Statue of Outer Gods
 #req_targmnr 8468 -- Statue of Outer Gods
-#req_godismnr 8960 -- Tathagata of the Void
-#req_targmnr 8960 -- Tathagata of the Void
+#req_godismnr 8379 -- Tathagata of the Void
+#req_targmnr 8379 -- Tathagata of the Void
 #req_pregame
 #req_owncapital 1
 #req_freesites 1
@@ -5635,8 +5636,8 @@ Thrones in Dominion summon 1 Thing that Should Not Be each month
 #rarity 5
 #req_godismnr 8468 -- Statue of Outer Gods
 #req_targmnr 8468 -- Statue of Outer Gods
-#req_godismnr 8960 -- Tathagata of the Void
-#req_targmnr 8960 -- Tathagata of the Void
+#req_godismnr 8379 -- Tathagata of the Void
+#req_targmnr 8379 -- Tathagata of the Void
 #req_owncapital 1
 #req_freesites 1
 #req_nositenbr 1999
@@ -9221,7 +9222,7 @@ When Order scales are present, Dominion reduces unrest by approx 1 per candle ea
 #req_order 1
 #req_godismnr 472 -- Statue of Order
 #req_godismnr 8488 -- Smiling Head
-#req_godismnr 5051 -- Gallu Demon
+#req_godismnr 8389 -- Gallu Demon
 #req_godismnr 4003 -- Divine Consul
 #nation -2
 #req_domchance 10
@@ -9238,7 +9239,7 @@ When Order scales are present, Dominion reduces unrest by approx 1 per candle ea
 #req_order 1
 #req_godismnr 472 -- Statue of Order
 #req_godismnr 8488 -- Smiling Head
-#req_godismnr 5051 -- Gallu Demon
+#req_godismnr 8389 -- Gallu Demon
 #req_godismnr 4003 -- Divine Consul
 #nation -2
 #req_domchance 10
@@ -12462,7 +12463,7 @@ Idol's province will always count as a temple
 #custommagic 32768 50 -- 50% roll at Blood
 #end
 
-#newmonster 8883
+#newmonster 7266
 #copystats 2444 -- Teotl of the Underworld
 #clearmagic
 #clearweapons
@@ -12499,8 +12500,8 @@ A Tzitimitl commander may appear each month (5% x candles chance, S1H1, 50%B)
 
 #newevent
 #rarity 5
-#req_godismnr 8883 -- Obsidian Butterfly
-#req_monster 8883 -- Obsidian Butterfly
+#req_godismnr 7266 -- Obsidian Butterfly
+#req_monster 7266 -- Obsidian Butterfly
 #req_dominion 1
 #req_domchance 5
 #nation -2
@@ -12512,8 +12513,8 @@ A Tzitimitl commander may appear each month (5% x candles chance, S1H1, 50%B)
 
 #newevent
 #rarity 5
-#req_godismnr 8883 -- Obsidian Butterfly
-#req_monster 8883 -- Obsidian Butterfly
+#req_godismnr 7266 -- Obsidian Butterfly
+#req_monster 7266 -- Obsidian Butterfly
 #req_friendlyench 54 -- Stellar Focus
 #req_land 1
 #req_mindef 1
@@ -12527,7 +12528,7 @@ A Tzitimitl commander may appear each month (5% x candles chance, S1H1, 50%B)
 #2d3units 1483 -- Ttzitzimitl
 #end
 
-#newmonster 8895
+#newmonster 8339
 #copystats 1097 -- Lord of the Summer Plague
 #clearweapons
 #clearmagic
@@ -12554,10 +12555,11 @@ Temples may summon 1D3 Sacred Vultures (Candles x 10% chance, with additional ch
 #weapon 10 -- Falchion
 #weapon 671 -- Stone Dagger
 #weapon 825 -- Magic Beak
-#batstartsum4d6 8223 -- Vulture
+#batstartsum4d6 7021 -- Vulture
+#homerealm 7  -- Africa
 #end
 
-#newmonster 8223
+#newmonster 7021
 #copystats 1380 -- Black Hawk
 #clearweapons
 #name "Vulture"
@@ -12578,7 +12580,7 @@ Temples may summon 1D3 Sacred Vultures (Candles x 10% chance, with additional ch
 
 #newevent
 #rarity 5
-#req_godismnr 8895 -- Lord of the Carrion Dead
+#req_godismnr 8339 -- Lord of the Carrion Dead
 #req_temple 1
 #req_dominion 1
 #req_land 1
@@ -12588,12 +12590,12 @@ Temples may summon 1D3 Sacred Vultures (Candles x 10% chance, with additional ch
 #msg "Vulture appears"
 #notext
 #nolog
-#1d3units 8223 -- Vultures
+#1d3units 7021 -- Vultures
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 8895 -- Lord of the Carrion Dead
+#req_godismnr 8339 -- Lord of the Carrion Dead
 #req_temple 1
 #req_dominion 1
 #req_death 1
@@ -12604,12 +12606,12 @@ Temples may summon 1D3 Sacred Vultures (Candles x 10% chance, with additional ch
 #msg "Vulture appears"
 #notext
 #nolog
-#1d3units 8223 -- Vultures
+#1d3units 7021 -- Vultures
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 8895 -- Lord of the Carrion Dead
+#req_godismnr 8339 -- Lord of the Carrion Dead
 #req_dominion 1
 #req_land 1
 #nation -2
@@ -12618,12 +12620,12 @@ Temples may summon 1D3 Sacred Vultures (Candles x 10% chance, with additional ch
 #msg "Vultures appear"
 #notext
 #nolog
-#1d3units 8223 -- Vultures
+#1d3units 7021 -- Vultures
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 8895 -- Lord of the Carrion Dead
+#req_godismnr 8339 -- Lord of the Carrion Dead
 #req_dominion 1
 #req_land 1
 #req_death 1
@@ -12633,10 +12635,10 @@ Temples may summon 1D3 Sacred Vultures (Candles x 10% chance, with additional ch
 #msg "Vultures appear"
 #notext
 #nolog
-#1d3units 8223 -- Vultures
+#1d3units 7021 -- Vultures
 #end
 
-#newmonster 8897
+#newmonster 8341
 #name "Great Creator"
 #spr1 "./ExtraPretenders/Demiurge.tga"
 #spr2 "./ExtraPretenders/Demiurge2.tga"
@@ -12687,8 +12689,8 @@ Rarely summons Hashmal units
 
 #newevent
 #rarity 5
-#req_godismnr 8897 -- Lord of the Heavens
-#req_monster 8897 -- Lord of the Heavens
+#req_godismnr 8341 -- Lord of the Heavens
+#req_monster 8341 -- Lord of the Heavens
 #req_land 1
 #req_dominion 1
 #req_domchance 3
@@ -12711,7 +12713,7 @@ Rarely summons Hashmal units
 
 #newevent
 #rarity 5
-#req_godismnr 8897 -- Lord of the Heavens
+#req_godismnr 8341 -- Lord of the Heavens
 #req_pregame
 #req_owncapital 1
 #req_freesites 1
@@ -12740,7 +12742,7 @@ Rarely summons Hashmal units
 
 #newevent
 #rarity 5
-#req_godismnr 8897 -- Lord of the Heavens
+#req_godismnr 8341 -- Lord of the Heavens
 #req_owncapital 1
 #req_freesites 1
 #req_nositenbr 1943
@@ -12752,7 +12754,7 @@ Rarely summons Hashmal units
 #addsite 1943
 #end
 
-#newmonster 8898
+#newmonster 8342
 #copystats 215 -- Virtue
 #clearmagic
 #name "Elohim"
@@ -12786,8 +12788,8 @@ Each month may summon a Malakh commander (Candles x 5% chance)
 
 #newevent
 #rarity 5
-#req_godismnr 8898 -- Elohim
-#req_monster 8898 -- Elohim
+#req_godismnr 8342 -- Elohim
+#req_monster 8342 -- Elohim
 #req_dominion 1
 #req_land 1
 #nation -2
@@ -12798,7 +12800,7 @@ Each month may summon a Malakh commander (Candles x 5% chance)
 #com 2056 -- Malakh
 #end
 
-#newmonster 5027
+#newmonster 8380
 #copystats 499 -- Nataraja
 #clearweapons
 #clearmagic
@@ -12834,7 +12836,7 @@ Priests gain Amulet of Conviction (Autoblessed, Inquisitor)
 #spreaddom 2
 #end
 
-#newmonster 8961
+#newmonster 8375
 #copystats 499 -- Nataraja
 #clearweapons
 #clearmagic
@@ -12864,7 +12866,7 @@ Priests gain Amulet of Conviction (Autoblessed, Inquisitor)
 #homerealm 0
 #end
 
-#newmonster 8969
+#newmonster 8395
 #name "Kami of the Earth"
 #spr1 "./ExtraPretenders/OkamiEarth.tga"
 #spr2 "./ExtraPretenders/OkamiEarth2.tga"
@@ -12919,7 +12921,7 @@ Each month may teach a priest in same province in Earth magic (10% x candles cha
 
 #newevent
 #rarity 5
-#req_godismnr 8969 -- Kami of the Earth
+#req_godismnr 8395 -- Kami of the Earth
 #req_pregame
 #req_owncapital 1
 #req_freesites 1
@@ -12946,7 +12948,7 @@ Each month may teach a priest in same province in Earth magic (10% x candles cha
 
 #newevent
 #rarity 5
-#req_godismnr 8969 -- Kami of the Earth
+#req_godismnr 8395 -- Kami of the Earth
 #req_owncapital 1
 #req_freesites 1
 #req_nositenbr 1944
@@ -12960,8 +12962,8 @@ Each month may teach a priest in same province in Earth magic (10% x candles cha
 
 #newevent
 #rarity 5
-#req_godismnr 8969 -- Kami of the Earth
-#req_monster 8969 -- Kami of the Earth
+#req_godismnr 8395 -- Kami of the Earth
+#req_monster 8395 -- Kami of the Earth
 #req_land 1
 #req_targgod 0
 #req_targpath1 9 -- H1 or higher
@@ -12975,7 +12977,7 @@ Each month may teach a priest in same province in Earth magic (10% x candles cha
 #earthboost -1 -- +1E
 #end
 
-#newmonster 8971
+#newmonster 8396
 #name "Kami of Fertility"
 #spr1 "./ExtraPretenders/OkamiFertility.tga"
 #spr2 "./ExtraPretenders/OkamiFertility.tga"
@@ -13024,7 +13026,7 @@ Whilst Kami is in a forest, a Kitsune commander may appear (Candles x 2% chance 
 
 #newevent
 #rarity 5
-#req_godismnr 8971 -- Kami of Fertility
+#req_godismnr 8396 -- Kami of Fertility
 #req_temple 0
 #req_dominion 1
 #req_forest 1
@@ -13040,7 +13042,7 @@ Whilst Kami is in a forest, a Kitsune commander may appear (Candles x 2% chance 
 
 #newevent
 #rarity 5
-#req_godismnr 8971 -- Kami of Fertility
+#req_godismnr 8396 -- Kami of Fertility
 #req_temple 1
 #req_dominion 1
 #req_forest 1
@@ -13055,7 +13057,7 @@ Whilst Kami is in a forest, a Kitsune commander may appear (Candles x 2% chance 
 
 #newevent
 #rarity 5
-#req_godismnr 8971 -- Kami of Fertility
+#req_godismnr 8396 -- Kami of Fertility
 #req_temple 0
 #req_dominion 1
 #req_land 1
@@ -13070,7 +13072,7 @@ Whilst Kami is in a forest, a Kitsune commander may appear (Candles x 2% chance 
 
 #newevent
 #rarity 5
-#req_godismnr 8971 -- Kami of Fertility
+#req_godismnr 8396 -- Kami of Fertility
 #req_temple 1
 #req_dominion 1
 #req_land 1
@@ -13085,8 +13087,8 @@ Whilst Kami is in a forest, a Kitsune commander may appear (Candles x 2% chance 
 
 #newevent
 #rarity 5
-#req_godismnr 8971 -- Kami of Fertility
-#req_monster 8971 -- Kami of Fertility
+#req_godismnr 8396 -- Kami of Fertility
+#req_monster 8396 -- Kami of Fertility
 #req_land 1
 #req_forest 1
 #nation -2
@@ -13098,7 +13100,7 @@ Whilst Kami is in a forest, a Kitsune commander may appear (Candles x 2% chance 
 #com 1434 -- Kitsune
 #end
 
-#newmonster 8974
+#newmonster 8398
 #name "Lord of Floods"
 #spr1 "./ExtraPretenders/LordFloods.tga"
 #spr2 "./ExtraPretenders/LordFloods2.tga"
@@ -13159,7 +13161,7 @@ Whilst present at Buzhou Pillar site may become enraged and smash against it (10
 
 #newevent
 #rarity 5
-#req_godismnr 8974 -- Lord of Floods
+#req_godismnr 8398 -- Lord of Floods
 #req_pregame
 #req_owncapital 1
 #req_freesites 1
@@ -13173,8 +13175,8 @@ Whilst present at Buzhou Pillar site may become enraged and smash against it (10
 
 #newevent
 #rarity 13
-#req_godismnr 8974 -- Lord of Floods
-#req_monster 8974 -- Lord of Floods
+#req_godismnr 8398 -- Lord of Floods
+#req_monster 8398 -- Lord of Floods
 #req_site 1
 #req_dominion 1
 #req_domchance 10
@@ -13187,7 +13189,7 @@ Whilst present at Buzhou Pillar site may become enraged and smash against it (10
 
 #newevent
 #rarity 13
-#req_godismnr 8974 -- Lord of Floods
+#req_godismnr 8398 -- Lord of Floods
 #req_dominion 1
 #req_domchance 10
 #req_unluck 1
@@ -13199,7 +13201,7 @@ Whilst present at Buzhou Pillar site may become enraged and smash against it (10
 #decscale 4 -- +Luck
 #end
 
-#newmonster 8975
+#newmonster 8399
 #name "Lord of Knowledge"
 #spr1 "./ExtraPretenders/Ganesha.tga"
 #spr2 "./ExtraPretenders/Ganesha2.tga"
@@ -13230,9 +13232,9 @@ Temples in Forests may summon a White Elephant each month (Candles x 10% chance)
 #magicskill 6 1
 #researchbonus 20
 #inspiringres 1
-#summon1 5724 -- White Elephant
-#domsummon20 5724 -- White Elephant
-#makemonsters2 5724 -- White Elephant
+#summon1 7845 -- White Elephant
+#domsummon20 7845 -- White Elephant
+#makemonsters2 7845 -- White Elephant
 #weapon 614 -- Tusk
 #weapon 92 -- Punch
 #expertleader
@@ -13250,7 +13252,7 @@ Temples in Forests may summon a White Elephant each month (Candles x 10% chance)
 
 #newevent
 #rarity 5
-#req_godismnr 8975 -- Lord of Knowledge
+#req_godismnr 8399 -- Lord of Knowledge
 #req_dominion 1
 #req_land 1
 #req_temple 1
@@ -13261,10 +13263,10 @@ Temples in Forests may summon a White Elephant each month (Candles x 10% chance)
 #msg "White Elephant Appears!"
 #notext
 #nolog
-#1unit 5724 -- White Elephant
+#1unit 7845 -- White Elephant
 #end
 
-#newmonster 8976
+#newmonster 8400
 #name "Terror of the Deep"
 #spr1 "./ExtraPretenders/DeepTerror.tga"
 #spr2 "./ExtraPretenders/DeepTerror2.tga"
@@ -13318,8 +13320,8 @@ Whilst at a Throne will produce 3D6 gems of each type each month until Throne is
 
 #newevent
 #rarity 5
-#req_godismnr 8976 -- Terror of the Deep
-#req_monster 8976 -- Terror of the Deep
+#req_godismnr 8400 -- Terror of the Deep
+#req_monster 8400 -- Terror of the Deep
 #req_thronesite 1
 #nation -2
 #req_pop0ok
@@ -13328,7 +13330,7 @@ Whilst at a Throne will produce 3D6 gems of each type each month until Throne is
 #3d6vis 53 -- All gem types
 #end
 
-#newmonster 8977
+#newmonster 8401
 #name "Prince of the Deeps"
 #spr1 "./ExtraPretenders/ElementalPrince.tga"
 #spr2 "./ExtraPretenders/ElementalPrince2.tga"
@@ -13382,8 +13384,8 @@ Whilst at a lab may create an Amulet of the Fish (Candles x 5% chance per month)
 
 #newevent
 #rarity 5
-#req_godismnr 8977 -- Prince of the Deeps
-#req_monster 8977 -- Prince of the Deeps
+#req_godismnr 8401 -- Prince of the Deeps
+#req_monster 8401 -- Prince of the Deeps
 #req_dominion 1
 #req_domchance 5
 #req_lab 1
@@ -13397,8 +13399,8 @@ Whilst at a lab may create an Amulet of the Fish (Candles x 5% chance per month)
 
 #newevent
 #rarity 5
-#req_godismnr 8977 -- Prince of the Deeps
-#req_monster 8977 -- Prince of the Deeps
+#req_godismnr 8401 -- Prince of the Deeps
+#req_monster 8401 -- Prince of the Deeps
 #req_ench 93 -- Vengeful Waters
 #req_permonth 1
 #nation -2
@@ -13451,7 +13453,7 @@ Whilst at a lab may create an Amulet of the Fish (Candles x 5% chance per month)
 
 #newevent
 #rarity 5
-#req_godismnr 8977 -- Prince of the Deeps
+#req_godismnr 8401 -- Prince of the Deeps
 #req_dominion 1
 #req_land 0
 #req_temple 1
@@ -13466,7 +13468,7 @@ Whilst at a lab may create an Amulet of the Fish (Candles x 5% chance per month)
 
 #newevent
 #rarity 5
-#req_godismnr 8977 -- Prince of the Deeps
+#req_godismnr 8401 -- Prince of the Deeps
 #req_friendlyench 93 -- Vengeful Waters
 #req_dominion 1
 #req_land 0
@@ -13482,7 +13484,7 @@ Whilst at a lab may create an Amulet of the Fish (Candles x 5% chance per month)
 
 #newevent
 #rarity 5
-#req_godismnr 8977 -- Prince of the Deeps
+#req_godismnr 8401 -- Prince of the Deeps
 #req_friendlyench 93 -- Vengeful Waters
 #req_dominion 1
 #req_land 1
@@ -13565,7 +13567,7 @@ Whilst at a lab may create an Amulet of the Fish (Candles x 5% chance per month)
 -- #holyboost -1
 -- #end
 
-#newmonster 8979
+#newmonster 8403
 #spr1 "./ExtraPretenders/Firstbornrhuax.tga"
 #spr2 "./ExtraPretenders/Firstbornrhuax2.tga"
 #name "Firstborn of Rhuax"
@@ -13629,7 +13631,7 @@ Lavaborn provinces gain a temple and fortified village, provide double income
 #end
 
 #newevent
-#req_godismnr 8979 -- Firstborn of Rhuax
+#req_godismnr 8403 -- Firstborn of Rhuax
 #rarity 5
 #req_land 1
 #req_owncapital 0
@@ -13645,7 +13647,7 @@ Lavaborn provinces gain a temple and fortified village, provide double income
 #end
 
 #newevent
-#req_godismnr 8979 -- Firstborn of Rhuax
+#req_godismnr 8403 -- Firstborn of Rhuax
 #rarity 5
 #req_rare 2
 #req_land 1
@@ -13661,7 +13663,7 @@ Lavaborn provinces gain a temple and fortified village, provide double income
 #end
 
 #newevent
-#req_godisnotmnr 8979 -- Firstborn of Rhuax
+#req_godisnotmnr 8403 -- Firstborn of Rhuax
 #req_mindef 1
 #rarity 5
 #req_rare 10
@@ -13676,7 +13678,7 @@ Lavaborn provinces gain a temple and fortified village, provide double income
 
 #newevent
 #rarity 5
-#req_godismnr 8979
+#req_godismnr 8403
 #req_poptype 94
 #req_fort 0
 #nation -2
@@ -13689,7 +13691,7 @@ Lavaborn provinces gain a temple and fortified village, provide double income
 
 #newevent
 #rarity 5
-#req_godismnr 8979
+#req_godismnr 8403
 #req_poptype 94
 #nation -2
 #msg "The local Lavaborn venerate their true God and have donated much gold to the treasury."
@@ -13698,7 +13700,7 @@ Lavaborn provinces gain a temple and fortified village, provide double income
 #end
 
 #newevent
-#req_godismnr 8979 -- Firstborn of Rhuax
+#req_godismnr 8403 -- Firstborn of Rhuax
 #rarity 5
 #req_land 1
 #req_mydominion 1
@@ -13712,7 +13714,7 @@ Lavaborn provinces gain a temple and fortified village, provide double income
 #1d6units 90 -- Lava Warriors
 #end
 
-#newmonster 8981 -- Neter of the River
+#newmonster 8405 -- Neter of the River
 #name "Neter of the River"
 #descr "The Neter is a giant of divine heritage. Fearsome and more beastly than his brethren, he was made guardian of the warm rivers and marshes of the world by the Pantokrator, but when he joined the rebellion of the lesser gods he was banished. Now with the Pantokrator gone the Neter of the River has returned to claim the world as his own. Crocodiles will crawl from nearby rivers and lakes at his temples and in swamplands to serve the Neter of the River, and occasionally a great Sacred Crocodile will lumber into the temple grounds to accept offers of meat and sacrifices. He is attended by great crocodilian warriors, and at his temples located in dingy marshes they will congregate to swell his armies.
 
@@ -13772,7 +13774,7 @@ Forts in swamps gain a free temple, allow recruitment of Sobek Warriors and Sobe
 #newevent
 #rarity 5
 #req_site 1
-#req_godisnotmnr 8981 -- Neter of the River
+#req_godisnotmnr 8405 -- Neter of the River
 #req_mindef 1
 #nation -2
 #req_pop0ok
@@ -13784,7 +13786,7 @@ Forts in swamps gain a free temple, allow recruitment of Sobek Warriors and Sobe
 
 #newevent
 #rarity 5
-#req_godismnr 8981 -- Neter of the River
+#req_godismnr 8405 -- Neter of the River
 #req_swamp 1
 #req_fort 1
 #req_mindef 1
@@ -13801,7 +13803,7 @@ Forts in swamps gain a free temple, allow recruitment of Sobek Warriors and Sobe
 
 #newevent
 #rarity 5
-#req_godismnr 8981 -- Neter of the River
+#req_godismnr 8405 -- Neter of the River
 #req_swamp 1
 #nation -2
 #msg "The inhabitants of the swamp venerate ##godname## and have donated much gold to the treasury."
@@ -13812,7 +13814,7 @@ Forts in swamps gain a free temple, allow recruitment of Sobek Warriors and Sobe
 
 #newevent
 #rarity 5
-#req_godismnr 8981 -- Neter of the River
+#req_godismnr 8405 -- Neter of the River
 #req_dominion 1
 #req_land 1
 #req_temple 1
@@ -13827,7 +13829,7 @@ Forts in swamps gain a free temple, allow recruitment of Sobek Warriors and Sobe
 
 #newevent
 #rarity 5
-#req_godismnr 8981 -- Neter of the River
+#req_godismnr 8405 -- Neter of the River
 #req_dominion 1
 #req_land 1
 #req_temple 1
@@ -13842,7 +13844,7 @@ Forts in swamps gain a free temple, allow recruitment of Sobek Warriors and Sobe
 
 #newevent
 #rarity 5
-#req_godismnr 8981 -- Neter of the River
+#req_godismnr 8405 -- Neter of the River
 #req_dominion 1
 #req_land 1
 #req_swamp 1
@@ -13996,7 +13998,7 @@ If control Fata Morgana, all friendly provinces may spawn a Tuatha Warrior (Cand
 #addsite 1955
 #end
 
-#newmonster 8982
+#newmonster 8406
 #name "Titan of the Sun"
 #spr1 "./ExtraPretenders/Titansun.tga"
 #spr2 "./ExtraPretenders/Titansun2.tga"
@@ -14069,7 +14071,7 @@ Whilst a Second Sun is in the sky Solaris Praetori can be recruited for 1/3 cost
 
 #newevent
 #rarity 5
-#req_godismnr 8982
+#req_godismnr 8406
 #req_pregame
 #req_owncapital 1
 #req_freesites 1
@@ -14084,7 +14086,7 @@ Whilst a Second Sun is in the sky Solaris Praetori can be recruited for 1/3 cost
 #newevent
 #rarity 5
 #req_site 1
-#req_godisnotmnr 8982 -- Titan of the Sun
+#req_godisnotmnr 8406 -- Titan of the Sun
 #req_mindef 1
 #nation -2
 #req_pop0ok
@@ -14096,7 +14098,7 @@ Whilst a Second Sun is in the sky Solaris Praetori can be recruited for 1/3 cost
 
 #newevent
 #rarity 5
-#req_godismnr 8982 -- Titan of the Sun
+#req_godismnr 8406 -- Titan of the Sun
 #req_temple 1
 #req_fort 1
 #req_freesites 1
@@ -14109,7 +14111,7 @@ Whilst a Second Sun is in the sky Solaris Praetori can be recruited for 1/3 cost
 #addsite 1964
 #end
 
-#newmonster 8983
+#newmonster 8407
 #spr1 "./ExtraPretenders/Titanwarfarming.tga"
 #spr2 "./ExtraPretenders/Titanwarfarming2.tga"
 #name "Titan of War and Farming"
@@ -14158,7 +14160,7 @@ Starting item: Shield of Gleaming Gold
 
 #newevent
 #rarity 5
-#req_godismnr 8983
+#req_godismnr 8407
 #req_maxdef 50
 #req_land 1
 #req_dominion 1
@@ -14171,7 +14173,7 @@ Starting item: Shield of Gleaming Gold
 
 #newevent
 #rarity 5
-#req_godismnr 8983
+#req_godismnr 8407
 #req_farm 1
 #req_mindef 30
 #req_fort 0
@@ -14185,7 +14187,7 @@ Starting item: Shield of Gleaming Gold
 
 #newevent
 #rarity 5
-#req_godismnr 8983
+#req_godismnr 8407
 #nation -2
 #req_site 1
 #req_land 1
@@ -14196,7 +14198,7 @@ Starting item: Shield of Gleaming Gold
 #revealsite
 #end
 
-#newmonster 5041
+#newmonster 8409
 #copyspr 775 -- Tartarian Titan
 #name "Tartarian"
 #descr "The Tartarian is an ancient Pretender god condemned to eternal imprisonment by the Pantokrator in ages past. Now, with the Pantokrator gone it has the chance to escape its imprisonment in Tartarus and will finally claim the Throne of Heaven. The Titan has tremendous power, but is somewhat insane after suffering aeons of perpetual pain. The body of the ancient god is dead, but its willpower keeps it alive in a state of constant decay. The dead god can bring only misery and misfortune to her followers. The God-spirit will be followed by other lesser spirits freed from Tartarus, and more will appear to serve it as its Dominion grows strong. Some fear that the Tartarian is only the first of many, and as its Dominion grows strong the wails of angry Gods can be heard faintly on the wind. 
@@ -14277,8 +14279,8 @@ Must start imprisoned
 
 #newevent
 #rarity 5
-#req_godismnr 5041 -- Tartarian
-#req_monster 5041 -- Tartarian
+#req_godismnr 8409 -- Tartarian
+#req_monster 8409 -- Tartarian
 #req_land 1
 #nation -2
 #req_pop0ok
@@ -14290,7 +14292,7 @@ Must start imprisoned
 #1unit -3082 -- Random Tartarian
 #end
 
-#newmonster 5049
+#newmonster 8411
 #copystats 1490
 #spr1 "./ExtraPretenders/Antumbral.tga"
 #spr2 "./ExtraPretenders/Antumbral2.tga"
@@ -14343,7 +14345,7 @@ Priests gain Shadow Pendant item (+50 Und. Ldr, Darkpower 3, casts Unholy Power)
 
 #newevent
 #rarity 5
-#req_godismnr 5049 -- Antumbral
+#req_godismnr 8411 -- Antumbral
 #req_godismnr 2444 -- Teotl of the Underworld
 #req_targpath1 9
 #req_targnoitem "Shadow Pendant"
@@ -14355,7 +14357,7 @@ Priests gain Shadow Pendant item (+50 Und. Ldr, Darkpower 3, casts Unholy Power)
 #addequip 9
 #end
 
-#newmonster 5052
+#newmonster 8412
 #spr1 "./ExtraPretenders/GodEmp.tga"
 #spr2 "./ExtraPretenders/GodEmp2.tga"
 #name "Deified Emperor"
@@ -14414,7 +14416,7 @@ Lar commanders gain 1H when at a temple
 
 #newevent
 #rarity 5
-#req_godismnr 5052 -- Deified Emperor
+#req_godismnr 8412 -- Deified Emperor
 #req_godismnr 874 -- Divine Emperor
 #req_temple 1
 #req_freesites 1
@@ -14442,7 +14444,7 @@ Lar commanders gain 1H when at a temple
 
 #newevent
 #rarity 5
-#req_godismnr 5052 -- Deified Emperor
+#req_godismnr 8412 -- Deified Emperor
 #req_temple 1
 #req_fort 1
 #nation -2
@@ -14457,7 +14459,7 @@ Lar commanders gain 1H when at a temple
 
 #newevent
 #rarity 5
-#req_godismnr 5052 -- Deified Emperor
+#req_godismnr 8412 -- Deified Emperor
 #req_temple 1
 #req_targmnr 3087 -- Lar
 #nation -2
@@ -14469,7 +14471,7 @@ Lar commanders gain 1H when at a temple
 #holyboost -1 -- +1H
 #end
 
-#newmonster 5053
+#newmonster 8413
 #copystats 931 -- Ivy King
 #clearmagic
 #clearweapons
@@ -14510,7 +14512,7 @@ Ivy Kings gain +1N, +1E and H2
 
 #newevent
 #rarity 5
-#req_godismnr 5053 -- Green Man
+#req_godismnr 8413 -- Green Man
 #req_forest 0
 #req_waste 0
 #req_dominion 1
@@ -14527,7 +14529,7 @@ Ivy Kings gain +1N, +1E and H2
 
 #newevent
 #rarity 5
-#req_godismnr 5053 -- Green Man
+#req_godismnr 8413 -- Green Man
 #req_forest 1
 #req_dominion 1
 #req_growth 1
@@ -14543,7 +14545,7 @@ Ivy Kings gain +1N, +1E and H2
 
 #newevent
 #rarity 5
-#req_godismnr 5053 -- Green Man
+#req_godismnr 8413 -- Green Man
 #req_temple 1
 #req_dominion 1
 #req_growth 1
@@ -14559,7 +14561,7 @@ Ivy Kings gain +1N, +1E and H2
 
 #newevent
 #rarity 5
-#req_godismnr 5053 -- Green Man
+#req_godismnr 8413 -- Green Man
 #req_targmnr 931 -- Ivy King
 #nation -2
 #req_pop0ok
@@ -14573,7 +14575,7 @@ Ivy Kings gain +1N, +1E and H2
 #pathboost 9 -- +1H
 #end
 
-#newmonster 5054
+#newmonster 8414
 #spr1 "./ExtraPretenders/AngelLord.tga"
 #spr2 "./ExtraPretenders/AngelLord2.tga"
 #name "Angelic Lord"
@@ -14629,8 +14631,8 @@ Fire Shield strikes attackers
 #newevent
 #rarity 5
 #req_pregame
-#req_godismnr 5054 -- Angelic Lord
-#req_monster 5054 -- Angelic Lord
+#req_godismnr 8414 -- Angelic Lord
+#req_monster 8414 -- Angelic Lord
 #req_owncapital 1
 #nation -2
 #req_pop0ok
@@ -14643,8 +14645,8 @@ Fire Shield strikes attackers
 #newevent
 #rarity 5
 #req_pregame
-#req_godismnr 5054 -- Angelic Lord
-#req_monster 5054 -- Angelic Lord
+#req_godismnr 8414 -- Angelic Lord
+#req_monster 8414 -- Angelic Lord
 #req_owncapital 1
 #nation -2
 #req_pop0ok
@@ -14657,8 +14659,8 @@ Fire Shield strikes attackers
 #newevent
 #rarity 5
 #req_pregame
-#req_godismnr 5054 -- Angelic Lord
-#req_monster 5054 -- Angelic Lord
+#req_godismnr 8414 -- Angelic Lord
+#req_monster 8414 -- Angelic Lord
 #req_owncapital 1
 #nation -2
 #req_pop0ok
@@ -14671,8 +14673,8 @@ Fire Shield strikes attackers
 #newevent
 #rarity 5
 #req_pregame
-#req_godismnr 5054 -- Angelic Lord
-#req_monster 5054 -- Angelic Lord
+#req_godismnr 8414 -- Angelic Lord
+#req_monster 8414 -- Angelic Lord
 #req_owncapital 1
 #nation -2
 #req_pop0ok
@@ -14682,7 +14684,7 @@ Fire Shield strikes attackers
 #1unit 2051 -- Ophan
 #end
 
-#newmonster 5060
+#newmonster 8415
 #copyspr 2066
 #name "Grigori"
 #descr "At the dawn of time, on the sacred mount Hermon, descended six angels in full celestial splendor to the natives of the holy land to aid and instruct them in righteousness and wisdom. The Avvim were a people strong and beautiful of mind and body. They were adept students and their culture flourished under the tutelage of the Watchers. But before long the Grigori became enamored with the Avvim, shared their burdens and taught them things that should not be taught. Tempted by the beauty of the Avvim, they took their daughters as wives and sinned before the Celestial Powers. Their offspring were the Nephilim, giants of great power, abominable to the world. When the Celestial Powers lashed out in fury, the Grigori were banished to the infernal realms. Now, with the Pantokrator gone one of the Grigori can feel his shackles weakening and will return to the world to claim the mantle of Godhood.
@@ -14737,7 +14739,7 @@ Cannot start awake
 #minprison 1
 #end
 
-#newmonster 5065
+#newmonster 8416
 #spr1 "./ExtraPretenders/BullDemonKing.tga"
 #spr2 "./ExtraPretenders/BullDemonKing2.tga"
 #name "Bull Demon King"
@@ -14784,10 +14786,10 @@ Demon commanders become H1 priests at his temples
 #pathcost 60
 #startdom 3
 #homerealm 4
-#shapechange 5066
+#shapechange 8417
 #end
 
-#newmonster 5066
+#newmonster 8417
 #copyspr 979 -- Great White Bull
 #name "Bull Demon King"
 #descr "The Bull Demon King is a Lord of the Underworld that can take the form of a gigantic white Bull. In ages past he terrorised the people of the world until the Pantokrator bid the Devi of Strength lead an army to subdue him and trap him in the Underworld. The Bull Demon King is powerful but arrogant, and is the most senior of the Demon Kings. He likes to think of himself as equal to the great sages of heaven and will become furious if his wisdom is questioned. Now, with the Pantrokrator gone the Bull Demon King will once more rule the realm of men. In Bull form he is physically powerful but it is not well suited for spellcasting. As a Demon King of the Underworld he is sesrved by ox-headed demon warriors that will be summoned by the priesthood at his temples. Demons are exalted by his followers and will gain priestly powers through dark rituals.
@@ -14836,13 +14838,13 @@ Demon commanders become H1 priests at his temples
 #pathcost 60
 #startdom 3
 #homerealm 0
-#shapechange 5065
+#shapechange 8416
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 5065 -- Demon King
-#req_godismnr 5066 -- Demon King - Bull
+#req_godismnr 8416 -- Demon King
+#req_godismnr 8417 -- Demon King - Bull
 #req_temple 1
 #req_land 1
 #req_domchance 10
@@ -14857,8 +14859,8 @@ Demon commanders become H1 priests at his temples
 
 #newevent
 #rarity 5
-#req_godismnr 5065 -- Demon King
-#req_godismnr 5066 -- Demon King Bull Form
+#req_godismnr 8416 -- Demon King
+#req_godismnr 8417 -- Demon King Bull Form
 #req_targgod 0 -- Not God
 #req_targdemon 1
 #req_temple 1
@@ -14870,7 +14872,7 @@ Demon commanders become H1 priests at his temples
 #holyboost -1
 #end
 
-#newmonster 5067
+#newmonster 8418
 #copystats 1368 -- Seraph
 #clearmagic
 #clearweapons
@@ -14924,7 +14926,7 @@ Ignores multiple attacker penalties for 5 attackers
 #homerealm 0
 #end
 
-#newmonster 5079 -- Sun Father
+#newmonster 8419 -- Sun Father
 #spr1 "./ExtraPretenders/SunFather.tga"
 #spr2 "./ExtraPretenders/SunFather.tga"
 #name "Sun Father"
@@ -14978,8 +14980,8 @@ If controls Second Sun he will draw energy from it each month getting 3d6 Fire g
 
 #newevent
 #rarity 5
-#req_godismnr 5079 -- Sun Father
-#req_monster 5079 -- Sun Father
+#req_godismnr 8419 -- Sun Father
+#req_monster 8419 -- Sun Father
 #req_friendlyench 41 -- Second Sun
 #nation -2
 #req_pop0ok
@@ -14987,7 +14989,7 @@ If controls Second Sun he will draw energy from it each month getting 3d6 Fire g
 #3d6vis 0 -- Fire gems
 #end
 
-#newmonster 5080
+#newmonster 8420
 #spr1 "./ExtraPretenders/Morning_Star.tga"
 #spr2 "./ExtraPretenders/Morning_Star2.tga"
 #name "Morning Star"
@@ -15047,7 +15049,7 @@ Morning Star has -2F, Full A, Evening Star has -2A, Full S, both get -1 paths wh
 #homerealm 0
 #end
 
-#newmonster 5081
+#newmonster 8421
 #spr1 "./ExtraPretenders/EveningStar.tga"
 #spr2 "./ExtraPretenders/EveningStar2.tga"
 #name "Evening Star"
@@ -15107,7 +15109,7 @@ Morning Star has -2F, Full A, Evening Star has -2A, Full S, both get -1 paths wh
 #homerealm 0
 #end
 
-#newmonster 5082
+#newmonster 8422
 #spr1 "./ExtraPretenders/Lakshmi.tga"
 #spr2 "./ExtraPretenders/Lakshmi2.tga"
 #name "Tridevi of Prosperity"
@@ -15157,7 +15159,7 @@ No path penalty for separation of trinity
 #homerealm 8
 #end
 
-#newmonster 5083
+#newmonster 8423
 #spr1 "./ExtraPretenders/Parvati.tga"
 #spr2 "./ExtraPretenders/Parvati2.tga"
 #name "Tridevi of Divine Strength"
@@ -15208,7 +15210,7 @@ No path penalty for separation of trinity
 #startdom 3
 #end
 
-#newmonster 5084
+#newmonster 8424
 #spr1 "./ExtraPretenders/Saraswati.tga"
 #spr2 "./ExtraPretenders/Saraswati.tga"
 #name "Tridevi of Wisdom"
@@ -15257,7 +15259,7 @@ No path penalty for separation of trinity
 #startdom 3
 #end
 
-#newmonster 5085
+#newmonster 8425
 #spr1 "./ExtraPretenders/Shiva.tga"
 #spr2 "./ExtraPretenders/Shiva2.tga"
 #name "Trimurti of Destruction"
@@ -15313,7 +15315,7 @@ No path penalty for separation of trinity
 #homerealm 8
 #end
 
-#newmonster 5086
+#newmonster 8426
 #spr1 "./ExtraPretenders/Vishnu.tga"
 #spr2 "./ExtraPretenders/Vishnu.tga"
 #name "Trimurti of Protection"
@@ -15360,7 +15362,7 @@ No path penalty for separation of trinity
 #startdom 3
 #end
 
-#newmonster 5087
+#newmonster 8427
 #spr1 "./ExtraPretenders/Brahma.tga"
 #spr2 "./ExtraPretenders/Brahma2.tga"
 #name "Trimurti of Creation"
@@ -15410,7 +15412,7 @@ No path penalty for separation of trinity
 #startdom 3
 #end
 
-#newmonster 5088
+#newmonster 8428
 #spr1 "./ExtraPretenders/Triglav.tga"
 #spr2 "./ExtraPretenders/Triglav.tga"
 #name "Lord of Mysteries"
@@ -15456,7 +15458,7 @@ Priests gain Gold Bands (makes bearer blind, grants +1A, +1E, +1D magic)
 
 #newevent
 #rarity 5
-#req_targmnr 5088
+#req_targmnr 8428
 #req_targnoitem 1031
 #addequip 9
 #msg "Provide Golden Bands [Golden Bands]"
@@ -15466,7 +15468,7 @@ Priests gain Gold Bands (makes bearer blind, grants +1A, +1E, +1D magic)
 
 #newevent
 #rarity 5
-#req_godismnr 5088
+#req_godismnr 8428
 #req_targpath1 9
 #req_targnoitem 1056
 #nation -2
@@ -15489,7 +15491,7 @@ Priests gain Gold Bands (makes bearer blind, grants +1A, +1E, +1D magic)
 #gainaff 4096 -- Blind
 #end
 
-#newmonster 5089
+#newmonster 8429
 #spr1 "./ExtraPretenders/Khonsu.tga"
 #spr2 "./ExtraPretenders/Khonsu2.tga"
 #name "Neter Child"
@@ -15537,7 +15539,7 @@ No path penalty for separation of trinity
 #homerealm 7
 #end
 
-#newmonster 5090
+#newmonster 8430
 #spr1 "./ExtraPretenders/Amun.tga"
 #spr2 "./ExtraPretenders/Amun2.tga"
 #name "Neter Father"
@@ -15581,7 +15583,7 @@ No path penalty for separation of trinity
 #startdom 3
 #end
 
-#newmonster 5091
+#newmonster 8431
 #spr1 "./ExtraPretenders/Mut.tga"
 #spr2 "./ExtraPretenders/Mut2.tga"
 #name "Neteret Mother"
@@ -15626,7 +15628,7 @@ No path penalty for separation of trinity
 #startdom 3
 #end
 
-#newmonster 5092
+#newmonster 8432
 #spr1 "./ExtraPretenders/Nyx.tga"
 #spr2 "./ExtraPretenders/Nyx2.tga"
 #name "Titan of the Night"
@@ -15680,7 +15682,7 @@ May summon a Ker commander each month (Candles x 5% chance)
 
 #newevent
 #rarity 5
-#req_godismnr 5092 -- Nyx
+#req_godismnr 8432 -- Nyx
 #req_pregame
 #req_owncapital 1
 #req_land 1
@@ -15693,8 +15695,8 @@ May summon a Ker commander each month (Candles x 5% chance)
 
 #newevent
 #rarity 5
-#req_godismnr 5092 -- Nyx
-#req_monster 5092 -- Nyx
+#req_godismnr 8432 -- Nyx
+#req_monster 8432 -- Nyx
 #req_land 1
 #req_dominion 1
 #req_domchance 5
@@ -15708,7 +15710,7 @@ May summon a Ker commander each month (Candles x 5% chance)
 
 #newevent
 #rarity 5
-#req_godismnr 5092 -- Nyx
+#req_godismnr 8432 -- Nyx
 #req_ench 118 -- Eternal Twilight
 #req_noench 56 -- Utterdark
 #req_land 1
@@ -15724,7 +15726,7 @@ May summon a Ker commander each month (Candles x 5% chance)
 
 #newevent
 #rarity 5
-#req_godismnr 5092 -- Nyx
+#req_godismnr 8432 -- Nyx
 #req_ench 56 -- Utterdark 
 #req_land 1
 #req_dominion 1
@@ -15739,7 +15741,7 @@ May summon a Ker commander each month (Candles x 5% chance)
 
 #newevent
 #rarity 5
-#req_godismnr 5092 -- Nyx
+#req_godismnr 8432 -- Nyx
 #req_targmnr 3127 -- Ker
 #nation -2
 #req_pop0ok
@@ -15750,7 +15752,7 @@ May summon a Ker commander each month (Candles x 5% chance)
 #holyboost -1 -- +1H
 #end
 
-#newmonster 5099
+#newmonster 8438
 #spr1 "./ExtraPretenders/WolfMan.tga"
 #spr2 "./ExtraPretenders/WolfMan2.tga"
 #name "Vargr"
@@ -15804,8 +15806,8 @@ May summon a Jotun Werewolf commander each month (candles x 5% chance)
 
 #newevent
 #rarity 5
-#req_godismnr 5099 -- Vargr
-#req_monster 5099 -- Vargr
+#req_godismnr 8438 -- Vargr
+#req_monster 8438 -- Vargr
 #req_land 1
 #req_dominion 1
 #req_domchance 5
@@ -15817,7 +15819,7 @@ May summon a Jotun Werewolf commander each month (candles x 5% chance)
 #com 6753 -- Jotun Werewolf
 #end
 
-#newmonster 5431
+#newmonster 7578
 #copystats 499 -- Nataraja
 #clearweapons
 #clearmagic
@@ -15865,7 +15867,7 @@ Forts in Order scales may spawn a Eunuch commander & 3D6 Footmen (Candles x 2% c
 
 #newevent
 #rarity 5
-#req_godismnr 5431 -- Founding Father
+#req_godismnr 7578 -- Founding Father
 #req_land 1
 #req_fort 1
 #req_dominion 1
@@ -15882,7 +15884,7 @@ Forts in Order scales may spawn a Eunuch commander & 3D6 Footmen (Candles x 2% c
 
 #newevent
 #rarity 5
-#req_godismnr 5431 -- Founding Father
+#req_godismnr 7578 -- Founding Father
 #req_land 1
 #req_fort 1
 #req_dominion 1
@@ -15899,7 +15901,7 @@ Forts in Order scales may spawn a Eunuch commander & 3D6 Footmen (Candles x 2% c
 
 #newevent
 #rarity 5
-#req_godismnr 5431 -- Founding Father
+#req_godismnr 7578 -- Founding Father
 #req_land 1
 #req_fort 1
 #req_dominion 1
@@ -15916,7 +15918,7 @@ Forts in Order scales may spawn a Eunuch commander & 3D6 Footmen (Candles x 2% c
 
 #newevent
 #rarity 5
-#req_godismnr 5431 -- Founding Father
+#req_godismnr 7578 -- Founding Father
 #req_land 1
 #req_fort 1
 #req_dominion 1
@@ -15933,7 +15935,7 @@ Forts in Order scales may spawn a Eunuch commander & 3D6 Footmen (Candles x 2% c
 
 #newevent
 #rarity 5
-#req_godismnr 5431 -- Founding Father
+#req_godismnr 7578 -- Founding Father
 #req_land 1
 #req_fort 1
 #req_dominion 1
@@ -15948,7 +15950,7 @@ Forts in Order scales may spawn a Eunuch commander & 3D6 Footmen (Candles x 2% c
 #3d6units 799 -- Imperial Footman
 #end
 
-#newmonster 8872
+#newmonster 8439
 #spr1 "./ExtraPretenders/Hilina.tga"
 #spr2 "./ExtraPretenders/Hilina2.tga"
 #name "Storm Raven"
@@ -15996,8 +15998,8 @@ Priests gain Cloak of Mists (grants Mistform in battles)
 
 #newevent
 #rarity 5
-#req_godismnr 8872 -- Storm Raven
-#req_monster 8872 -- Storm Raven
+#req_godismnr 8439 -- Storm Raven
+#req_monster 8439 -- Storm Raven
 #req_targpath1 9
 #req_targnoitem "Cloak of Mists"
 #nation -2
@@ -16008,7 +16010,7 @@ Priests gain Cloak of Mists (grants Mistform in battles)
 #addequip 9
 #end
 
-#newmonster 8871
+#newmonster 8440
 #spr1 "./ExtraPretenders/Kumugwe.tga"
 #spr2 "./ExtraPretenders/Kumugwe2.tga"
 #name "Copper Maker"
@@ -16059,7 +16061,7 @@ Summons Krakens up to half Dominion candles whilst underwater
 
 #newevent
 #rarity 5
-#req_godismnr 8871 -- Copper Maker
+#req_godismnr 8440 -- Copper Maker
 #req_pregame
 #req_owncapital 1
 #req_land 1
@@ -16073,8 +16075,8 @@ Summons Krakens up to half Dominion candles whilst underwater
 
 #newevent
 #rarity 5
-#req_godismnr 8871 -- Copper Maker
-#req_monster 8871 -- Copper Maker
+#req_godismnr 8440 -- Copper Maker
+#req_monster 8440 -- Copper Maker
 #req_land 0
 #req_maxturn 24
 #nation -2
@@ -16087,8 +16089,8 @@ Summons Krakens up to half Dominion candles whilst underwater
 
 #newevent
 #rarity 5
-#req_godismnr 8871 -- Copper Maker
-#req_monster 8871 -- Copper Maker
+#req_godismnr 8440 -- Copper Maker
+#req_monster 8440 -- Copper Maker
 #req_land 0
 #req_turn 24
 #nation -2
@@ -16099,7 +16101,7 @@ Summons Krakens up to half Dominion candles whilst underwater
 #magicitem 4
 #end
 
-#newmonster 5366
+#newmonster 7513
 #copystats 1224 -- Dire Wolf
 #copyspr 2474 -- White Wolf
 #name "Akhlut"
@@ -16121,11 +16123,11 @@ Summons Krakens up to half Dominion candles whilst underwater
 #spiritsight
 #patience 1
 #researchbonus -6
-#watershape 5367
+#watershape 7514
 #transformation 0
 #end
 
-#newmonster 5367
+#newmonster 7514
 #spr1 "./ExtraPretenders/EEKiller.tga"
 #spr2 "./ExtraPretenders/EEKiller2.tga"
 #name "Akhlut"
@@ -16162,12 +16164,12 @@ Summons Krakens up to half Dominion candles whilst underwater
 #patience 1
 #researchbonus -6
 #itemslots 786432
-#landshape 5366
+#landshape 7513
 #weapon 20 -- Bite
 #weapon 589 -- Tail Slap
 #end
 
-#newmonster 8870
+#newmonster 8441
 #spr1 "./ExtraPretenders/Sgana.tga"
 #spr2 "./ExtraPretenders/Sgana.tga"
 #name "Lord of the Undersea"
@@ -16218,8 +16220,8 @@ Each month an Akhlut may appear (A1W1 amphibious assassin, Candles x 5% chance)
 
 #newevent
 #rarity 5
-#req_godismnr 8870 -- Sgana
-#req_monster 8870 -- Sgana
+#req_godismnr 8441 -- Sgana
+#req_monster 8441 -- Sgana
 #req_land 1
 #req_dominion 1
 #req_domchance 5
@@ -16227,13 +16229,13 @@ Each month an Akhlut may appear (A1W1 amphibious assassin, Candles x 5% chance)
 #req_pop0ok
 #msg "A spirit of the sea has appeared to serve ##godname##!"
 #nolog
-#com 5366
+#com 7513
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 8870 -- Sgana
-#req_monster 8870 -- Sgana
+#req_godismnr 8441 -- Sgana
+#req_monster 8441 -- Sgana
 #req_land 0
 #req_dominion 1
 #req_domchance 5
@@ -16241,10 +16243,10 @@ Each month an Akhlut may appear (A1W1 amphibious assassin, Candles x 5% chance)
 #req_pop0ok
 #msg "A spirit of the sea has appeared to serve ##godname##!"
 #nolog
-#com 5367
+#com 7514
 #end
 
-#newmonster 8869
+#newmonster 8443
 #spr1 "./ExtraPretenders/Taxet.tga"
 #spr2 "./ExtraPretenders/Taxet.tga"
 #name "Lord of Violent Death"
@@ -16300,8 +16302,8 @@ Provinces in Dominion with corpses present may raise 1d3 dispossessed spirits ea
 
 #newevent
 #rarity 5
-#req_godismnr 8869 -- Ta'xet
-#req_monster 8869 -- Ta'xet
+#req_godismnr 8443 -- Ta'xet
+#req_monster 8443 -- Ta'xet
 #req_mincorpses 1
 #nation -2
 #req_pop0ok
@@ -16313,7 +16315,7 @@ Provinces in Dominion with corpses present may raise 1d3 dispossessed spirits ea
 
 #newevent
 #rarity 5
-#req_godismnr 8869 -- Ta'xet
+#req_godismnr 8443 -- Ta'xet
 #req_dominion 1
 #req_domchance 10
 #req_mincorpses 1
@@ -16327,7 +16329,7 @@ Provinces in Dominion with corpses present may raise 1d3 dispossessed spirits ea
 
 #newevent
 #rarity 5
-#req_godismnr 8869 -- Ta'xet
+#req_godismnr 8443 -- Ta'xet
 #req_temple 1
 #req_dominion 1
 #req_mincorpses 1
@@ -18167,19 +18169,21 @@ Wastes or temples with Heat scales may spawn 1D6 Sacred Lions (10% x candles cha
 #diseaseres 100
 #magicboost 0 2
 #beastmaster 5
-#domsummon 6746 -- Sacred Lion
-#batstartsum1d6 6746 -- Sacred Lion
+#domsummon 7760 -- Sacred Lion
+#batstartsum1d6 7760 -- Sacred Lion
 #heat 15
 #firepower 1
 #pathcost 80
 #end
 
-#newmonster 6746 -- Sacred Lion
+#newmonster 7760 -- Sacred Lion
 #copystats 628 -- Lion
 #copyspr 628 -- Lion
 #name "Sacred Lion"
 #descr "The great lion is a large and ferocious lion. This lion is sacred and can be blessed by a priest."
 #holy
+#transformation 0
+#montag 1036
 #end
 
 #newevent
@@ -18194,7 +18198,7 @@ Wastes or temples with Heat scales may spawn 1D6 Sacred Lions (10% x candles cha
 #msg "Lions Appear"
 #notext
 #nolog
-#1d6units 6746 -- Sacred Lion
+#1d6units 7760 -- Sacred Lion
 #end
 
 #newevent
@@ -18209,7 +18213,7 @@ Wastes or temples with Heat scales may spawn 1D6 Sacred Lions (10% x candles cha
 #msg "Lions Appear"
 #notext
 #nolog
-#1d6units 6746 -- Sacred Lion
+#1d6units 7760 -- Sacred Lion
 #end
 
 #newsite 1912
@@ -18724,10 +18728,6 @@ If Valkyries already recruitable, start with a Horn of Vanhalla in treasury (Fly
 #addsite 1956
 #end
 
-#selectmonster 855 -- Helheim Valkyrie
-#magicskill 9 2 -- H2
-#end
-
 #newevent
 #rarity 5
 #req_godismnr 1098 -- Asynja
@@ -18741,7 +18741,12 @@ If Valkyries already recruitable, start with a Horn of Vanhalla in treasury (Fly
 #1d3units 261 -- Valkyrie
 #1d6units 261 -- Valkyrie
 #2d3units 261 -- Valkyrie
-#2com 855 -- Valkyrie
+#com 855 -- Valkyrie
+#holyboost
+#holyboost
+#com 855 -- Valkyrie
+#holyboost
+#holyboost
 #end
 
 #newevent
@@ -18754,7 +18759,12 @@ If Valkyries already recruitable, start with a Horn of Vanhalla in treasury (Fly
 #nation -2
 #msg "##godname## has summoned an entourage of Valkyries to celebrate her coming Ascension! The power has now been drained from the Throne and the summoning cannot be attempted for another year."
 #nolog
-#2com 855 -- Valkyrie
+#com 855 -- Valkyrie
+#holyboost
+#holyboost
+#com 855 -- Valkyrie
+#holyboost
+#holyboost
 #1unit 261 -- Valkyrie
 #1d3units 261 -- Valkyrie
 #1d6units 261 -- Valkyrie
@@ -21056,7 +21066,7 @@ Where Death scales are present additional chance at all spawns, plus has chance 
 #msg "Spawn soulless"
 #notext
 #nolog
-#1d6units 5279 -- Drowned Soulless
+#1d6units 7432 -- Drowned Soulless
 #end
 
 #newevent
@@ -21072,7 +21082,7 @@ Where Death scales are present additional chance at all spawns, plus has chance 
 #msg "Spawn soulless"
 #notext
 #nolog
-#1d6units 5279 -- Drowned Soulless
+#1d6units 7432 -- Drowned Soulless
 #end
 
 #newevent
@@ -22431,11 +22441,6 @@ Cannot start awake
 #domsummon 2630 -- Daeva
 #end
 
-#selectmonster 2630 -- Daeva
-#magicskill 9 1
-#okundeadleader
-#end
-
 #selectmonster 2685 -- Viracocha
 #descr "The Viracocha is a giant of divine heritage. He was the servant of a previous Pantokrator and aided him in the creation of the world. He was given the splendor of the sun, the rage of the storm and the life-bringing rain as tools and was commanded to bring civilization and order to creation. But the splendor of the sun gave the Viracocha hubris and he tried to create men to inhabit the world. He breathed air into stones and created a race of giants. But the stone giants were imbecilic and violent and they threatened other races created by the Pantokrator. The Pantokrator was displeased and took the rain from his servant and drowned the giants with a great flood. The Viracocha was imprisoned for eternity. Now, with the Pantokrator gone, the Viracocha can return and bring splendor to the world and claim it as his. The blessing of the Viraocha will always grant protection from the beating sun and the raging storm in addition to other blessings chosen. He still recalls his stone children and will breathe life into a field of stones to create an army to serve him. Each month the Viracocha can breathe air into more stone statues to bring them to a semblance of life.
 
@@ -23251,9 +23256,9 @@ When Son of the Sea is site searching Underwater, may find Fortress & Lab with 1
 "
 #gcost 240
 #raiseonkill 50
-#raiseshape 5280
-#makemonsters3 5280
-#domsummon 5279
+#raiseshape 7433
+#makemonsters3 7433
+#domsummon 7432
 #armor 196 -- Golden Scale
 #armor 92 -- Enchanted Shield
 #armor 212 -- Magic Crown
@@ -23280,7 +23285,7 @@ When Son of the Sea is site searching Underwater, may find Fortress & Lab with 1
 #1d6units 1801 -- Fomorian Giant
 #end
 
-#newmonster 5279
+#newmonster 7432
 #copystats 1203 -- Unfrozen
 #copyspr 536 -- Damned Buccaneer
 #clearweapons
@@ -23301,7 +23306,7 @@ When Son of the Sea is site searching Underwater, may find Fortress & Lab with 1
 #weapon 10 -- Falchion
 #end 
 
-#newmonster 5280
+#newmonster 7433
 #clear
 #copystats 434 -- Black Servant
 #spr1 "./ExtraPretenders/EEDrowned.tga"
@@ -23450,10 +23455,10 @@ Whenever Kami is at a Throne, worldwide darkness (-3 penalty) will occur next mo
 #rarity 5
 #req_godismnr 3073 -- Kami of the Moon
 #req_godismnr 2737 -- Immortal Coya
-#req_godismnr 7993 -- Mountain Lion
+#req_godismnr 8263 -- Mountain Lion
 #req_godismnr 3388 -- Ilah of the Moon
-#req_godismnr 7993
-#req_godismnr 8937 -- Night Hunter
+#req_godismnr 8263
+#req_godismnr 8353 -- Night Hunter
 #req_owncapital 1
 #req_freesites 1
 #req_nositenbr 1921
@@ -23596,9 +23601,9 @@ Whilst controls Aella, Queen of Storms, spawns size 7 Air Elementals at Temples 
 #newevent
 #rarity 5
 #req_godismnr 3074 -- Kami of Storms
-#req_godismnr 8956 -- Tathagata of Air
+#req_godismnr 8374 -- Tathagata of Air
 #req_targmnr 3074 -- Kami of Storms
-#req_targmnr 8956 -- Tathagata of Air
+#req_targmnr 8374 -- Tathagata of Air
 #req_pregame
 #req_owncapital 1
 #req_freesites 1
@@ -23627,7 +23632,7 @@ Whilst controls Aella, Queen of Storms, spawns size 7 Air Elementals at Temples 
 #newevent
 #rarity 5
 #req_godismnr 3074 -- Kami of Storms
-#req_godismnr 8956 -- Tathagata of Air
+#req_godismnr 8374 -- Tathagata of Air
 #req_pretawake 1
 #req_owncapital 1
 #req_freesites 1
@@ -23813,11 +23818,11 @@ Temples generate a Farm of Plenty site (+0.2% growth), Farm of Plenty sites are 
 #gemprod 6 3
 #godsite 851 -- Farm of Plenty
 #startitem 379 -- Endless bag of wine
-#domsummon 5998 -- Divine Cattle
+#domsummon 8505 -- Divine Cattle
 #diseaseres 100
 #end
 
-#newmonster 5998
+#newmonster 8505
 #copystats 3009 -- Buffalo
 #copyspr 3177 -- Red Cattle
 #name "Divine Cattle"
@@ -24381,7 +24386,7 @@ Each month may gift a Trueshot Longbow to her followers (Candles x 5% chance)
 #newevent
 #rarity 5
 #req_godismnr 3203 -- Titan of the Hunt
-#req_godismnr 7993 -- Mountain Lion
+#req_godismnr 8263 -- Mountain Lion
 #req_targnoitem "Furs of the Hunt"
 #req_targpath1 9 -- Priest
 #nation -2
@@ -24921,10 +24926,10 @@ Capital gains Sacred Mountain (3F1E gems, +100 res, +2 ritual range, Training 10
 #diseaseres 100
 #armor 231 -- Heavy magic robes
 #armor 234 -- Magic headdress
-#batstartsum1 6749 -- Great Green Serpent
+#batstartsum1 10001 -- Great Green Serpent
 #end
 
-#newmonster 6749
+#newmonster 10001
 #copystats 2799 -- Wadjet
 #copyspr 2799 -- Wadjet
 #clearmagic
@@ -25307,11 +25312,6 @@ Will cast Divine Serenity in battles (All enemies must pass MR or be afflicted w
 #onebattlespell 180 -- Divine Serenity
 #end
 
-#selectmonster 3927 -- Vahana
-#prot 18
-#heal
-#end
-
 #selectmonster 4024 -- Mother Mandragora
 #descr "The Mother Mandragora was once a giant of divine heritage born in primordial times. She was given powers over all things growing by a previous Pantokrator. Her blessings and gifts to mankind were numerous and she brought fertility and life to the world. With time the half-men of the wild forests as well as mankind sought comfort in her divine embrace. Jealous of all that would contest his omnipotency the Pantokrator slew his servant and trapped her soul in her mortal remains, overgrown by vines and roots. Now, with the Pantokrator gone, the old decrees are weakening and the vengeful soul of the dead Titan is slowly awakening, reanimating her carcass prison and causing the wild woods to dream the Dark Dream of Vengeance.
 
@@ -25496,7 +25496,7 @@ Forest temples may spawn a Black Centaur each month (10% x candles chance)
 
 ---- DOM 2
 
-#newmonster 8889
+#newmonster 8334
 #copystats 2134 -- Terracotta Soldier
 #clearweapons
 #spr1 "./ExtraPretenders/TerraPrince.tga"
@@ -25525,8 +25525,8 @@ Forts with Production scales may produce Terracotta warriors each month (Each Pr
 #expertleader
 #expertmagicleader
 #moreprod 1
-#domsummon -5192 -- Terracotta Warriors
-#makemonsters5 -5192 -- Terracotta Warriors
+#domsummon -1034 -- Terracotta Warriors
+#makemonsters5 -1034 -- Terracotta Warriors
 #weapon 10 -- Falchion
 #weapon 56 -- Hoof
 #armor 2 --- Shield
@@ -25538,7 +25538,7 @@ Forts with Production scales may produce Terracotta warriors each month (Each Pr
 #homerealm 0
 #end
 
-#newmonster 5593
+#newmonster 7726
 #copystats 2134 -- Terracotta Soldier
 #spr1 "./ExtraPretenders/EETerraShield.tga"
 #spr2 "./ExtraPretenders/EETerraShield2.tga"
@@ -25547,11 +25547,11 @@ Forts with Production scales may produce Terracotta warriors each month (Each Pr
 #descr "A ceramic statue given false life through magic rituals. Terracotta soldiers are highly resistant to fire, but are somewhat brittle if struck by blunt weapons. They are given armor and weapons from the armory and sent to do battle in the name of the Emperor."
 #weapon 1 -- Spear
 #armor 4 -- Tower Shield
-#montag 5192 -- Terracotta
+#montag 1034 -- Terracotta
 #montagweight 2
 #end
 
-#newmonster 5594
+#newmonster 7727
 #copystats 2134 -- Terracotta Soldier
 #clearweapons
 #spr1 "./ExtraPretenders/EETerraGlaive.tga"
@@ -25559,11 +25559,11 @@ Forts with Production scales may produce Terracotta warriors each month (Each Pr
 #name "Terracotta Heavy Footman"
 #descr "A ceramic statue given false life through magic rituals. Terracotta soldiers are highly resistant to fire, but are somewhat brittle if struck by blunt weapons. They are given armor and weapons from the armory and sent to do battle in the name of the Emperor."
 #weapon 308 -- Glaive
-#montag 5192 -- Terracotta
+#montag 1034 -- Terracotta
 #montagweight 2
 #end
 
-#newmonster 5595
+#newmonster 7728
 #copystats 2134 -- Terracotta Soldier
 #clearweapons
 #spr1 "./ExtraPretenders/EETerraHorse.tga"
@@ -25581,10 +25581,10 @@ Forts with Production scales may produce Terracotta warriors each month (Each Pr
 #weapon 10 -- Falchion
 #weapon 56 -- Hoof
 #armor 2 --- Shield
-#montag 5192 -- Terracotta
+#montag 1034 -- Terracotta
 #end
 
-#newmonster 5596
+#newmonster 7729
 #copystats 2134 -- Terracotta Soldier
 #spr1 "./ExtraPretenders/EETerraChariot.tga"
 #spr2 "./ExtraPretenders/EETerraChariot2.tga"
@@ -25599,46 +25599,46 @@ Forts with Production scales may produce Terracotta warriors each month (Each Pr
 #ap 16
 #mapmove 20
 #weapon 10 -- Falchion
-#montag 5192 -- Terracotta
+#montag 1034 -- Terracotta
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 8889 -- Terracotta General
+#req_godismnr 8334 -- Terracotta General
 #req_pregame
 #req_owncapital 1
 #nation -2
 #msg "Terracotta Army"
 #notext
 #nolog
-#1unit 5596 -- Chariot
-#1d3units 5596 -- Chariot
-#1d6units 5595 -- Horsemen
-#2d3units 5594 -- Footmen
-#2d6units 5593 -- Footmen
-#3d3units 5594 -- Footmen
-#com 5595 -- Horseman Commander
+#1unit 7729 -- Chariot
+#1d3units 7729 -- Chariot
+#1d6units 7728 -- Horsemen
+#2d3units 7727 -- Footmen
+#2d6units 7726 -- Footmen
+#3d3units 7727 -- Footmen
+#com 7728 -- Horseman Commander
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 8889 -- Terracotta General
+#req_godismnr 8334 -- Terracotta General
 #req_pregame
 #req_owncapital 1
 #nation -2
 #msg "Terracotta Army"
 #notext
 #nolog
-#1unit 5596 -- Chariot
-#1d3units 5596 -- Chariot
-#1d6units 5595 -- Horsemen
-#2d3units 5594 -- Footmen
-#2d6units 5593 -- Footmen
+#1unit 7729 -- Chariot
+#1d3units 7729 -- Chariot
+#1d6units 7728 -- Horsemen
+#2d3units 7727 -- Footmen
+#2d6units 7726 -- Footmen
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 8889 -- Terracotta General
+#req_godismnr 8334 -- Terracotta General
 #req_land 1
 #req_fort 1
 #req_prod 1
@@ -25649,12 +25649,12 @@ Forts with Production scales may produce Terracotta warriors each month (Each Pr
 #msg "Terracotta spawns"
 #notext
 #nolog
-#1d6units -5192
+#1d6units -1034
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 8889 -- Terracotta General
+#req_godismnr 8334 -- Terracotta General
 #req_land 1
 #req_fort 1
 #req_prod 2
@@ -25665,12 +25665,12 @@ Forts with Production scales may produce Terracotta warriors each month (Each Pr
 #msg "Terracotta spawns"
 #notext
 #nolog
-#1d6units -5192
+#1d6units -1034
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 8889 -- Terracotta General
+#req_godismnr 8334 -- Terracotta General
 #req_land 1
 #req_fort 1
 #req_prod 3
@@ -25681,12 +25681,12 @@ Forts with Production scales may produce Terracotta warriors each month (Each Pr
 #msg "Terracotta spawns"
 #notext
 #nolog
-#1d6units -5192
+#1d6units -1034
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 8889 -- Terracotta General
+#req_godismnr 8334 -- Terracotta General
 #req_land 1
 #req_fort 1
 #req_prod 4
@@ -25697,12 +25697,12 @@ Forts with Production scales may produce Terracotta warriors each month (Each Pr
 #msg "Terracotta spawns"
 #notext
 #nolog
-#1d6units -5192
+#1d6units -1034
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 8889 -- Terracotta General
+#req_godismnr 8334 -- Terracotta General
 #req_land 1
 #req_fort 1
 #req_prod 5
@@ -25713,12 +25713,12 @@ Forts with Production scales may produce Terracotta warriors each month (Each Pr
 #msg "Terracotta spawns"
 #notext
 #nolog
-#1d6units -5192
+#1d6units -1034
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 8889 -- Terracotta General
+#req_godismnr 8334 -- Terracotta General
 #req_land 1
 #req_fort 1
 #req_prod 3
@@ -25729,10 +25729,10 @@ Forts with Production scales may produce Terracotta warriors each month (Each Pr
 #msg "Terracotta commander spawns"
 #notext
 #nolog
-#com 5595
+#com 7728
 #end
 
-#newmonster 5063
+#newmonster 8324
 #copystats 174 -- Triton
 #spr1 "./ExtraPretenders/MerGod.tga"
 #spr2 "./ExtraPretenders/MerGod2.tga"
@@ -25792,7 +25792,7 @@ Each month whilst researching may create a Pearl of Wisdom (Candles x 5% chance,
 
 #newevent
 #rarity 5
-#req_godismnr 5063 -- Sage of the Sea
+#req_godismnr 8324 -- Sage of the Sea
 #req_pregame
 #req_fort 1
 #req_owncapital 1
@@ -25807,8 +25807,8 @@ Each month whilst researching may create a Pearl of Wisdom (Candles x 5% chance,
 
 #newevent
 #rarity 5
-#req_godismnr 5063 -- Sage of the Sea
-#req_targmnr 5063 -- Sage of the Sea
+#req_godismnr 8324 -- Sage of the Sea
+#req_targmnr 8324 -- Sage of the Sea
 #req_land 0
 #req_targorder 4 -- Researching
 #req_dominion 1
@@ -25821,7 +25821,7 @@ Each month whilst researching may create a Pearl of Wisdom (Candles x 5% chance,
 #magicitem 9
 #end
 
-#newmonster 8891
+#newmonster 8336
 #spr1 "./ExtraPretenders/Gorynch.tga"
 #spr2 "./ExtraPretenders/Gorynch2.tga"
 #name "Zmey Gorynch"
@@ -25875,13 +25875,13 @@ When Zmey Gorynch is at a Throne will gain 5-30 Air gems, 2 Sylph commanders, 1 
 #startdom 2
 #pathcost 20
 #homerealm 0
-#shapechange 8892
+#shapechange 8337
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 8891 -- Gorynch
-#req_godismnr 8892 -- Gorynch
+#req_godismnr 8336 -- Gorynch
+#req_godismnr 8337 -- Gorynch
 #req_pregame
 #req_owncapital 1
 #req_land 1
@@ -25894,10 +25894,10 @@ When Zmey Gorynch is at a Throne will gain 5-30 Air gems, 2 Sylph commanders, 1 
 
 #newevent
 #rarity 5
-#req_godismnr 8891 -- Zmey Gorynch
-#req_godismnr 8892 -- Gorynch
-#req_targmnr 8891 -- Zmey Gorynch
-#req_targmnr 8892 -- Zmey Gorynch
+#req_godismnr 8336 -- Zmey Gorynch
+#req_godismnr 8337 -- Gorynch
+#req_targmnr 8336 -- Zmey Gorynch
+#req_targmnr 8337 -- Zmey Gorynch
 #req_thronesite 1
 #req_nositenbr 1887
 #req_mindef 1
@@ -25921,8 +25921,8 @@ When Zmey Gorynch is at a Throne will gain 5-30 Air gems, 2 Sylph commanders, 1 
 
 #newevent
 #rarity 5
-#req_godismnr 8891 -- Zmey Gorynch
-#req_godismnr 8892 -- Gorynch
+#req_godismnr 8336 -- Zmey Gorynch
+#req_godismnr 8337 -- Gorynch
 #nation -2
 #req_pop0ok
 #msg "##godname## has performed a great weather ritual channeling the power of the Throne, calling many weather spirits to serve the True God."
@@ -25944,7 +25944,7 @@ When Zmey Gorynch is at a Throne will gain 5-30 Air gems, 2 Sylph commanders, 1 
 #removesite 1887
 #end
 
-#newmonster 8892
+#newmonster 8337
 #copystats 1917 -- Knyaz
 #copyspr 1917 -- Knyaz
 #clearweapons
@@ -25985,10 +25985,10 @@ When Zmey Gorynch is at a Throne will gain 5-30 Air gems, 2 Sylph commanders, 1 
 #armor 119 -- Leather Cap
 #startdom 2
 #pathcost 20
-#shapechange 8891
+#shapechange 8336
 #end
 
-#newmonster 7991
+#newmonster 8261
 #clear
 #spr1 "./ExtraPretenders/BrownBear.tga"
 #spr2 "./ExtraPretenders/BrownBear2.tga"
@@ -26054,9 +26054,9 @@ Bear Tribe provinces always contain a temple and provide double income
 #newevent
 #rarity 5
 #req_godismnr 3926 -- Devi of Strength
-#req_godismnr 7991 -- Brown Bear
+#req_godismnr 8261 -- Brown Bear
 #req_targmnr 3926 -- Devi of Strength
-#req_targmnr 7991 -- Brown Bear
+#req_targmnr 8261 -- Brown Bear
 #req_pregame
 #req_owncapital 1
 #req_freesites 1
@@ -26070,7 +26070,7 @@ Bear Tribe provinces always contain a temple and provide double income
 
 #newevent
 #rarity 5
-#req_godismnr 7991 -- Brown Bear
+#req_godismnr 8261 -- Brown Bear
 #req_pregame
 #req_owncapital 1
 #nation -2
@@ -26099,7 +26099,7 @@ Bear Tribe provinces always contain a temple and provide double income
 #newevent
 #rarity 5
 #req_godismnr 3926 -- Devi of Strength
-#req_godismnr 7991 -- Brown Bear
+#req_godismnr 8261 -- Brown Bear
 #req_pretawake 1
 #req_owncapital 1
 #req_freesites 1
@@ -26114,8 +26114,8 @@ Bear Tribe provinces always contain a temple and provide double income
 
 #newevent
 #rarity 5
-#req_godismnr 5061 -- Spirit Bear
-#req_godismnr 7991 -- Brown Bear
+#req_godismnr 8372 -- Spirit Bear
+#req_godismnr 8261 -- Brown Bear
 #req_poptype 79
 #nation -2
 #req_pop0ok
@@ -26125,7 +26125,7 @@ Bear Tribe provinces always contain a temple and provide double income
 #taxboost 100
 #end
 
-#newmonster 7992
+#newmonster 8262
 #clear
 #copystats 2785 -- Solar Eagle
 #clearmagic
@@ -26171,15 +26171,15 @@ Summons Sacred Eagles up to half Dominion candles
 #spiritsight
 #goodleader
 #shockres 15
-#domsummon2 7954 -- Sacred Eagle
-#batstartsum2d6 7954 -- Sacred Eagle
+#domsummon2 6832 -- Sacred Eagle
+#batstartsum2d6 6832 -- Sacred Eagle
 #twiceborn 1388 -- Ziz
 #pathcost 80
 #startdom 2
 #homerealm 0
 #end
 
-#newmonster 7953
+#newmonster 6831
 #copystats 3009 -- Buffalo
 #spr1 "./ExtraPretenders/Bison.tga"
 #spr2 "./ExtraPretenders/Bison2.tga"
@@ -26189,7 +26189,7 @@ Summons Sacred Eagles up to half Dominion candles
 #transformation 0
 #end
 
-#newmonster 7954
+#newmonster 6832
 #copystats 1380 -- Great Hawk
 #spr1 "./ExtraPretenders/BaldEagleSmall.tga"
 #spr2 "./ExtraPretenders/BaldEagleSmall2.tga"
@@ -26205,7 +26205,7 @@ Summons Sacred Eagles up to half Dominion candles
 #transformation 0
 #end
 
-#newmonster 7993
+#newmonster 8263
 #clear
 #spr1 "./ExtraPretenders/BigCougar.tga"
 #spr2 "./ExtraPretenders/BigCougar2.tga"
@@ -26255,7 +26255,7 @@ Priests gain Furs of the Hunt (Gain stealth)
 #homerealm 0
 #end
 
-#newmonster 8899
+#newmonster 8343
 #name "Traveler"
 #spr1 "./ExtraPretenders/Hermes.tga"
 #spr2 "./ExtraPretenders/Hermes2.tga"
@@ -26309,8 +26309,8 @@ May grant his followers winged shoes or boots of quickness each month (candles x
 
 #newevent
 #rarity 5
-#req_godismnr 8899 -- Hermes
-#req_monster 8899 -- Hermes
+#req_godismnr 8343 -- Hermes
+#req_monster 8343 -- Hermes
 #req_dominion 1
 #req_domchance 5
 #nation -2
@@ -26322,8 +26322,8 @@ May grant his followers winged shoes or boots of quickness each month (candles x
 
 #newevent
 #rarity 5
-#req_godismnr 8899 -- Hermes
-#req_monster 8899 -- Hermes
+#req_godismnr 8343 -- Hermes
+#req_monster 8343 -- Hermes
 #req_dominion 1
 #req_domchance 5
 #nation -2
@@ -26333,7 +26333,7 @@ May grant his followers winged shoes or boots of quickness each month (candles x
 #magicitem 9
 #end
 
-#newmonster 8904
+#newmonster 8348
 #name "First Valkyrie"
 #spr1 "./ExtraPretenders/FirstValk.tga"
 #spr2 "./ExtraPretenders/FirstValk2.tga"
@@ -26388,7 +26388,7 @@ Priests gain Charm of Vanhalla (Grants Lightning Resistance 15, Flight and Quick
 
 #newevent
 #rarity 5
-#req_godismnr 8904 -- First Valkyrie
+#req_godismnr 8348 -- First Valkyrie
 #req_targpath1 9
 #req_targnoitem "Charm of Vanhalla"
 #nation -2
@@ -26401,7 +26401,7 @@ Priests gain Charm of Vanhalla (Grants Lightning Resistance 15, Flight and Quick
 
 #newevent
 #rarity 5
-#req_godismnr 8904 -- First Valkyrie
+#req_godismnr 8348 -- First Valkyrie
 #req_targpath1 9
 #req_targnoitem "Charm of Vanhalla"
 #nation -2
@@ -26414,7 +26414,7 @@ Priests gain Charm of Vanhalla (Grants Lightning Resistance 15, Flight and Quick
 
 #newevent
 #rarity 5
-#req_godismnr 8904 -- First Valkyrie
+#req_godismnr 8348 -- First Valkyrie
 #req_targpath1 9
 #req_targnoitem "Charm of Vanhalla"
 #nation -2
@@ -26425,7 +26425,7 @@ Priests gain Charm of Vanhalla (Grants Lightning Resistance 15, Flight and Quick
 #addequip 9
 #end
 
-#newmonster 8905
+#newmonster 8349
 #name "Great Gull of the Sea"
 #spr1 "./ExtraPretenders/Seagull.tga"
 #spr2 "./ExtraPretenders/Seagull2.tga"
@@ -26490,7 +26490,7 @@ Prophet gains +1W per month (Max W4)
 
 #newevent
 #rarity 5
-#req_godismnr 8905
+#req_godismnr 8349
 #nation -2
 #req_pop0ok
 #req_coast 1
@@ -26505,7 +26505,7 @@ Prophet gains +1W per month (Max W4)
 
 #newevent
 #rarity 5
-#req_godismnr 8905 -- Gull
+#req_godismnr 8349 -- Gull
 #req_targnopath4 2
 #req_targprophet 1
 #nation -2
@@ -26515,11 +26515,7 @@ Prophet gains +1W per month (Max W4)
 #waterboost -1
 #end
 
-#selectmonster 3083 -- Sacred Hound
-#darkvision 50
-#end
-
-#newmonster 6811
+#newmonster 8352
 #copystats 2795 -- Dog of the Underworld
 #clearmagic
 #spr1 "./ExtraPretenders/XolotlTC.tga"
@@ -26564,7 +26560,7 @@ Whilst has more than 600hp casts Darkness in battles and temple forts may summon
 #com 329 -- Spectral Mage
 #end
 
-#newmonster 6812
+#newmonster 8351
 #copystats 2795 -- Dog of the Underworld
 #clearmagic
 #spr1 "./ExtraPretenders/XolotlTB.tga"
@@ -26594,7 +26590,7 @@ Whilst has more than 600hp casts Darkness in battles and temples may summon D3 s
 #homerealm 0
 #end
 
-#newmonster 6813
+#newmonster 8350
 #copystats 2795 -- Dog of the Underworld
 #clearmagic
 #spr1 "./ExtraPretenders/Xolotl.tga"
@@ -26620,7 +26616,7 @@ Whilst has more than 600hp casts Darkness in battles and temples may summon D3 s
 #growhp 300
 #end
 
-#newmonster 8907
+#newmonster 8351
 #copystats 2786 -- Celestial Gryphon
 #clearweapons
 #clearmagic
@@ -26644,8 +26640,8 @@ Will cause Hurricanes to strike enemy fort provinces (5% x candles in capital ch
 #stormimmune
 #magicskill 1 1 -- Air 1
 #magicskill 6 1
-#domsummon2 5677 -- Centonmixzoa
-#batstartsum1d6 5677 -- Centonmixzoa
+#domsummon2 7799 -- Centonmixzoa
+#batstartsum1d6 7799 -- Centonmixzoa
 #homerealm 6 -- MesoAmerica
 #diseaseres 100
 #woundfend 5
@@ -26653,8 +26649,8 @@ Will cause Hurricanes to strike enemy fort provinces (5% x candles in capital ch
 
 #newevent
 #rarity 5
-#req_godisnotmnr 8907 -- Feathered Serpent
-#req_mnr 8907 -- Feathered Serpent
+#req_godisnotmnr 8351 -- Feathered Serpent
+#req_mnr 8351 -- Feathered Serpent
 #req_land 1
 #req_fort 1
 #req_varpos 326 -- Global Hurricanes
@@ -26668,7 +26664,7 @@ Will cause Hurricanes to strike enemy fort provinces (5% x candles in capital ch
 
 #newevent
 #rarity 5
-#req_godismnr 8907 -- Feathered Serpent
+#req_godismnr 8351 -- Feathered Serpent
 #req_land 1
 #req_owncapital 1
 #nation -2
@@ -26682,8 +26678,8 @@ Will cause Hurricanes to strike enemy fort provinces (5% x candles in capital ch
 
 #newevent
 #rarity 5
-#req_godismnr 8907 -- Feathered Serpent
-#req_mnr 8907 -- Feathered Serpent
+#req_godismnr 8351 -- Feathered Serpent
+#req_mnr 8351 -- Feathered Serpent
 #req_land 1
 #req_owncapital 1
 #nation -2
@@ -26696,8 +26692,8 @@ Will cause Hurricanes to strike enemy fort provinces (5% x candles in capital ch
 
 #newevent
 #rarity 5
-#req_godismnr 8907 -- Feathered Serpent
-#req_mnr 8907 -- Feathered Serpent
+#req_godismnr 8351 -- Feathered Serpent
+#req_mnr 8351 -- Feathered Serpent
 #req_land 1
 #req_owncapital 1
 #nation -2
@@ -26712,8 +26708,8 @@ Will cause Hurricanes to strike enemy fort provinces (5% x candles in capital ch
 
 #newevent
 #rarity 13
-#req_godismnr 8907 -- Feathered Serpent
-#req_mnr 8907 -- Feathered Serpent
+#req_godismnr 8351 -- Feathered Serpent
+#req_mnr 8351 -- Feathered Serpent
 #req_land 1
 #req_owncapital 1
 #nation -2
@@ -26724,7 +26720,7 @@ Will cause Hurricanes to strike enemy fort provinces (5% x candles in capital ch
 #incvar 326 -- Global Hurricanes
 #end
 
-#newmonster 5677
+#newmonster 7799
 #copystats 295 -- Sacred Serpent
 #clearweapons
 #spr1 "./ExtraPretenders/EECloudSerp.tga"
@@ -26753,7 +26749,7 @@ Will cause Hurricanes to strike enemy fort provinces (5% x candles in capital ch
 
 #newevent
 #rarity 5
-#req_godismnr 8907 -- Feathered Serpent
+#req_godismnr 8351 -- Feathered Serpent
 #req_land 1
 #nation -2
 #req_pop0ok
@@ -26766,7 +26762,7 @@ Will cause Hurricanes to strike enemy fort provinces (5% x candles in capital ch
 #holyboost -1
 #end
 
-#newmonster 8936
+#newmonster 8630
 #name "Island Crab"
 #spr1 "./ExtraPretenders/IslandCrab.tga"
 #spr2 "./ExtraPretenders/IslandCrab2.tga"
@@ -26810,7 +26806,7 @@ Capital gains Temple of the Crab providing sacred Heikegani recruits
 #homerealm 9 -- Deeps
 #end
 
-#newmonster 6205
+#newmonster 8029
 #clear
 #copystats 2102 -- Crab Warrior
 #clearweapons
@@ -26839,12 +26835,12 @@ Capital gains Temple of the Crab providing sacred Heikegani recruits
 #level 0
 #rarity 5
 #look 6
-#homemon 6205 -- Heikegani
+#homemon 8029 -- Heikegani
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 8936
+#req_godismnr 8630
 #req_pregame
 #req_owncapital 1
 #req_land 0
@@ -26860,7 +26856,7 @@ Capital gains Temple of the Crab providing sacred Heikegani recruits
 
 #newevent
 #rarity 5
-#req_godismnr 8936 -- Island Crab
+#req_godismnr 8630 -- Island Crab
 #req_land 0
 #req_temple 1
 #req_dominion 1
@@ -26875,7 +26871,7 @@ Capital gains Temple of the Crab providing sacred Heikegani recruits
 
 #newevent
 #rarity 5
-#req_godismnr 8936 -- Island Crab
+#req_godismnr 8630 -- Island Crab
 #req_land 1
 #req_coast 1
 #req_temple 1
@@ -26891,7 +26887,7 @@ Capital gains Temple of the Crab providing sacred Heikegani recruits
 
 #newevent
 #rarity 5
-#req_godismnr 8936 -- Island Crab
+#req_godismnr 8630 -- Island Crab
 #req_land 0
 #req_temple 1
 #req_dominion 1
@@ -26901,12 +26897,12 @@ Capital gains Temple of the Crab providing sacred Heikegani recruits
 #msg "Heikegani Appears"
 #notext
 #nolog
-#1unit 6205 -- Heikegani
+#1unit 8029 -- Heikegani
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 8936 -- Island Crab
+#req_godismnr 8630 -- Island Crab
 #req_land 1
 #req_coast 1
 #req_temple 1
@@ -26917,10 +26913,10 @@ Capital gains Temple of the Crab providing sacred Heikegani recruits
 #msg "Heikegani Appears"
 #notext
 #nolog
-#1unit 6205 -- Heikegani
+#1unit 8029 -- Heikegani
 #end
 
-#newmonster 8937
+#newmonster 8353
 #name "Night Hunter"
 #spr1 "./ExtraPretenders/NightHunter.tga"
 #spr2 "./ExtraPretenders/NightHunter2.tga"
@@ -26980,9 +26976,9 @@ When Night Hunter Blood Hunts, unrest is reduced by 50 in province
 
 #newevent
 #rarity 5
-#req_godismnr 8937
+#req_godismnr 8353
 #nation -2
-#req_targmnr 8937
+#req_targmnr 8353
 #req_targorder 8 -- blood hunt
 #msg "Night Hunter Unrest"
 #notext
@@ -26992,8 +26988,8 @@ When Night Hunter Blood Hunts, unrest is reduced by 50 in province
 
 #newevent
 #rarity 5
-#req_godismnr 8937 -- Night Hunter
-#req_godismnr 5055 -- Megalodon
+#req_godismnr 8353 -- Night Hunter
+#req_godismnr 8370 -- Megalodon
 #req_targpath2 9 -- Priest
 #req_targnopath1 8 -- No B
 #nation -2
@@ -27006,8 +27002,8 @@ When Night Hunter Blood Hunts, unrest is reduced by 50 in province
 
 #newevent
 #rarity 5
-#req_godismnr 8937 -- Night Hunter
-#req_godismnr 5055 -- Megalodon
+#req_godismnr 8353 -- Night Hunter
+#req_godismnr 8370 -- Megalodon
 #req_targpath2 9 -- Priest
 #req_targnopath1 8 -- No B
 #nation -2
@@ -27020,8 +27016,8 @@ When Night Hunter Blood Hunts, unrest is reduced by 50 in province
 
 #newevent
 #rarity 5
-#req_godismnr 8937 -- Night Hunter
-#req_godismnr 5055 -- Megalodon
+#req_godismnr 8353 -- Night Hunter
+#req_godismnr 8370 -- Megalodon
 #req_targpath2 9 -- Priest
 #req_targnopath1 8 -- No B
 #nation -2
@@ -27351,11 +27347,11 @@ Provinces containing at least 5 White Tigers gain +1 Luck scale & Growth scale e
 #beastmaster 3
 #woundfend 5
 #diseaseres 100
-#batstartsum1d6 5380 -- White Tiger
-#domsummon 5380 -- White Tiger
+#batstartsum1d6 7528 -- White Tiger
+#domsummon 7528 -- White Tiger
 #end
 
-#newmonster 5380
+#newmonster 7528
 #spr1 "./ExtraPretenders/EEWTiger.tga"
 #spr2 "./ExtraPretenders/EEWTiger2.tga"
 #name "White Tiger"
@@ -27395,7 +27391,7 @@ Provinces containing at least 5 White Tigers gain +1 Luck scale & Growth scale e
 #req_unluck -2
 #nation -2
 #req_pop0ok
-#req_5monsters 5380 -- White Tigers
+#req_5monsters 7528 -- White Tigers
 #msg "Luck & Growth increase"
 #notext
 #nolog
@@ -27409,7 +27405,7 @@ Provinces containing at least 5 White Tigers gain +1 Luck scale & Growth scale e
 #req_death -2
 #nation -2
 #req_pop0ok
-#req_5monsters 5380 -- White Tigers
+#req_5monsters 7528 -- White Tigers
 #msg "Luck & Growth increase"
 #notext
 #nolog
@@ -27494,7 +27490,7 @@ Dominion increases permanent income and population in Growth scales (10% x candl
 #decscale 3 -- +Growth
 #end
 
-#newmonster 8942
+#newmonster 8358
 #name "Saltwater Serpent"
 #spr1 "./ExtraPretenders/PrimordialSerpent.tga"
 #spr2 "./ExtraPretenders/PrimordialSerpent2.tga"
@@ -27537,10 +27533,10 @@ Rarely summons a Basmu or Child of Tiamat
 #darkvision 50
 #diseaseres 100
 #summon3 -5172 -- Sea Beast
-#domsummon2 5917 -- Serpopard
-#domsummon20 5536 -- Basmu
-#makemonsters1 5435 -- Child of Tiamat
-#raredomsummon 5435 -- Child of Tiamat
+#domsummon2 7994 -- Serpopard
+#domsummon20 7626 -- Basmu
+#makemonsters1 7582 -- Child of Tiamat
+#raredomsummon 7582 -- Child of Tiamat
 #itemslots 786432 -- 2 misc
 #maxage 1000
 #startage 500
@@ -27549,7 +27545,7 @@ Rarely summons a Basmu or Child of Tiamat
 #homerealm 9 -- Deeps
 #end
 
-#newmonster 5302
+#newmonster 7455
 #copystats 403 -- Horned Serpent
 #spr1 "./ExtraPretenders/EESnake.tga"
 #spr2 "./ExtraPretenders/EESnake2.tga"
@@ -27566,7 +27562,7 @@ Rarely summons a Basmu or Child of Tiamat
 #aquatic
 #end
 
-#newmonster 5435
+#newmonster 7582
 #copystats 322
 #clearweapons
 #cleararmor
@@ -27598,7 +27594,7 @@ Eventually Tiamat was cut asunder and her children scattered to the four corners
 #weapon 462 -- Venomous Bite
 #end
 
-#newmonster 5485
+#newmonster 7625
 #name "Basmu"
 #spr1 "./ExtraPretenders/EEBasmu.tga"
 #spr2 "./ExtraPretenders/EEBasmu2.tga"
@@ -27634,11 +27630,11 @@ Eventually Tiamat was cut asunder and her children scattered to the four corners
 #poisonskin 50
 #fear 5
 #supplybonus 10
-#watershape 5536 -- Basmu
+#watershape 7626 -- Basmu
 #nametype 151 -- ur male
 #end
 
-#newmonster 5536
+#newmonster 7626
 #name "Basmu"
 #spr1 "./ExtraPretenders/EEBasmu.tga"
 #spr2 "./ExtraPretenders/EEBasmu2.tga"
@@ -27674,11 +27670,11 @@ Eventually Tiamat was cut asunder and her children scattered to the four corners
 #poisonskin 50
 #fear 5
 #supplybonus 10
-#landshape 5485 -- Basmu
+#landshape 7625 -- Basmu
 #nametype 151 -- ur male
 #end
 
-#newmonster 5917
+#newmonster 7994
 #copystats 514 -- Kithaironic Lion
 #clearweapons
 #spr1 "./ExtraPretenders/EESerpopard.tga"
@@ -27700,7 +27696,7 @@ Eventually Tiamat was cut asunder and her children scattered to the four corners
 #weapon 29 -- Claw
 #end
 
-#newmonster 8943
+#newmonster 8359
 #name "Great Water Lizard"
 #spr1 "./ExtraPretenders/WaterLizard.tga"
 #spr2 "./ExtraPretenders/WaterLizard2.tga"
@@ -27751,7 +27747,7 @@ Coastal temples may summon Deep Ones & Deep One fanatics each month (Candles x 1
 
 #newevent
 #rarity 5
-#req_godismnr 8943 -- Great Water Lizard
+#req_godismnr 8359 -- Great Water Lizard
 #req_temple 1
 #req_coast 1
 #req_land 1
@@ -27768,7 +27764,7 @@ Coastal temples may summon Deep Ones & Deep One fanatics each month (Candles x 1
 
 #newevent
 #rarity 5
-#req_godismnr 8943 -- Great Water Lizard
+#req_godismnr 8359 -- Great Water Lizard
 #req_temple 1
 #req_coast 1
 #req_land 1
@@ -27784,7 +27780,7 @@ Coastal temples may summon Deep Ones & Deep One fanatics each month (Candles x 1
 
 #newevent
 #rarity 5
-#req_godismnr 8943 -- Great Water Lizard
+#req_godismnr 8359 -- Great Water Lizard
 #req_owncapital 1
 #req_pregame
 #nation -2
@@ -27800,7 +27796,7 @@ Coastal temples may summon Deep Ones & Deep One fanatics each month (Candles x 1
 #2com 3096 -- Mage of the Deep
 #end
 
-#newmonster 8944
+#newmonster 8360
 #name "Piscean"
 #spr1 "./ExtraPretenders/Barracuda.tga"
 #spr2 "./ExtraPretenders/Barracuda2.tga"
@@ -27853,8 +27849,8 @@ Each month may create a Fish Scale Armor (5% chance per candle, Casts Liquid Bod
 
 #newevent
 #rarity 5
-#req_godismnr 8944 -- Piscean
-#req_monster 8944 -- Piscean
+#req_godismnr 8360 -- Piscean
+#req_monster 8360 -- Piscean
 #req_land 0
 #req_dominion 1
 #nation -2
@@ -27867,8 +27863,8 @@ Each month may create a Fish Scale Armor (5% chance per candle, Casts Liquid Bod
 
 #newevent
 #rarity 5
-#req_godismnr 8944 -- Piscean
-#req_monster 8944 -- Piscean
+#req_godismnr 8360 -- Piscean
+#req_monster 8360 -- Piscean
 #req_land 0
 #req_dominion 1
 #nation -2
@@ -27881,7 +27877,7 @@ Each month may create a Fish Scale Armor (5% chance per candle, Casts Liquid Bod
 
 #newevent
 #rarity 5
-#req_godismnr 8944 -- Piscean
+#req_godismnr 8360 -- Piscean
 #req_land 0
 #req_fort 1
 #req_dominion 1
@@ -27896,8 +27892,8 @@ Each month may create a Fish Scale Armor (5% chance per candle, Casts Liquid Bod
 
 #newevent
 #rarity 5
-#req_godismnr 8944 -- Piscean
-#req_monster 8944 -- Piscean
+#req_godismnr 8360 -- Piscean
+#req_monster 8360 -- Piscean
 #req_land 0
 #nation -2
 #msg "Taxboost"
@@ -27908,7 +27904,7 @@ Each month may create a Fish Scale Armor (5% chance per candle, Casts Liquid Bod
 
 #newevent
 #rarity 5
-#req_godismnr 8944 -- Piscean
+#req_godismnr 8360 -- Piscean
 #req_land 1
 #req_coast 1
 #req_dominion 1
@@ -27920,7 +27916,7 @@ Each month may create a Fish Scale Armor (5% chance per candle, Casts Liquid Bod
 #taxboost 20
 #end
 
-#newmonster 8945
+#newmonster 8361
 #name "Divine Turtle"
 #spr1 "./ExtraPretenders/Turtle.tga"
 #spr2 "./ExtraPretenders/Turtle2.tga"
@@ -27958,7 +27954,7 @@ When Turtle is at a Throne on land will gain 5-30 Water gems, 3 Wind Masters (A2
 #female
 #darkvision 50
 #diseaseres 100
-#landshape 8946
+#landshape 8362
 #domsummon 1291 -- Turtle Warriors
 #makemonsters1 1234 -- Asp Turtle
 #itemslots 786432 -- 2 misc
@@ -27972,8 +27968,8 @@ When Turtle is at a Throne on land will gain 5-30 Water gems, 3 Wind Masters (A2
 
 #newevent
 #rarity 5
-#req_godismnr 8945 -- Turtle
-#req_targmnr 8945 -- Turtle
+#req_godismnr 8361 -- Turtle
+#req_targmnr 8361 -- Turtle
 #req_land 0
 #req_thronesite 1
 #req_nositenbr 1887
@@ -28007,7 +28003,7 @@ When Turtle is at a Throne on land will gain 5-30 Water gems, 3 Wind Masters (A2
 #end
 
 
-#newmonster 8946
+#newmonster 8362
 #name "Divine Turtle"
 #spr1 "./ExtraPretenders/TurtleLand.tga"
 #spr2 "./ExtraPretenders/TurtleLand2.tga"
@@ -28046,7 +28042,7 @@ When Turtle is at a Throne on land will gain 5-30 Water gems, 3 Wind Masters (A2
 #darkvision 50
 #diseaseres 100
 #domsummon 1292 -- Turtle Warriors
-#watershape 8945
+#watershape 8361
 #itemslots 786432 -- 2 misc
 #twiceborn 1235 -- Leviathan
 #maxage 1000
@@ -28057,8 +28053,8 @@ When Turtle is at a Throne on land will gain 5-30 Water gems, 3 Wind Masters (A2
 
 #newevent
 #rarity 5
-#req_godismnr 8946 -- Turtle Land
-#req_targmnr 8946 -- Turtle Land
+#req_godismnr 8362 -- Turtle Land
+#req_targmnr 8362 -- Turtle Land
 #req_land 1
 #req_thronesite 1
 #req_nositenbr 1887
@@ -28091,7 +28087,7 @@ When Turtle is at a Throne on land will gain 5-30 Water gems, 3 Wind Masters (A2
 #removesite 1887
 #end
 
-#newmonster 8947
+#newmonster 7999
 #name "Void Larva"
 #spr1 "./ExtraPretenders/VoidLarva.tga"
 #spr2 "./ExtraPretenders/VoidLarva2.tga"
@@ -28156,7 +28152,7 @@ Moves around the battlefield randomly and may horror mark attackers
 
 #newevent
 #rarity 5
-#req_godismnr 8947 -- Void Larva
+#req_godismnr 7999 -- Void Larva
 #req_targnoitem "Void Aura"
 #nation -2
 #req_pop0ok
@@ -28166,7 +28162,7 @@ Moves around the battlefield randomly and may horror mark attackers
 #addequip 9
 #end
 
-#newmonster 8948
+#newmonster 8363
 #name "Formless One"
 #spr1 "./ExtraPretenders/Formless.tga"
 #spr2 "./ExtraPretenders/Formless2.tga"
@@ -28225,7 +28221,7 @@ In battles will grants all friendly sacred magic beings present +10% Regeneratio
 #pathcost 80
 #end
 
-#newmonster 8954 -- First Mushussu
+#newmonster 8367 -- First Mushussu
 #spr1 "./ExtraPretenders/Firstsirrush.tga"
 #spr2 "./ExtraPretenders/Firstsirrush2.tga"
 #name "First Mushussu"
@@ -28335,7 +28331,7 @@ Temples may spawn 1D3 Giant Spiders and 1 Great Spider each month (Candles x 10%
 #nolog
 #end
 
-#newmonster 5050
+#newmonster 8369
 #name "Brazen Bull"
 #spr1 "./ExtraPretenders/BrazenBull.tga"
 #spr2 "./ExtraPretenders/BrazenBull2.tga"
@@ -28386,7 +28382,7 @@ Candles x 1% chance each month site will come alive & spawn Brazen Bull commande
 #startdom 2
 #end
 
-#newmonster 6129
+#newmonster 8167
 #name "Brazen Bull"
 #nametype 149 --rephaim
 #spr1 "./ExtraPretenders/Brazen_Bull_1.tga"
@@ -28462,7 +28458,7 @@ Candles x 1% chance each month site will come alive & spawn Brazen Bull commande
 
 #newevent
 #rarity 5
-#req_godismnr 5050 -- Brazen Bull
+#req_godismnr 8369 -- Brazen Bull
 #req_land 1
 #req_temple 1
 #req_fort 1
@@ -28492,7 +28488,7 @@ Candles x 1% chance each month site will come alive & spawn Brazen Bull commande
 
 #newevent
 #rarity 5
-#req_godismnr 5050 -- Brazen Bull
+#req_godismnr 8369 -- Brazen Bull
 #req_land 1
 #req_temple 1
 #req_site 1
@@ -28501,12 +28497,12 @@ Candles x 1% chance each month site will come alive & spawn Brazen Bull commande
 #req_dominion 1
 #req_domchance 1
 #msg "During a blood rite the Brazen Bull miraculously came alive! It now bellows hellish flames and calls for more sacrifices.[Brazen Bull]"
-#com 6129 -- Brazen Bull
+#com 8167 -- Brazen Bull
 #removesite 1972
 #addsite 1973
 #end
 
-#newmonster 5055
+#newmonster 8370
 #name "Megalodon"
 #spr1 "./ExtraPretenders/Megalodon.tga"
 #spr2 "./ExtraPretenders/Megalodon2.tga"
@@ -28558,7 +28554,7 @@ Shark Tribe provinces always contain a temple and provide double income
 
 #newevent
 #rarity 5
-#req_godismnr 5055
+#req_godismnr 8370
 #req_poptype 91
 #nation -2
 #msg "The local Shark Tribe venerate their true God and have donated much gold to the treasury."
@@ -28569,7 +28565,7 @@ Shark Tribe provinces always contain a temple and provide double income
 
 #newevent
 #rarity 5
-#req_godismnr 5055
+#req_godismnr 8370
 #req_poptype 92
 #nation -2
 #msg "The local Shark Tribe venerate their true God and have donated much gold to the treasury."
@@ -28610,7 +28606,7 @@ Shark Tribe provinces always contain a temple and provide double income
 
 #newevent
 #rarity 5
-#req_godismnr 5055 -- Megalodon
+#req_godismnr 8370 -- Megalodon
 #req_site 1
 #req_land 0
 #req_temple 1
@@ -28668,7 +28664,7 @@ Shark Tribe provinces always contain a temple and provide double income
 #xpshape 75
 #end
 
-#newmonster 5059
+#newmonster 8371
 #name "Ruk"
 #spr1 "./ExtraPretenders/Ruk.tga"
 #spr2 "./ExtraPretenders/Ruk2.tga"
@@ -28726,8 +28722,8 @@ Hatchling will grow into a Ruk
 
 #newevent
 #rarity 5
-#req_godismnr 5059
-#req_monster 5059
+#req_godismnr 8371
+#req_monster 8371
 #req_owncapital 1
 #req_nositenbr 1982
 #nation -2
@@ -28740,8 +28736,8 @@ Hatchling will grow into a Ruk
 
 #newevent
 #rarity 5
-#req_godismnr 5059
-#req_monster 5059
+#req_godismnr 8371
+#req_monster 8371
 #req_owncapital 1
 #req_site 1
 #nation -2
@@ -28753,7 +28749,7 @@ Hatchling will grow into a Ruk
 #removesite 1982
 #end
 
-#newmonster 5061
+#newmonster 8372
 #spr1 "./ExtraPretenders/BigBear.tga"
 #spr2 "./ExtraPretenders/BigBear2.tga"
 #name "Spirit Bear"
@@ -28809,7 +28805,7 @@ If controls Sea of Ice coastal temples generate 1D6 W gems each month
 
 #newevent
 #rarity 5
-#req_godismnr 5061
+#req_godismnr 8372
 #req_fort 1
 #req_coast 1
 #req_temple 0
@@ -28823,7 +28819,7 @@ If controls Sea of Ice coastal temples generate 1D6 W gems each month
 
 #newevent
 #rarity 5
-#req_godismnr 5061
+#req_godismnr 8372
 #req_friendlyench 28 -- Sea of Ice
 #req_coast 1
 #req_temple 1
@@ -28835,7 +28831,7 @@ If controls Sea of Ice coastal temples generate 1D6 W gems each month
 #1d6vis 2
 #end
 
-#newmonster 5064 -- Great Toad
+#newmonster 8373 -- Great Toad
 #spr1 "./ExtraPretenders/Froggod.tga"
 #spr2 "./ExtraPretenders/Froggod2.tga"
 #name "Great Toad"
@@ -28889,7 +28885,7 @@ Toad Tribe provinces always contain a temple and provide double income
 
 #newevent
 #rarity 5
-#req_godismnr 5064
+#req_godismnr 8373
 #req_poptype 83
 #nation -2
 #req_pop0ok
@@ -28899,7 +28895,7 @@ Toad Tribe provinces always contain a temple and provide double income
 #taxboost 100
 #end
 
-#newmonster 8956
+#newmonster 8374
 #name "Tathagata of Air"
 #spr1 "./ExtraPretenders/TathagataAir.tga"
 #spr2 "./ExtraPretenders/TathagataAir2.tga"
@@ -28929,7 +28925,7 @@ If controls Gale Gate will call 1D3 size 8 Air Elementals each month
 #stormimmune
 #diseaseres 100
 #heal
-#batstartsum1 8961 -- Wisdom King
+#batstartsum1 8375 -- Wisdom King
 #awe 1
 #moremagic 1
 #spiritsight
@@ -28945,8 +28941,8 @@ If controls Gale Gate will call 1D3 size 8 Air Elementals each month
 
 #newevent
 #rarity 5
-#req_godismnr 8956
-#req_monster 8956
+#req_godismnr 8374
+#req_monster 8374
 #req_friendlyench 49 -- Gale Gate
 #req_mindef 1
 #nation -2
@@ -28960,7 +28956,7 @@ If controls Gale Gate will call 1D3 size 8 Air Elementals each month
 
 #newevent
 #rarity 5
-#req_godismnr 8956
+#req_godismnr 8374
 #req_targgod 0 -- Not God
 #req_targpath1 1 -- Air Mage
 #req_targnopath1 9 -- Not Priest
@@ -28983,7 +28979,7 @@ Bless gains Awe 3 once Awakens
 Fire mages gain H1 if not already priests
 Casts Solar Brilliance in battles in friendly dominion
 "
-#domshape 8957
+#domshape 8376
 #humanoid
 #size 6
 #hp 35
@@ -29002,14 +28998,14 @@ Casts Solar Brilliance in battles in friendly dominion
 #heal
 #immortal
 #diseaseres 100
-#batstartsum1 8961 -- Wisdom King
+#batstartsum1 8375 -- Wisdom King
 #sunawe 3
 #maxage 1000
 #magicskill 0 3
 #spreaddom 2
 #end
 
-#newmonster 8957
+#newmonster 8376
 #name "Tathagata of Light"
 #spr1 "./ExtraPretenders/TathagataFire.tga"
 #spr2 "./ExtraPretenders/TathagataFire2.tga"
@@ -29041,7 +29037,7 @@ Casts Solar Brilliance in battles in friendly dominion
 #heal
 #immortal
 #diseaseres 100
-#batstartsum1 8961 -- Wisdom King
+#batstartsum1 8375 -- Wisdom King
 #onebattlespell "Solar Brilliance"
 #sunawe 5
 #maxage 1000
@@ -29055,7 +29051,7 @@ Casts Solar Brilliance in battles in friendly dominion
 
 #newevent
 #rarity 5
-#req_godismnr 8957 -- Tathagata
+#req_godismnr 8376 -- Tathagata
 #req_godismnr 8446 -- Pillar of Eternal Flame
 #req_godismnr 2792 -- Solar Serpent
 #req_targgod 0 -- Not God
@@ -29070,7 +29066,7 @@ Casts Solar Brilliance in battles in friendly dominion
 #holyboost -1
 #end
 
-#newmonster 8958
+#newmonster 8377
 #name "Tathagata of Earth"
 #spr1 "./ExtraPretenders/TathagataEarth.tga"
 #spr2 "./ExtraPretenders/TathagataEarth2.tga"
@@ -29102,7 +29098,7 @@ Bless gains +2 Reinvigoration
 #godsite 1975
 #diseaseres 100
 #onebattlespell "Relief"
-#batstartsum1 8961 -- Wisdom King
+#batstartsum1 8375 -- Wisdom King
 #awe 1
 #reinvigoration 4
 #maxage 1000
@@ -29116,7 +29112,7 @@ Bless gains +2 Reinvigoration
 
 #newevent
 #rarity 5
-#req_godismnr 8958
+#req_godismnr 8377
 #req_targgod 0 -- Not God
 #req_targpath1 3 -- Earth Mage
 #req_targnopath1 9 -- Not Priest
@@ -29153,8 +29149,8 @@ Bless gains +2 Reinvigoration
 
 #newevent
 #rarity 5
-#req_godismnr 8958
-#req_targmnr 8958
+#req_godismnr 8377
+#req_targmnr 8377
 #req_owncapital 1
 #req_freesites 1
 #req_nositenbr 1975
@@ -29166,7 +29162,7 @@ Bless gains +2 Reinvigoration
 #addsite 1975
 #end
 
-#newmonster 8959
+#newmonster 8378
 #name "Tathagata of Water"
 #spr1 "./ExtraPretenders/TathagataWater.tga"
 #spr2 "./ExtraPretenders/TathagataWater2.tga"
@@ -29197,7 +29193,7 @@ Forted temples may summon a Sacred White Elephant (Candles x 10% chance)
 #amphibian
 #diseaseres 100
 #heal
-#batstartsum1 8961 -- Wisdom King
+#batstartsum1 8375 -- Wisdom King
 #awe 1
 #maxage 1000
 #startage 500
@@ -29210,7 +29206,7 @@ Forted temples may summon a Sacred White Elephant (Candles x 10% chance)
 
 #newevent
 #rarity 5
-#req_godismnr 8959 -- Tathagata
+#req_godismnr 8378 -- Tathagata
 #req_godismnr 8447 -- Idol of Watery Wisdom
 #req_targgod 0 -- Not God
 #req_targpath1 2 -- Water Mage
@@ -29235,8 +29231,8 @@ Forted temples may summon a Sacred White Elephant (Candles x 10% chance)
 
 #newevent
 #rarity 5
-#req_godismnr 8959 -- Tathagata
-#req_targmnr 8959 -- Tathagata
+#req_godismnr 8378 -- Tathagata
+#req_targmnr 8378 -- Tathagata
 #req_pregame
 #req_owncapital 1
 #req_freesites 1
@@ -29264,7 +29260,7 @@ Forted temples may summon a Sacred White Elephant (Candles x 10% chance)
 
 #newevent
 #rarity 5
-#req_godismnr 8959 -- Tathagata
+#req_godismnr 8378 -- Tathagata
 #req_pretawake 1
 #req_owncapital 1
 #req_freesites 1
@@ -29278,7 +29274,7 @@ Forted temples may summon a Sacred White Elephant (Candles x 10% chance)
 #addsite 1896
 #end
 
-#newmonster 5724
+#newmonster 7845
 #copystats 2398 -- Elephant
 #name "White Elephant"
 #spr1 "./ExtraPretenders/WhiteEle.tga"
@@ -29291,7 +29287,7 @@ Forted temples may summon a Sacred White Elephant (Candles x 10% chance)
 
 #newevent
 #rarity 5
-#req_godismnr 8959 -- Tathagata
+#req_godismnr 8378 -- Tathagata
 #req_temple 1
 #req_fort 1
 #req_owncapital 0
@@ -29304,10 +29300,10 @@ Forted temples may summon a Sacred White Elephant (Candles x 10% chance)
 #msg "White Elephant appears"
 #notext
 #nolog
-#1unit 5724 -- White Elephant
+#1unit 7845 -- White Elephant
 #end
 
-#newmonster 8960
+#newmonster 8379
 #name "Tathagata of Void"
 #spr1 "./ExtraPretenders/TathagataVoid.tga"
 #spr2 "./ExtraPretenders/TathagataVoid2.tga"
@@ -29336,7 +29332,7 @@ Whilst at Nexus, will gain paths each month (Automatic +1 up to 5 in each path, 
 #heal
 #diseaseres 100
 #incscale 5 -- +Magic
-#batstartsum1 8961 -- Wisdom King
+#batstartsum1 8375 -- Wisdom King
 #moremagic -1
 #awe 1
 #researchbonus 20
@@ -29352,7 +29348,7 @@ Whilst at Nexus, will gain paths each month (Automatic +1 up to 5 in each path, 
 
 #newevent
 #rarity 5
-#req_godismnr 8960
+#req_godismnr 8379
 #req_targgod 0 -- Not God
 #req_targpath1 4 -- Astral Mage
 #req_targnopath1 9 -- Not Priest
@@ -29367,7 +29363,7 @@ Whilst at Nexus, will gain paths each month (Automatic +1 up to 5 in each path, 
 
 #newevent
 #rarity 13
-#req_targmnr 8960
+#req_targmnr 8379
 #req_targmnr 3416 -- Great Archon
 #req_targmnr 652 -- Void Lord
 #req_targmnr 2980 -- Uttervast
@@ -29386,7 +29382,7 @@ Whilst at Nexus, will gain paths each month (Automatic +1 up to 5 in each path, 
 
 #newevent
 #rarity 13
-#req_targmnr 8960
+#req_targmnr 8379
 #req_targmnr 3416 -- Great Archon
 #req_targmnr 652 -- Void Lord
 #req_targmnr 2980 -- Uttervast
@@ -29405,7 +29401,7 @@ Whilst at Nexus, will gain paths each month (Automatic +1 up to 5 in each path, 
 #end
 
 
-#newmonster 8965
+#newmonster 8384
 #copystats 1562 -- Void Spectre
 #clearmagic
 #name "Void Essence"
@@ -29436,7 +29432,7 @@ Illithid priests at a temple may become Void Spectres (Candles x 1% chance)
 
 #newevent
 #rarity 5
-#req_godismnr 8965
+#req_godismnr 8384
 #req_temple 1
 #req_fort 1
 #req_lab 1
@@ -29466,7 +29462,7 @@ Illithid priests at a temple may become Void Spectres (Candles x 1% chance)
 
 #newevent
 #rarity 5
-#req_godismnr 8965
+#req_godismnr 8384
 #req_temple 1
 #req_land 1
 #nation -2
@@ -29481,7 +29477,7 @@ Illithid priests at a temple may become Void Spectres (Candles x 1% chance)
 
 #newevent
 #rarity 5
-#req_godismnr 8965 -- Void Essence
+#req_godismnr 8384 -- Void Essence
 #req_targmnr 445 -- Illithid Lord
 #req_targmnr 332 -- Starspawn
 #req_targmnr 333 -- Starspawn
@@ -29500,7 +29496,7 @@ Illithid priests at a temple may become Void Spectres (Candles x 1% chance)
 #nolog
 #end
 
-#newmonster 8966
+#newmonster 8385
 #copystats 872 -- Ghost King
 #name "Spectral Ba'al"
 #spr1 "./ExtraPretenders/SpectralBaal.tga"
@@ -29522,7 +29518,7 @@ Temple forts may summon a Rephaite Ghost commander (Candles x 2% chance, D1H1)
 #magicskill 8 1 -- Blood 1
 #weapon 59 -- Rod of Death
 #weapon 331 -- Gore
-#domsummon 5999 -- Ghostly Rephaite
+#domsummon 7287 -- Ghostly Rephaite
 #nametype 149 -- Hinnom
 #wastesurvival
 #heal
@@ -29532,7 +29528,7 @@ Temple forts may summon a Rephaite Ghost commander (Candles x 2% chance, D1H1)
 #homerealm 0
 #end
 
-#newmonster 5999
+#newmonster 7287
 #copystats 566 -- Ghost
 #spr1 "./ExtraPretenders/EEGhostReph.tga"
 #spr2 "./ExtraPretenders/EEGhostReph2.tga"
@@ -29551,7 +29547,7 @@ Temple forts may summon a Rephaite Ghost commander (Candles x 2% chance, D1H1)
 
 #newevent
 #rarity 5
-#req_godismnr 8966 -- Spectral Ba'al
+#req_godismnr 8385 -- Spectral Ba'al
 #req_temple 1
 #req_fort 1
 #nation -2
@@ -29560,10 +29556,10 @@ Temple forts may summon a Rephaite Ghost commander (Candles x 2% chance, D1H1)
 #req_domchance 2
 #msg "A Rephaite Champion of old has returned to aid the ascension of ##godname##."
 #nolog
-#com 5999 -- Ghostly Rephaite
+#com 7287 -- Ghostly Rephaite
 #end
 
-#newmonster 8967
+#newmonster 8387
 #name "Once and Future King"
 #spr1 "./ExtraPretenders/OnceFutureKing.tga"
 #spr2 "./ExtraPretenders/OnceFutureKing2.tga"
@@ -29609,25 +29605,28 @@ Quests may appear allowing your Holy Knights to earn gold, items or gems, but be
 #fixedname "Arturus"
 #end
 
-#selectmonster 2359 -- Holy Knight
-#magicskill 9 1 -- Holy 1
-#end
-
 #newevent
 #rarity 5
-#req_godismnr 8967 -- Once & Future King
+#req_godismnr 8387 -- Once & Future King
 #req_owncapital 1
 #req_pregame
 #nation -2
 #msg "Knights appear"
 #notext
 #nolog
-#4com 2359 -- Holy Knight
+#com 2359 -- Holy Knight
+#holyboost
+#com 2359 -- Holy Knight
+#holyboost
+#com 2359 -- Holy Knight
+#holyboost
+#com 2359 -- Holy Knight
+#holyboost
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 8967 -- Once & Future King
+#req_godismnr 8387 -- Once & Future King
 #req_owncapital 1
 #nation -2
 #req_pop0ok
@@ -29639,7 +29638,7 @@ Quests may appear allowing your Holy Knights to earn gold, items or gems, but be
 
 #newevent
 #rarity 5
-#req_godismnr 8967 -- Once & Future King
+#req_godismnr 8387 -- Once & Future King
 #req_owncapital 1
 #nation -2
 #req_pop0ok
@@ -29647,12 +29646,13 @@ Quests may appear allowing your Holy Knights to earn gold, items or gems, but be
 #req_domchance 5
 #msg "A questing knight has appeared and pledged service to ##godname##."
 #com 2359 -- Holy Knight
+#holyboost
 #end
 
 #newevent
 #rarity 5
 #req_rare 50
-#req_godismnr 8967 -- Once & Future King
+#req_godismnr 8387 -- Once & Future King
 #req_land 1
 #req_code -513
 #req_targmnr 2359 -- Holy Knight
@@ -29669,7 +29669,7 @@ Quests may appear allowing your Holy Knights to earn gold, items or gems, but be
 #newevent
 #rarity 5
 #req_rare 50
-#req_godismnr 8967 -- Once & Future King
+#req_godismnr 8387 -- Once & Future King
 #req_land 1
 #req_code -513
 #req_targmnr 2359 -- Holy Knight
@@ -29684,7 +29684,7 @@ Quests may appear allowing your Holy Knights to earn gold, items or gems, but be
 
 #newevent
 #rarity 5
-#req_godismnr 8967 -- Once & Future King
+#req_godismnr 8387 -- Once & Future King
 #req_land 1
 #req_code -513
 #req_targmnr 2359 -- Holy Knight
@@ -29699,7 +29699,7 @@ Quests may appear allowing your Holy Knights to earn gold, items or gems, but be
 
 #newevent
 #rarity 5
-#req_godismnr 8967 -- Once & Future King
+#req_godismnr 8387 -- Once & Future King
 #req_land 1
 #req_fort 0
 #req_code 0
@@ -29713,7 +29713,7 @@ Quests may appear allowing your Holy Knights to earn gold, items or gems, but be
 
 #newevent
 #rarity 5
-#req_godismnr 8967 -- Once & Future King
+#req_godismnr 8387 -- Once & Future King
 #req_land 1
 #req_code -513
 #nation -2
@@ -29723,7 +29723,7 @@ Quests may appear allowing your Holy Knights to earn gold, items or gems, but be
 #flagland 1
 #end
 
-#newmonster 5037
+#newmonster 8388
 #copystats 1975 -- Iron Angel
 #name "Blacksteel Angel"
 #spr1 "./ExtraPretenders/BlacksteelAngel.tga"
@@ -29744,13 +29744,13 @@ Summons Black Iron Infantry up to candles each month
 #startdom 2
 #pathcost 250
 #expertleader
-#domsummon 5831 -- Black Iron Infantry
+#domsummon 7966 -- Black Iron Infantry
 #diseaseres 100
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 5037 -- Blacksteel Angel
+#req_godismnr 8388 -- Blacksteel Angel
 #req_godismnr 8499 -- Divine Anvil
 #req_dominion 1
 #req_prod 4
@@ -29762,7 +29762,7 @@ Summons Black Iron Infantry up to candles each month
 #unrest -5
 #end
 
-#newmonster 5831
+#newmonster 7966
 #copystats 74 -- Black Plate Infantry
 #clearweapons
 #spr1 "./ExtraPretenders/EEBlackIron.tga"
@@ -29773,10 +29773,10 @@ Summons Black Iron Infantry up to candles each month
 #mr 12
 #mor 13
 #weapon 74 -- Sword of Sharpness
-#monpresentrec -5186 -- Iron/Blacksteel Angel
+#monpresentrec -8388 -- Iron/Blacksteel Angel
 #end
 
-#newmonster 5051
+#newmonster 8389
 #name "Gallu Demon"
 #spr1 "./ExtraPretenders/Gallu.tga"
 #spr2 "./ExtraPretenders/Gallu2.tga"
@@ -29827,7 +29827,7 @@ Casts Holy Avenger in battles
 #pathcost 80
 #end
 
-#newmonster 5068
+#newmonster 8390
 #name "Celestial Fox"
 #spr1 "./ExtraPretenders/NineTails.tga"
 #spr2 "./ExtraPretenders/NineTails2.tga"
@@ -29876,10 +29876,10 @@ At temples in Magic scales a Fox spirit present may become a commander (Candles 
 #pathcost 20
 #homerealm 4
 #domsummon2 6767 -- Fox spirit
-#shapechange 5069 -- Human shape
+#shapechange 8391 -- Human shape
 #end
 
-#newmonster 5069
+#newmonster 8391
 #copystats 1433 -- Kitsune
 #copyspr 1433 -- Kitsune
 #clearmagic
@@ -29917,7 +29917,7 @@ At temples in Magic scales a Fox spirit present may become a commander (Candles 
 #startdom 2
 #pathcost 20
 #domsummon2 6767 -- Fox spirit
-#shapechange 5068 -- Fox Shape
+#shapechange 8390 -- Fox Shape
 #end
 
 #newmonster 6767
@@ -29960,8 +29960,8 @@ At temples in Magic scales a Fox spirit present may become a commander (Candles 
 
 #newevent
 #rarity 5
-#req_godismnr 5068 -- Celestial Fox
-#req_godismnr 5069 -- Celestial Fox
+#req_godismnr 8390 -- Celestial Fox
+#req_godismnr 8391 -- Celestial Fox
 #req_monster 6767
 #req_dominion 1
 #req_temple 1
@@ -29975,7 +29975,7 @@ At temples in Magic scales a Fox spirit present may become a commander (Candles 
 #com 6787 -- Fox Spirit
 #end
 
-#newmonster 5070
+#newmonster 8392
 #spr1 "./ExtraPretenders/SunWukong.tga"
 #spr2 "./ExtraPretenders/SunWukong2.tga"
 #name "Monkey King"
@@ -30033,7 +30033,7 @@ Local province will gain unrest but may also gain lucky events
 
 #newevent
 #rarity 5
-#req_godismnr 5070 -- Monkey King
+#req_godismnr 8392 -- Monkey King
 #req_poptype 77 -- Atavi
 #nation -2
 #msg "The local Monkeyfolk venerate their true King and have donated much gold to the treasury."
@@ -30077,7 +30077,7 @@ Local province will gain unrest but may also gain lucky events
 #holy
 #end
 
-#newmonster 6769
+#newmonster 8393
 #spr1 "./ExtraPretenders/Hanuman.tga"
 #spr2 "./ExtraPretenders/Hanuman2.tga"
 #name "Divine Monkey"
@@ -30128,8 +30128,8 @@ Atavi provinces within Dominion gain a Fortified Village and Temple
 
 #newevent
 #rarity 5
-#req_godismnr 6769
-#req_monster 6769
+#req_godismnr 8393
+#req_monster 8393
 #req_owncapital 1
 #req_pregame
 #nation -2
@@ -30146,8 +30146,8 @@ Atavi provinces within Dominion gain a Fortified Village and Temple
 
 #newevent
 #rarity 5
-#req_godismnr 6769
-#req_monster 6769
+#req_godismnr 8393
+#req_monster 8393
 #req_owncapital 1
 #req_pregame
 #nation -2
@@ -30162,8 +30162,8 @@ Atavi provinces within Dominion gain a Fortified Village and Temple
 
 #newevent
 #rarity 5
-#req_godismnr 6769
-#req_monster 6769
+#req_godismnr 8393
+#req_monster 8393
 #req_owncapital 1
 #req_pregame
 #nation -2
@@ -30177,7 +30177,7 @@ Atavi provinces within Dominion gain a Fortified Village and Temple
 
 #newevent
 #rarity 5
-#req_godismnr 6769
+#req_godismnr 8393
 #req_land 1
 #req_poptype 77 -- Atavi
 #req_fort 0
@@ -30191,7 +30191,7 @@ Atavi provinces within Dominion gain a Fortified Village and Temple
 
 #newevent
 #rarity 5
-#req_godismnr 6769
+#req_godismnr 8393
 #req_land 1
 #req_forest 1
 #req_dominion 1
@@ -30206,7 +30206,7 @@ Atavi provinces within Dominion gain a Fortified Village and Temple
 
 #newevent
 #rarity 5
-#req_godismnr 6769
+#req_godismnr 8393
 #req_land 1
 #req_forest 1
 #req_temple 1
@@ -30220,7 +30220,7 @@ Atavi provinces within Dominion gain a Fortified Village and Temple
 #1d6units 1142 -- White One
 #end
 
-#newmonster 5071
+#newmonster 8394
 #spr1 "./ExtraPretenders/ThroneLich.tga"
 #spr2 "./ExtraPretenders/ThroneLich2.tga"
 #name "Returned King"
@@ -30272,8 +30272,8 @@ Grants H2 to 1 Undead commander in capital each month
 
 #newevent
 #rarity 5
-#req_godismnr 5071
-#req_monster 5071
+#req_godismnr 8394
+#req_monster 8394
 #req_targgod 0 -- Not God
 #req_capital 1
 #req_targundead 1
@@ -30288,8 +30288,8 @@ Grants H2 to 1 Undead commander in capital each month
 
 #newevent
 #rarity 5
-#req_godismnr 5071
-#req_monster 5071
+#req_godismnr 8394
+#req_monster 8394
 #req_owncapital 1
 #req_temple 1
 #req_land 1
@@ -30306,7 +30306,7 @@ Grants H2 to 1 Undead commander in capital each month
 
 #newevent
 #rarity 5
-#req_godismnr 5071
+#req_godismnr 8394
 #req_temple 1
 #req_land 1
 #req_death 1
@@ -30323,7 +30323,7 @@ Grants H2 to 1 Undead commander in capital each month
 
 #newevent
 #rarity 5
-#req_godismnr 5071
+#req_godismnr 8394
 #req_temple 1
 #req_land 1
 #req_death 1
@@ -30337,7 +30337,7 @@ Grants H2 to 1 Undead commander in capital each month
 #com 191 -- Longdead
 #end
 
-#newmonster 5095
+#newmonster 8435
 #spr1 "./ExtraPretenders/Praxidike.tga"
 #spr2 "./ExtraPretenders/Praxidike2.tga"
 #name "Spirit of Justice"
@@ -30395,7 +30395,7 @@ Spirit of Justice has no path penalty for separation of trinity, others lose -1 
 #chaospower -1
 #end
 
-#newmonster 5096
+#newmonster 8436
 #spr1 "./ExtraPretenders/Arete.tga"
 #spr2 "./ExtraPretenders/Arete2.tga"
 #name "Spirit of Moral Virtue"
@@ -30450,7 +30450,7 @@ Spirit of Justice has no path penalty for separation of trinity, others lose -1 
 #chaospower -1
 #end
 
-#newmonster 5097
+#newmonster 8437
 #spr1 "./ExtraPretenders/Homonia.tga"
 #spr2 "./ExtraPretenders/Homonia2.tga"
 #name "Spirit of Unanimity"
@@ -30504,7 +30504,7 @@ Spirit of Justice has no path penalty for separation of trinity, others lose -1 
 #chaospower -1
 #end
 
-#newmonster 5024
+#newmonster 8501
 #copystats 2009 -- Rephaite Commander
 #clearweapons
 #cleararmor
@@ -30558,8 +30558,8 @@ Can reanimate 5 armored Rephaite Longdead each month
 
 #newevent
 #rarity 5
-#req_godismnr 5024 -- Rephaite Lich Lord
-#req_monster 5024 -- Rephaite Lich Lord
+#req_godismnr 8501 -- Rephaite Lich Lord
+#req_monster 8501 -- Rephaite Lich Lord
 #req_targmnr 2027 -- Adon
 #req_targmnr 2028 -- Talmai Elder
 #req_targnopath2 5 -- D1 or less
@@ -30573,7 +30573,7 @@ Can reanimate 5 armored Rephaite Longdead each month
 #pathboost 5 -- +D
 #end
 
-#newmonster 5026
+#newmonster 8504
 #name "Heavenly Sage"
 #spr1 "./ExtraPretenders/Heavensage.tga"
 #spr2 "./ExtraPretenders/Heavensage2.tga"
@@ -30622,7 +30622,7 @@ Temples may summon a Celestial Hound each month (10% x candles chance)
 
 #newevent
 #rarity 5
-#req_godismnr 5026 -- Heavenly Sage
+#req_godismnr 8504 -- Heavenly Sage
 #req_temple 1
 #req_land 1
 #nation -2
@@ -30636,7 +30636,7 @@ Temples may summon a Celestial Hound each month (10% x candles chance)
 #end
 
 
-#newmonster 8867
+#newmonster 7245
 #copystats 1501 -- Cavern Wight
 #clearmagic
 #spr1 "./ExtraPretenders/Necrophidian.tga"
@@ -30676,7 +30676,7 @@ Fort Temples and Wastes may summon a Tomb Wyrm each month (10% x candles chance,
 
 #newevent
 #rarity 5
-#req_godismnr 8867 -- Tomb Wyrm
+#req_godismnr 7245 -- Tomb Wyrm
 #req_land 1
 #req_waste 1
 #req_temple 0
@@ -30692,7 +30692,7 @@ Fort Temples and Wastes may summon a Tomb Wyrm each month (10% x candles chance,
 
 #newevent
 #rarity 5
-#req_godismnr 8867 -- Tomb Wyrm
+#req_godismnr 7245 -- Tomb Wyrm
 #req_land 1
 #req_temple 1
 #req_fort 1
@@ -30708,7 +30708,7 @@ Fort Temples and Wastes may summon a Tomb Wyrm each month (10% x candles chance,
 
 #newevent
 #rarity 5
-#req_godismnr 8867 -- Tomb Wyrm
+#req_godismnr 7245 -- Tomb Wyrm
 #req_land 1
 #req_temple 1
 #req_fort 1
@@ -30725,7 +30725,7 @@ Fort Temples and Wastes may summon a Tomb Wyrm each month (10% x candles chance,
 
 #newevent
 #rarity 5
-#req_godismnr 8867 -- Tomb Wyrm
+#req_godismnr 7245 -- Tomb Wyrm
 #req_land 1
 #req_temple 1
 #req_fort 1
@@ -30742,7 +30742,7 @@ Fort Temples and Wastes may summon a Tomb Wyrm each month (10% x candles chance,
 
 #newevent
 #rarity 5
-#req_godismnr 8867 -- Tomb Wyrm
+#req_godismnr 7245 -- Tomb Wyrm
 #req_land 1
 #req_temple 1
 #req_fort 1
@@ -30759,7 +30759,7 @@ Fort Temples and Wastes may summon a Tomb Wyrm each month (10% x candles chance,
 
 #newevent
 #rarity 5
-#req_godismnr 8867 -- Tomb Wyrm
+#req_godismnr 7245 -- Tomb Wyrm
 #req_land 1
 #req_temple 1
 #req_fort 1
@@ -30776,7 +30776,7 @@ Fort Temples and Wastes may summon a Tomb Wyrm each month (10% x candles chance,
 
 #newevent
 #rarity 5
-#req_godismnr 8867 -- Tomb Wyrm
+#req_godismnr 7245 -- Tomb Wyrm
 #req_land 1
 #req_temple 1
 #req_fort 1
@@ -30791,7 +30791,7 @@ Fort Temples and Wastes may summon a Tomb Wyrm each month (10% x candles chance,
 #1unit 693 -- Tomb Wyrm
 #end
 
-#newmonster 8868
+#newmonster 8442
 #spr1 "./ExtraPretenders/IdMonster.tga"
 #spr2 "./ExtraPretenders/IdMonster2.tga"
 #name "Id Monster"
@@ -31236,7 +31236,7 @@ Starting item: Strong Sake (grants Berseker but may also become Confused at batt
 #1d6vis 6 -- Nature
 #2d6vis 6 -- Nature
 #3d6vis 2 -- Water
-#1unit 6749 -- Great Green Serpent
+#1unit 10001 -- Great Green Serpent
 #1d3units 295 -- Sacred Serpents
 #1d6units 295 -- Sacred Serpents
 #2d3units 295 -- Sacred Serpents
@@ -32875,7 +32875,8 @@ Capital gains Egg of the Phoenix (+2F income)
 #descr "The Scorpion King is a spirit of destruction and terror given divine powers by a previous Pantokrator. The beast was placed as a monstrous guardian of the path to immortality beyond Mount Mashu. With the disappearance of the Pantokrator, the beast has claimed the secrets beyond Mashu and arrived to wreak destruction and havoc upon the world. The Scorpion King is a hideous and twisted being with the body of a huge scorpion and the upper torso of a scaly human. It is followed by scorpions from the desert grown to enormous size that will arrive in large numbers as its Dominion grows strong. At its temples in forlorn wastes its gigantic servants will arrive from Mount Mashu to serve it. It is a mighty beast capable of striking simultaneously with its scorpion stinger and any forged weapons it may carry.
 
 Summons Giant Scorpions & Sacred Scorpions up to Dominion candles each month
-Temples in wastes may summon a Scorpion Man commander each month (F1E1H1 100%F/E, Candles x 5% chance)
+Temples in wastes may summon a Scorpion Man commander each month (H1, Candles x 5% chance)
+Scorpion Man will rise their magic paths by 1 up to F2E2 (1 max per province per month)
 "
 #gcost 200
 #woundfend 5
@@ -32884,13 +32885,6 @@ Temples in wastes may summon a Scorpion Man commander each month (F1E1H1 100%F/E
 #domsummon 2233 -- Giant Scorpion
 #domsummon2 2690 -- Sacred Scorpion
 #domsummon20 1649 -- Scorpion Man
-#end
-
-#selectmonster 1649 -- Scorpion Man
-#magicskill 0 1 -- 1F
-#magicskill 3 1 -- 1E
-#magicskill 9 1 -- H1
-#custommagic 1152 100 -- 100% F/E
 #end
 
 #newevent
@@ -32906,6 +32900,33 @@ Temples in wastes may summon a Scorpion Man commander each month (F1E1H1 100%F/E
 #notext
 #nolog
 #com 1649 -- Scorpion Man
+#holyboost
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 655 -- Scorpion King
+#req_monster 1649 -- Scorpion Man
+#nation -2
+#req_pop0ok
+#msg "Scorpion Man boost"
+#notext
+#nolog
+#req_targnopath2 3 -- E
+#earthboost
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 655 -- Scorpion King
+#req_monster 1649 -- Scorpion Man
+#nation -2
+#req_pop0ok
+#msg "Scorpion Man boost"
+#notext
+#nolog
+#req_targnopath2 1 -- F
+#fireboost
 #end
 
 #selectmonster 661 -- Shedu
@@ -35205,6 +35226,7 @@ Starts with Forbidden Light in treasury if Awake
 #woundfend 2
 #blind
 #localsun
+#homerealm 0
 #end
 
 #selectmonster 2785 -- Solar Eagle
@@ -35393,7 +35415,7 @@ Lion Tribe provinces always contain a temple and provide double income
 #diseaseres 100
 #heal
 #startdom 2
-#batstartsum1d6 6746 -- Sacred lions
+#batstartsum1d6 7760 -- Sacred lions
 #end
 
 #newevent
@@ -35650,7 +35672,7 @@ Mastersmith -3 and -20 Research
 #domsummon 2225 -- Fire Ant
 #end
 
-#newmonster 5386
+#newmonster 7534
 #copystats 2225 -- Fire Ant
 #clearweapons
 #spr1 "./ExtraPretenders/EEAntQ.tga"
@@ -35684,7 +35706,7 @@ Mastersmith -3 and -20 Research
 #req_pop0ok
 #msg "A huge and strangely intelligent Queen Ant has appeared and has begun preparing a hive to hold her offspring."
 #nolog
-#com 5386 -- Ant Queen
+#com 7534 -- Ant Queen
 #end
 
 #selectmonster 2791 -- Earth Serpent
@@ -36401,10 +36423,6 @@ Thrones within Dominion will spawn 2D6 Atlantian Shadow Soldiers, 1 ghost and an
 #domsummon20 566 -- Ghost
 #end
 
-#selectmonster 2340
-#goodundeadleader
-#end
-
 #newevent
 #rarity 5
 #req_godismnr 2853 -- Ghost King
@@ -36535,8 +36553,8 @@ Lion Tribe provinces always contain a temple and provide double income
 #animalawe 3
 #godsite 1928
 #onebattlespell 187
-#makemonsters5 6746 -- Sacred Lion
-#domsummon 6746 -- Sacred Lion
+#makemonsters5 7760 -- Sacred Lion
+#domsummon 7760 -- Sacred Lion
 #domsummon20 514 -- Kithaironic Lion
 #end
 
@@ -36976,7 +36994,7 @@ When Demiurge is at a Throne will lower Dominion across the world by 1 once each
 #newevent
 #rarity 5
 #req_godismnr 3395 -- Demiurge
-#req_godismnr 5027 -- Wisdom King
+#req_godismnr 8380 -- Wisdom King
 #req_targpath1 9
 #req_targnoitem "Amulet of Conviction"
 #nation -2
@@ -37212,10 +37230,6 @@ May create a Worm Mage whilst at the capital (1% chance per candle each month)
 #diseaseres 100
 #end
 
-#selectmonster 2217 -- Worm Mage
-#poormagicleader
-#end
-
 #newevent
 #rarity 5
 #req_godismnr 4033 -- Worm Soul
@@ -37290,7 +37304,7 @@ May create a Worm Mage whilst at the capital (1% chance per candle each month)
 
 --- DOM 1
 
-#newmonster 8909
+#newmonster 8306
 #name "Lord of Pearls"
 #spr1 "./ExtraPretenders/PearlLord.tga"
 #spr2 "./ExtraPretenders/PearlLord2.tga"
@@ -37335,7 +37349,7 @@ Forts within friendly Dominion gain Knightly Order of the Deep (+Order, recruit 
 
 #newevent
 #rarity 5
-#req_godismnr 8909 -- Lord of Pearls
+#req_godismnr 8306 -- Lord of Pearls
 #req_land 0
 #req_fort 1
 #req_dominion 1
@@ -37350,7 +37364,7 @@ Forts within friendly Dominion gain Knightly Order of the Deep (+Order, recruit 
 
 #newevent
 #rarity 5
-#req_godisnotmnr 8909 -- Lord of Pearls
+#req_godisnotmnr 8306 -- Lord of Pearls
 #req_mindef 1
 #req_land 0
 #req_fort 1
@@ -37365,7 +37379,7 @@ Forts within friendly Dominion gain Knightly Order of the Deep (+Order, recruit 
 #removesite 1257 -- Knightly Order of the Deep
 #end
 
-#newmonster 8910
+#newmonster 8307
 #copystats 481 -- High Magus
 #clearmagic
 #clearweapons
@@ -37411,8 +37425,8 @@ Each month whilst at a lab may create a Stone Monstra commander (Candles x 3% ch
 
 #newevent
 #rarity 5
-#req_godismnr 8910
-#req_monster 8910
+#req_godismnr 8307
+#req_monster 8307
 #req_pregame
 #req_owncapital 1
 #req_land 1
@@ -37430,7 +37444,7 @@ Each month whilst at a lab may create a Stone Monstra commander (Candles x 3% ch
 
 #newevent
 #rarity 5
-#req_godismnr 8910
+#req_godismnr 8307
 #req_pretawake 1
 #req_owncapital 1
 #req_land 1
@@ -37448,8 +37462,8 @@ Each month whilst at a lab may create a Stone Monstra commander (Candles x 3% ch
 
 #newevent
 #rarity 5
-#req_godismnr 8910
-#req_monster 8910
+#req_godismnr 8307
+#req_monster 8307
 #req_lab 1
 #req_land 1
 #req_fort 1
@@ -37462,7 +37476,7 @@ Each month whilst at a lab may create a Stone Monstra commander (Candles x 3% ch
 #com 542 -- Stone Monstra
 #end
 
-#newmonster 8911
+#newmonster 8308
 #copystats 122 -- Bloodhenge Druid 
 #clearmagic
 #clearweapons
@@ -37505,8 +37519,8 @@ Blood Henge druids become N2B2H1 after recruitment
 
 #newevent
 #rarity 5
-#req_godismnr 8911 -- Archdruid
-#req_monster 8911 -- Archdruid
+#req_godismnr 8308 -- Archdruid
+#req_monster 8308 -- Archdruid
 #req_pregame
 #req_owncapital 1
 #nation -2
@@ -37522,7 +37536,7 @@ Blood Henge druids become N2B2H1 after recruitment
 
 #newevent
 #rarity 5
-#req_godismnr 8911 -- Archdruid
+#req_godismnr 8308 -- Archdruid
 #req_pretawake 1
 #req_owncapital 1
 #req_nositenbr 1041 -- Blood Henge
@@ -37538,7 +37552,7 @@ Blood Henge druids become N2B2H1 after recruitment
 
 #newevent
 #rarity 5
-#req_godismnr 8911 -- Archdruid
+#req_godismnr 8308 -- Archdruid
 #req_forest 1
 #req_targorder 8 -- Blood Hunt
 #dominion 1
@@ -37552,7 +37566,7 @@ Blood Henge druids become N2B2H1 after recruitment
 
 #newevent
 #rarity 5
-#req_godismnr 8911 -- Archdruid
+#req_godismnr 8308 -- Archdruid
 #req_targmnr 122 -- Bloodhenge Druid
 #req_targnopath1 9
 #nation -2
@@ -37566,7 +37580,7 @@ Blood Henge druids become N2B2H1 after recruitment
 
 #newevent
 #rarity 5
-#req_godismnr 8911 -- Archdruid
+#req_godismnr 8308 -- Archdruid
 #req_targmnr 122 -- Bloodhenge Druid
 #req_targnopath1 9
 #nation -2
@@ -37580,7 +37594,7 @@ Blood Henge druids become N2B2H1 after recruitment
 
 #newevent
 #rarity 5
-#req_godismnr 8911 -- Archdruid
+#req_godismnr 8308 -- Archdruid
 #req_targmnr 122 -- Bloodhenge Druid
 #req_targnopath1 9
 #nation -2
@@ -37592,7 +37606,7 @@ Blood Henge druids become N2B2H1 after recruitment
 #holyboost -1
 #end
 
-#newmonster 8912
+#newmonster 8309
 #copystats 314 -- Mandragora
 #clearmagic
 #name "First Mandragora"
@@ -37620,8 +37634,8 @@ Forests in Growth scales may spawn Mandragora (Candles x 5% chance for 1 Mandrag
 
 #newevent
 #rarity 5
-#req_godismnr 8912 -- Mandragora
-#req_monster 8912 -- Mandragora
+#req_godismnr 8309 -- Mandragora
+#req_monster 8309 -- Mandragora
 #req_pregame
 #req_owncapital 1
 #req_land 1
@@ -37636,7 +37650,7 @@ Forests in Growth scales may spawn Mandragora (Candles x 5% chance for 1 Mandrag
 
 #newevent
 #rarity 5
-#req_godismnr 8912 -- Mandragora
+#req_godismnr 8309 -- Mandragora
 #req_pretawake 1
 #req_owncapital 1
 #req_land 1
@@ -37651,7 +37665,7 @@ Forests in Growth scales may spawn Mandragora (Candles x 5% chance for 1 Mandrag
 
 #newevent
 #rarity 5
-#req_godismnr 8912 -- Mandragora
+#req_godismnr 8309 -- Mandragora
 #req_forest 1
 #req_land 1
 #req_growth 1
@@ -37667,7 +37681,7 @@ Forests in Growth scales may spawn Mandragora (Candles x 5% chance for 1 Mandrag
 
 #newevent
 #rarity 5
-#req_godismnr 8912 -- Mandragora
+#req_godismnr 8309 -- Mandragora
 #req_forest 1
 #req_land 1
 #req_growth 2
@@ -37683,7 +37697,7 @@ Forests in Growth scales may spawn Mandragora (Candles x 5% chance for 1 Mandrag
 
 #newevent
 #rarity 5
-#req_godismnr 8912 -- Mandragora
+#req_godismnr 8309 -- Mandragora
 #req_forest 1
 #req_land 1
 #req_growth 3
@@ -37699,7 +37713,7 @@ Forests in Growth scales may spawn Mandragora (Candles x 5% chance for 1 Mandrag
 
 #newevent
 #rarity 5
-#req_godismnr 8912 -- Mandragora
+#req_godismnr 8309 -- Mandragora
 #req_forest 1
 #req_land 1
 #req_growth 4
@@ -37715,7 +37729,7 @@ Forests in Growth scales may spawn Mandragora (Candles x 5% chance for 1 Mandrag
 
 #newevent
 #rarity 5
-#req_godismnr 8912 -- Mandragora
+#req_godismnr 8309 -- Mandragora
 #req_forest 1
 #req_land 1
 #req_growth 5
@@ -37729,7 +37743,7 @@ Forests in Growth scales may spawn Mandragora (Candles x 5% chance for 1 Mandrag
 #1unit 314 -- Mandragora
 #end
 
-#newmonster 8913
+#newmonster 8310
 #copystats 2419 -- Mermage
 #clearmagic
 #clearweapons
@@ -37751,7 +37765,7 @@ Whilst at an UW laboratory may create an Amulet of the Fish each month (Candles 
 #magicboost 53 1
 #goodleader
 #diseaseres 100
-#landshape 8914
+#landshape 8311
 #weapon 238
 #pathcost 20
 #startdom 1
@@ -37760,10 +37774,10 @@ Whilst at an UW laboratory may create an Amulet of the Fish each month (Candles 
 
 #newevent
 #rarity 5
-#req_godismnr 8913 -- Master of the Deeps
-#req_godismnr 8914 -- Master of the Deeps
-#req_targmnr 8913 -- Master of the Deeps
-#req_targmnr 8914 -- Master of the Deeps
+#req_godismnr 8310 -- Master of the Deeps
+#req_godismnr 8311 -- Master of the Deeps
+#req_targmnr 8310 -- Master of the Deeps
+#req_targmnr 8311 -- Master of the Deeps
 #req_land 0
 #req_lab 1
 #req_mindef 1
@@ -37777,7 +37791,7 @@ Whilst at an UW laboratory may create an Amulet of the Fish each month (Candles 
 #magicitem 9
 #end
 
-#newmonster 8914
+#newmonster 8311
 #copystats 2420 -- Mermage Landshape
 #clearmagic
 #clearweapons
@@ -37800,7 +37814,7 @@ Whilst at an UW laboratory may create an Amulet of the Fish each month (Candles 
 #goodleader
 #godsite 1940
 #diseaseres 100
-#watershape 8913
+#watershape 8310
 #weapon 238
 #pathcost 10
 #startdom 1
@@ -37860,7 +37874,7 @@ Whilst at an UW laboratory may create an Amulet of the Fish each month (Candles 
 
 #newevent
 #rarity 5
-#req_godismnr 8913 -- Master of the Deeps
+#req_godismnr 8310 -- Master of the Deeps
 #req_fort 1
 #req_temple 1
 #req_lab 1
@@ -37873,7 +37887,7 @@ Whilst at an UW laboratory may create an Amulet of the Fish each month (Candles 
 #addsite 1940
 #end
 
-#newmonster 8915
+#newmonster 8312
 #spr1 "./ExtraPretenders/Tengukunshu.tga"
 #spr2 "./ExtraPretenders/Tengukunshu2.tga"
 #name "Tengu Kunshu"
@@ -37948,8 +37962,8 @@ Whilst awake, Mountain Forts in Dominion gain a Temple if not one present
 
 #newevent
 #rarity 5
-#req_godismnr 8915 -- Tengu Kunshu
-#req_mnr 8915 -- Tengu Kunshu
+#req_godismnr 8312 -- Tengu Kunshu
+#req_mnr 8312 -- Tengu Kunshu
 #req_land 1
 #req_mountain 1
 #req_fort 1
@@ -37965,8 +37979,8 @@ Whilst awake, Mountain Forts in Dominion gain a Temple if not one present
 
 #newevent
 #rarity 5
-#req_godismnr 8915 -- Tengu Kunshu
-#req_monster 8915 -- Tengu Kunshu
+#req_godismnr 8312 -- Tengu Kunshu
+#req_monster 8312 -- Tengu Kunshu
 #req_pregame
 #req_owncapital 1
 #req_mountain 1
@@ -37982,7 +37996,7 @@ Whilst awake, Mountain Forts in Dominion gain a Temple if not one present
 #newevent
 #rarity 5
 #req_site 1
-#req_godisnotmnr 8915 -- Tengu Kunshu
+#req_godisnotmnr 8312 -- Tengu Kunshu
 #req_mindef 1
 #nation -2
 #req_pop0ok
@@ -37995,8 +38009,8 @@ Whilst awake, Mountain Forts in Dominion gain a Temple if not one present
 
 #newevent
 #rarity 5
-#req_godismnr 8915 -- Tengu Kunshu
-#req_targmnr 8915 -- Tengu Kunshu
+#req_godismnr 8312 -- Tengu Kunshu
+#req_targmnr 8312 -- Tengu Kunshu
 #req_targmnr 3246 -- Tengu King
 #req_targmnr 1480 -- Dai Tengu
 #req_temple 1
@@ -38013,7 +38027,7 @@ Whilst awake, Mountain Forts in Dominion gain a Temple if not one present
 
 #newevent
 #rarity 5
-#req_godismnr 8915 -- Tengu Kunshu
+#req_godismnr 8312 -- Tengu Kunshu
 #req_targmnr 1480 -- Dai Tengu
 #req_targnopath3 9
 #nation -2
@@ -38024,7 +38038,7 @@ Whilst awake, Mountain Forts in Dominion gain a Temple if not one present
 #holyboost -1
 #end
 
-#newmonster 8916
+#newmonster 8313
 #spr1 "./ExtraPretenders/Archdaktyl.tga"
 #spr2 "./ExtraPretenders/Archdaktyl2.tga"
 #name "Arch Daktyl"
@@ -38077,8 +38091,8 @@ Daktyloi gain H1 while present at a temple
 
 #newevent
 #rarity 5
-#req_godismnr 8916 -- Arch Daktyl
-#req_monster 8916 -- Arch Daktyl
+#req_godismnr 8313 -- Arch Daktyl
+#req_monster 8313 -- Arch Daktyl
 #req_freesites 1
 #req_fort 1
 #req_coast 1
@@ -38091,7 +38105,7 @@ Daktyloi gain H1 while present at a temple
 
 #newevent
 #rarity 5
-#req_godisnotmnr 8916 -- Arch Daktyl
+#req_godisnotmnr 8313 -- Arch Daktyl
 #req_mindef 1
 #req_site 1
 #nation -2
@@ -38106,7 +38120,7 @@ Daktyloi gain H1 while present at a temple
 
 #newevent
 #rarity 5
-#req_godismnr 8916 -- Arch Daktyl
+#req_godismnr 8313 -- Arch Daktyl
 #req_targmnr 2836 -- Daktyl
 #req_temple 1
 #req_targnopath1 9 -- not Priest
@@ -38118,7 +38132,7 @@ Daktyloi gain H1 while present at a temple
 #holyboost -1
 #end
 
-#newmonster 8917
+#newmonster 8314
 #copystats 176 -- Triton
 #clearmagic
 #clearweapons
@@ -38151,7 +38165,7 @@ At end of each year, capital spawns 15-70 Tritons, 2 Pearl mages and Amber Clan 
 #newevent
 #rarity 5
 #req_owncapital 1
-#req_godismnr 8917 -- Triton Queen
+#req_godismnr 8314 -- Triton Queen
 #req_pretawake 1
 #req_unique 1
 #nation -2
@@ -38171,7 +38185,7 @@ At end of each year, capital spawns 15-70 Tritons, 2 Pearl mages and Amber Clan 
 #newevent
 #rarity 5
 #req_owncapital 1
-#req_godismnr 8917 -- Triton Queen
+#req_godismnr 8314 -- Triton Queen
 #req_pretawake 1
 #req_unique 1
 #nation -2
@@ -38192,7 +38206,7 @@ At end of each year, capital spawns 15-70 Tritons, 2 Pearl mages and Amber Clan 
 #newevent
 #rarity 5
 #req_owncapital 1
-#req_godismnr 8917 -- Triton Queen
+#req_godismnr 8314 -- Triton Queen
 #req_pretawake 1
 #req_unique 1
 #nation -2
@@ -38210,7 +38224,7 @@ At end of each year, capital spawns 15-70 Tritons, 2 Pearl mages and Amber Clan 
 #newevent
 #rarity 5
 #req_owncapital 1
-#req_godismnr 8917 -- Triton Queen
+#req_godismnr 8314 -- Triton Queen
 #req_pretawake 1
 #req_month 11
 #nation -2
@@ -38229,7 +38243,7 @@ At end of each year, capital spawns 15-70 Tritons, 2 Pearl mages and Amber Clan 
 #end
 
 
-#newmonster 8918
+#newmonster 8315
 #copystats 1054 -- Siren
 #clearmagic
 #clearweapons
@@ -38252,7 +38266,7 @@ Sirens gain H2 after recruitment
 #magicboost 53 1
 #goodleader
 #diseaseres 100
-#landshape 8919
+#landshape 8316
 #pathcost 20
 #startdom 1
 #beckon 16
@@ -38261,7 +38275,7 @@ Sirens gain H2 after recruitment
 
 #newevent
 #rarity 5
-#req_godismnr 8918 -- Siren Sorc
+#req_godismnr 8315 -- Siren Sorc
 #req_targmnr 1054 -- Siren
 #req_targnoitem "Siren Charm"
 #nation -2
@@ -38276,7 +38290,7 @@ Sirens gain H2 after recruitment
 
 #newevent
 #rarity 5
-#req_godismnr 8918 -- Siren Sorc
+#req_godismnr 8315 -- Siren Sorc
 #req_targmnr 1055 -- Siren
 #req_targnoitem "Siren Charm"
 #nation -2
@@ -38289,7 +38303,7 @@ Sirens gain H2 after recruitment
 #addequip 9
 #end
 
-#newmonster 8919
+#newmonster 8316
 #copystats 1055 -- Siren Birdform
 #clearmagic
 #clearweapons
@@ -38313,7 +38327,7 @@ Sirens gain H2 after recruitment
 #goodleader
 #pathcost 20
 #diseaseres 100
-#watershape 8918
+#watershape 8315
 #startdom 1
 #homerealm 0
 #beckon 16
@@ -38322,7 +38336,7 @@ Sirens gain H2 after recruitment
 
 #newevent
 #rarity 5
-#req_godismnr 8919 -- Siren Sorc
+#req_godismnr 8316 -- Siren Sorc
 #req_targmnr 1054 -- Siren
 #req_targnoitem 667
 #nation -2
@@ -38337,7 +38351,7 @@ Sirens gain H2 after recruitment
 
 #newevent
 #rarity 5
-#req_godismnr 8919 -- Siren Sorc
+#req_godismnr 8316 -- Siren Sorc
 #req_targmnr 1055 -- Siren
 #req_targnoitem 667
 #nation -2
@@ -38350,7 +38364,7 @@ Sirens gain H2 after recruitment
 #addequip 9
 #end
 
-#newmonster 8920 -- Mermaid Enchantress
+#newmonster 8317 -- Mermaid Enchantress
 #copystats 1065 -- Merman
 #clearmagic
 #clearweapons
@@ -38379,10 +38393,10 @@ UW or coastal Temple forts may spawn a Mermage (Candles x 5% per month, W1 + 100
 #pathcost 10
 #startdom 1
 #homerealm 9
-#landshape 8921
+#landshape 8318
 #end
 
-#newmonster 8921 -- Mermaid Enchantress Landform
+#newmonster 8318 -- Mermaid Enchantress Landform
 #copystats 1066 -- Merman Landform
 #clearmagic
 #clearweapons
@@ -38410,7 +38424,7 @@ UW or coastal Temple forts may spawn a Mermage (Candles x 5% per month, W1 + 100
 #gemprod 4 1
 #startdom 1
 #homerealm 0
-#watershape 8920
+#watershape 8317
 #end
 
 #newsite 1942
@@ -38436,7 +38450,7 @@ UW or coastal Temple forts may spawn a Mermage (Candles x 5% per month, W1 + 100
 #magicskill 2 2
 #magicskill 6 1
 #magicskill 9 1 -- Holy 1
-#custommagic 8960 100 -- 100% roll at Air, Water, Nature
+#custommagic 8379 100 -- 100% roll at Air, Water, Nature
 #custommagic 25088 100 -- 100% roll at Water, Nature, Glamour
 #awe 1
 #mr 16
@@ -38464,7 +38478,7 @@ UW or coastal Temple forts may spawn a Mermage (Candles x 5% per month, W1 + 100
 #magicskill 2 2
 #magicskill 6 1
 #magicskill 9 1 -- Holy 1
-#custommagic 8960 100 -- 100% roll at Air, Water, Nature
+#custommagic 8379 100 -- 100% roll at Air, Water, Nature
 #custommagic 25088 100 -- 100% roll at Water, Nature, Glamour
 #awe 1
 #mr 16
@@ -38482,10 +38496,10 @@ UW or coastal Temple forts may spawn a Mermage (Candles x 5% per month, W1 + 100
 
 #newevent
 #rarity 5
-#req_godismnr 8920 -- Mermaid Enchantress
-#req_godismnr 8921 -- Mermaid Enchantress
-#req_monster 8920 -- Mermaid Enchantress
-#req_monster 8921 -- Mermaid Enchantress
+#req_godismnr 8317 -- Mermaid Enchantress
+#req_godismnr 8318 -- Mermaid Enchantress
+#req_monster 8317 -- Mermaid Enchantress
+#req_monster 8318 -- Mermaid Enchantress
 #req_pregame
 #req_owncapital 1
 #req_freesites 1
@@ -38500,8 +38514,8 @@ UW or coastal Temple forts may spawn a Mermage (Candles x 5% per month, W1 + 100
 
 #newevent
 #rarity 5
-#req_godismnr 8920 -- Mermaid Enchantress
-#req_godismnr 8921 -- Mermaid Enchantress
+#req_godismnr 8317 -- Mermaid Enchantress
+#req_godismnr 8318 -- Mermaid Enchantress
 #req_pretawake 1
 #req_owncapital 1
 #req_freesites 1
@@ -38515,7 +38529,7 @@ UW or coastal Temple forts may spawn a Mermage (Candles x 5% per month, W1 + 100
 
 #newevent
 #rarity 5
-#req_godismnr 8920 -- Mermaid Enchantress
+#req_godismnr 8317 -- Mermaid Enchantress
 #req_temple 1
 #req_land 0
 #req_fort 1
@@ -38531,7 +38545,7 @@ UW or coastal Temple forts may spawn a Mermage (Candles x 5% per month, W1 + 100
 
 #newevent
 #rarity 5
-#req_godismnr 8920 -- Mermaid Enchantress
+#req_godismnr 8317 -- Mermaid Enchantress
 #req_temple 1
 #req_land 1
 #req_coast 1
@@ -38593,7 +38607,7 @@ Whilst controls Remnants in the Depths, UW provinces with Death scales generate 
 #msg "Longdead & Soulless appear"
 #notext
 #nolog
-#1d3units 5279 -- Drowned Soulless
+#1d3units 7432 -- Drowned Soulless
 #end
 
 #newevent
@@ -38609,8 +38623,8 @@ Whilst controls Remnants in the Depths, UW provinces with Death scales generate 
 #msg "Longdead & Soulless appear"
 #notext
 #nolog
-#1d3units 5279 -- Drowned Soulless
-#1unit 5280 -- Drowned Ghost
+#1d3units 7432 -- Drowned Soulless
+#1unit 7433 -- Drowned Ghost
 #end
 
 #newevent
@@ -38624,7 +38638,7 @@ Whilst controls Remnants in the Depths, UW provinces with Death scales generate 
 #msg "Longdead & Soulless appear"
 #notext
 #nolog
-#1d3units 5280 -- Drowned Ghost
+#1d3units 7433 -- Drowned Ghost
 #end
 
 #newevent
@@ -38642,7 +38656,7 @@ Whilst controls Remnants in the Depths, UW provinces with Death scales generate 
 #1unit 1236 -- Leviathan
 #end
 
-#newmonster 8924 -- Sage Queen
+#newmonster 8321 -- Sage Queen
 #copystats 813 -- Imperial Consort
 #clearmagic
 #name "Divine Sage Empress"
@@ -38677,7 +38691,7 @@ Dominion grants permanent gold and resources increases to friendly provinces eac
 
 #newevent
 #rarity 5
-#req_godismnr 8924 -- Divine Sage Empress
+#req_godismnr 8321 -- Divine Sage Empress
 #req_dominion 1
 #req_domchance 10
 #req_mindef 1
@@ -38690,7 +38704,7 @@ Dominion grants permanent gold and resources increases to friendly provinces eac
 
 #newevent
 #rarity 5
-#req_godismnr 8924 -- Divine Sage Empress
+#req_godismnr 8321 -- Divine Sage Empress
 #req_owncapital 1
 #req_pretawake 1
 #nation -2
@@ -38707,7 +38721,7 @@ Dominion grants permanent gold and resources increases to friendly provinces eac
 
 #newevent
 #rarity 5
-#req_godismnr 8924 -- Divine Sage Empress
+#req_godismnr 8321 -- Divine Sage Empress
 #req_owncapital 1
 #req_pretawake 1
 #nation -2
@@ -38726,7 +38740,7 @@ Dominion grants permanent gold and resources increases to friendly provinces eac
 
 #newevent
 #rarity 5
-#req_godismnr 8924 -- Divine Sage Empress
+#req_godismnr 8321 -- Divine Sage Empress
 #req_unluck 1
 #nation -2
 #msg "Divine Sage Empress misfortune taxboost."
@@ -38737,7 +38751,7 @@ Dominion grants permanent gold and resources increases to friendly provinces eac
 
 #newevent
 #rarity 5
-#req_godismnr 8924 -- Divine Sage Empress
+#req_godismnr 8321 -- Divine Sage Empress
 #req_unluck 2
 #nation -2
 #msg "Divine Sage Empress misfortune taxboost."
@@ -38748,7 +38762,7 @@ Dominion grants permanent gold and resources increases to friendly provinces eac
 
 #newevent
 #rarity 5
-#req_godismnr 8924 -- Divine Sage Empress
+#req_godismnr 8321 -- Divine Sage Empress
 #req_unluck 3
 #nation -2
 #msg "Divine Sage Empress misfortune taxboost."
@@ -38759,7 +38773,7 @@ Dominion grants permanent gold and resources increases to friendly provinces eac
 
 #newevent
 #rarity 5
-#req_godismnr 8924 -- Divine Sage Empress
+#req_godismnr 8321 -- Divine Sage Empress
 #req_unluck 4
 #nation -2
 #msg "Divine Sage Empress misfortune taxboost."
@@ -38770,7 +38784,7 @@ Dominion grants permanent gold and resources increases to friendly provinces eac
 
 #newevent
 #rarity 5
-#req_godismnr 8924 -- Divine Sage Empress
+#req_godismnr 8321 -- Divine Sage Empress
 #req_unluck 5
 #nation -2
 #msg "Divine Sage Empress misfortune taxboost."
@@ -38779,7 +38793,7 @@ Dominion grants permanent gold and resources increases to friendly provinces eac
 #taxboost 5
 #end
 
-#newmonster 8925 -- Basalt Architect
+#newmonster 8322 -- Basalt Architect
 #copystats 322 -- King of the Deep
 #clearmagic
 #clearweapons
@@ -38822,12 +38836,12 @@ When present at a fortress without a lab will construct one at no cost
 
 #newevent
 #rarity 5
-#req_godismnr 8925 -- Basalt Architect
-#req_targmnr 8925 -- Basalt Architect
-#req_godismnr 8874 -- Arch Mage
-#req_targmnr 8874 -- Arch Mage
-#req_godismnr 8879 -- Arch Mage
-#req_targmnr 8879 -- Arch Mage
+#req_godismnr 8322 -- Basalt Architect
+#req_targmnr 8322 -- Basalt Architect
+#req_godismnr 8517 -- Arch Mage
+#req_targmnr 8517 -- Arch Mage
+#req_godismnr 8512 -- Arch Mage
+#req_targmnr 8512 -- Arch Mage
 #req_godismnr 244 -- Arch Mage
 #req_targmnr 244 -- Arch Mage
 #req_fort 1
@@ -38836,7 +38850,7 @@ When present at a fortress without a lab will construct one at no cost
 #lab 1
 #end
 
-#newmonster 5039
+#newmonster 8323
 #copystats 481 -- High Magus
 #clearmagic
 #clearweapons
@@ -38892,7 +38906,7 @@ Arcane Diagram in capital (20% Evocation discount)
 #revealsite
 #end
 
-#newmonster 5072
+#newmonster 8325
 #copystats 280 -- Seithkona
 #clearmagic
 #clearweapons
@@ -38924,7 +38938,7 @@ Each loses -1 paths when one norn is missing and -2 paths when alone
 #homerealm 1 -- North
 #end
 
-#newmonster 5073
+#newmonster 8326
 #copystats 280 -- Seithkona
 #clearmagic
 #clearweapons
@@ -38966,7 +38980,7 @@ Each loses -1 paths when one aspect is missing and -2 paths when alone
 #homerealm 2 -- Celtic
 #end
 
-#newmonster 5074
+#newmonster 8327
 #copystats 280 -- Seithkona
 #clearmagic
 #clearweapons
@@ -39005,7 +39019,7 @@ Each loses -1 paths when one aspect is missing and -2 paths when alone
 #pathcost 10
 #end
 
-#newmonster 5075
+#newmonster 8328
 #copystats 280 -- Seithkona
 #clearmagic
 #clearweapons
@@ -39048,7 +39062,7 @@ Each loses -1 paths when one aspect is missing and -2 paths when alone
 #pathcost 10
 #end
 
-#newmonster 5076
+#newmonster 8329
 #copystats 92 -- Cloud Mage
 #clearmagic
 #clearweapons
@@ -39081,7 +39095,7 @@ No path reduction when separated
 #homerealm 4
 #end
 
-#newmonster 5077
+#newmonster 8330
 #copystats 92 -- Cloud Mage
 #clearmagic
 #clearweapons
@@ -39111,7 +39125,7 @@ No path reduction when separated
 #pathcost 20
 #end
 
-#newmonster 5078
+#newmonster 8331
 #copystats 92 -- Cloud Mage
 #clearmagic
 #clearweapons
@@ -39141,7 +39155,7 @@ No path reduction when separated
 #pathcost 20
 #end
 
-#newmonster 8901
+#newmonster 8345
 #copystats 246 -- Freak Lord
 #clearmagic
 #clearweapons
@@ -39163,7 +39177,7 @@ Each month whilst at a laboratory may create a box of exploding arrows (25% chan
 #animal
 #startage 250
 #maxage 500
-#mountmnr 8900 -- Giant Markata
+#mountmnr 8344 -- Giant Markata
 #unmountedspr1 "./ExtraPretenders/VanaraFreakLord_Dis1.tga"
 #unmountedspr2 "./ExtraPretenders/VanaraFreakLord_Dis2.tga"
 #diseaseres 100
@@ -39172,13 +39186,13 @@ Each month whilst at a laboratory may create a box of exploding arrows (25% chan
 #crossbreeder 10
 #domsummon 5268 -- Berserk Markata
 #summon5 1120 -- Markata Archer
-#domsummon2 8900 -- Markata Freak
+#domsummon2 8344 -- Markata Freak
 #startdom 1
 #pathcost 10
 #homerealm 0
 #end
 
-#newmonster 8900
+#newmonster 8344
 #copystats 247 -- Freak
 #spr1 "./ExtraPretenders/GiantMarkata.tga"
 #spr2 "./ExtraPretenders/GiantMarkata2.tga"
@@ -39207,7 +39221,7 @@ Each month whilst at a laboratory may create a box of exploding arrows (25% chan
 
 #newevent
 #rarity 5
-#req_godismnr 8901 -- Markata Master
+#req_godismnr 8345 -- Markata Master
 #req_land 1
 #req_lab 1
 #req_mindef 1
@@ -39218,7 +39232,7 @@ Each month whilst at a laboratory may create a box of exploding arrows (25% chan
 #msg "Generate Markata & Freaks."
 #notext
 #nolog
-#1unit 8900 -- Markata Freak
+#1unit 8344 -- Markata Freak
 #1d6units -12 -- Foul Spawn
 #2d6units 1120 -- Markata Archer
 #4d6units 5268 -- Berserk Markata
@@ -39227,8 +39241,8 @@ Each month whilst at a laboratory may create a box of exploding arrows (25% chan
 
 #newevent
 #rarity 5
-#req_godismnr 8901 -- Markata Master
-#req_monster 8901 -- Markata Master
+#req_godismnr 8345 -- Markata Master
+#req_monster 8345 -- Markata Master
 #req_land 1
 #req_lab 1
 #req_mindef 1
@@ -39414,7 +39428,7 @@ Temples with labs may spawn a Drake each month (Swamp Drake in swamps, Cave Drak
 #1unit 2196 -- Swamp Drake
 #end
 
-#newmonster 8884
+#newmonster 8508
 #copyspr 1032 -- Royal Navigator
 #copystats 1032 -- Royal Navigator
 #name "Great Navigator"
@@ -39444,7 +39458,7 @@ While awake, coastal forts generate approx +10% income per candle
 
 #newevent
 #rarity 5
-#req_godismnr 8884 -- Great Navigator
+#req_godismnr 8508 -- Great Navigator
 #req_targpath1 9
 #req_targnoitem "Fleet of the Navigator"
 #nation -2
@@ -39457,7 +39471,7 @@ While awake, coastal forts generate approx +10% income per candle
 
 #newevent
 #rarity 5
-#req_godismnr 8884 -- Great Navigator
+#req_godismnr 8508 -- Great Navigator
 #req_pretawake 1
 #req_land 1
 #req_coast 1
@@ -39580,10 +39594,6 @@ Enchanters & Enchantresses gain H1 after joining
 #magicboost 53 1
 #end
 
-#selectmonster 364
-#gcost 10050
-#end
-
 #newsite 1930
 #name "Grove of Enchantment" 
 #path 6
@@ -39598,8 +39608,8 @@ Enchanters & Enchantresses gain H1 after joining
 #newevent
 #rarity 5
 #req_godismnr 245 -- Master Enchanter
-#req_godismnr 8875 -- Master Enchanter
-#req_godismnr 8880 -- Master Enchanter
+#req_godismnr 8516 -- Master Enchanter
+#req_godismnr 8511 -- Master Enchanter
 #req_pretawake 1
 #req_owncapital 1
 #req_freesites 1
@@ -39643,8 +39653,8 @@ Enchanters & Enchantresses gain H1 after joining
 #newevent
 #rarity 5
 #req_godismnr 245 -- Master Enchanter
-#req_godismnr 8875 -- Master Enchanter
-#req_godismnr 8880 -- Master Enchanter
+#req_godismnr 8516 -- Master Enchanter
+#req_godismnr 8511 -- Master Enchanter
 #req_pretawake 1
 #req_owncapital 1
 #req_land 1
@@ -39660,8 +39670,8 @@ Enchanters & Enchantresses gain H1 after joining
 #newevent
 #rarity 5
 #req_godismnr 245 -- Master Enchanter
-#req_godismnr 8875 -- Master Enchanter
-#req_godismnr 8880 -- Master Enchanter
+#req_godismnr 8516 -- Master Enchanter
+#req_godismnr 8511 -- Master Enchanter
 #req_targmnr 338 -- Enchanter
 #req_targmnr 363 -- Enchantress
 #req_targmnr 364 -- Enchantress
@@ -39809,7 +39819,7 @@ Whilst controls Guardians of the Deep, 1D3 Lobster Hybrids will appear at each U
 #domsummon2 211
 #end
 
-#newmonster 5766
+#newmonster 7890
 #clear
 #copystats 1529 -- Slave Troll
 #spr1 "./ExtraPretenders/EELobsterHyb.tga"
@@ -39838,8 +39848,8 @@ Whilst controls Guardians of the Deep, 1D3 Lobster Hybrids will appear at each U
 #msg "##godname## has created bybrid creatures from the Giant lobsters in the province."
 #nolog
 #kill2d6mon 642 -- Lobster
-#1unit 5766 -- Lobster Hybrids
-#1d3units 5766 -- Lobster Hybrids
+#1unit 7890 -- Lobster Hybrids
+#1d3units 7890 -- Lobster Hybrids
 #end
 
 #newevent
@@ -39853,7 +39863,7 @@ Whilst controls Guardians of the Deep, 1D3 Lobster Hybrids will appear at each U
 #msg "Lobsters from the Deep"
 #notext
 #nolog
-#1d3units 5766 -- Lobster Hybrids
+#1d3units 7890 -- Lobster Hybrids
 #end
 
 #selectmonster 249 -- Crone
@@ -39987,10 +39997,10 @@ Whilst researching may create an Owl Quill each month (50% chance)
 #rarity 5
 #req_godismnr 251 -- Great Sage
 #req_targmnr 251 -- Great Sage
-#req_godismnr 8877 -- Great Sage
-#req_targmnr 8877 -- Great Sage
-#req_godismnr 8882 -- Great Sage
-#req_targmnr 8882 -- Great Sage
+#req_godismnr 8514 -- Great Sage
+#req_targmnr 8514 -- Great Sage
+#req_godismnr 8509 -- Great Sage
+#req_targmnr 8509 -- Great Sage
 #req_targorder 4 -- Research
 #req_land 1
 #nation -2
@@ -40005,10 +40015,10 @@ Whilst researching may create an Owl Quill each month (50% chance)
 #rarity 5
 #req_godismnr 251 -- Great Sage
 #req_targmnr 251 -- Great Sage
-#req_godismnr 8877 -- Great Sage
-#req_targmnr 8877 -- Great Sage
-#req_godismnr 8882 -- Great Sage
-#req_targmnr 8882 -- Great Sage
+#req_godismnr 8514 -- Great Sage
+#req_targmnr 8514 -- Great Sage
+#req_godismnr 8509 -- Great Sage
+#req_targmnr 8509 -- Great Sage
 #req_pregame
 #req_owncapital 1
 #req_nositenbr 1989 -- Library of Lore
@@ -40024,8 +40034,8 @@ Whilst researching may create an Owl Quill each month (50% chance)
 #newevent
 #rarity 5
 #req_godismnr 251 -- Great Sage
-#req_godismnr 8877 -- Great Sage
-#req_godismnr 8882 -- Great Sage
+#req_godismnr 8514 -- Great Sage
+#req_godismnr 8509 -- Great Sage
 #req_pretawake 1
 #req_owncapital 1
 #req_nositenbr 1989 -- Library of Lore
@@ -40041,10 +40051,10 @@ Whilst researching may create an Owl Quill each month (50% chance)
 #rarity 5
 #req_godismnr 251 -- Great Sage
 #req_targmnr 251 -- Great Sage
-#req_godismnr 8877 -- Great Sage
-#req_targmnr 8877 -- Great Sage
-#req_godismnr 8882 -- Great Sage
-#req_targmnr 8882 -- Great Sage
+#req_godismnr 8514 -- Great Sage
+#req_targmnr 8514 -- Great Sage
+#req_godismnr 8509 -- Great Sage
+#req_targmnr 8509 -- Great Sage
 #req_fort 1
 #req_lab 1
 #req_owncapital 0
@@ -40060,8 +40070,8 @@ Whilst researching may create an Owl Quill each month (50% chance)
 #newevent
 #rarity 5
 #req_godismnr 251 -- Great Sage
-#req_godismnr 8877 -- Great Sage
-#req_godismnr 8882 -- Great Sage
+#req_godismnr 8514 -- Great Sage
+#req_godismnr 8509 -- Great Sage
 #req_targmnr 479 -- Lore Master
 #req_targmnr 478 -- Sage
 #req_targnopath1 9 -- Not priest
@@ -40305,8 +40315,8 @@ Starting item: Wand of Transmutation (Casts Curse of the Frog Prince)
 #newevent
 #rarity 5
 #req_godismnr 485 -- Great Enchantress
-#req_godismnr 8873 -- Great Enchantress
-#req_godismnr 8878 -- Great Enchantress
+#req_godismnr 8518 -- Great Enchantress
+#req_godismnr 8513 -- Great Enchantress
 #req_owncapital 1
 #req_pregame
 #nation -2
@@ -40321,10 +40331,10 @@ Starting item: Wand of Transmutation (Casts Curse of the Frog Prince)
 #rarity 5
 #req_godismnr 485 -- Great Enchantress
 #req_targmnr 485 -- Great Enchantress
-#req_godismnr 8873 -- Great Enchantress
-#req_targmnr 8873 -- Great Enchantress
-#req_godismnr 8878 -- Great Enchantress
-#req_targmnr 8878 -- Great Enchantress
+#req_godismnr 8518 -- Great Enchantress
+#req_targmnr 8518 -- Great Enchantress
+#req_godismnr 8513 -- Great Enchantress
+#req_targmnr 8513 -- Great Enchantress
 #req_dominion 1
 #req_domchance 5
 #nation -2
@@ -40338,10 +40348,10 @@ Starting item: Wand of Transmutation (Casts Curse of the Frog Prince)
 #rarity 5
 #req_godismnr 485 -- Great Enchantress
 #req_targmnr 338 -- Enchanter
-#req_godismnr 8873 -- Great Enchantress
-#req_targmnr 8873 -- Great Enchantress
-#req_godismnr 8878 -- Great Enchantress
-#req_targmnr 8878 -- Great Enchantress
+#req_godismnr 8518 -- Great Enchantress
+#req_targmnr 8518 -- Great Enchantress
+#req_godismnr 8513 -- Great Enchantress
+#req_targmnr 8513 -- Great Enchantress
 #req_targnopath1 9 -- Not Priest
 #nation -2
 #msg "Enchanters Holy"
@@ -40354,10 +40364,10 @@ Starting item: Wand of Transmutation (Casts Curse of the Frog Prince)
 #rarity 5
 #req_godismnr 485 -- Great Enchantress
 #req_targmnr 338 -- Enchanter
-#req_godismnr 8873 -- Great Enchantress
-#req_targmnr 8873 -- Great Enchantress
-#req_godismnr 8878 -- Great Enchantress
-#req_targmnr 8878 -- Great Enchantress
+#req_godismnr 8518 -- Great Enchantress
+#req_targmnr 8518 -- Great Enchantress
+#req_godismnr 8513 -- Great Enchantress
+#req_targmnr 8513 -- Great Enchantress
 #req_targnopath1 9 -- Not Priest
 #nation -2
 #msg "Enchanters Holy"
@@ -40832,7 +40842,7 @@ May teach a Bakemono Sorcerer in same province the secret of immortality each mo
 #diseaseres 100
 #end
 
-#newmonster 6757
+#newmonster 7827
 #copystats 1427 -- Bakemono Sorcerer
 #spr1 "./ExtraPretenders/EEKizoku.tga"
 #spr2 "./ExtraPretenders/EEKizoku2.tga"
@@ -40879,7 +40889,7 @@ May teach a Bakemono Sorcerer in same province the secret of immortality each mo
 #req_dominion 1
 #req_domchance 5
 #msg "##godname## has taught ##targname## the Bakemono Sorcerer the secret of hiding his mortality outside his body. ##targname## has now joined the immortals and will persist as long as the resting place of his mortality is not captured by the enemy."
-#transform 6757 -- Bakemono Kizoku
+#transform 7827 -- Bakemono Kizoku
 #end
 
 #selectmonster 653 -- Serpent King
@@ -40896,7 +40906,7 @@ Summons Sacred Serpents & Lamia up to Dominion candles each month, rarely summon
 #regeneration 50
 #domsummon 295 -- Sacred Serpent
 #domsummon2 394 -- Lamia
-#domsummon20 6749 -- Great Green Serpent
+#domsummon20 10001 -- Great Green Serpent
 #heal
 #diseaseres 100
 #end
@@ -40912,7 +40922,7 @@ Summons Sacred Serpents & Lamia up to Dominion candles each month, rarely summon
 #gcost 140
 #domsummon 295 -- Sacred Serpent
 #domsummon2 394 -- Lamia
-#domsummon20 6749 -- Great Green Serpent
+#domsummon20 10001 -- Great Green Serpent
 #lamialord 4
 #regeneration 50
 #heal
@@ -40931,7 +40941,7 @@ Summons Sacred Serpents & Lamia up to Dominion candles each month, rarely summon
 #msg "Throne Serpent Summon"
 #notext
 #nolog
-#1unit 6749 -- Great Green Serpent
+#1unit 10001 -- Great Green Serpent
 #end
 
 #selectmonster 857 -- The Smoking Mirror
@@ -40987,7 +40997,7 @@ H3 Priests performing a Blood Sacrifice have a 10% x candles chance to summon an
 #diseaseres 100
 #end
 
-#newmonster 5701
+#newmonster 7822
 #copystats 404 -- Vampire Lord
 #copyspr 1019 -- Vampire Count
 #name "Vampire Count"
@@ -41001,7 +41011,7 @@ H3 Priests performing a Blood Sacrifice have a 10% x candles chance to summon an
 #domsummon2 1022 -- Thrall
 #end
 
-#newmonster 5702
+#newmonster 7823
 #copystats 862 -- Vampire Queen
 #copyspr 862 -- Vampire Queen
 #homerealm 0
@@ -41044,10 +41054,10 @@ May turn a humanoid living blood mage in province into a vampire count/countess 
 #req_targpath1 8 -- B1+
 #req_dominion 1
 #req_domchance 5
-#req_targnomnr 5702 -- Vampire Countess
+#req_targnomnr 7823 -- Vampire Countess
 #req_targmaxsize 3
 #msg "##targname## has been given the gift of immortality and now feasts on the blood of innocents!"
-#transform 5702 -- Vampire Countess
+#transform 7823 -- Vampire Countess
 #nation -2
 #req_pop0ok
 #pathboost 8
@@ -41066,12 +41076,12 @@ May turn a humanoid living blood mage in province into a vampire count/countess 
 #req_targpath1 8 -- B1+
 #req_dominion 1
 #req_domchance 5
-#req_targnomnr 5701 -- Vampire Count
+#req_targnomnr 7822 -- Vampire Count
 #req_targmaxsize 3
 #msg "##targname## has been given the gift of immortality and now feasts on the blood of innocents!"
 #nation -2
 #req_pop0ok
-#transform 5701 -- Vampire Count
+#transform 7822 -- Vampire Count
 #pathboost 8
 #nolog
 #end
@@ -41294,7 +41304,7 @@ May call Morrigan commander each month (A1D1H1, 5% x candles chance)
 #holyboost -1
 #end
 
-#newmonster 5490
+#newmonster 7630
 #copystats 1810
 #clearweapons
 #name "Longdead Partholonian Lord"
@@ -41345,7 +41355,7 @@ Each month may raise a Longdead Partholonian Lord (5% x candles chance, G2D1H2, 
 #req_pop0ok
 #msg "##godname## has ensorcelled the bones of an ancient Partholonian lord to join her in silent reminiscence."
 #nolog
-#com 5490 -- Partholonian Lord
+#com 7630 -- Partholonian Lord
 #end
 
 #selectmonster 2205 -- Great Sauromancer
@@ -41362,8 +41372,8 @@ Whilst awake, friendly mages site searching in wastes may reanimate 2-7 Mummifie
 #raiseonkill 50
 #startitem 203 -- Scorpion Crown
 #reanimator 20
-#batstartsum2d6 5149 -- Mummified Guard
-#domsummon 5149 -- Mummified Guard
+#batstartsum2d6 7316 -- Mummified Guard
+#domsummon 7316 -- Mummified Guard
 #domsummon20 625 -- Mummy
 #end
 
@@ -41381,8 +41391,8 @@ Whilst awake, friendly mages site searching in wastes may reanimate 2-7 Mummifie
 #msg "Mummies created"
 #notext
 #nolog
-#1unit 5149 -- Mummified Guard
-#1d6units 5149 -- Mummified Guard
+#1unit 7316 -- Mummified Guard
+#1d6units 7316 -- Mummified Guard
 #end
 
 #newevent
@@ -41393,7 +41403,7 @@ Whilst awake, friendly mages site searching in wastes may reanimate 2-7 Mummifie
 #req_targmnr 741 -- Giant Mummy
 #req_targmnr 742 -- Giant Mummy
 #req_targmnr 778 -- Divine Mummy
-#req_targmnr 5149 -- Ceremonial Guard
+#req_targmnr 7316 -- Ceremonial Guard
 #req_targnopath2 9 -- Not H2
 #nation -2
 #req_pop0ok
@@ -41417,7 +41427,7 @@ Whilst awake, friendly mages site searching in wastes may reanimate 2-7 Mummifie
 #holyboost -1
 #end
 
-#newmonster 5149
+#newmonster 7316
 #copystats 625 -- Mummy
 #clearweapons
 #name "Mummified Ceremonial Guard"
@@ -42342,24 +42352,24 @@ When Awakens will found a Forest Observatory in capital (2N2S, Allows Scrying, R
 #end
 
 #selectmonster 1260 -- Ko Oni
-#montag 5182
+#montag 1260
 #montagweight 2
 #end
 
 #selectmonster 1264 -- Ao Oni
-#montag 5182
+#montag 1260
 #end
 
 #selectmonster 1266 -- Aka Oni
-#montag 5182
+#montag 1260
 #end
 
 #selectmonster 1272 -- Oni
-#montag 5182
+#montag 1260
 #end
 
 #selectmonster 3084 -- Amanojaku
-#montag 5182
+#montag 1260
 #end
 
 #selectmonster 2978 -- Master Sorcerer
@@ -42541,10 +42551,6 @@ Whilst site searching may discover 150 gold and 1D6 of each elemental gem (Candl
 #magicboost 53 1
 #nobadevents 75
 #diseaseres 100
-#end
-
-#selectmonster 382 -- Mystic Prophet
-#gcost 10000
 #end
 
 #newevent
@@ -42738,7 +42744,6 @@ Summons a size 8 Water Elemental each month & summons Water Elementals at 1 size
 #2com 103 -- Hydromancer
 #holyboost 103 -- Hydromancer
 #end
-
 
 #newsite 1914
 #name "Temple of the Sea" 
@@ -43170,7 +43175,7 @@ Temple forts within Dominion spawn slave units & mages whilst First Spawn is in 
 #com 5192 -- Enslaved Spy
 #end
 
-#newmonster 5187
+#newmonster 7350
 #copystats 1182 -- Hedge Wizard
 #copyspr 1182 -- Hedge Wizard
 #clearweapons
@@ -43192,7 +43197,7 @@ Temple forts within Dominion spawn slave units & mages whilst First Spawn is in 
 #slowrec
 #end
 
-#newmonster 5189
+#newmonster 7352
 #copystats 1182 -- Hedge Wizard
 #copyspr 363 -- Enchantress
 #clearmagic
@@ -43223,7 +43228,7 @@ Temple forts within Dominion spawn slave units & mages whilst First Spawn is in 
 #slave
 #end
 
-#newmonster 5308
+#newmonster 7461
 #copystats 40 -- Heavy Infantry
 #copyspr 40 -- Heavy Infantry
 #name "Slave Soldier"
@@ -43235,7 +43240,7 @@ Temple forts within Dominion spawn slave units & mages whilst First Spawn is in 
 #montag 5333
 #end
 
-#newmonster 5309
+#newmonster 7462
 #copystats 29 -- Light Infantry
 #copyspr 29 -- Light Infantry
 #name "Slave Soldier"
@@ -43247,7 +43252,7 @@ Temple forts within Dominion spawn slave units & mages whilst First Spawn is in 
 #montag 5333
 #end
 
-#newmonster 5310
+#newmonster 7463
 #copystats 17 -- Archer
 #copyspr 17 -- Archer
 #name "Slave Archer"
@@ -43750,7 +43755,7 @@ When Order scales are present, Dominion reduces unrest by approx 1 per candle ea
 
 
 
-#newmonster 8882
+#newmonster 8509
 #copystats 251 -- Great Sage
 #spr1 "./ExtraPretenders/AFGreatSage1.tga"
 #spr2 "./ExtraPretenders/AFGreatSage2.tga"
@@ -43758,7 +43763,7 @@ When Order scales are present, Dominion reduces unrest by approx 1 per candle ea
 #nametype 126
 #end
 
-#newmonster 8881
+#newmonster 8510
 #copystats 249 -- Crone
 #name "Elder"
 #spr1 "./ExtraPretenders/AFFrostFather1.tga"
@@ -43772,7 +43777,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #nametype 126
 #end
 
-#newmonster 8880
+#newmonster 8511
 #copystats 245 -- Master Enchanter
 #spr1 "./ExtraPretenders/AFMasterEnchanter1.tga"
 #spr2 "./ExtraPretenders/AFMasterEnchanter2.tga"
@@ -43780,7 +43785,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #nametype 126
 #end
 
-#newmonster 8879
+#newmonster 8512
 #copystats 244 -- Arch Mage
 #spr1 "./ExtraPretenders/AFArchMage1.tga"
 #spr2 "./ExtraPretenders/AFArchMage2.tga"
@@ -43800,8 +43805,8 @@ Starting item Tome of Lore (Casts Record of Creation)
 
 #newevent
 #rarity 5
-#req_godismnr 8879 -- Arch Mage
-#req_targmnr 8879 -- Arch Mage
+#req_godismnr 8512 -- Arch Mage
+#req_targmnr 8512 -- Arch Mage
 #req_owncapital 1
 #req_pregame
 #req_freesites 1
@@ -43815,8 +43820,8 @@ Starting item Tome of Lore (Casts Record of Creation)
 
 #newevent
 #rarity 5
-#req_godismnr 8879 -- Arch Mage
-#req_monster 8879 -- Arch Mage
+#req_godismnr 8512 -- Arch Mage
+#req_monster 8512 -- Arch Mage
 #req_fort 1
 #req_lab 1
 #req_mindef 1
@@ -43832,7 +43837,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 
 #newevent
 #rarity 5
-#req_nomonster 8879 -- Arch Mage
+#req_nomonster 8512 -- Arch Mage
 #req_site 1
 #nation -2
 #req_pop0ok
@@ -43842,7 +43847,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #removesite 1903
 #end
 
-#newmonster 8878
+#newmonster 8513
 #copystats 485 -- Great Enchantress
 #spr1 "./ExtraPretenders/AFGreatEnchantress1.tga"
 #spr2 "./ExtraPretenders/AFGreatEnchantress2.tga"
@@ -43850,7 +43855,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #nametype 125
 #end
 
-#newmonster 8877
+#newmonster 8514
 #copystats 251 -- Great Sage
 #spr1 "./ExtraPretenders/AMGreatSage1.tga"
 #spr2 "./ExtraPretenders/AMGreatSage2.tga"
@@ -43858,7 +43863,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #nametype 123
 #end
 
-#newmonster 8876
+#newmonster 8515
 #copystats 250 -- Frost Father
 #spr1 "./ExtraPretenders/AMFrostFather1.tga"
 #spr2 "./ExtraPretenders/AMFrostFather2.tga"
@@ -43868,8 +43873,8 @@ Starting item Tome of Lore (Casts Record of Creation)
 
 #newevent
 #rarity 5
-#req_godismnr 8876 -- Frost Father
-#req_monster 8876 -- Frost Father
+#req_godismnr 8515 -- Frost Father
+#req_monster 8515 -- Frost Father
 #req_owncapital 1
 #req_pregame
 #nation -2
@@ -43886,7 +43891,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 
 #newevent
 #rarity 5
-#req_godismnr 8876 -- Frost Father
+#req_godismnr 8515 -- Frost Father
 #req_owncapital 1
 #req_season 3 -- Winter
 #req_mydominion 1
@@ -43903,7 +43908,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 
 #newevent
 #rarity 5
-#req_godismnr 8876 -- Frost Father
+#req_godismnr 8515 -- Frost Father
 #req_owncapital 1
 #req_season 3 -- Winter
 #req_mydominion 1
@@ -43916,7 +43921,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #com 1200 -- Unfrozen Mage
 #end
 
-#newmonster 8875
+#newmonster 8516
 #copystats 245 -- Master Enchanter
 #spr1 "./ExtraPretenders/AMMasterEnchanter1.tga"
 #spr2 "./ExtraPretenders/AMMasterEnchanter2.tga"
@@ -43924,7 +43929,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #nametype 123
 #end
 
-#newmonster 8874
+#newmonster 8517
 #copystats 244 -- Arch Mage
 #spr1 "./ExtraPretenders/AMArchMage1.tga"
 #spr2 "./ExtraPretenders/AMArchMage2.tga"
@@ -43944,9 +43949,9 @@ Starting item Tome of Lore (Casts Record of Creation)
 
 #newevent
 #rarity 5
-#req_godismnr 8874 -- Arch Mage
+#req_godismnr 8517 -- Arch Mage
 #req_owncapital 1
-#req_monster 8874 -- Arch Mage
+#req_monster 8517 -- Arch Mage
 #req_pregame
 #req_freesites 1
 #req_nositenbr 1902
@@ -43959,8 +43964,8 @@ Starting item Tome of Lore (Casts Record of Creation)
 
 #newevent
 #rarity 5
-#req_godismnr 8874 -- Arch Mage
-#req_targmnr 8874 -- Arch Mage
+#req_godismnr 8517 -- Arch Mage
+#req_targmnr 8517 -- Arch Mage
 #req_fort 1
 #req_lab 1
 #req_mindef 1
@@ -43976,7 +43981,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 
 #newevent
 #rarity 5
-#req_nomonster 8874 -- Arch Mage
+#req_nomonster 8517 -- Arch Mage
 #req_site 1
 #nation -2
 #req_pop0ok
@@ -43986,7 +43991,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #removesite 1902
 #end
 
-#newmonster 8873
+#newmonster 8518
 #copystats 485 -- Great Enchantress
 #spr1 "./ExtraPretenders/AMGreatEnchantress1.tga"
 #spr2 "./ExtraPretenders/AMGreatEnchantress2.tga"
@@ -43998,15 +44003,15 @@ Starting item Tome of Lore (Casts Record of Creation)
 
 #selectnation 5 -- EA Arco
 #cheapgod20 8475 -- Statue of Wisdom
-#cheapgod20 8910 -- Stone Magus
+#cheapgod20 8307 -- Stone Magus
 #end
 
 #selectnation 6 -- Mekone
-#delgod 8982 -- Titan of the Sun
-#delgod 8983 -- Titan of War and Farming
-#delgod 5095 -- Spirit of Justice
-#addgod 5050 -- Brazen Bull
-#addgod 5041 -- Tartarian
+#delgod 8406 -- Titan of the Sun
+#delgod 8407 -- Titan of War and Farming
+#delgod 8435 -- Spirit of Justice
+#addgod 8369 -- Brazen Bull
+#addgod 8409 -- Tartarian
 #addgod 8453 -- Divine Egg
 #addgod 8454 -- Spirit of the Well
 #addgod 8458 -- Statue of the Silent God
@@ -44016,8 +44021,8 @@ Starting item Tome of Lore (Casts Record of Creation)
 #addgod 4032 -- Worm Soul
 #addgod 8461 -- Idol of the Seasons
 #addgod 8456 -- Bloodstained Edifice
-#addgod 5053 -- Green Man
-#addgod 8912 -- First Mandragora
+#addgod 8413 -- Green Man
+#addgod 8309 -- First Mandragora
 #addgod 7480 -- Tree of Hate
 #cheapgod20 8455 -- Sacred Grove
 #cheapgod20 8461 -- Idol of the Seasons
@@ -44025,27 +44030,27 @@ Starting item Tome of Lore (Casts Record of Creation)
 
 #selectnation 8 -- EA Ermor
 #addgod 8366 -- Icon
-#addgod 5054 -- Angelic Lord
-#addgod 5067 -- Peacock Angel
+#addgod 8414 -- Angelic Lord
+#addgod 8418 -- Peacock Angel
 #addgod 8472 -- Reliquary
 #addgod 8446 -- Pillar of Eternal Flame
-#cheapgod20 8982 -- Titan of the Sun
+#cheapgod20 8406 -- Titan of the Sun
 #cheapgod20 8472 -- Reliquary
 #end
 
 #selectnation 9 -- EA Sauromatia
 #addgod 8474 -- Ancestral Barrow
 #addgod 4032 -- Worm Soul
-#addgod 5064 -- Great Toad
-#addgod 5073 -- Triple Goddess
-#addgod 8867 -- Necrophidian
+#addgod 8373 -- Great Toad
+#addgod 8326 -- Triple Goddess
+#addgod 7245 -- Necrophidian
 #addgod 8456 -- Bloodstained Edifice
 #cheapgod20 8474 -- Ancestral Barrow
 #end
 
 #selectnation 10 -- Fomoria
 #addgod 8455 -- Sacred Grove
-#addgod 8905 -- Great Gull
+#addgod 8349 -- Great Gull
 #cheapgod20 6807 -- Raven of the Underworld
 #cheapgod20 6810 -- Dog of the Underworld
 #end
@@ -44053,7 +44058,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #selectnation 11 -- Tir Na nOg
 #addgod 956 -- Mother of Tuathas
 #addgod 8455 -- Sacred Grove
-#addgod 7991 -- Great Bear
+#addgod 8261 -- Great Bear
 #cheapgod20 956 -- Mother of Tuathas
 #end
 
@@ -44061,8 +44066,8 @@ Starting item Tome of Lore (Casts Record of Creation)
 #addgod 8455 -- Sacred Grove
 #addgod 8456 -- Bloodstained Edifice
 #addgod 4032 -- Worm Soul
-#addgod 7991 -- Great Bear
-#cheapgod20 8911 -- Arch Druid of Bloodhenge
+#addgod 8261 -- Great Bear
+#cheapgod20 8308 -- Arch Druid of Bloodhenge
 #cheapgod20 8467 -- Spirit of the Henge
 #end
 
@@ -44078,7 +44083,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #addgod 8456 -- Bloodstained Edifice
 #addgod 8499 -- Divine Anvil
 #addgod 8492 -- Idol of Storms
-#addgod 7991 -- Great Bear
+#addgod 8261 -- Great Bear
 #cheapgod20 8492 -- Idol of Storms
 #delgod 8449 -- Idol of the Sun
 #delgod 8448 -- Statue of the Sun and Rain
@@ -44086,54 +44091,54 @@ Starting item Tome of Lore (Casts Record of Creation)
 
 #selectnation 15 -- EA Agartha
 #addgod 156 -- Cyclops
-#addgod 8979 -- Firstborn of Rhuax
+#addgod 8403 -- Firstborn of Rhuax
 #addgod 8465 -- Protean Abomination
-#addgod 5049 -- Antumbral
+#addgod 8411 -- Antumbral
 #addgod 8456 -- Bloodstained Edifice
 #delgod 8449 -- Idol of the Sun
 #delgod 8448 -- Statue of the Sun and Rain
 #delgod 6807 -- Raven of the Underworld
-#delgod 7991 -- Great Bear
+#delgod 8261 -- Great Bear
 #cheapgod20 8454 -- Spirit of the Well
 #cheapgod20 156 -- Chthonic Cyclops
 #end
 
 #selectnation 16 -- EA Abysia
 #addgod 156 -- Cyclops
-#addgod 8979 -- Firstborn of Rhuax
+#addgod 8403 -- Firstborn of Rhuax
 #addgod 8446 -- Pillar of Eternal Flame
 #addgod 8450 -- Emissary of Antrax
 #addgod 8451 -- Infernal Spirit
 #addgod 8456 -- Bloodstained Edifice
-#addgod 5050 -- Brazen Bull
+#addgod 8369 -- Brazen Bull
 #delgod 8485 -- Sacred Grove
 #delgod 8447 -- Idol of Watery Wisdom
 #delgod 8454 -- Spirit of the Well
-#delgod 8882 -- Great Sage
-#delgod 8881 -- Crone
-#delgod 8880 -- Master Enchanter
-#delgod 8879 -- Arch Mage
-#delgod 8878 -- Great Enchantress
+#delgod 8509 -- Great Sage
+#delgod 8510 -- Crone
+#delgod 8511 -- Master Enchanter
+#delgod 8512 -- Arch Mage
+#delgod 8513 -- Great Enchantress
 #addgod 8338 -- Burning Bush
-#delgod 7991 -- Great Bear
+#delgod 8261 -- Great Bear
 #cheapgod20 8446 -- Pillar of Flame
-#cheapgod20 8979 -- Firstborn of Rhuax
+#cheapgod20 8403 -- Firstborn of Rhuax
 #cheapgod20 8451 -- Infernal Spirit
 #end
 
 #selectnation 17 -- Hinnom
 #addgod 8456 -- Bloodstained Edifice
 #addgod 8450 -- Emissary of Antrax
-#addgod 5050 -- Brazen Bull
-#addgod 5060 -- Grigori
-#addgod 8966 -- Spectral Ba'al
-#addgod 8897 -- Great Creator
-#addgod 8898 -- Elohim
+#addgod 8369 -- Brazen Bull
+#addgod 8415 -- Grigori
+#addgod 8385 -- Spectral Ba'al
+#addgod 8341 -- Great Creator
+#addgod 8342 -- Elohim
 #addgod 8451 -- Infernal Spirit
-#delgod 7991 -- Great Bear
+#delgod 8261 -- Great Bear
 #cheapgod20 8338 -- Burning Bush
-#cheapgod20 8898 -- Elohim
-#cheapgod20 8897 -- Great Creator
+#cheapgod20 8342 -- Elohim
+#cheapgod20 8341 -- Great Creator
 #end
 
 #selectnation 18 -- Ubar
@@ -44142,71 +44147,71 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 245 -- Master Enchanter
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
-#delgod 7991 -- Great Bear
+#delgod 8261 -- Great Bear
 #end
 
 #selectnation 19 -- Ur
-#addgod 8954 -- First Sirrush
-#addgod 8942 -- Saltwater Serpent
-#addgod 5051 -- Gallu Demon
+#addgod 8367 -- First Sirrush
+#addgod 8358 -- Saltwater Serpent
+#addgod 8389 -- Gallu Demon
 #delgod 8451 -- Infernal Spirit
-#addgod 5064 -- Great Toad
-#cheapgod20 8954 -- First Sirrush
+#addgod 8373 -- Great Toad
+#cheapgod20 8367 -- First Sirrush
 #cheapgod20 8447 -- Watery Wisdom
 #end
 
 #selectnation 20 -- EA Kailasa
 #delgod 246 -- Freak Lord
-#addgod 8901 -- Markata Master
-#cheapgod20 8975 -- Lord of Knowledge
+#addgod 8345 -- Markata Master
+#cheapgod20 8399 -- Lord of Knowledge
 #cheapgod20 8466 -- Idol of the Harvest
 #end
 
 #selectnation 21 -- Lanka
 #delgod 246 -- Freak Lord
-#addgod 8901 -- Markata Master
+#addgod 8345 -- Markata Master
 #addgod 8978 -- Danavaraja
 #addgod 8450 -- Emissary of Antrax
 #addgod 8456 -- Bloodstained Edifice
 #cheapgod20 8978 -- Danavaraja
-#cheapgod20 8901 -- Markata Master
+#cheapgod20 8345 -- Markata Master
 #end
 
 #selectnation 22 -- EA TC
 #addgod 8474 -- Ancestral Barrow
-#addgod 8924 -- Divine Sage Empress
-#addgod 8975 -- Lord of Knowledge
-#addgod 8956 -- Tathagata 
-#addgod 8957 -- Tathagata 
-#addgod 8958 -- Tathagata 
-#addgod 8959 -- Tathagata
-#addgod 8960 -- Tathagata
-#addgod 5027 -- Wisdom King
+#addgod 8321 -- Divine Sage Empress
+#addgod 8399 -- Lord of Knowledge
+#addgod 8374 -- Tathagata 
+#addgod 8376 -- Tathagata 
+#addgod 8377 -- Tathagata 
+#addgod 8378 -- Tathagata
+#addgod 8379 -- Tathagata
+#addgod 8380 -- Wisdom King
 #addgod 8487 -- Statue of Wisdom
 #addgod 8489 -- Statue of Creation
 #addgod 8490 -- Shanta Murti
-#addgod 5082 -- Tridevi
-#addgod 5085 -- Trimurti
-#addgod 8889 -- Terracotta Emperor
-#delgod 7991 -- Great Bear
+#addgod 8422 -- Tridevi
+#addgod 8425 -- Trimurti
+#addgod 8334 -- Terracotta Emperor
+#delgod 8261 -- Great Bear
 #cheapgod20 8474 -- Ancestral Barrow
-#cheapgod20 5026 -- Heavenly Sage
-#cheapgod20 5431 -- Founding Father
+#cheapgod20 8504 -- Heavenly Sage
+#cheapgod20 7578 -- Founding Father
 #end
 
 #selectnation 23 -- Yomi
-#addgod 8915 -- Tengu Kunshu
+#addgod 8312 -- Tengu Kunshu
 #addgod 8497 -- Spirit Gate
-#delgod 5068 -- Celestial Fox
-#delgod 5076 -- Pure Ones
-#cheapgod20 5065 -- Bull Demon King
-#cheapgod20 5066 -- Bull Demon King
+#delgod 8390 -- Celestial Fox
+#delgod 8329 -- Pure Ones
+#cheapgod20 8416 -- Bull Demon King
+#cheapgod20 8417 -- Bull Demon King
 #end
 
 #selectnation 24 -- EA Caelum
 #cheapgod20 8446 -- Pillar of Flame
-#delgod 7991 -- Great Bear
-#addgod 5067 -- Peacock Angel
+#delgod 8261 -- Great Bear
+#addgod 8418 -- Peacock Angel
 #end
 
 #selectnation 25 -- EA Mictlan
@@ -44217,8 +44222,8 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
 #delgod 6807 -- Raven of the Underworld
-#addgod 8895 -- Lord of the Carrion Dead
-#addgod 7993 -- Mountain Lion
+#addgod 8339 -- Lord of the Carrion Dead
+#addgod 8263 -- Mountain Lion
 #cheapgod20 8448 -- Statue of the Sun & Rain
 #end
 
@@ -44230,23 +44235,23 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
 #delgod 6807 -- Raven of the Underworld
-#delgod 7991 -- Great Bear
-#cheapgod20 8937 -- Night Hunter
+#delgod 8261 -- Great Bear
+#cheapgod20 8353 -- Night Hunter
 #cheapgod20 8906 -- Monstrous Dog
 #cheapgod20 8346 -- Skull Idol
 #end
 
 #selectnation 27 -- EA Ctis
-#cheapgod20 8981 -- Neter of the River
+#cheapgod20 8405 -- Neter of the River
 #delgod 251 -- Great Sage
 #delgod 249 -- Crone
 #delgod 245 -- Master Enchanter
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
-#delgod 8895 -- Lord of Carrion Dead
-#addgod 5064 -- Great Toad
-#addgod 8867 -- Necrophidian
-#delgod 7991 -- Great Bear
+#delgod 8339 -- Lord of Carrion Dead
+#addgod 8373 -- Great Toad
+#addgod 7245 -- Necrophidian
+#delgod 8261 -- Great Bear
 #end
 
 #selectnation 28 -- EA Machaka
@@ -44257,51 +44262,51 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
 #addgod 8499 -- Divine Anvil
-#addgod 8895 -- Lord of the Carrion Dead
-#delgod 7991 -- Great Bear
+#addgod 8339 -- Lord of the Carrion Dead
+#delgod 8261 -- Great Bear
 #end
 
 #selectnation 29 -- Berytos
-#addgod 8916 -- Arch Daktyl
+#addgod 8313 -- Arch Daktyl
 #addgod 8456 -- Bloodstained Edifice
 #addgod 8450 -- Emissary of Antrax
-#addgod 5050 -- Brazen Bull
+#addgod 8369 -- Brazen Bull
 #addgod 8963 -- Sea Nymph
 #delgod 8455 -- Sacred Grove
 #addgod 8259 -- Lighthouse
-#addgod 8905 -- Great Gull
-#addgod 8884 -- Great Navigator
-#delgod 8882 -- Great Sage
-#delgod 8881 -- Crone
-#delgod 8880 -- Master Enchanter
-#delgod 8879 -- Arch Mage
-#delgod 8878 -- Great Enchantress
+#addgod 8349 -- Great Gull
+#addgod 8508 -- Great Navigator
+#delgod 8509 -- Great Sage
+#delgod 8510 -- Crone
+#delgod 8511 -- Master Enchanter
+#delgod 8512 -- Arch Mage
+#delgod 8513 -- Great Enchantress
 #addgod 8451 -- Infernal Spirit
-#delgod 7991 -- Great Bear
+#delgod 8261 -- Great Bear
 #cheapgod20 4905 -- Great Gull
-#cheapgod20 5050 -- Brazen Bull
+#cheapgod20 8369 -- Brazen Bull
 #end
 
 #selectnation 30 -- Vanheim
-#addgod 8904 -- First Valkyrie
-#addgod 8905 -- Great Gull
+#addgod 8348 -- First Valkyrie
+#addgod 8349 -- Great Gull
 #end
 
 #selectnation 31 -- Helheim
 #cheapgod20 8491 -- Hanging Tree
-#addgod 8904 -- First Valkyrie
-#addgod 8905 -- Great Gull
-#cheapgod20 8904 -- First Valkyrie
+#addgod 8348 -- First Valkyrie
+#addgod 8349 -- Great Gull
+#cheapgod20 8348 -- First Valkyrie
 #cheapgod20 6807 -- Raven of the Underworld
 #end
 
 #selectnation 32 -- EA Rus
-#addgod 8891 -- Zmey Gorynych
+#addgod 8336 -- Zmey Gorynych
 #addgod 779 -- Rams Head Serpent
-#addgod 5061 -- Spirit Bear
-#cheapgod20 5079 -- Sun Father
-#cheapgod20 5088 -- Triglav
-#cheapgod20 7991 -- Great Bear
+#addgod 8372 -- Spirit Bear
+#cheapgod20 8419 -- Sun Father
+#cheapgod20 8428 -- Triglav
+#cheapgod20 8261 -- Great Bear
 #end
 
 #selectnation 33 -- Niefelheim
@@ -44313,70 +44318,70 @@ Starting item Tome of Lore (Casts Record of Creation)
 #addgod 8446 -- Pillar of Eternal Flame
 #addgod 3086 -- Deives of the Sun (Doesnt work due to hardcoding)
 #addgod 156 -- Cyclops
-#addgod 8979 -- Firstborn of Rhuax
+#addgod 8403 -- Firstborn of Rhuax
 #addgod 8499 -- Divine Anvil
 #delgod 2791 -- Earth Serpent
 #delgod 500 -- Skratti (Doesnt work due to hardcoding)
 #cheapgod20 8459 -- Icon of Winter
-#cheapgod20 5079 -- Sun Father
+#cheapgod20 8419 -- Sun Father
 #cheapgod20 8446 -- Pillar of Eternal Flame
 #end
 
 #selectnation 40 -- EA Pelagia
-#addgod 8909 -- Lord of Pearls
-#addgod 8917 -- Triton Queen
+#addgod 8306 -- Lord of Pearls
+#addgod 8314 -- Triton Queen
 #addgod 8477 -- Mother of Pearls
 #addgod 8447 -- Idol of Watery Wisdom
 #addgod 8475 -- Statue of Wisdom
 #delgod 2791 -- Earth Serpent
 #addgod 8453 -- Divine Egg
 #cheapgod20 248 -- Aquatic Archmage
-#cheapgod20 8909 -- Lord of Pearls
-#cheapgod20 8917 -- Triton Queen
+#cheapgod20 8306 -- Lord of Pearls
+#cheapgod20 8314 -- Triton Queen
 #cheapgod40 8477 -- Mother of Pearls
 #end
 
 #selectnation 41 -- EA Oceania
-#addgod 8918 -- Siren Sorc
+#addgod 8315 -- Siren Sorc
 #addgod 8447 -- Idol of Watery Wisdom
 #addgod 8475 -- Statue of Wisdom
 #delgod 2791 -- Earth Serpent
 #addgod 8453 -- Divine Egg
-#cheapgod20 8913 -- Master of the Deeps
-#cheapgod20 8914 -- Master of the Deeps
-#cheapgod20 8918 -- Siren Queen
-#cheapgod20 8920 -- Mermaid Enchantress
-#cheapgod20 8921 -- Mermaid Enchantress
-#cheapgod20 8942 -- Saltwater Serpent
+#cheapgod20 8310 -- Master of the Deeps
+#cheapgod20 8311 -- Master of the Deeps
+#cheapgod20 8315 -- Siren Queen
+#cheapgod20 8317 -- Mermaid Enchantress
+#cheapgod20 8318 -- Mermaid Enchantress
+#cheapgod20 8358 -- Saltwater Serpent
 #cheapgod20 8469 -- Ancient Anemone
 #cheapgod20 8470 -- Living Reef
 #end
 
 #selectnation 42 -- Therodos
-#addgod 8916 -- Arch Daktyl
+#addgod 8313 -- Arch Daktyl
 #addgod 8447 -- Idol of Watery Wisdom
 #addgod 8475 -- Statue of Wisdom
 #addgod 8499 -- Divine Anvil
 #delgod 2791 -- Earth Serpent
-#cheapgod20 8916 -- Arch Daktyl
+#cheapgod20 8313 -- Arch Daktyl
 #end
 
 #selectnation 43 -- EA Atlantis
-#addgod 8925 -- Basalt Architect
+#addgod 8322 -- Basalt Architect
 #addgod 5011 -- Dark Crystal
 #addgod 8454 -- Spirit of the Well
 #addgod 8447 -- Idol of Watery Wisdom
 #delgod 2791 -- Earth Serpent
 #addgod 8453 -- Divine Egg
-#cheapgod20 8925 -- Basalt Architect
-#cheapgod20 8976 -- Terror of the Deep
+#cheapgod20 8322 -- Basalt Architect
+#cheapgod20 8400 -- Terror of the Deep
 #cheapgod40 5011 -- Dark Crystal
 #end
 
 #selectnation 44 -- EA Rlyeh
 #addgod 8465 -- Protean Abomination
 #addgod 8458 -- Statue of the Silent God
-#delgod 8920 -- Mermaid Enchantress
+#delgod 8317 -- Mermaid Enchantress
 #delgod 2791 -- Earth Serpent
 #delgod 8477 -- Mother of Pearls
 #cheapgod20 8458 -- Statue of the Silent God
@@ -44390,10 +44395,10 @@ Starting item Tome of Lore (Casts Record of Creation)
 
 #selectnation 51 -- Phlegra
 #delgod 982 -- Titan of the Sun
-#delgod 8983 -- Titan of War and Farming
-#delgod 5095 -- Spirit of Justice
-#addgod 5050 -- Brazen Bull
-#addgod 5041 -- Tartarian
+#delgod 8407 -- Titan of War and Farming
+#delgod 8435 -- Spirit of Justice
+#addgod 8369 -- Brazen Bull
+#addgod 8409 -- Tartarian
 #addgod 8453 -- Divine Egg
 #addgod 8454 -- Spirit of the Well
 #addgod 8458 -- Statue of the Silent God
@@ -44405,20 +44410,20 @@ Starting item Tome of Lore (Casts Record of Creation)
 #addgod 4032 -- Worm Soul
 #addgod 8461 -- Idol of the Seasons
 #addgod 4996 -- Bloodstained Edifice
-#addgod 5053 -- Green Man
-#addgod 8912 -- First Mandragora
+#addgod 8413 -- Green Man
+#addgod 8309 -- First Mandragora
 #addgod 7480 -- Tree of Hate
 #cheapgod20 8455 -- Sacred Grove
 #cheapgod20 8461 -- Idol of the Seasons
 #end
 
 #selectnation 53 -- MA Asphodel
-#addgod 5041 -- Tartarian
-#addgod 8912 -- First Mandragora
+#addgod 8409 -- Tartarian
+#addgod 8309 -- First Mandragora
 #addgod 7480 -- Tree of Hate
-#addgod 8867 -- Necrophidian
+#addgod 7245 -- Necrophidian
 #cheapgod40 7480 -- Tree of Hate
-#cheapgod20 8912 -- First Mandragora
+#cheapgod20 8309 -- First Mandragora
 #cheapgod20 8457 -- Spirit of Bones
 #end
 
@@ -44426,8 +44431,8 @@ Starting item Tome of Lore (Casts Record of Creation)
 #addgod 3888 -- Dracolich
 #addgod 8450 -- Emissary of Antrax
 #addgod 8473 -- Unholy Reliquary
-#addgod 5041 -- Tartarian
-#addgod 8867 -- Necrophidian
+#addgod 8409 -- Tartarian
+#addgod 7245 -- Necrophidian
 #delgod 8447 -- Idol of Watery Wisdom
 #delgod 8454 -- Spirit of the Well
 #delgod 8455 -- Sacred Grove
@@ -44441,80 +44446,80 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 249 -- Crone
 #delgod 485 -- Great Enchantress
 #cheapgod20 8473 -- Unholy Reliquary
-#cheapgod20 5071 -- Returned King
+#cheapgod20 8394 -- Returned King
 #cheapgod20 5100 -- Ghost Dragon
 #cheapgod20 5101 -- Banefire Dracolich
 #end
 
 #selectnation 55 -- Sceleria
 #delgod 874 -- Divine Emperor
-#addgod 5041 -- Tartarian
-#addgod 8867 -- Necrophidian
+#addgod 8409 -- Tartarian
+#addgod 7245 -- Necrophidian
 #addgod 8446 -- Pillar of Eternal Flame
-#cheapgod20 5071 -- Returned King
+#cheapgod20 8394 -- Returned King
 #end
 
 #selectnation 56 -- MA Pythium
 #delgod 874 -- Divine Emperor
-#addgod 5052 -- Deified Emperor
+#addgod 8412 -- Deified Emperor
 #addgod 8366 -- Icon
-#addgod 5054 -- Angelic Lord
-#addgod 5067 -- Peacock Angel
-#addgod 5064 -- Great Toad
+#addgod 8414 -- Angelic Lord
+#addgod 8418 -- Peacock Angel
+#addgod 8373 -- Great Toad
 #addgod 8446 -- Pillar of Eternal Flame
 #cheapgod20 8366 -- Icon
-#cheapgod20 5052 -- Deified Emperor
+#cheapgod20 8412 -- Deified Emperor
 #end
 
 #selectnation 57 -- MA Man
 #addgod 956 -- Mother of Tuathas
-#addgod 8967 -- Once & Future King
-#addgod 7991 -- Great Bear
+#addgod 8387 -- Once & Future King
+#addgod 8261 -- Great Bear
 #cheapgod20 8938 -- Great White Stag
-#cheapgod20 8967 -- Once & Future King
-#cheapgod20 5073 -- Triple Goddess
+#cheapgod20 8387 -- Once & Future King
+#cheapgod20 8326 -- Triple Goddess
 #end
 
 #selectnation 58 -- MA Eriu
 #addgod 956 -- Mother of Tuathas
 #addgod 8455 -- Sacred Grove
-#addgod 7991 -- Great Bear
+#addgod 8261 -- Great Bear
 #cheapgod20 956 -- Mother of Tuathas
 #end
 
 #selectnation 59 -- MA Agartha
 #addgod 156 -- Cyclops
-#addgod 8979 -- Firstborn of Rhuax
+#addgod 8403 -- Firstborn of Rhuax
 #addgod 8465 -- Protean Abomination
 #addgod 8410 -- Onyx Statue
-#addgod 5049 -- Antumbral
+#addgod 8411 -- Antumbral
 #addgod 8456 -- Bloodstained Edifice
 #delgod 8449 -- Idol of the Sun
 #delgod 8448 -- Statue of the Sun and Rain
 #delgod 6807 -- Raven of the Underworld
-#delgod 7991 -- Great Bear
+#delgod 8261 -- Great Bear
 #cheapgod20 8410 -- Onyx Statue
 #cheapgod20 156 -- Chthonic Cyclops
-#cheapgod20 5049 -- Antumbral
+#cheapgod20 8411 -- Antumbral
 #end
 
 #selectnation 60 -- MA Ulm
 #addgod 8404 -- Blacksteel Colossus
-#addgod 5037 -- Blacksteel Angel
+#addgod 8388 -- Blacksteel Angel
 #addgod 8499 -- Divine Anvil
 #cheapgod20 8404 -- Blacksteel Colossus
-#cheapgod20 5037 -- Blacksteel Angel
+#cheapgod20 8388 -- Blacksteel Angel
 #cheapgod20 8499 -- Divine Anvil
 #end
 
 #selectnation 61 -- MA Marignon
 #addgod 8366 -- Icon
-#addgod 5054 -- Angelic Lord
-#addgod 5067 -- Peacock Angel
-#addgod 7991 -- Great Bear
+#addgod 8414 -- Angelic Lord
+#addgod 8418 -- Peacock Angel
+#addgod 8261 -- Great Bear
 #addgod 8446 -- Pillar of Eternal Flame
 #cheapgod20 8366 -- Icon
-#cheapgod20 5054 -- Angelic Lord
+#cheapgod20 8414 -- Angelic Lord
 #end
 
 #selectnation 62 -- MA Pyrene
@@ -44523,47 +44528,47 @@ Starting item Tome of Lore (Casts Record of Creation)
 #addgod 8499 -- Divine Anvil
 #addgod 8492 -- Idol of Storms
 #addgod 8451 -- Infernal Spirit
-#addgod 7991 -- Great Bear
+#addgod 8261 -- Great Bear
 #cheapgod20 8456 -- Bloodstained Edifice
 #cheapgod20 8451 -- Infernal Spirit
 #end
 
 #selectnation 63 -- MA Abysia
 #addgod 156 -- Cyclops
-#addgod 8979 -- Firstborn of Rhuax
+#addgod 8403 -- Firstborn of Rhuax
 #addgod 8446 -- Pillar of Eternal Flame
 #addgod 8450 -- Emissary of Antrax
 #addgod 8451 -- Infernal Spirit
 #addgod 8456 -- Bloodstained Edifice
-#addgod 5050 -- Brazen Bull
+#addgod 8369 -- Brazen Bull
 #delgod 8485 -- Sacred Grove
 #delgod 4987 -- Idol of Watery Wisdom
 #delgod 8454 -- Spirit of the Well
-#delgod 8882 -- Great Sage
-#delgod 8881 -- Crone
-#delgod 8880 -- Master Enchanter
-#delgod 8879 -- Arch Mage
-#delgod 8878 -- Great Enchantress
+#delgod 8509 -- Great Sage
+#delgod 8510 -- Crone
+#delgod 8511 -- Master Enchanter
+#delgod 8512 -- Arch Mage
+#delgod 8513 -- Great Enchantress
 #addgod 8338 -- Burning Bush
-#delgod 7991 -- Great Bear
+#delgod 8261 -- Great Bear
 #cheapgod20 8446 -- Pillar of Flame
-#cheapgod20 8979 -- Firstborn of Rhuax
+#cheapgod20 8403 -- Firstborn of Rhuax
 #end
 
 #selectnation 64 -- Ashdod
-#addgod 8966 -- Spectral Ba'al
-#addgod 5024 -- Rephaite Lich Lord
+#addgod 8385 -- Spectral Ba'al
+#addgod 8501 -- Rephaite Lich Lord
 #addgod 8450 -- Emissary of Antrax
-#addgod 5050 -- Brazen Bull
-#addgod 8897 -- Great Creator
-#addgod 8898 -- Elohim
+#addgod 8369 -- Brazen Bull
+#addgod 8341 -- Great Creator
+#addgod 8342 -- Elohim
 #addgod 8451 -- Infernal Spirit
-#delgod 7991 -- Great Bear
+#delgod 8261 -- Great Bear
 #cheapgod20 8338 -- Burning Bush
-#cheapgod20 8898 -- Elohim
-#cheapgod20 8897 -- Great Creator
-#cheapgod20 8966 -- Spectral Ba'al
-#cheapgod20 5024 -- Rephaite Lich Lord
+#cheapgod20 8342 -- Elohim
+#cheapgod20 8341 -- Great Creator
+#cheapgod20 8385 -- Spectral Ba'al
+#cheapgod20 8501 -- Rephaite Lich Lord
 #end
 
 #selectnation 65 -- Na'ba
@@ -44572,78 +44577,78 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 245 -- Master Enchanter
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
-#delgod 7991 -- Great Bear
+#delgod 8261 -- Great Bear
 #end
 
 #selectnation 66 -- Uruk
-#addgod 5064 -- Great Toad
-#addgod 8954 -- First Sirrush
+#addgod 8373 -- Great Toad
+#addgod 8367 -- First Sirrush
 #addgod 942 -- Saltwater Serpent
-#addgod 5051 -- Gallu Demon
+#addgod 8389 -- Gallu Demon
 #delgod 8451 -- Infernal Spirit
 #cheapgod20 7604 -- Idol of the Ancient Warrior
-#cheapgod20 8954 -- First Sirrush
+#cheapgod20 8367 -- First Sirrush
 #cheapgod20 8447 -- Watery Wisdom
 #end
 
 #selectnation 67 -- Ind
 #delgod 8903 -- Drake Breeder
-#delgod 8910 -- Stone Magus
-#delgod 8882 -- Great Sage
-#delgod 8881 -- Crone
-#delgod 8880 -- Master Enchanter
-#delgod 8879 -- Arch Mage
-#delgod 8878 -- Great Enchantress
+#delgod 8307 -- Stone Magus
+#delgod 8509 -- Great Sage
+#delgod 8510 -- Crone
+#delgod 8511 -- Master Enchanter
+#delgod 8512 -- Arch Mage
+#delgod 8513 -- Great Enchantress
 #addgod 8366 -- Icon
-#addgod 8898 -- Elohim
+#addgod 8342 -- Elohim
 #addgod 8338 -- Burning Bush
-#addgod 5060 -- Grigori
+#addgod 8415 -- Grigori
 #addgod 8451 -- Infernal Spirit
-#addgod 8897 -- Great Creator
+#addgod 8341 -- Great Creator
 #cheapgod20 8366 -- Icon
-#cheapgod20 5060 -- Grigori
+#cheapgod20 8415 -- Grigori
 #end
 
 #selectnation 68 -- MA Bandar
 #delgod 246 -- Freak Lord
-#addgod 8901 -- Markata Master
+#addgod 8345 -- Markata Master
 #addgod 8456 -- Blood Soaked Edifice
 #addgod 8978 -- Danavaraja
-#cheapgod20 8975 -- Lord of Knowledge
+#cheapgod20 8399 -- Lord of Knowledge
 #end
 
 #selectnation 69 -- MA TC
 #addgod 550 -- Master Alchemist
-#addgod 8924 -- Divine Sage Empress
-#addgod 8975 -- Lord of Knowledge
-#addgod 8956 -- Tathagata 
-#addgod 8957 -- Tathagata 
-#addgod 8958 -- Tathagata 
-#addgod 8959 -- Tathagata
-#addgod 8960 -- Tathagata
-#addgod 5027 -- Wisdom King
+#addgod 8321 -- Divine Sage Empress
+#addgod 8399 -- Lord of Knowledge
+#addgod 8374 -- Tathagata 
+#addgod 8376 -- Tathagata 
+#addgod 8377 -- Tathagata 
+#addgod 8378 -- Tathagata
+#addgod 8379 -- Tathagata
+#addgod 8380 -- Wisdom King
 #addgod 8487 -- Statue of Wisdom
 #addgod 8489 -- Statue of Creation
 #addgod 8490 -- Shanta Murti
-#addgod 5082 -- Tridevi
-#addgod 5085 -- Trimurti
-#addgod 8889 -- Terracotta Emperor
-#delgod 7991 -- Great Bear
-#cheapgod20 8924 -- Divine Sage Empress
+#addgod 8422 -- Tridevi
+#addgod 8425 -- Trimurti
+#addgod 8334 -- Terracotta Emperor
+#delgod 8261 -- Great Bear
+#cheapgod20 8321 -- Divine Sage Empress
 #end
 
 #selectnation 70 -- Shinuyama
-#addgod 8915 -- Tengu Kunshu
+#addgod 8312 -- Tengu Kunshu
 #addgod 8497 -- Spirit Gate
-#cheapgod20 5069 -- Celestial Fox
-#cheapgod20 5070 -- Celestial Fox
+#cheapgod20 8391 -- Celestial Fox
+#cheapgod20 8392 -- Celestial Fox
 #end
 
 #selectnation 71 -- MA Caelum
 #cheapgod20 8446 -- Pillar of Flame
 #delgod 2791 -- Earth Serpent
-#addgod 5067 -- Peacock Angel
-#delgod 7991 -- Great Bear
+#addgod 8418 -- Peacock Angel
+#delgod 8261 -- Great Bear
 #end
 
 #selectnation 72 -- Nazca
@@ -44652,14 +44657,14 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
 #delgod 250 -- Frost Father
-#addgod 8876 -- Frost Father
-#addgod 8877 -- Great Sage
-#addgod 8875 -- Master Enchanter 
-#addgod 8874 -- Arch Mage 
-#addgod 8873 -- Great Enchantress 
-#addgod 7993 -- Mountain Lion
-#delgod 7991 -- Great Bear
-#cheapgod20 7993
+#addgod 8515 -- Frost Father
+#addgod 8514 -- Great Sage
+#addgod 8516 -- Master Enchanter 
+#addgod 8517 -- Arch Mage 
+#addgod 8518 -- Great Enchantress 
+#addgod 8263 -- Mountain Lion
+#delgod 8261 -- Great Bear
+#cheapgod20 8263
 #cheapgod20 8449 -- Statue of the Sun
 #cheapgod20 5100 -- Ghost Dragon
 #end
@@ -44672,10 +44677,10 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
 #delgod 6807 -- Raven of the Underworld
-#addgod 7993 -- Mountain Lion
+#addgod 8263 -- Mountain Lion
 #cheapgod20 8445 -- Idol of Sustenance
 #cheapgod20 8448 -- Statue of Sun & Rain
-#cheapgod20 8907 -- Feathered Serpent
+#cheapgod20 8351 -- Feathered Serpent
 #cheapgod20 2785 -- Solar Eagle
 #end
 
@@ -44687,23 +44692,23 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
 #delgod 6807 -- Raven of the Underworld
-#delgod 7991 -- Great Bear
-#cheapgod20 5064 -- Great Toad
-#cheapgod20 8937 -- Night Hunter
+#delgod 8261 -- Great Bear
+#cheapgod20 8373 -- Great Toad
+#cheapgod20 8353 -- Night Hunter
 #cheapgod20 8346 -- Skull Idol
 #end
 
 #selectnation 75 -- MA Ctis
-#addgod 5064 -- Great Toad
-#addgod 8867 -- Necrophidian
+#addgod 8373 -- Great Toad
+#addgod 7245 -- Necrophidian
 #delgod 251 -- Great Sage
 #delgod 249 -- Crone
 #delgod 245 -- Master Enchanter
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
-#delgod 7991 -- Great Bear
-#cheapgod20 5064 -- Great Toad
-#cheapgod40 8981 -- Neter of the River
+#delgod 8261 -- Great Bear
+#cheapgod20 8373 -- Great Toad
+#cheapgod40 8405 -- Neter of the River
 #end
 
 #selectnation 76 -- MA Machaka
@@ -44713,8 +44718,8 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
 #addgod 8499 -- Divine Anvil
-#addgod 8895 -- Lord of the Carrion Dead
-#delgod 7991 -- Great Bear
+#addgod 8339 -- Lord of the Carrion Dead
+#delgod 8261 -- Great Bear
 #end
 
 #selectnation 77 -- Phaeacia
@@ -44726,25 +44731,25 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 485 -- Great Enchantress
 #delgod 8485 -- Sacred Grove
 #addgod 8259 -- Lighthouse
-#addgod 8905 -- Great Gull
-#addgod 8884 -- Great Navigator
-#delgod 7991 -- Great Bear
-#cheapgod20 8905 -- Great Gull
+#addgod 8349 -- Great Gull
+#addgod 8508 -- Great Navigator
+#delgod 8261 -- Great Bear
+#cheapgod20 8349 -- Great Gull
 #cheapgod20 8259 -- Lighthouse
 #end
 
 #selectnation 78 -- Vanheim
-#addgod 8904 -- First Valkyrie
-#addgod 8905 -- Great Gull
+#addgod 8348 -- First Valkyrie
+#addgod 8349 -- Great Gull
 #end
 
 #selectnation 79 -- Vanarus
-#addgod 8891 -- Zmey Gorynych
+#addgod 8336 -- Zmey Gorynych
 #addgod 779 -- Rams Head Serpent
-#addgod 8904 -- First Valkyrie
-#addgod 5061 -- Spirit Bear
-#cheapgod20 5079 -- Sun Father
-#cheapgod20 5088 -- Triglav
+#addgod 8348 -- First Valkyrie
+#addgod 8372 -- Spirit Bear
+#cheapgod20 8419 -- Sun Father
+#cheapgod20 8428 -- Triglav
 #end
 
 #selectnation 80 -- MA Jotunheim
@@ -44753,10 +44758,10 @@ Starting item Tome of Lore (Casts Record of Creation)
 #end
 
 #selectnation 81 -- Nidavangr
-#addgod 7991 -- Great Bear
-#addgod 5061  -- Spirit Bear
-#cheapgod20 7991 -- Great Bear
-#cheapgod20 5061 -- Spirit Bear
+#addgod 8261 -- Great Bear
+#addgod 8372  -- Spirit Bear
+#cheapgod20 8261 -- Great Bear
+#cheapgod20 8372 -- Spirit Bear
 #cheapgod20 8459 -- Icon of Winter
 #end
 
@@ -44766,31 +44771,31 @@ Starting item Tome of Lore (Casts Record of Creation)
 #end
 
 #selectnation 86 -- MA Pelagia
-#addgod 8909 -- Lord of Pearls
-#addgod 8917 -- Triton Queen
+#addgod 8306 -- Lord of Pearls
+#addgod 8314 -- Triton Queen
 #addgod 8477 -- Mother of Pearls
 #addgod 8447 -- Idol of Watery Wisdom
 #addgod 8475 -- Statue of Wisdom
 #delgod 2791 -- Earth Serpent
 #addgod 8453 -- Divine Egg
-#cheapgod20 8909 -- Lord of Pearls
-#cheapgod20 8917 -- Triton Queen
+#cheapgod20 8306 -- Lord of Pearls
+#cheapgod20 8314 -- Triton Queen
 #cheapgod20 8962 -- Sea Nymph
 #cheapgod20 8477 -- Mother of Pearls
 #end
 
 #selectnation 87 -- MA Oceania
-#addgod 8918 -- Siren Sorc
+#addgod 8315 -- Siren Sorc
 #addgod 8447 -- Idol of Watery Wisdom
 #addgod 8475 -- Statue of Wisdom
 #delgod 2791 -- Earth Serpent
 #addgod 8453 -- Divine Egg
-#cheapgod20 8913 -- Master of the Deeps
-#cheapgod20 8914 -- Master of the Deeps
-#cheapgod20 8918 -- Siren Queen
-#cheapgod20 8920 -- Mermaid Enchantress
-#cheapgod20 8921 -- Mermaid Enchantress
-#cheapgod20 8942 -- Saltwater Serpent
+#cheapgod20 8310 -- Master of the Deeps
+#cheapgod20 8311 -- Master of the Deeps
+#cheapgod20 8315 -- Siren Queen
+#cheapgod20 8317 -- Mermaid Enchantress
+#cheapgod20 8318 -- Mermaid Enchantress
+#cheapgod20 8358 -- Saltwater Serpent
 #cheapgod20 8469 -- Ancient Anemone
 #cheapgod20 8470 -- Living Reef
 #end
@@ -44803,20 +44808,20 @@ Starting item Tome of Lore (Casts Record of Creation)
 #end
 
 #selectnation 89 -- MA Rlyeh
-#addgod 8947 -- Void Larva
-#addgod 8948 -- Formless One
-#addgod 8965 -- Void Essence
+#addgod 7999 -- Void Larva
+#addgod 8363 -- Formless One
+#addgod 8384 -- Void Essence
 #addgod 8465 -- Protean Abomination
 #addgod 8468 -- Statue of the Outer Gods
 #addgod 8458 -- Statue of the Silent God
 #addgod 8476 -- Void Crystal
 #addgod 5018 -- Nuclear Chaos
-#addgod 8868 -- Id Monster
-#delgod 8920 -- Mermaid Enchantress
+#addgod 8442 -- Id Monster
+#delgod 8317 -- Mermaid Enchantress
 #delgod 8477 -- Mother of Pearls
 #delgod 2791 -- Earth Serpent
-#cheapgod20 8947 -- Void Larva
-#cheapgod20 8965 -- Void Essence
+#cheapgod20 7999 -- Void Larva
+#cheapgod20 8384 -- Void Essence
 #cheapgod20 8468 -- Statue of the Outer Gods
 #cheapgod20 8476 -- Void Crystal
 #end
@@ -44828,11 +44833,11 @@ Starting item Tome of Lore (Casts Record of Creation)
 #end
 
 #selectnation 96 -- LA Phlegra
-#delgod 8982 -- Titan of the Sun
-#delgod 8983 -- Titan of War and Farming
-#delgod 5095 -- Spirit of Justice
-#addgod 5050 -- Brazen Bull
-#addgod 5041 -- Tartarian
+#delgod 8406 -- Titan of the Sun
+#delgod 8407 -- Titan of War and Farming
+#delgod 8435 -- Spirit of Justice
+#addgod 8369 -- Brazen Bull
+#addgod 8409 -- Tartarian
 #addgod 8453 -- Divine Egg
 #addgod 8454 -- Spirit of the Well
 #addgod 8458 -- Statue of the Silent God
@@ -44842,19 +44847,19 @@ Starting item Tome of Lore (Casts Record of Creation)
 
 #selectnation 97 -- LA Pangaea
 #addgod 4032 -- Worm Soul
-#addgod 8912 -- First Mandragora
+#addgod 8309 -- First Mandragora
 #addgod 7480 -- Tree of Hate
-#cheapgod20 8983 -- Titan of War and Farming
+#cheapgod20 8407 -- Titan of War and Farming
 #end
 
 #selectnation 98 -- LA Pythium
-#delgod 8895 -- Lord of Carrion Dead
-#addgod 5052 -- Deified Emperor
+#delgod 8339 -- Lord of Carrion Dead
+#addgod 8412 -- Deified Emperor
 #addgod 8366 -- Icon
-#addgod 5054 -- Angelic Lord
-#addgod 5067 -- Peacock Angel
-#addgod 5064 -- Great Toad
-#addgod 8867 -- Necrophidian
+#addgod 8414 -- Angelic Lord
+#addgod 8418 -- Peacock Angel
+#addgod 8373 -- Great Toad
+#addgod 7245 -- Necrophidian
 #addgod 8446 -- Pillar of Eternal Flame
 #end
 
@@ -44863,8 +44868,8 @@ Starting item Tome of Lore (Casts Record of Creation)
 #cheapgod20 5101 -- Banefire Dracolich
 #addgod 8450 -- Emissary of Antrax
 #addgod 8473 -- Unholy Reliquary
-#addgod 5041 -- Tartarian
-#addgod 8867 -- Necrophidian
+#addgod 8409 -- Tartarian
+#addgod 7245 -- Necrophidian
 #delgod 8447 -- Idol of Watery Wisdom
 #delgod 8454 -- Spirit of the Well
 #delgod 8455 -- Sacred Grove
@@ -44875,8 +44880,8 @@ Starting item Tome of Lore (Casts Record of Creation)
 
 #selectnation 100 -- LA Man
 #addgod 956 -- Mother of Tuathas
-#addgod 8967 -- Once & Future King
-#addgod 7991 -- Great Bear
+#addgod 8387 -- Once & Future King
+#addgod 8261 -- Great Bear
 #end
 
 #selectnation 101 -- LA Ulm
@@ -44888,88 +44893,88 @@ Starting item Tome of Lore (Casts Record of Creation)
 #addgod 156 -- Cyclops
 #addgod 8465 -- Protean Abomination
 #addgod 8410 -- Onyx Statue
-#addgod 5049 -- Antumbral
+#addgod 8411 -- Antumbral
 #delgod 8449 -- Idol of the Sun
 #delgod 8448 -- Statue of the Sun and Rain
 #delgod 6807 -- Raven of the Underworld
-#delgod 7991 -- Great Bear
-#cheapgod20 5049 -- Antumbral
+#delgod 8261 -- Great Bear
+#cheapgod20 8411 -- Antumbral
 #end
 
 #selectnation 103 -- LA Marignon
 #addgod 8366 -- Icon
-#addgod 5054 -- Angelic Lord
-#addgod 5067 -- Peacock Angel
+#addgod 8414 -- Angelic Lord
+#addgod 8418 -- Peacock Angel
 #addgod 8451 -- Infernal Spirit
 #addgod 8259 -- Lighthouse
-#addgod 8905 -- Great Gull
-#addgod 8884 -- Great Navigator
-#delgod 8877 -- Great Sage
-#delgod 8875 -- Master Enchanter 
-#delgod 8874 -- Arch Mage 
-#delgod 8873 -- Great Enchantress 
-#addgod 7991 -- Great Bear
+#addgod 8349 -- Great Gull
+#addgod 8508 -- Great Navigator
+#delgod 8514 -- Great Sage
+#delgod 8516 -- Master Enchanter 
+#delgod 8517 -- Arch Mage 
+#delgod 8518 -- Great Enchantress 
+#addgod 8261 -- Great Bear
 #addgod 8446 -- Pillar of Eternal Flame
 #cheapgod20 8366 -- Icon
-#cheapgod40 8884 -- Great Navigator
+#cheapgod40 8508 -- Great Navigator
 #cheapgod20 8451 -- Infernal Spirit
 #end
 
 #selectnation 104 -- LA Abysia
 #addgod 156 -- Cyclops
-#addgod 8979 -- Firstborn of Rhuax
+#addgod 8403 -- Firstborn of Rhuax
 #addgod 8446 -- Pillar of Eternal Flame
 #addgod 8450 -- Emissary of Antrax
 #addgod 8451 -- Infernal Spirit
 #addgod 8456 -- Bloodstained Edifice
-#addgod 5050 -- Brazen Bull
+#addgod 8369 -- Brazen Bull
 #delgod 8485 -- Sacred Grove
 #delgod 8447 -- Idol of Watery Wisdom
 #delgod 8454 -- Spirit of the Well
-#delgod 8882 -- Great Sage
-#delgod 8881 -- Crone
-#delgod 8880 -- Master Enchanter
-#delgod 8879 -- Arch Mage
-#delgod 8878 -- Great Enchantress
+#delgod 8509 -- Great Sage
+#delgod 8510 -- Crone
+#delgod 8511 -- Master Enchanter
+#delgod 8512 -- Arch Mage
+#delgod 8513 -- Great Enchantress
 #addgod 8338 -- Burning Bush
-#delgod 7991 -- Great Bear
+#delgod 8261 -- Great Bear
 #cheapgod20 8450 -- Emissary of Antrax
 #cheapgod20 8460 -- Foul Statue
 #cheapgod20 8456 -- Blood Soaked Edifice
 #end
 
 #selectnation 105 -- Ragha
-#addgod 5067 -- Peacock Angel
-#delgod 7991 -- Great Bear
+#addgod 8418 -- Peacock Angel
+#delgod 8261 -- Great Bear
 #end
 
 #selectnation 106 -- LA Caelum
-#addgod 5067 -- Peacock Angel
-#delgod 7991 -- Great Bear
+#addgod 8418 -- Peacock Angel
+#delgod 8261 -- Great Bear
 #cheapgod20 6807 -- Raven of the Underworld
 #end
 
 #selectnation 107 -- Gath
-#addgod 8966 -- Spectral Ba'al
-#addgod 5050 -- Brazen Bull
-#addgod 5060 -- Grigori
-#addgod 8897 -- Great Creator
-#addgod 8898 -- Elohim
-#delgod 7991 -- Great Bear
+#addgod 8385 -- Spectral Ba'al
+#addgod 8369 -- Brazen Bull
+#addgod 8415 -- Grigori
+#addgod 8341 -- Great Creator
+#addgod 8342 -- Elohim
+#delgod 8261 -- Great Bear
 #cheapgod20 8338 -- Burning Bush
-#cheapgod20 8898 -- Elohim
-#cheapgod20 8897 -- Great Creator
+#cheapgod20 8342 -- Elohim
+#cheapgod20 8341 -- Great Creator
 #cheapgod20 8340 -- Nehushtan
 #end
 
 #selectnation 108 -- LA Patala
 #delgod 246 -- Freak Lord
-#addgod 8901 -- Markata Master
+#addgod 8345 -- Markata Master
 #addgod 8456 -- Blood Soaked Edifice
 #addgod 2792 -- Solar Serpent
 #addgod 2793 -- Serpent of Chaos
 #addgod 2799 -- Wadjet
-#addgod 8867 -- Necrophidian
+#addgod 7245 -- Necrophidian
 #cheapgod20 2791 -- Earth Serpent
 #cheapgod20 2792 -- Solar Serpent
 #cheapgod20 2793 -- Serpent of Chaos
@@ -44979,30 +44984,30 @@ Starting item Tome of Lore (Casts Record of Creation)
 
 #selectnation 109 -- LA TC
 #addgod 8474 -- Ancestral Barrow
-#addgod 8924 -- Divine Sage Empress
-#addgod 8975 -- Lord of Knowledge
-#addgod 8956 -- Tathagata 
-#addgod 8957 -- Tathagata 
-#addgod 8958 -- Tathagata 
-#addgod 8959 -- Tathagata
-#addgod 8960 -- Tathagata
-#addgod 5027 -- Wisdom King
+#addgod 8321 -- Divine Sage Empress
+#addgod 8399 -- Lord of Knowledge
+#addgod 8374 -- Tathagata 
+#addgod 8376 -- Tathagata 
+#addgod 8377 -- Tathagata 
+#addgod 8378 -- Tathagata
+#addgod 8379 -- Tathagata
+#addgod 8380 -- Wisdom King
 #addgod 8487 -- Statue of Wisdom
 #addgod 8489 -- Statue of Creation
 #addgod 8490 -- Shanta Murti
 #addgod 8499 -- Divine Anvil
-#addgod 5082 -- Tridevi
-#addgod 5085 -- Trimurti
-#addgod 8889 -- Terracotta Emperor
-#delgod 7991 -- Great Bear
+#addgod 8422 -- Tridevi
+#addgod 8425 -- Trimurti
+#addgod 8334 -- Terracotta Emperor
+#delgod 8261 -- Great Bear
 #cheapgod20 8474 -- Ancestral Barrow
 #end
 
 #selectnation 110 -- Jomon
-#addgod 8915 -- Tengu Kunshu
-#addgod 8924 -- Divine Sage Empress
+#addgod 8312 -- Tengu Kunshu
+#addgod 8321 -- Divine Sage Empress
 #addgod 8497 -- Spirit Gate
-#cheapgod20 8915 -- Tengu Kunshu
+#cheapgod20 8312 -- Tengu Kunshu
 #cheapgod20 2316 -- Dragon King
 #end
 
@@ -45015,8 +45020,8 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
 #delgod 6807 -- Raven of the Underworld
-#addgod 7993 -- Mountain Lion
-#cheapgod20 5064 -- Great Toad
+#addgod 8263 -- Mountain Lion
+#cheapgod20 8373 -- Great Toad
 #cheapgod20 8448 -- Statue of Sun & Rain
 #end
 
@@ -45029,9 +45034,9 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
 #delgod 6807 -- Raven of the Underworld
-#delgod 7991 -- Great Bear
-#cheapgod20 8937 -- Night Hunter
-#cheapgod20 5064 -- Great Toad
+#delgod 8261 -- Great Bear
+#cheapgod20 8353 -- Night Hunter
+#cheapgod20 8373 -- Great Toad
 #cheapgod20 8346 -- Skull Idol
 #end
 
@@ -45042,31 +45047,31 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
 #addgod 8450 -- Emissary of Antrax
-#addgod 8867 -- Necrophidian
+#addgod 7245 -- Necrophidian
 #cheapgod20 8450 -- Emissary of Antrax
-#delgod 7991 -- Great Bear
+#delgod 8261 -- Great Bear
 #end
 
 #selectnation 115 -- LA Midgard
-#addgod 8904 -- First Valkyrie
-#addgod 8905 -- Great Gull
-#addgod 8884 -- Great Navigator
+#addgod 8348 -- First Valkyrie
+#addgod 8349 -- Great Gull
+#addgod 8508 -- Great Navigator
 #end
 
 #selectnation 116 -- Bogarus
-#addgod 8891 -- Zmey Gorynych
-#cheapgod20 8891 -- Zmey Gorynych
+#addgod 8336 -- Zmey Gorynych
+#cheapgod20 8336 -- Zmey Gorynych
 #addgod 8366 -- Icon
-#addgod 5054 -- Angelic Lord
-#addgod 5067 -- Peacock Angel
+#addgod 8414 -- Angelic Lord
+#addgod 8418 -- Peacock Angel
 #addgod 779 -- Rams Head Serpent
-#addgod 5061 -- Spirit Bear
-#cheapgod20 5079 -- Sun Father
-#cheapgod20 5088 -- Triglav
+#addgod 8372 -- Spirit Bear
+#cheapgod20 8419 -- Sun Father
+#cheapgod20 8428 -- Triglav
 #end
 
 #selectnation 117 -- Utgard
-#cheapgod20 5072 -- Norn
+#cheapgod20 8325 -- Norn
 #end
 
 #selectnation  118 -- Vaettiheim
@@ -45076,41 +45081,41 @@ Starting item Tome of Lore (Casts Record of Creation)
 
 #selectnation 119 -- Feminie
 #addgod 8366 -- Icon
-#addgod 8898 -- Elohim
+#addgod 8342 -- Elohim
 #addgod 8338 -- Burning Bush
-#addgod 5060 -- Grigori
+#addgod 8415 -- Grigori
 #addgod 8451 -- Infernal Spirit
-#addgod 8897 -- Great Creator
+#addgod 8341 -- Great Creator
 #delgod 251 -- Great Sage
 #delgod 249 -- Crone
 #delgod 245 -- Master Enchanter
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
-#cheapgod20 5060 -- Grigori
+#cheapgod20 8415 -- Grigori
 #end
 
 #selectnation 120 -- Piconye
 #addgod 8366 -- Icon
-#addgod 8898 -- Elohim
+#addgod 8342 -- Elohim
 #addgod 8338 -- Burning Bush
-#addgod 5060 -- Grigori
+#addgod 8415 -- Grigori
 #addgod 8451 -- Infernal Spirit
-#addgod 8897 -- Great Creator
+#addgod 8341 -- Great Creator
 #delgod 251 -- Great Sage
 #delgod 249 -- Crone
 #delgod 245 -- Master Enchanter
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
-#cheapgod20 8897 -- Great Creator
+#cheapgod20 8341 -- Great Creator
 #end
 
 #selectnation 121 -- Andramania
 #addgod 8366 -- Icon
-#addgod 8898 -- Elohim
+#addgod 8342 -- Elohim
 #addgod 8338 -- Burning Bush
-#addgod 5060 -- Grigori
+#addgod 8415 -- Grigori
 #addgod 8451 -- Infernal Spirit
-#addgod 8897 -- Great Creator
+#addgod 8341 -- Great Creator
 #delgod 251 -- Great Sage
 #delgod 249 -- Crone
 #delgod 245 -- Master Enchanter
@@ -45129,129 +45134,70 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 8455 -- Sacred Grove
 #delgod 8962 -- Sea Nymph Watershape
 #addgod 8963 -- Sea Nymph Landshape
-#delgod 8882 -- Great Sage
-#delgod 8881 -- Crone
-#delgod 8880 -- Master Enchanter
-#delgod 8879 -- Arch Mage
-#delgod 8878 -- Great Enchantress
-#delgod 8945 -- Divine Turtle
+#delgod 8509 -- Great Sage
+#delgod 8510 -- Crone
+#delgod 8511 -- Master Enchanter
+#delgod 8512 -- Arch Mage
+#delgod 8513 -- Great Enchantress
+#delgod 8361 -- Divine Turtle
 #delgod 8922 -- Lacedon Mage
-#delgod 8920 -- Mermaid Watershape
-#addgod 8921 -- Mermaid Landshape
-#delgod 7991 -- Great Bear
-#cheapgod20 8920 -- Mermaid Enchantress
-#cheapgod20 8982 -- Titan of the Sun
-#addgod 8905 -- Great Gull
+#delgod 8317 -- Mermaid Watershape
+#addgod 8318 -- Mermaid Landshape
+#delgod 8261 -- Great Bear
+#cheapgod20 8317 -- Mermaid Enchantress
+#cheapgod20 8406 -- Titan of the Sun
+#addgod 8349 -- Great Gull
 #addgod 8259 -- Lighthouse
-#addgod 8884 -- Great Navigator
+#addgod 8508 -- Great Navigator
 #cheapgod20 8259 -- Lighthouse
 #end
 
 #selectnation 126 -- LA Atlantis
 #delgod 8449 -- Idol of the Sun
 #delgod 8466 -- Idol of the Harvest
-#addgod 8943 -- Water Lizard
+#addgod 8359 -- Water Lizard
 #addgod 8459 -- Idol of Winter
-#addgod 5061  -- Spirit Bear
+#addgod 8372  -- Spirit Bear
 #delgod 251 -- Great Sage
 #delgod 245 -- Master Enchanter
 #delgod 244 -- Arch Mage
 #delgod 250 -- Frost Father
 #delgod 485 -- Great Enchantress
-#addgod 8877 -- Great Sage
-#addgod 8876 -- Frost Father
-#addgod 8875 -- Master Enchanter 
-#addgod 8874 -- Arch Mage 
-#addgod 8873 -- Great Enchantress
+#addgod 8514 -- Great Sage
+#addgod 8515 -- Frost Father
+#addgod 8516 -- Master Enchanter 
+#addgod 8517 -- Arch Mage 
+#addgod 8518 -- Great Enchantress
 #addgod 8260 -- Totem
 #addgod 8012 -- "Diyin Dine'é of the Earth"
 #addgod 8011 -- "Diyin Dine'é of Dawn"
-#addgod 8872 -- Storm Raven
-#addgod 8871 -- Copper Maker
-#addgod 8870 -- Lord of the Undersea
-#addgod 7992 -- Storm Eagle
-#addgod 7993 -- Mountain Lion
-#cheapgod20 8870 -- Lord of the Undersea
-#addgod 8869 -- Lord of Violent Death
-#cheapgod20 5061 -- Spirit Bear
-#addgod 8905 -- Great Gull
+#addgod 8439 -- Storm Raven
+#addgod 8440 -- Copper Maker
+#addgod 8441 -- Lord of the Undersea
+#addgod 8262 -- Storm Eagle
+#addgod 8263 -- Mountain Lion
+#cheapgod20 8441 -- Lord of the Undersea
+#addgod 8443 -- Lord of Violent Death
+#cheapgod20 8372 -- Spirit Bear
+#addgod 8349 -- Great Gull
 #end
 
 #selectnation 127 -- LA Rlyeh
-#addgod 8947 -- Void Larva
-#addgod 8948 -- Formless One
-#addgod 8965 -- Void Essence
+#addgod 7999 -- Void Larva
+#addgod 8363 -- Formless One
+#addgod 8384 -- Void Essence
 #addgod 8465 -- Protean Abomination
 #addgod 8468 -- Statue of the Outer Gods
 #addgod 8458 -- Statue of the Silent God
 #addgod 8476 -- Void Crystal
 #addgod 5018 -- Nuclear Chaos
-#addgod 8868 -- Id Monster
-#delgod 8920 -- Mermaid Enchantress
+#addgod 8442 -- Id Monster
+#delgod 8317 -- Mermaid Enchantress
 #delgod 8477 -- Mother of Pearls
 #delgod 2791 -- Earth Serpent
-#cheapgod20 8868 -- Id Monster
-#cheapgod20 8947 -- Void Larva
-#cheapgod20 8965 -- Void Essence
+#cheapgod20 8442 -- Id Monster
+#cheapgod20 7999 -- Void Larva
+#cheapgod20 8384 -- Void Essence
 #cheapgod20 8468 -- Statue of the Outer Gods
 #cheapgod20 8476 -- Void Crystal
 #end
-
-
-
-
--- Siren Charm changed from 1 Air boost to have a 1 Glamour boost.
--- Updated custom paths on Powaqa to 100% roll at Fire, Air, Death, Nature for Dominions 6.
--- Updated custom paths on Powaqa to 100% roll at Fire, Air, Death, Nature for Dominions 6.
--- Marid Sultan Air 2 changed to 1 Air magic, 1 Glamour magic.
--- Marid Sultan changed from 1 Air boost to have a 1 Glamour boost.
--- Marid Sultan Air 1 changed to 1 Glamour magic.
--- Hanging Tree Air 1 changed to 1 Glamour magic.
--- Updated custom paths on Spirit of the Sun to 50% roll at Blood for Dominions 6.
--- Neter of the River changed from 1 Air boost to have a 1 Glamour boost.
--- Tartarian Air 1 changed to 1 Glamour magic.
--- Tartarian changed from 1 Air boost to have a 1 Glamour boost.
--- Stone Statue Air 1 changed to 1 Air magic, 1 Glamour magic.
--- Stone Statue changed from 1 Air boost to have a 1 Glamour and Air boost.
--- Child of the Neter changed from 2 Air boost to have a 2 Glamour boost.
--- Updated custom paths on Blessing of the Desert Sun to 100% roll at Air, Earth, Nature for Dominions 6.
--- Updated custom paths on Blessing of the Desert Sun to 100% roll at Air, Earth, Nature for Dominions 6.
--- Updated custom paths on Blessing of the Desert Sun to 100% roll at Air, Water, Nature for Dominions 6.
--- Updated custom paths on Blessing of the Desert Sun to 100% roll at Air, Water, Nature for Dominions 6.
--- Updated custom paths on Priest of the Morning Star to 100% roll at Air, Earth, Astral for Dominions 6.
--- Updated custom paths on Priest of the Morning Star to 100% roll at Air, Earth, Astral for Dominions 6.
--- Deep Forest Clearing changed from 1 Air boost to have a 1 Glamour boost.
--- Blessing of Winter Air 2 changed to 2 Glamour magic.
--- Blessing of Winter changed from 1 Air boost to have a 1 Glamour boost.
--- Eldest Olm Air 1 changed to 1 Glamour magic.
--- Updated custom paths on Triton Sage to 100% roll at Fire, Air, Water, Earth, Astral, Death, Nature for Dominions 6.
--- Updated custom paths on Triton Sage to 100% roll at Fire, Air, Water, Earth, Astral, Death, Nature for Dominions 6.
--- First Valkyrie Air 1 changed to 1 Air magic, 1 Glamour magic.
--- Great White Stag Air 1 changed to 1 Glamour magic.
--- Aos Si Rider Air 2 changed to 2 Glamour magic.
--- Updated custom paths on Brazen Bull to 100% roll at Fire, Earth, Death, Blood for Dominions 6.
--- Updated custom paths on Brazen Bull to 100% roll at Fire, Earth, Death, Blood for Dominions 6.
--- Updated custom paths on Disciple of Blood to 100% roll at Water, Blood for Dominions 6.
--- Updated custom paths on Disciple of Blood to 10% roll at Water, Blood for Dominions 6.
--- Celestial Fox Air 1 changed to 1 Glamour magic.
--- Celestial Fox Air 1 changed to 1 Glamour magic.
--- Updated custom paths on Fox spirit to 50% roll at Water, Earth, Astral, Nature, Glamour for Dominions 6.
--- Updated custom paths on Fox spirit to 50% roll at Water, Earth, Astral, Nature, Glamour for Dominions 6.
--- Updated custom paths on Fox spirit to 25% roll at Water, Earth, Astral, Nature, Glamour for Dominions 6.
--- Updated custom paths on Fox spirit to 10% roll at Water, Earth, Astral, Nature, Glamour for Dominions 6.
--- Palace of the Dragon Air 2 changed to 2 Glamour magic.
--- Updated custom paths on Temple of the Sun to 100% roll at Earth, Death, Blood for Dominions 6.
--- Updated custom paths on Mermage Student to 100% roll at Air, Water, Earth, Nature for Dominions 6.
--- Updated custom paths on Mermage Student to 100% roll at Air, Water, Earth, Nature for Dominions 6.
--- Siren Sorceress Air 1 changed to 1 Glamour magic.
--- Siren Sorceress Air 1 changed to 1 Glamour magic.
--- Updated custom paths on Mermaid to 100% roll at Air, Water, Nature for Dominions 6.
--- Updated custom paths on Mermaid to 100% roll at Air, Water, Nature for Dominions 6.
--- Norn Air 1 changed to 1 Glamour magic.
--- Updated custom paths on Apprentice Mage to 200% roll at Fire, Air, Water, Earth for Dominions 6.
--- Updated custom paths on Apprentice Mage to 100% roll at Fire, Air, Water, Earth for Dominions 6.
--- Updated custom paths on Apprentice Mage to 10% roll at Fire, Air, Water, Earth for Dominions 6.
--- Longdead Partholonian Lord Air 2 changed to 2 Glamour magic.
--- Updated custom paths on Centaur Loremaster to 100% roll at Air, Water, Earth, Astral, Nature for Dominions 6.
--- Updated custom paths on Centaur Loremaster to 10% roll at Air, Water, Earth, Astral, Nature for Dominions 6.
--- Updated custom paths on Arcane Rector to 10% roll at Fire, Air, Earth, Astral for Dominions 6.

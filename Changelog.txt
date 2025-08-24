@@ -5,13 +5,85 @@ Weapons: OK
 Armor: OK
 Monsters: ***
 * Emissary of Antrax -- их два
-* 5810 "Banefire Servant"
 * 6771 "Druidic Seer"
 * 6772 "Amphiprionid"
 * 6776 "Reef Guard"
 * 6815 "Greater Ancestral Spirit"
 * 5030 "Nuclear Chaos"
-* 
+* 6770 "Animated Holy Water"
+* 6774 "Tuatha Noble"
+* 6777 "Solaris Praetori"
+* 6734 "Child of the Neter"
+* 6781 "Avatar of War & Wisdom"
+* 6728 "Amazon Queen"
+* 5862 "Mosquito Cloud" OK
+* 6735 "Gongen"
+* 6736 "Hetaira"
+* 6775 "Celestial Foot Soldier"
+* 6817 "Divine Owl"
+* 6737 "Priest of the Morning Star"
+* 6738 Lioness CONFLICT
+* 6739 "Child of the King"
+* 6740 "Golden Boar"
+* 6741 "Ram-Headed Serpent"
+* 6742 "Great White Stag"
+* 5267 "Child of the Moon"
+* 6743 "Eldest Olm"
+* 6744 "Aclla"
+* 6745 "Inca"
+* 6747 "Shipmaster"
+* 6748 "Sacred Warrior"
+* 8615 "Mubarak Swordsman"
+* 6800 "Triton Sage"
+* 6779 "Albatross"
+* 5319 "Aos Si Rider"
+* 5320 "Aos Si"
+* 6773 "Disciple of Blood"
+* 5058 "Ruk Hatchling"
+* 8985 "Tathagata of Dim Light"
+* 6767 "Fox spirit"
+* 6787 "Fox spirit"
+* 6768 "Monkey King" (clones)
+* 6818 "Seelie Empress"
+* 6819 "Unseelie Empress"
+* 6820 unseelie Soldier
+* 6821 unseelie Knight
+* 6822 "Unseelie Mischief-Maker"
+* 6823 "Orochi"
+* 6784 "Niefel Draug"
+* 5101 "Banefire Dracolich" OK
+* 5100 "Ghost Dragon" OK
+* 6780 "High Priest of C'tis" CONFLICT
+* 6778 "Grove Warrior" CONFLICT
+* 6750 "High Seraphine of the Oath" CONFLICT
+* 6798 "Bloody Daeva" CONFLICT
+* 6751 Bolon-ti-ku CONFLICT
+* 6786 "Gryphon Knight" CONFLICT
+* 6805-7 Raven of the Underworld
+* 6808-10 Dog of the Underworld 
+* 6765-6766 "Mermage Student"
+* 6801 "Tengu Samurai"
+* 6802 "Tengu King"
+* 6792 "Mermaid" magic
+* 6793 "Mermaid" magic
+* 8922 "Lacedon Mage"
+* 5268 "Berserk Markata"
+* 8903 "Drake Breeder"
+* 6752 "Apprentice Mage"
+* 6814 "Lord of Darkness"
+* 6753 "Jotun Werewolf"
+* 6754 "Sacred Polar Bear"
+* 6755 "Sacred Orca"
+* 6756 "Sacred Band"
+* 6788 "Seer Hierophant"
+* 6759 "Bouda"
+* 6760 "Werehyena"
+* 6791 "Leader of the Closed Council"
+* 6761 "Centaur Loremaster"
+* 6762 "Shikioji"
+* 6763 "Voidborn"
+* 6764 "Arcane Rector"
+* 5311 "Lobo Guard"
 Items: OK
 Sites: OK
 Nations: * -- меньше богов доступно будет. Џерекрывать нельзЯ, нужно содействие разрабов DE
@@ -23,6 +95,9 @@ Sahira: Fix
 Blacksteel Colossus: Summon bug
 Weapons: All changes to vanilla weapons reverted
 Events: Reverted changes to vanilla temples cost
+Delete changes to Thing that Should not Be 751?
+"The Sacred Mountain" changed -- whoms?
+8350-52!!!
 
 V1.14.2
 
