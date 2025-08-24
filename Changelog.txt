@@ -1,3 +1,12 @@
+V1.15.0
+
+Dominions Enhanced compatability (enable Divinitus DE version after DE itself)
+Some new bugs
+Sahira: Fixed The Last Wish not killing wielder
+Celestial Dragon: Fixed starting dominion power
+Removed most changes to vanilla monsters (not pretenders)
+Many small fixes
+
 V1.14.2
 
 Formless One: Cost 180 -> 270; Can't start awake
