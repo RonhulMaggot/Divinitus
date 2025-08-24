@@ -3280,7 +3280,7 @@ If Antrax present with Emissary, breaks free from summoning circle (becomes mobi
 #newevent
 #rarity 5
 #req_godismnr 8450 -- Emissary of Antrax
-#req_godismnr 6803 -- Awoken Emissary
+#req_godismnr 5972 -- Awoken Emissary
 #req_owncapital 0
 #req_temple 1
 #req_freesites 1
@@ -3302,13 +3302,13 @@ If Antrax present with Emissary, breaks free from summoning circle (becomes mobi
 #req_pop0ok
 #msg "Antrax has appeared and brought ##godname## fully into the world! He is now free to deal with his enemies as he sees fit."
 #nolog
-#forcetransform 6803 -- Emissary Freed
+#forcetransform 5972 -- Emissary Freed
 #end
 
 #newevent
 #rarity 5
 #req_godismnr 8450 -- Emissary of Antrax
-#req_godismnr 6803 -- Awoken Emissary
+#req_godismnr 5972 -- Awoken Emissary
 #req_monster 909 -- Antrax
 #req_land 1
 #req_mindef 1
@@ -3321,7 +3321,7 @@ If Antrax present with Emissary, breaks free from summoning circle (becomes mobi
 #com 7421 -- Banefire Child
 #end
 
-#newmonster 6803
+#newmonster 5972
 #copystats 909 -- Antrax
 #copyspr 909 -- Antrax
 #clearmagic
@@ -5449,7 +5449,7 @@ Woodhenge Druids become N1S1H2 after recruitment
 #homerealm 2 -- Celtic
 #end
 
-#newmonster 6771
+#newmonster
 #copystats 2468 -- Druid
 #copyspr 1204 -- Elder Druid
 #clearmagic
@@ -5474,7 +5474,7 @@ Woodhenge Druids become N1S1H2 after recruitment
 #notext
 #nolog
 #com 931 -- Ivy king
-#2com 6771 -- Druid Seers
+#2com "Druidic Seer" -- Druid Seers
 #end
 
 #newevent
@@ -5489,7 +5489,7 @@ Woodhenge Druids become N1S1H2 after recruitment
 #req_domchance 5
 #msg "A Druidic Seer has been trained at the Great Henge."
 #nolog
-#com 6771 -- Druid Seers
+#com "Druidic Seer" -- Druid Seers
 #end
 
 #newevent
@@ -5704,7 +5704,7 @@ Amphiprionid recruitable in cap
 #homerealm 9 -- Deeps
 #end
 
-#newmonster 6772
+#newmonster
 #copystats 2805 -- Ichtyid Pearl Mage
 #spr1 "./ExtraPretenders/clownfishmage.tga"
 #spr2 "./ExtraPretenders/clownfishmage.tga"
@@ -5732,7 +5732,7 @@ Amphiprionid recruitable in cap
 #rarity 5
 #blesspoisres 10
 #look 7
-#com 6772 -- Amphiprionid
+#com "Amphiprionid" -- Amphiprionid
 #end
 
 #newevent
@@ -5748,7 +5748,7 @@ Amphiprionid recruitable in cap
 #notext
 #nolog
 #addsite 1949
-#com 6772 -- Amphiprionid
+#com "Amphiprionid" -- Amphiprionid
 #end
 
 #newevent
@@ -5790,7 +5790,7 @@ Amphiprionid recruitable in cap
 #msg "Amphiprionid Appears!"
 #notext
 #nolog
-#com 6772 -- Amphiprionid
+#com "Amphiprionid" -- Amphiprionid
 #end
 
 #newmonster 8470
@@ -5851,7 +5851,7 @@ MA Atlantis only: Monster Fish may appear in capital each month (5% x candles ch
 #homerealm 9 -- Deeps
 #end
 
-#newmonster 6776
+#newmonster
 #copystats 209 -- Mother Guard
 #copyspr 209 -- Mother Guard
 #name "Reef Guard"
@@ -5868,10 +5868,10 @@ MA Atlantis only: Monster Fish may appear in capital each month (5% x candles ch
 #msg "Coral Army"
 #notext
 #nolog
-#1unit 6776
-#1d3units 6776
-#2d3units 6776
-#1d6units 6776
+#1unit "Reef Guard"
+#1d3units "Reef Guard"
+#2d3units "Reef Guard"
+#1d6units "Reef Guard"
 #2d6units 1622 -- Coral Guard
 #3d6units 1622 -- Coral Guard
 #com 112 -- Coral Queen
@@ -5886,7 +5886,7 @@ MA Atlantis only: Monster Fish may appear in capital each month (5% x candles ch
 #gems 6 1
 #res 100
 #look 8
-#mon 6776 -- Reef Guard
+#mon "Reef Guard" -- Reef Guard
 #mon 1622 -- Coral Guard
 #end
 
@@ -6117,6 +6117,14 @@ Thrones summon 1D3 Knights of the Unholy Sepulchre each month
 #1d3units 184 -- Knight of the Unholy Sepulchre
 #end
 
+#newmonster
+#copystats 566 -- Ghost
+#copyspr 566 -- Ghost
+#name "Greater Ancestral Spirit"
+#descr "An ancestral spirit is the helpful spirit of an ancestor. It is given offerings to secure the well-being of its descendants. In times of need, ancestral spirits can be called upon to aid armies. The most powerful ancestors return as frightening ethereal beings that can drain the life force from the living."
+#holy
+#end
+
 #newmonster 8474
 #clear
 #name "Ancestral Barrow"
@@ -6171,18 +6179,10 @@ Temples may grant a priest present with no D paths 1D (10% x candles chance)
 #homerealm 2 -- Celtic
 #domsummon "Ancestral spirit"
 #domsummon2 "Ancestral spirit"
-#summon2 6815 -- Greater Ancestral Spirit
-#domsummon20 6815 -- Greater Ancestral Spirit
+#summon2 "Greater Ancestral Spirit" -- Greater Ancestral Spirit
+#domsummon20 "Greater Ancestral Spirit" -- Greater Ancestral Spirit
 #batstartsum9d6 "Ancestral spirit"
-#batstartsum2d6 6815 -- Greater Ancestral Spirit
-#end
-
-#newmonster 6815
-#copystats 566 -- Ghost
-#copyspr 566 -- Ghost
-#name "Greater Ancestral Spirit"
-#descr "An ancestral spirit is the helpful spirit of an ancestor. It is given offerings to secure the well-being of its descendants. In times of need, ancestral spirits can be called upon to aid armies. The most powerful ancestors return as frightening ethereal beings that can drain the life force from the living."
-#holy
+#batstartsum2d6 "Greater Ancestral Spirit" -- Greater Ancestral Spirit
 #end
 
 #newevent
@@ -6197,7 +6197,7 @@ Temples may grant a priest present with no D paths 1D (10% x candles chance)
 #notext
 #nolog
 #1d3units "Ancestral spirit"
-#1unit 6815 -- Greater Ancestral Spirit
+#1unit "Greater Ancestral Spirit" -- Greater Ancestral Spirit
 #end
 
 #newevent
@@ -6295,8 +6295,8 @@ Increases Magic limit by +2 (Provinces with magic 4+ lose 5 unrest each month)
 #msg "A Triton Sage has appeared, eager to learn the secrets of ##godname##."
 #notext
 #nolog
-#com 6800 -- Triton Sage
-#holyboost 6800 -- Lore Master
+#com "Triton Sage" -- Triton Sage
+#holyboost "Triton Sage" -- Lore Master
 #end
 
 #newevent
@@ -6874,7 +6874,7 @@ Return to the capital to return to its smaller form
 #homeshape 5020
 #end
 
-#newmonster 5030
+#newmonster 5982
 #clear
 #name "Nuclear Chaos"
 #spr1 "./ExtraPretenders/NuclearChaosD.tga"
@@ -6935,7 +6935,7 @@ Return to the capital to return to its smaller form
 #req_owncapital 0
 #req_targmnr 8483 -- Nuclear Chaos
 #msg "The Nuclear Chaos has grown more powerful, but also more unpredictable."
-#forcetransform 5030
+#forcetransform 5982
 #nolog
 #end
 
@@ -8876,19 +8876,19 @@ A Siege Golem, Poison Golem or Iron Dragon at a temple will become a commander
 #weapon "Shatterfist"
 #end
 
-#selectmonster 6794
+#selectmonster 5972
 #copystats 760 -- Siege Golem
 #copyspr 760 -- Siege Golem
 #itemslots 17571846 -- Crown/2 hands/2 misc
 #end
 
-#selectmonster 6795
+#selectmonster 5971
 #copystats 1099 -- Poison Golem
 #copyspr 1099 -- Poison Golem
 #itemslots 17571846 -- Crown/2 hands/2 misc
 #end
 
-#selectmonster 6799
+#selectmonster 5970
 #copystats 531 -- Iron Dragon
 #copyspr 531 -- Iron Dragon
 #end
@@ -8904,7 +8904,7 @@ A Siege Golem, Poison Golem or Iron Dragon at a temple will become a commander
 #notext
 #nolog
 #killmon 760 -- Siege Golem
-#com 6794
+#com 5972
 #end
 
 #newevent
@@ -8918,7 +8918,7 @@ A Siege Golem, Poison Golem or Iron Dragon at a temple will become a commander
 #notext
 #nolog
 #killmon 1099 -- Poison Golem
-#com 6795
+#com 5971
 #end
 
 #newevent
@@ -8932,7 +8932,7 @@ A Siege Golem, Poison Golem or Iron Dragon at a temple will become a commander
 #notext
 #nolog
 #killmon 531 -- Iron Dragon
-#com 6799
+#com 5970
 #end
 
 #newevent
@@ -13330,6 +13330,47 @@ Whilst at a Throne will produce 3D6 gems of each type each month until Throne is
 #3d6vis 53 -- All gem types
 #end
 
+#newmonster
+#copystats 3282 -- Ind Soldier Priest
+#copyspr 3735 -- Size 4 W Elemental
+#drawsize -45
+#clearweapons
+#cleararmor
+#name "Animated Holy Water"
+#descr "This water has been blessed by the priesthood and has now been animated by a divine presence. It carries the blessing of the Lord and is always blessed in battles. Holy water causes great pain to demons and undead creatures and can banish them from this world."
+#miscshape
+#gcost 0
+#size 5
+#hp 42
+#mr 15
+#mor 50
+#str 14
+#att 11
+#def 11
+#prec 5
+#ap 9
+#mapmove 14
+#enc 0
+#okmagicleader
+#fireres 6
+#poisonres 25
+#uwregen 5
+#spiritsight
+#blind
+#unsurr 2
+#woundfend 99
+#weapon 497 -- Sacred Water
+#weapon 90 -- Crush
+#holy
+#slashres
+#pierceres
+#bluntres
+#magicbeing
+#inanimate
+#amphibian
+#neednoteat
+#end
+
 #newmonster 8401
 #name "Prince of the Deeps"
 #spr1 "./ExtraPretenders/ElementalPrince.tga"
@@ -13359,7 +13400,7 @@ Whilst at a lab may create an Amulet of the Fish (Candles x 5% chance per month)
 #gemprod 2 3
 #darkvision 100
 #spiritsight
-#batstartsum1d6 6770 -- Size 5 Animated Water
+#batstartsum1d6 "Animated Holy Water" -- Size 5 Animated Water
 #weapon 90 -- Crush
 #weapon 90 -- Crush
 #expertleader
@@ -13410,47 +13451,6 @@ Whilst at a lab may create an Amulet of the Fish (Candles x 5% chance per month)
 #3d6vis 2 -- 3D6 Water Gems
 #end
 
-#newmonster 6770
-#copystats 3282 -- Ind Soldier Priest
-#copyspr 3735 -- Size 4 W Elemental
-#drawsize -45
-#clearweapons
-#cleararmor
-#name "Animated Holy Water"
-#descr "This water has been blessed by the priesthood and has now been animated by a divine presence. It carries the blessing of the Lord and is always blessed in battles. Holy water causes great pain to demons and undead creatures and can banish them from this world."
-#miscshape
-#gcost 0
-#size 5
-#hp 42
-#mr 15
-#mor 50
-#str 14
-#att 11
-#def 11
-#prec 5
-#ap 9
-#mapmove 14
-#enc 0
-#okmagicleader
-#fireres 6
-#poisonres 25
-#uwregen 5
-#spiritsight
-#blind
-#unsurr 2
-#woundfend 99
-#weapon 497 -- Sacred Water
-#weapon 90 -- Crush
-#holy
-#slashres
-#pierceres
-#bluntres
-#magicbeing
-#inanimate
-#amphibian
-#neednoteat
-#end
-
 #newevent
 #rarity 5
 #req_godismnr 8401 -- Prince of the Deeps
@@ -13463,7 +13463,7 @@ Whilst at a lab may create an Amulet of the Fish (Candles x 5% chance per month)
 #msg "Animated Water Appears!"
 #notext
 #nolog
-#1unit 6770 -- Animated Water
+#1unit "Animated Holy Water" -- Animated Water
 #end
 
 #newevent
@@ -13479,7 +13479,7 @@ Whilst at a lab may create an Amulet of the Fish (Candles x 5% chance per month)
 #msg "Animated Water Appears!"
 #notext
 #nolog
-#1unit 6770 -- Animated Water
+#1unit "Animated Holy Water" -- Animated Water
 #end
 
 #newevent
@@ -13495,7 +13495,7 @@ Whilst at a lab may create an Amulet of the Fish (Candles x 5% chance per month)
 #msg "Animated Water Appears!"
 #notext
 #nolog
-#1unit 6770 -- Animated Water
+#1unit "Animated Holy Water" -- Animated Water
 #end
 
 #selectmonster 1767 -- Danava
@@ -13920,6 +13920,18 @@ If control Fata Morgana, all friendly provinces may spawn a Tuatha Warrior (Cand
 #1unit 1753 -- Tuatha Warrior
 #end
 
+#newmonster
+#copystats 856 -- Tuatha
+#copyspr 856 -- Tuatha
+#clearmagic
+#name "Tuatha Noble"
+#descr "The Tuatha are the ancient masters of Tir na n'Og and Avalon. When men came to their lands, they retreated to the Land of the Ever Young and were lost to the world. A few of them lingered on and aided the retreat of their Sidhe descendants into strange and magical twilight lands hidden under ancient mounds. With the coming of the new God, a few of them have returned from their seclusion together with their Sidhe descendants. Tuatha nobles ride magnificent Sidhe steeds and can use glamour and illusions to hide their true appearance."
+#rpcost 32
+#mr 14
+#def 14
+#noslowrec
+#end
+
 #newevent
 #rarity 5
 #req_godismnr 956
@@ -13932,19 +13944,7 @@ If control Fata Morgana, all friendly provinces may spawn a Tuatha Warrior (Cand
 #msg "Tuatha spawn."
 #notext
 #nolog
-#1unit 6774 -- Tuatha Noble
-#end
-
-#newmonster 6774
-#copystats 856 -- Tuatha
-#copyspr 856 -- Tuatha
-#clearmagic
-#name "Tuatha Noble"
-#descr "The Tuatha are the ancient masters of Tir na n'Og and Avalon. When men came to their lands, they retreated to the Land of the Ever Young and were lost to the world. A few of them lingered on and aided the retreat of their Sidhe descendants into strange and magical twilight lands hidden under ancient mounds. With the coming of the new God, a few of them have returned from their seclusion together with their Sidhe descendants. Tuatha nobles ride magnificent Sidhe steeds and can use glamour and illusions to hide their true appearance."
-#rpcost 32
-#mr 14
-#def 14
-#noslowrec
+#1unit "Tuatha Noble" -- Tuatha Noble
 #end
 
 #newsite 1955
@@ -13952,7 +13952,7 @@ If control Fata Morgana, all friendly provinces may spawn a Tuatha Warrior (Cand
 #path 7
 #level 0
 #rarity 5
-#mon 6774 -- Tuatha
+#mon "Tuatha Noble" -- Tuatha
 #look 4
 #end
 
@@ -14045,7 +14045,7 @@ Whilst a Second Sun is in the sky Solaris Praetori can be recruited for 1/3 cost
 #fixedname "Helios"
 #end
 
-#newmonster 6777
+#newmonster
 #copystats 1866 -- Primani Solaris
 #copyspr 1866 -- Primani Solaris
 #name "Solaris Praetori"
@@ -14065,7 +14065,7 @@ Whilst a Second Sun is in the sky Solaris Praetori can be recruited for 1/3 cost
 #path 0
 #level 0
 #rarity 5
-#mon 6777
+#mon "Solaris Praetori"
 #look 8
 #end
 
@@ -15816,7 +15816,7 @@ May summon a Jotun Werewolf commander each month (candles x 5% chance)
 #msg "Werewolf appears"
 #notext
 #nolog
-#com 6753 -- Jotun Werewolf
+#com 5986 -- Jotun Werewolf
 #end
 
 #newmonster 7578
@@ -16169,6 +16169,38 @@ Summons Krakens up to half Dominion candles whilst underwater
 #weapon 589 -- Tail Slap
 #end
 
+#newmonster
+#spr1 "./ExtraPretenders/EEKiller.tga"
+#spr2 "./ExtraPretenders/EEKiller2.tga"
+#name "Sacred Orca"
+#descr "Orcas are aquatic carnivores also known as Killer Whales. They hunt in pods and feed on fish and marine animals. They are respected by hunters as Lords of the Frozen Sea."
+#snake
+#holy
+#gcost 0
+#hp 55
+#size 8
+#prot 8
+#mr 9
+#mor 15
+#str 22
+#att 11
+#def 10
+#prec 5
+#enc 2
+#mapmove 20
+#ap 20
+#stealthy 0
+#coldres 15
+#weapon 20 -- Bite
+#weapon 589 -- Tail Slap
+#undisciplined
+#animal
+#aquatic
+#neednoteat
+#itemslots 786432 -- 2 misc
+#nametype 141 -- Inuit
+#end
+
 #newmonster 8441
 #spr1 "./ExtraPretenders/Sgana.tga"
 #spr2 "./ExtraPretenders/Sgana.tga"
@@ -16203,7 +16235,7 @@ Each month an Akhlut may appear (A1W1 amphibious assassin, Candles x 5% chance)
 #armor 155 -- Golden Shield
 #startitem 445 -- Astral Harpoon
 #amphibian
-#domsummon2 6755 -- Sacred Orca
+#domsummon2 "Sacred Orca" -- Sacred Orca
 #giftofwater 250
 #darkvision 50
 #startage 1000
@@ -17250,33 +17282,7 @@ Each month she will gift one of her priesthood her symbol (grants Magicpower 1 a
 #glamourboost -1
 #end
 
-#selectmonster 388 -- Neter of Chaos
-#clearmagic
-#descr "The Neter is a giant of divine heritage. He was once given power over the desert, storms, darkness and destruction by a previous Pantokrator. Endowed with unequaled destructive power and jealous ambition, he led the lesser gods in rebellion against his master and slew and dismembered him. However, the Pantokrator was reassembled by one of his servants and was able to return from the dead to banish the Neter for eternity. Sacred animal headed warriors spawned in his image will appear to serve him as his Dominion grows strong, and they will emerge from his temples whilst he controls the storm. With the disappearance of the Pantokrator, the prison weakens and the Neter of Chaos can once more claim the world as his to destroy.
-
-Summons Sacred Children of the Neter up to Dominion candles each month
-Increases Turmoil limit by +2
-Whilst controls Dark Skies, temples will summon Children of the Neter (10% x candles chance per month)
-Cannot start awake
-"
-#gcost 240
-#minprison 1
-#chaospower 1
-#moreorder -2
-#magicskill 0 1
-#magicskill 1 1  -- Air 1
-#magicskill 5 1
-#magicskill 7 1 -- Glamour 1
-#att 14
-#def 11
-#batstartsum2 6734 -- Neter Child
-#domsummon 6734 -- Neter Child
-#heal
-#diseaseres 100
-#pathcost 80
-#end
-
-#newmonster 6734
+#newmonster
 #copystats 2165 -- Enkidu Warrior
 #clearweapons
 #cleararmor
@@ -17307,6 +17313,32 @@ Cannot start awake
 #nametype 113 -- C'tis Male
 #end
 
+#selectmonster 388 -- Neter of Chaos
+#clearmagic
+#descr "The Neter is a giant of divine heritage. He was once given power over the desert, storms, darkness and destruction by a previous Pantokrator. Endowed with unequaled destructive power and jealous ambition, he led the lesser gods in rebellion against his master and slew and dismembered him. However, the Pantokrator was reassembled by one of his servants and was able to return from the dead to banish the Neter for eternity. Sacred animal headed warriors spawned in his image will appear to serve him as his Dominion grows strong, and they will emerge from his temples whilst he controls the storm. With the disappearance of the Pantokrator, the prison weakens and the Neter of Chaos can once more claim the world as his to destroy.
+
+Summons Sacred Children of the Neter up to Dominion candles each month
+Increases Turmoil limit by +2
+Whilst controls Dark Skies, temples will summon Children of the Neter (10% x candles chance per month)
+Cannot start awake
+"
+#gcost 240
+#minprison 1
+#chaospower 1
+#moreorder -2
+#magicskill 0 1
+#magicskill 1 1  -- Air 1
+#magicskill 5 1
+#magicskill 7 1 -- Glamour 1
+#att 14
+#def 11
+#batstartsum2 "Child of the Neter" -- Neter Child
+#domsummon "Child of the Neter" -- Neter Child
+#heal
+#diseaseres 100
+#pathcost 80
+#end
+
 #newevent
 #rarity 5
 #req_godismnr 388 -- Neter of Chaos
@@ -17320,7 +17352,7 @@ Cannot start awake
 #msg "Neter Child Appears"
 #notext
 #nolog
-#1unit 6734 -- Neter Child
+#1unit "Child of the Neter" -- Neter Child
 #end
 
 #selectmonster 499 -- Nataraja
@@ -17401,7 +17433,7 @@ Each month a Vanjarl and 2D6 Vanir Huskarls may appear (5% x candles chance)
 #2d6units 1508 -- Huskarl
 #end
 
-#newmonster 6781
+#newmonster
 #copystats 600 -- Titan of War & Wisdom
 #copyspr 600 -- Titan of War & Wisdom
 #name "Avatar of War & Wisdom"
@@ -17421,7 +17453,7 @@ Each month a Vanjarl and 2D6 Vanir Huskarls may appear (5% x candles chance)
 #homerealm 0
 #end
 
-#newmonster 6728
+#newmonster
 #copystats 1175 -- Warrior Queen
 #copyspr 1175 -- Warrior Queen
 #name "Amazon Queen"
@@ -17463,13 +17495,13 @@ A single army at a temple with at least 500 troops gains Avatar of War & Wisdom 
 #msg "Warrior Queen Appears."
 #notext
 #nolog
-#2com 6728 -- Amazon Queen
+#2com "Amazon Queen" -- Amazon Queen
 #end
 
 #newevent
 #rarity 5
 #req_godismnr 600 -- Titan of War & Wisdom
-#req_nomnr 6781
+#req_nomnr "Avatar of War & Wisdom"
 #req_temple 1
 #req_land 1
 #nation -2
@@ -17477,14 +17509,14 @@ A single army at a temple with at least 500 troops gains Avatar of War & Wisdom 
 #req_mintroops 500
 #msg "A great avatar of ##godname## has appeared to lead the assembled host!"
 #nolog
-#com 6781 -- Avatar
-#astralboost 6781 -- Avatar
+#com "Avatar of War & Wisdom" -- Avatar
+#astralboost "Avatar of War & Wisdom" -- Avatar
 #end
 
 #newevent
 #rarity 5
 #req_godismnr 600 -- Titan of War & Wisdom
-#req_monster 6728 -- Amazon Queen
+#req_monster "Amazon Queen" -- Amazon Queen
 #req_land 1
 #nation -2
 #req_pop0ok
@@ -17500,7 +17532,7 @@ A single army at a temple with at least 500 troops gains Avatar of War & Wisdom 
 #newevent
 #rarity 5
 #req_godismnr 600 -- Titan of War & Wisdom
-#req_monster 6728 -- Amazon Queen
+#req_monster "Amazon Queen" -- Amazon Queen
 #req_land 1
 #nation -2
 #req_pop0ok
@@ -17523,7 +17555,7 @@ A single army at a temple with at least 500 troops gains Avatar of War & Wisdom 
 #req_pop0ok
 #msg "Representatives of the Amazon tribes have appeared at year's end to serve ##godname##!"
 #nolog
-#com 6728 -- Amazon Queen
+#com "Amazon Queen" -- Amazon Queen
 #end
 
 #newevent
@@ -17955,16 +17987,6 @@ Whilst at Nexus, will gain paths each month (Automatic +1 up to 5 in each path, 
 #msg "The Void Lord resides in the outer realm beset by enemies and will emerge once the stars are right."
 #banished -11
 #nolog
-#end
-
-#selectmonster 751 -- Thing that Should not Be
-#neednoteat
-#clearweapons
-#weapon 823 -- Magic Claw
-#weapon 719 -- Intrinsic Life Drain
-#weapon 719 -- Intrinsic Life Drain
-#weapon 719 -- Intrinsic Life Drain
-#weapon 719 -- Intrinsic Life Drain
 #end
 
 #newevent
@@ -18478,9 +18500,47 @@ Casts Quicken Self in combat
 #removesite 1913
 #end
 
-#selectitem 32 -- Rod of the Leper King -- Why?
-#cursed
-#nofind
+#newmonster
+#spr1 "./ExtraPretenders/RMosCloud.tga"
+#spr2 "./ExtraPretenders/RMosCloud2.tga"
+#name "Mosquito Cloud"
+#descr "This is a cloud of mosquitos summoned and directed by a mage. The cloud will be difficult to destroy with regular weapons, however burning them will quickly disperse the insects. Their many bites will weaken and fatigue enemies, aswell as spreading disease."
+#miscshape
+#gcost 0
+#hp 20
+#size 1
+#prot 0
+#invulnerable 15
+#pierceres
+#slashres
+#bluntres
+#assassin
+#diseasecloud 2
+#fireres -10
+#woundfend 99
+#formationfighter -8
+#mr 5
+#mor 50
+#str 10
+#att 8
+#def 18
+#prec 10
+#enc 1
+#speciallook 150
+#mapmove 2
+#blind
+#diseaseres 100
+#ap 18
+#eyes 8
+#startage 1
+#maxage 5
+#animal
+#float
+#weapon 3032 -- Mosquito Drain
+#weapon 450 -- Tiny Bite
+#spiritsight
+#swampsurvival
+#noleader
 #end
 
 #selectmonster 1097  -- Lord of the Summer Plague
@@ -18502,7 +18562,7 @@ Starts with Disease Grinder in treasury
 #onebattlespell "Soul Vortex"
 #startitem 1026 -- Bow of Plagues
 #domsummon 8168 -- Diseased Soulless
-#domsummon2 5862 -- Mosquito Cloud
+#domsummon2 "Mosquito Cloud" -- Mosquito Cloud
 #sleepaura 10
 #heal
 #end
@@ -18593,49 +18653,6 @@ Starts with Disease Grinder in treasury
 #notext
 #nolog
 #com 7965 -- Queen Mosquito
-#end
-
-#newmonster 5862
-#spr1 "./ExtraPretenders/RMosCloud.tga"
-#spr2 "./ExtraPretenders/RMosCloud2.tga"
-#name "Mosquito Cloud"
-#descr "This is a cloud of mosquitos summoned and directed by a mage. The cloud will be difficult to destroy with regular weapons, however burning them will quickly disperse the insects. Their many bites will weaken and fatigue enemies, aswell as spreading disease."
-#miscshape
-#gcost 0
-#hp 20
-#size 1
-#prot 0
-#invulnerable 15
-#pierceres
-#slashres
-#bluntres
-#assassin
-#diseasecloud 2
-#fireres -10
-#woundfend 99
-#formationfighter -8
-#mr 5
-#mor 50
-#str 10
-#att 8
-#def 18
-#prec 10
-#enc 1
-#speciallook 150
-#mapmove 2
-#blind
-#diseaseres 100
-#ap 18
-#eyes 8
-#startage 1
-#maxage 5
-#animal
-#float
-#weapon 3032 -- Mosquito Drain
-#weapon 450 -- Tiny Bite
-#spiritsight
-#swampsurvival
-#noleader
 #end
 
 #selectmonster 1098 -- Asynja
@@ -19260,7 +19277,7 @@ Temple forts in Luck scales may summon a Gongen each month (Candles x 1% chance,
 #diseaseres 100
 #end
 
-#newmonster 6735 -- Gongen
+#newmonster -- Gongen
 #copystats 1895 -- Ceremonial Master
 #copyspr 3265 -- Tanuki human
 #clearmagic
@@ -19296,7 +19313,7 @@ Temple forts in Luck scales may summon a Gongen each month (Candles x 1% chance,
 #msg "Gongen appears"
 #notext
 #nolog
-#com 6735 -- Gongen
+#com "Gongen" -- Gongen
 #end
 
 #newevent
@@ -19313,7 +19330,7 @@ Temple forts in Luck scales may summon a Gongen each month (Candles x 1% chance,
 #msg "Gongen appears"
 #notext
 #nolog
-#com 6735 -- Gongen
+#com "Gongen" -- Gongen
 #end
 
 #newevent
@@ -19330,7 +19347,7 @@ Temple forts in Luck scales may summon a Gongen each month (Candles x 1% chance,
 #msg "Gongen appears"
 #notext
 #nolog
-#com 6735 -- Gongen
+#com "Gongen" -- Gongen
 #end
 
 #newevent
@@ -19347,7 +19364,7 @@ Temple forts in Luck scales may summon a Gongen each month (Candles x 1% chance,
 #msg "Gongen appears"
 #notext
 #nolog
-#com 6735 -- Gongen
+#com "Gongen" -- Gongen
 #end
 
 #newevent
@@ -19364,7 +19381,7 @@ Temple forts in Luck scales may summon a Gongen each month (Candles x 1% chance,
 #msg "Gongen appears"
 #notext
 #nolog
-#com 6735 -- Gongen
+#com "Gongen" -- Gongen
 #end
 
 #newevent
@@ -19680,7 +19697,7 @@ Temples on land may summon Animated Holy Water (10% x candles chance per month o
 #armor 231 -- Heavy magic robes
 #magicboost 2 2
 #diseaseres 100
-#summon2 6770 -- Animated Holy Water
+#summon2 "Animated Holy Water" -- Animated Holy Water
 #end
 
 #newevent
@@ -19726,7 +19743,7 @@ Temples on land may summon Animated Holy Water (10% x candles chance per month o
 #msg "Holy Water Elemental appears"
 #notext
 #nolog
-#1unit 6770 -- Animated Holy Water
+#1unit "Animated Holy Water" -- Animated Holy Water
 #end
 
 #newevent
@@ -19743,7 +19760,7 @@ Temples on land may summon Animated Holy Water (10% x candles chance per month o
 #msg "Holy Water Elemental appears"
 #notext
 #nolog
-#1unit 6770 -- Animated Holy Water
+#1unit "Animated Holy Water" -- Animated Holy Water
 #end
 
 #newevent
@@ -19759,7 +19776,20 @@ Temples on land may summon Animated Holy Water (10% x candles chance per month o
 #msg "Holy Water Elemental appears"
 #notext
 #nolog
-#1unit 6770 -- Animated Holy Water
+#1unit "Animated Holy Water" -- Animated Holy Water
+#end
+
+#newmonster
+#copystats 813 -- Imperial Consort
+#copyspr 242 -- Hiereia
+#name "Hetaira"
+#descr "The Hetaira are sacred companions dedicated to the Titan of Love. They are often educated and provide pleasures of the mind aswell as the body to those they deem worthy. They are skilled in the arts of seduction and are taught a few charms for healing and protection. They are sometimes employed to spy on the courts of foreign powers, or to sway rival commanders to the service of the Titan of Love."
+#rpcost 2
+#gcost 95
+#seduce 11
+#magicskill 6 1
+#magicskill 9 1 -- Holy 1
+#weapon 92 -- Fist
 #end
 
 #selectmonster 1343 -- Titan of Love
@@ -19789,8 +19819,8 @@ Adventurers may appear each month (Candles x 5% chance)
 #msg "Starting Heteira."
 #notext
 #nolog
-#2com 6736 -- Hetaira
-#com 6736 -- Hetaira
+#2com "Hetaira" -- Hetaira
+#com "Hetaira" -- Hetaira
 #end
 
 #newevent
@@ -19806,25 +19836,12 @@ Adventurers may appear each month (Candles x 5% chance)
 #com -13 -- Random Adventurer
 #end
 
-#newmonster 6736
-#copystats 813 -- Imperial Consort
-#copyspr 242 -- Hiereia
-#name "Hetaira"
-#descr "The Hetaira are sacred companions dedicated to the Titan of Love. They are often educated and provide pleasures of the mind aswell as the body to those they deem worthy. They are skilled in the arts of seduction and are taught a few charms for healing and protection. They are sometimes employed to spy on the courts of foreign powers, or to sway rival commanders to the service of the Titan of Love."
-#rpcost 2
-#gcost 95
-#seduce 11
-#magicskill 6 1
-#magicskill 9 1 -- Holy 1
-#weapon 92 -- Fist
-#end
-
 #newsite 1915
 #name "Temple of Love" 
 #path 9
 #level 0
 #rarity 5
-#homecom 6736
+#homecom "Hetaira"
 #look 2
 #end
 
@@ -19967,7 +19984,7 @@ Can call 4 Celestial Soldiers to aid him each month
 #diseaseres 100
 #end
 
-#newmonster 6775
+#newmonster
 #copystats 902 -- Celestial Soldier
 #copyspr 902 -- Celestial Soldier
 #clearmagic
@@ -19986,7 +20003,7 @@ Can call 4 Celestial Soldiers to aid him each month
 #path 4
 #level 0
 #rarity 5
-#mon 6775 -- Celestial Foot Soldier
+#mon "Celestial Foot Soldier" -- Celestial Foot Soldier
 #look 5
 #end
 
@@ -20412,7 +20429,7 @@ Casts Light of the Northern Star in battles
 #armor 231 -- Heavy magic robes
 #end
 
-#newmonster 6817
+#newmonster
 #copystats 1380 -- Black Hawk
 #spr1 "./ExtraPretenders/Owl.tga"
 #spr2 "./ExtraPretenders/Owl2.tga"
@@ -20432,7 +20449,7 @@ Casts Light of the Northern Star in battles
 #spy
 #end
 
-#newmonster 6737
+#newmonster
 #copystats 2951 -- Ashipu
 #copyspr 2951 -- Ashipu
 #clearmagic
@@ -20455,7 +20472,7 @@ Casts Light of the Northern Star in battles
 #path 9
 #level 0
 #rarity 5
-#homecom 6737
+#homecom "Priest of the Morning Star"
 #look 7
 #end
 
@@ -20472,7 +20489,7 @@ Casts Light of the Northern Star in battles
 #notext
 #nolog
 #addsite 1916
-#com 6817 -- Divine Owl
+#com "Divine Owl" -- Divine Owl
 #end
 
 #selectmonster 1378 -- Lord of the Forest
@@ -21384,8 +21401,8 @@ Provinces in strong dominion will additionaly increase local population by ~100 
 #def 11
 #moreorder -1
 #incunrest 50
-#batstartsum2 6738 -- Sacred Lioness
-#domsummon 6738 -- Sacred Lioness
+#batstartsum2 5999 -- Sacred Lioness
+#domsummon 5999 -- Sacred Lioness
 #heal
 #diseaseres 100
 #end
@@ -21451,7 +21468,7 @@ Provinces in strong dominion will additionaly increase local population by ~100 
 #incpop 100
 #end
 
-#newmonster 6738
+#newmonster 5999
 #copystats 2133 -- Lioness
 #copyspr 2133 -- Lioness
 #descr "A female lion. These creatures are the symbol of the Annunaki and are sacred."
@@ -21475,7 +21492,7 @@ Provinces in strong dominion will additionaly increase local population by ~100 
 #msg "Spawn Lioness"
 #notext
 #nolog
-#1d6units 6738 -- Sacred Lioness
+#1d6units 5999 -- Sacred Lioness
 #end
 
 #selectmonster 2436 -- Annunaki of the Moon
@@ -21889,25 +21906,7 @@ Each month whilst in a temple province with Death scales may summon a Dust Pries
 #com 1978 -- Dust Priest
 #end
 
-#selectmonster 2446 -- Neter of Kings
-#descr "The Neter is a giant of divine heritage. A previous Pantokrator once gave him rulership over the world, and the things that brings life; the sun in the heaven and the rivers and waters of the world. He was imprisoned for eternity when he joined a rebellion of lesser gods. Now with the Pantokrator gone, the Neter is once more free to claim the world as his. He is served by creatures spawned in his image, and more will flock to him as his Dominion grows strong. At temples where priests are preaching an emissary of the King may appear to lead the faithful. The Neter of Kings will spread Dominion more strongly than most Pretenders.
-
-Summons Children of the King up to half Dominion candles each month
-Temple forts where a priest is preaching may summon a Child of the King commander (F1W1S1H2, 4% x candles chance)
-"
-#gcost 230
-#awe 3
-#att 14
-#def 11
-#spreaddom 1
-#startdom 3
-#batstartsum1d6 6739 -- Child of the King
-#domsummon2 6739 -- Child of the King
-#heal
-#diseaseres 100
-#end
-
-#newmonster 6739
+#newmonster
 #copystats 2165 -- Enkidu Warrior
 #clearweapons
 #cleararmor
@@ -21939,6 +21938,24 @@ Temple forts where a priest is preaching may summon a Child of the King commande
 #nametype 113 -- C'tis Male
 #end
 
+#selectmonster 2446 -- Neter of Kings
+#descr "The Neter is a giant of divine heritage. A previous Pantokrator once gave him rulership over the world, and the things that brings life; the sun in the heaven and the rivers and waters of the world. He was imprisoned for eternity when he joined a rebellion of lesser gods. Now with the Pantokrator gone, the Neter is once more free to claim the world as his. He is served by creatures spawned in his image, and more will flock to him as his Dominion grows strong. At temples where priests are preaching an emissary of the King may appear to lead the faithful. The Neter of Kings will spread Dominion more strongly than most Pretenders.
+
+Summons Children of the King up to half Dominion candles each month
+Temple forts where a priest is preaching may summon a Child of the King commander (F1W1S1H2, 4% x candles chance)
+"
+#gcost 230
+#awe 3
+#att 14
+#def 11
+#spreaddom 1
+#startdom 3
+#batstartsum1d6 "Child of the King" -- Child of the King
+#domsummon2 "Child of the King" -- Child of the King
+#heal
+#diseaseres 100
+#end
+
 #newevent
 #rarity 5
 #req_godismnr 2446 -- Neter of Kings
@@ -21952,7 +21969,7 @@ Temple forts where a priest is preaching may summon a Child of the King commande
 #req_pop0ok
 #msg "A Child of the King has appeared to lead the faithful!"
 #nolog
-#com 6739
+#com "Child of the King"
 #end
 
 #selectmonster 2450 -- Horned One
@@ -21991,7 +22008,7 @@ Golden Boar (E2H3, Domsummons Boars), Rams Head Serpent (N2H3, Domsummons Cerast
 #addsite 942 -- Primal Forest
 #end
 
-#newmonster 6740
+#newmonster
 #copystats 2784 -- Thrice Horned Boar
 #copyspr 2784 -- Thrice Horned Boar
 #clearmagic
@@ -22008,7 +22025,7 @@ Golden Boar (E2H3, Domsummons Boars), Rams Head Serpent (N2H3, Domsummons Cerast
 #magicskill 9 3
 #end
 
-#newmonster 6741
+#newmonster
 #copystats 779 -- Rams Headed Serpent
 #copyspr 779 -- Rams Headed Serpent
 #clearmagic
@@ -22027,7 +22044,7 @@ Golden Boar (E2H3, Domsummons Boars), Rams Head Serpent (N2H3, Domsummons Cerast
 #batstartsum3d6 0
 #end
 
-#newmonster 6742
+#newmonster
 #copystats 3693
 #copyspr 3693
 #clearmagic
@@ -22056,7 +22073,7 @@ Golden Boar (E2H3, Domsummons Boars), Rams Head Serpent (N2H3, Domsummons Cerast
 #msg "White Stag appears"
 #notext
 #nolog
-#com 6742 -- White Stag
+#com "Great White Stag" -- White Stag
 #end
 
 #newevent
@@ -22069,7 +22086,7 @@ Golden Boar (E2H3, Domsummons Boars), Rams Head Serpent (N2H3, Domsummons Cerast
 #nation -2
 #req_pop0ok
 #msg "The Ram-Headed Serpent has escaped the enchanted forest and arrived at the gates to the capital! It has pledged to aid the servants of the Horned One."
-#com 6741 -- Ram Headed Serpent
+#com "Ram-Headed Serpent" -- Ram Headed Serpent
 #end
 
 #newevent
@@ -22082,35 +22099,10 @@ Golden Boar (E2H3, Domsummons Boars), Rams Head Serpent (N2H3, Domsummons Cerast
 #nation -2
 #req_pop0ok
 #msg "The Golden Boar has escaped the enchanted forest and arrived at the gates to the capital! It has pledged to aid the servants of the Horned One."
-#com 6740 -- Golden Boar
+#com "Golden Boar" -- Golden Boar
 #end
 
-#selectmonster 2464 -- Neter of the Moon
-#clearweapons
-#descr "The Neter is a giant of divine heritage. A previous Pantokrator gave him power knowledge the moon and the stars and the wisdom how to use it. As guardian of the celestial bodies he observed what was, what had been, and what would come to pass. During the rebellion of the lesser gods, he observed but did not interfere on either side. For this the Pantokrator imprisoned him for eternity. Now with the Pantokrator gone his astral prison is weakening and he will return to guide the world as he wills.
-
-Strikes attackers with Cursed Luck & prevents 75% of bad events in the province
-Generates 3 Astral pearls each month
-Each month grants a Stellar Staff to another commander in the province (Grants Stellar bolt attack)
-While controls Stellar Focus, sacred Children of the Moon will appear at temples (10% x candles chance per month)
-"
-#gcost 220
-#magicboost 4 2
-#heal
-#prec 16
-#batstartsum2 5267
-#inspiringres 3
-#curseluckshield 4
-#diseaseres 100
-#pathcost 40
-#darkvision 100
-#nobadevents 75
-#startitem 680
-#weapon 238 -- Magic Staff
-#gemprod 4 3 -- 3 Pearls/month
-#end
-
-#newmonster 5267
+#newmonster
 #clear
 #copystats 2165 -- Enkidu Warrior
 #clearweapons
@@ -22141,6 +22133,31 @@ While controls Stellar Focus, sacred Children of the Moon will appear at temples
 #nametype 113 -- C'tis Male
 #end
 
+#selectmonster 2464 -- Neter of the Moon
+#clearweapons
+#descr "The Neter is a giant of divine heritage. A previous Pantokrator gave him power knowledge the moon and the stars and the wisdom how to use it. As guardian of the celestial bodies he observed what was, what had been, and what would come to pass. During the rebellion of the lesser gods, he observed but did not interfere on either side. For this the Pantokrator imprisoned him for eternity. Now with the Pantokrator gone his astral prison is weakening and he will return to guide the world as he wills.
+
+Strikes attackers with Cursed Luck & prevents 75% of bad events in the province
+Generates 3 Astral pearls each month
+Each month grants a Stellar Staff to another commander in the province (Grants Stellar bolt attack)
+While controls Stellar Focus, sacred Children of the Moon will appear at temples (10% x candles chance per month)
+"
+#gcost 220
+#magicboost 4 2
+#heal
+#prec 16
+#batstartsum2 "Child of the Moon"
+#inspiringres 3
+#curseluckshield 4
+#diseaseres 100
+#pathcost 40
+#darkvision 100
+#nobadevents 75
+#startitem 680
+#weapon 238 -- Magic Staff
+#gemprod 4 3 -- 3 Pearls/month
+#end
+
 #newevent
 #rarity 5
 #req_godismnr 2464 -- Neter of the Moon
@@ -22168,7 +22185,7 @@ While controls Stellar Focus, sacred Children of the Moon will appear at temples
 #msg "Child appears"
 #notext
 #nolog
-#1unit 5267 -- Child of the Moon
+#1unit "Child of the Moon" -- Child of the Moon
 #end
 
 #selectmonster 2502 -- Earth Made Flesh
@@ -22230,7 +22247,7 @@ If Earth Made Flesh controls Earth Blood Deep well, gains 3-18 Pale One Soldiers
 #1d6units 2489 -- Ancient Wet Ones
 #end
 
-#newmonster 6743
+#newmonster
 #copystats 1590 -- Ageless Olm
 #copyspr 1590 -- Ageless Olm
 #clearmagic
@@ -22258,7 +22275,7 @@ If Earth Made Flesh controls Earth Blood Deep well, gains 3-18 Pale One Soldiers
 #nation -2
 #req_pop0ok
 #msg "The Eldest Olm has journeyed from the deepest caverns to once more aid his love."
-#com 6743 -- Eldest Olm
+#com "Eldest Olm" -- Eldest Olm
 #end
 
 #selectmonster 2552 -- Ahura of Wisdom
@@ -22547,7 +22564,7 @@ Accla & Sun King gain +1F while awake
 #pathcost 40
 #end
 
-#newmonster 6744
+#newmonster
 #copystats 2656 -- Aclla
 #copyspr 2656 -- Aclla
 #name "Aclla"
@@ -22555,7 +22572,7 @@ Accla & Sun King gain +1F while awake
 #magicboost 0 1
 #end
 
-#newmonster 6745
+#newmonster
 #copystats 2658 -- Inca
 #copyspr 2658 -- Inca
 #name "Inca"
@@ -22573,7 +22590,7 @@ Accla & Sun King gain +1F while awake
 #msg "Aclla fireboost"
 #notext
 #nolog
-#transform 6744
+#transform "Aclla"
 #end
 
 #newevent
@@ -22586,7 +22603,7 @@ Accla & Sun King gain +1F while awake
 #msg "Aclla fireboost"
 #notext
 #nolog
-#transform 6744
+#transform "Aclla"
 #end
 
 #newevent
@@ -22599,7 +22616,7 @@ Accla & Sun King gain +1F while awake
 #msg "Aclla fireboost"
 #notext
 #nolog
-#transform 6744
+#transform "Aclla"
 #end
 
 #newevent
@@ -22612,7 +22629,7 @@ Accla & Sun King gain +1F while awake
 #msg "Aclla fireboost"
 #notext
 #nolog
-#transform 6744
+#transform "Aclla"
 #end
 
 #newevent
@@ -22625,7 +22642,7 @@ Accla & Sun King gain +1F while awake
 #msg "Aclla fireboost"
 #notext
 #nolog
-#transform 6744
+#transform "Aclla"
 #end
 
 #newevent
@@ -22638,7 +22655,7 @@ Accla & Sun King gain +1F while awake
 #msg "Inca fireboost"
 #notext
 #nolog
-#transform 6745
+#transform "Inca"
 #end
 
 #newevent
@@ -22651,7 +22668,7 @@ Accla & Sun King gain +1F while awake
 #msg "Inca fireboost"
 #notext
 #nolog
-#transform 6745
+#transform "Inca"
 #end
 
 #newevent
@@ -22664,13 +22681,13 @@ Accla & Sun King gain +1F while awake
 #msg "Inca fireboost"
 #notext
 #nolog
-#transform 6745
+#transform "Inca"
 #end
 
 #newevent
 #rarity 5
 #req_nomnr 2686 -- Apu Inti
-#req_targmnr 6744 -- Aclla
+#req_targmnr "Aclla" -- Aclla
 #nation -2
 #req_pop0ok
 #msg "Aclla loses fireboost"
@@ -22682,7 +22699,7 @@ Accla & Sun King gain +1F while awake
 #newevent
 #rarity 5
 #req_nomnr 2686 -- Apu Inti
-#req_targmnr 6744 -- Aclla
+#req_targmnr "Aclla" -- Aclla
 #nation -2
 #req_pop0ok
 #msg "Aclla loses fireboost"
@@ -22694,7 +22711,7 @@ Accla & Sun King gain +1F while awake
 #newevent
 #rarity 5
 #req_nomnr 2686 -- Apu Inti
-#req_targmnr 6744 -- Aclla
+#req_targmnr "Aclla" -- Aclla
 #nation -2
 #req_pop0ok
 #msg "Aclla loses fireboost"
@@ -22706,7 +22723,7 @@ Accla & Sun King gain +1F while awake
 #newevent
 #rarity 5
 #req_nomnr 2686 -- Apu Inti
-#req_targmnr 6744 -- Aclla
+#req_targmnr "Aclla" -- Aclla
 #nation -2
 #req_pop0ok
 #msg "Aclla loses fireboost"
@@ -22718,7 +22735,7 @@ Accla & Sun King gain +1F while awake
 #newevent
 #rarity 5
 #req_nomnr 2686 -- Apu Inti
-#req_targmnr 6744 -- Aclla
+#req_targmnr "Aclla" -- Aclla
 #nation -2
 #req_pop0ok
 #msg "Aclla loses fireboost"
@@ -22730,7 +22747,7 @@ Accla & Sun King gain +1F while awake
 #newevent
 #rarity 5
 #req_nomnr 2686 -- Apu Inti
-#req_targmnr 6745 -- Inca
+#req_targmnr "Inca" -- Inca
 #nation -2
 #req_pop0ok
 #msg "Inca loses fireboost"
@@ -22742,7 +22759,7 @@ Accla & Sun King gain +1F while awake
 #newevent
 #rarity 5
 #req_nomnr 2686 -- Apu Inti
-#req_targmnr 6745 -- Inca
+#req_targmnr "Inca" -- Inca
 #nation -2
 #req_pop0ok
 #msg "Inca loses fireboost"
@@ -22754,7 +22771,7 @@ Accla & Sun King gain +1F while awake
 #newevent
 #rarity 5
 #req_nomnr 2686 -- Apu Inti
-#req_targmnr 6745 -- Inca
+#req_targmnr "Inca" -- Inca
 #nation -2
 #req_pop0ok
 #msg "Inca loses fireboost"
@@ -23098,7 +23115,7 @@ Temples in Death 3 scales may spawn Bolon-ti-ku (1% x candles chance)
 #req_domchance 1
 #msg "A powerful Bolon-Ti-Ku has broken free from imprisonment and now serves the One Death!"
 #req_death 3
-#com 6751 -- Bolon-ti-ku
+#com 5991 -- Bolon-ti-ku
 #end
 
 #selectmonster 2849 -- Father of Monsters
@@ -23177,7 +23194,7 @@ Shipwrights Guild appears in Capital & coastal temple forts (Grants +1 Precision
 #taxboost 5
 #end
 
-#newmonster 6747
+#newmonster
 #copystats 870 -- Captain
 #copyspr 870 -- Captain
 #name "Shipmaster"
@@ -23193,7 +23210,7 @@ Shipwrights Guild appears in Capital & coastal temple forts (Grants +1 Precision
 #level 0
 #rarity 5
 #look 7
-#com 6747 -- Shipmaster
+#com "Shipmaster" -- Shipmaster
 #com 869 -- Navigator
 #mon 871 -- Pirate
 #blessprec 1
@@ -24762,25 +24779,7 @@ H2+ Priests gain a Fate Charm (+2MR, Luck & casts Group Luck in battles)
 #addequip 9
 #end
 
-#selectmonster 3370 -- Ilahat of Might
-#descr "The Ilahat is a giant of divine heritage. A previous Pantokrator took her as his wife and gave her mandate to rule the world. When mankind began to worship her as well, the Pantokrator he was furious, imprisoned her for eternity and punished mankind with labor and strife. Now with the Pantokrator gone, the Ilahat is free to once more rule the world. The Ilahat will be joined by warriors that will flock to her temples as her Dominion grows strong, compelled to serve by her Divine mandate. In battle those that fight with the Ilahat will be granted great strength to better enact her will, and her blessing will always grant increased strength in addition to other blessings chosen.
-
-Casts Rush of Strength (+4 Str) on friendly army in battles
-Summons Sacred Warriors each month up to Dominion candles
-Bless gains +2 Strength
-Forted temples may summon D3 Sacred Warriors (Candles x 10% chance)
-"
-#gcost 250
-#heal
-#armor 231 -- Heavy magic robes
-#diseaseres 100
-#awe 1
-#magicboost 3 1
-#onebattlespell "Rush of Strength"
-#domsummon 6748 -- Sacred Warriors
-#end
-
-#newmonster 6748
+#newmonster
 #copystats 29 -- Light Infantry
 #clearweapons
 #cleararmor
@@ -24800,6 +24799,24 @@ Forted temples may summon D3 Sacred Warriors (Candles x 10% chance)
 #armor 2
 #end
 
+#selectmonster 3370 -- Ilahat of Might
+#descr "The Ilahat is a giant of divine heritage. A previous Pantokrator took her as his wife and gave her mandate to rule the world. When mankind began to worship her as well, the Pantokrator he was furious, imprisoned her for eternity and punished mankind with labor and strife. Now with the Pantokrator gone, the Ilahat is free to once more rule the world. The Ilahat will be joined by warriors that will flock to her temples as her Dominion grows strong, compelled to serve by her Divine mandate. In battle those that fight with the Ilahat will be granted great strength to better enact her will, and her blessing will always grant increased strength in addition to other blessings chosen.
+
+Casts Rush of Strength (+4 Str) on friendly army in battles
+Summons Sacred Warriors each month up to Dominion candles
+Bless gains +2 Strength
+Forted temples may summon D3 Sacred Warriors (Candles x 10% chance)
+"
+#gcost 250
+#heal
+#armor 231 -- Heavy magic robes
+#diseaseres 100
+#awe 1
+#magicboost 3 1
+#onebattlespell "Rush of Strength"
+#domsummon "Sacred Warrior" -- Sacred Warriors
+#end
+
 #newevent
 #rarity 5
 #req_godismnr 3370 -- Illahat of Might
@@ -24813,7 +24830,7 @@ Forted temples may summon D3 Sacred Warriors (Candles x 10% chance)
 #msg "Warriors appear"
 #notext
 #nolog
-#1d3units 6748 -- Sacred Warriors
+#1d3units "Sacred Warrior" -- Sacred Warriors
 #end
 
 #newsite 1977
@@ -24947,7 +24964,7 @@ Capital gains Sacred Mountain (3F1E gems, +100 res, +2 ritual range, Training 10
 #hp 94
 #end
 
-#newmonster 8615
+#newmonster
 #copystats 4603
 #name "Mubarak Swordsman" -- MA version
 #spr1 "ExtraPretenders/ma_mubarak_swordsman1.tga"
@@ -24986,20 +25003,20 @@ Capital gains Sacred Mountain (3F1E gems, +100 res, +2 ritual range, Training 10
 #msg "Army appear"
 #notext
 #nolog
-#1unit 8615 -- Mubarak Swordsman
-#1d3units 8615 -- Mubarak Swordsman
-#2d3units 8615 -- Mubarak Swordsman
-#3d3units 8615 -- Mubarak Swordsman
-#1d6units 8615 -- Mubarak Swordsman
-#2d6units 8615 -- Mubarak Swordsman
+#1unit "Mubarak Swordsman" -- Mubarak Swordsman
+#1d3units "Mubarak Swordsman" -- Mubarak Swordsman
+#2d3units "Mubarak Swordsman" -- Mubarak Swordsman
+#3d3units "Mubarak Swordsman" -- Mubarak Swordsman
+#1d6units "Mubarak Swordsman" -- Mubarak Swordsman
+#2d6units "Mubarak Swordsman" -- Mubarak Swordsman
 #end
 
 #selectsite "The Sacred Mountain" 
 #gems 0 3
 #res 100
 #allrange 2
-#homemon 8615
-#wallunit 8615
+#homemon "Mubarak Swordsman"
+#wallunit "Mubarak Swordsman"
 #wallmult 10
 #xp 10
 #end
@@ -25765,7 +25782,7 @@ Each month whilst researching may create a Pearl of Wisdom (Candles x 5% chance,
 #homerealm 9 -- Deeps
 #end
 
-#newmonster 6800
+#newmonster
 #copystats 3050 -- Triton Priest
 #copyspr 3050 -- Triton Priest
 #clearmagic
@@ -25787,7 +25804,7 @@ Each month whilst researching may create a Pearl of Wisdom (Candles x 5% chance,
 #level 0
 #rarity 5
 #look 3
-#homecom 6800 -- Triton Sage
+#homecom "Triton Sage" -- Triton Sage
 #end
 
 #newevent
@@ -25802,7 +25819,7 @@ Each month whilst researching may create a Pearl of Wisdom (Candles x 5% chance,
 #notext
 #nolog
 #addsite 1997
-#com 6800 -- Triton Sage
+#com "Triton Sage" -- Triton Sage
 #end
 
 #newevent
@@ -26425,6 +26442,17 @@ Priests gain Charm of Vanhalla (Grants Lightning Resistance 15, Flight and Quick
 #addequip 9
 #end
 
+#newmonster
+#copystats 2694 -- Condor
+#spr1 "./ExtraPretenders/Albatross.tga"
+#spr2 "./ExtraPretenders/Albatross2.tga"
+#name "Albatross"
+#descr "The Albatross is a great seabird that follows in the wake of the Great Gull. They can cross the oceans and can fly in any storm. To kill an albatross brings bad luck and most sailors will avoid causing them any harm."
+#deathcurse
+#stormimmune
+#sailing 5 5
+#end
+
 #newmonster 8349
 #name "Great Gull of the Sea"
 #spr1 "./ExtraPretenders/Seagull.tga"
@@ -26467,7 +26495,7 @@ Prophet gains +1W per month (Max W4)
 #weapon 826 -- Magic Talons
 #weapon 825 -- Magic Beak
 #weapon 677 -- Wing buff
-#batstartsum2d6 6779 -- Albatross
+#batstartsum2d6 "Albatross" -- Albatross
 #onebattlespell "Storm"
 #maxage 5000
 #startage 1000
@@ -26475,17 +26503,6 @@ Prophet gains +1W per month (Max W4)
 #pathcost 80
 #startdom 2
 #homerealm 0
-#end
-
-#newmonster 6779
-#copystats 2694 -- Condor
-#spr1 "./ExtraPretenders/Albatross.tga"
-#spr2 "./ExtraPretenders/Albatross2.tga"
-#name "Albatross"
-#descr "The Albatross is a great seabird that follows in the wake of the Great Gull. They can cross the oceans and can fly in any storm. To kill an albatross brings bad luck and most sailors will avoid causing them any harm."
-#deathcurse
-#stormimmune
-#sailing 5 5
 #end
 
 #newevent
@@ -26500,7 +26517,7 @@ Prophet gains +1W per month (Max W4)
 #msg "Albatross Spawn"
 #notext
 #nolog
-#1d3units 6779 -- Albatross
+#1d3units "Albatross" -- Albatross
 #end
 
 #newevent
@@ -26515,7 +26532,7 @@ Prophet gains +1W per month (Max W4)
 #waterboost -1
 #end
 
-#newmonster 8352
+#newmonster 5974
 #copystats 2795 -- Dog of the Underworld
 #clearmagic
 #spr1 "./ExtraPretenders/XolotlTC.tga"
@@ -26590,7 +26607,7 @@ Whilst has more than 600hp casts Darkness in battles and temples may summon D3 s
 #homerealm 0
 #end
 
-#newmonster 8350
+#newmonster 5975
 #copystats 2795 -- Dog of the Underworld
 #clearmagic
 #spr1 "./ExtraPretenders/Xolotl.tga"
@@ -27028,6 +27045,52 @@ When Night Hunter Blood Hunts, unrest is reduced by 50 in province
 #bloodboost -1
 #end
 
+#newmonster
+#copystats 1790 -- Nemedian Warrior
+#clearweapons
+#spr1 "./ExtraPretenders/EEAos.tga"
+#spr2 "./ExtraPretenders/EEAos2.tga"
+#name "Aos Si"
+#descr "The Aos Si are a supernatural race related to the Sidhe but prone to evil and mischief. During the season of Samhain the Aos Si can more easily come into our world. They may pass by a townstead if offerings of food and drink are left for them, however if the whim takes them they will descend to carry off people and livestock. They are of fay descent and are far superior to humans in physical and magical strength. Like all the Sidhe they are masters of illusions and ride into battle astride magnificent fay horses of unequaled speed."
+#gcost 0
+#weapon 474 -- Golden Sword
+#att 13
+#def 13
+#magicpower 1
+#incunrest 10
+#darkvision 50
+#magicbeing
+#forestsurvival
+#spiritsight
+#end
+
+#newmonster
+#copystats 1504 -- Mounted Hirdman
+#clearweapons
+#spr1 "./ExtraPretenders/EEAosRiderCu.tga"
+#spr2 "./ExtraPretenders/EEAosRiderCu2.tga"
+#name "Aos Si Rider"
+#descr "The Aos Si are a supernatural race related to the Sidhe but prone to evil and mischief. During the season of Samhain the Aos Si can more easily come into our world. They may pass by a townstead if offerings of food and drink are left for them, however if the whim takes them they will descend to carry off people and livestock. They are of fay descent and are far superior to humans in physical and magical strength. Like all the Sidhe they are masters of illusions and ride into battle astride magnificent Cu Sidhe, ferocious fay hounds that will fight on if their rider is killed."
+#gcost 0
+#incunrest 20
+#darkvision 50
+#att 13
+#def 13
+#magicpower 1
+#mountmnr 1770 -- Cu Sidhe
+#unmountedspr1 "./ExtraPretenders/EEAos.tga"
+#unmountedspr2 "./ExtraPretenders/EEAos2.tga"
+#magicbeing
+#spiritsight
+#ironvul 1
+#magicskill 7 2 -- Glamour 2
+#magicskill 2 1
+#weapon 651 -- Bronze Lance
+#weapon 474 -- Golden Sword
+#weapon 21 -- Javelin
+#forestsurvival
+#end
+
 #selectmonster 3693 -- White Stag
 #descr "At the dawn of time, monsters and giants ruled the world. Among the beasts was a great stag with white fur and blood-red horns that emerged from the primal forests of the nascent world. As a creature of the wild it was worshiped by the first men as a god of the hunt. When the previous Pantokrator rose to power he hunted the stag and imprisoned it in the forest from which it came. Now, with the Pantrokator gone, the shackles are weakening and the Stag can once more inspire men to hunt. As its Dominion grows strong the barrier between this world and the next will grow thin, and mischievous fey will appear to aid its followers. The Stag is a fey creature and can cloak its appearance in illusion and trickery. Temples of the stag erected in the heart of a fortress will include a portal to the fey realm, and rarely one of the Fair Folk will appear from the Land of the Ever Young.
 
@@ -27042,9 +27105,9 @@ Deer Tribe provinces always contain a temple and provide double income
 #moremagic 2
 #moreluck 1
 #domsummon 1770 -- Cu Sidhe
-#domsummon2 5320 -- Aos Si
-#domsummon20 5319 -- Aos Si Rider
-#raredomsummon 5319 -- Aos Si Rider
+#domsummon2 "Aos Si" -- Aos Si
+#domsummon20 "Aos Si Rider" -- Aos Si Rider
+#raredomsummon "Aos Si Rider" -- Aos Si Rider
 #batstartsum1d6 2228 -- Deer
 #mastersmith -1
 #researchbonus 8
@@ -27082,7 +27145,7 @@ Deer Tribe provinces always contain a temple and provide double income
 #msg "Aos Si Rider Appears"
 #notext
 #nolog
-#com 5319 -- Aos Si Rider
+#com "Aos Si Rider" -- Aos Si Rider
 #end
 
 #selectmonster 3692 -- Great Stag
@@ -27182,54 +27245,6 @@ Deer Tribe provinces always contain a temple and provide double income
 #nolog
 #killcom 2450 -- Horned One
 #clearvar 328 -- Stag hunting
-#end
-
-
-
-#newmonster 5319
-#copystats 1504 -- Mounted Hirdman
-#clearweapons
-#spr1 "./ExtraPretenders/EEAosRiderCu.tga"
-#spr2 "./ExtraPretenders/EEAosRiderCu2.tga"
-#name "Aos Si Rider"
-#descr "The Aos Si are a supernatural race related to the Sidhe but prone to evil and mischief. During the season of Samhain the Aos Si can more easily come into our world. They may pass by a townstead if offerings of food and drink are left for them, however if the whim takes them they will descend to carry off people and livestock. They are of fay descent and are far superior to humans in physical and magical strength. Like all the Sidhe they are masters of illusions and ride into battle astride magnificent Cu Sidhe, ferocious fay hounds that will fight on if their rider is killed."
-#gcost 0
-#incunrest 20
-#darkvision 50
-#att 13
-#def 13
-#magicpower 1
-#mountmnr 1770 -- Cu Sidhe
-#unmountedspr1 "./ExtraPretenders/EEAos.tga"
-#unmountedspr2 "./ExtraPretenders/EEAos2.tga"
-#magicbeing
-#spiritsight
-#ironvul 1
-#magicskill 7 2 -- Glamour 2
-#magicskill 2 1
-#weapon 651 -- Bronze Lance
-#weapon 474 -- Golden Sword
-#weapon 21 -- Javelin
-#forestsurvival
-#end
-
-#newmonster 5320
-#copystats 1790 -- Nemedian Warrior
-#clearweapons
-#spr1 "./ExtraPretenders/EEAos.tga"
-#spr2 "./ExtraPretenders/EEAos2.tga"
-#name "Aos Si"
-#descr "The Aos Si are a supernatural race related to the Sidhe but prone to evil and mischief. During the season of Samhain the Aos Si can more easily come into our world. They may pass by a townstead if offerings of food and drink are left for them, however if the whim takes them they will descend to carry off people and livestock. They are of fay descent and are far superior to humans in physical and magical strength. Like all the Sidhe they are masters of illusions and ride into battle astride magnificent fay horses of unequaled speed."
-#gcost 0
-#weapon 474 -- Golden Sword
-#att 13
-#def 13
-#magicpower 1
-#incunrest 10
-#darkvision 50
-#magicbeing
-#forestsurvival
-#spiritsight
 #end
 
 #selectmonster 3932 -- Black Tortoise
@@ -28574,7 +28589,7 @@ Shark Tribe provinces always contain a temple and provide double income
 #taxboost 100
 #end
 
-#newmonster 6773
+#newmonster
 #copystats 2805 -- Ichtyid Pearl Mage
 #spr1 "./ExtraPretenders/Sharkmage.tga"
 #spr2 "./ExtraPretenders/Sharkmage.tga"
@@ -28601,7 +28616,7 @@ Shark Tribe provinces always contain a temple and provide double income
 #rarity 5
 #look 6
 #gems 8 1
-#homecom 6773 -- Disciple of Blood
+#homecom "Disciple of Blood" -- Disciple of Blood
 #end
 
 #newevent
@@ -28621,7 +28636,7 @@ Shark Tribe provinces always contain a temple and provide double income
 #1d3units 815 -- Small Shark
 #end
 
-#newmonster 5058
+#newmonster
 #name "Ruk Hatchling"
 #spr1 "./ExtraPretenders/Ruk.tga"
 #drawsize -25
@@ -28745,7 +28760,7 @@ Hatchling will grow into a Ruk
 #req_season 1
 #req_dominion 1
 #msg "The Ruk sat upon its egg in the heat of the summer and it began to hatch! A gigantic Ruk hatchling of great power has emerged. [Ruk Egg]"
-#com 5058 -- Ruk Hatchling
+#com "Ruk Hatchling" -- Ruk Hatchling
 #removesite 1982
 #end
 
@@ -28969,7 +28984,7 @@ If controls Gale Gate will call 1D3 size 8 Air Elementals each month
 #holyboost -1
 #end
 
-#newmonster 8985
+#newmonster
 #name "Tathagata of Dim Light"
 #spr1 "./ExtraPretenders/TathagataFire.tga"
 #spr2 "./ExtraPretenders/TathagataFire2.tga"
@@ -29015,7 +29030,7 @@ Bless gains Awe 3 once Awakens
 Fire mages gain H1 if not already priests
 Casts Solar Brilliance in battles in friendly dominion
 "
-#notdomshape 8985
+#notdomshape "Tathagata of Dim Light"
 #humanoid
 #fixedname "Amitabha"
 #gcost 220
@@ -29875,7 +29890,7 @@ At temples in Magic scales a Fox spirit present may become a commander (Candles 
 #startdom 2
 #pathcost 20
 #homerealm 4
-#domsummon2 6767 -- Fox spirit
+#domsummon2 5998 -- Fox spirit
 #shapechange 8391 -- Human shape
 #end
 
@@ -29916,11 +29931,11 @@ At temples in Magic scales a Fox spirit present may become a commander (Candles 
 #magicboost 53 -1
 #startdom 2
 #pathcost 20
-#domsummon2 6767 -- Fox spirit
+#domsummon2 5998 -- Fox spirit
 #shapechange 8390 -- Fox Shape
 #end
 
-#newmonster 6767
+#newmonster 5998
 #copystats 1434 -- Kitsune
 #copyspr 1434 -- Kitsune
 #name "Fox spirit"
@@ -29939,7 +29954,7 @@ At temples in Magic scales a Fox spirit present may become a commander (Candles 
 #custommagic 28160 10 -- 10% roll at Water, Earth, Astral, Nature, Glamour
 #end
 
-#newmonster 6787
+#newmonster
 #copystats 1434 -- Kitsune
 #copyspr 1434 -- Kitsune
 #name "Fox spirit"
@@ -29962,7 +29977,7 @@ At temples in Magic scales a Fox spirit present may become a commander (Candles 
 #rarity 5
 #req_godismnr 8390 -- Celestial Fox
 #req_godismnr 8391 -- Celestial Fox
-#req_monster 6767
+#req_monster 5998
 #req_dominion 1
 #req_temple 1
 #req_magic 1
@@ -29971,8 +29986,8 @@ At temples in Magic scales a Fox spirit present may become a commander (Candles 
 #req_pop0ok
 #msg "At the temple one of the fox spirits has begun to speak with a soft voice and praise ##godname##!"
 #nolog
-#killmon 6767 -- Fox Spirit
-#com 6787 -- Fox Spirit
+#killmon 5998 -- Fox Spirit
+#com "Fox spirit" -- Fox Spirit
 #end
 
 #newmonster 8392
@@ -30015,7 +30030,7 @@ Local province will gain unrest but may also gain lucky events
 #okmagicleader
 #spiritsight
 #batstartsum1 903 -- Celestial Servant
-#batstartsum2d6 6768 -- Monkey Clones
+#batstartsum2d6 5997 -- Monkey Clones
 #bringeroffortune 25
 #beastmaster 1
 #startage 1000
@@ -30042,7 +30057,7 @@ Local province will gain unrest but may also gain lucky events
 #taxboost 100
 #end
 
-#newmonster 6768
+#newmonster 5997
 #copyspr 1117 -- Vanara
 #name "Monkey King"
 #descr "The Monkey King is a divine monkey spirit born from a magic stone. To attract the attention of the Pantokrator and gain immortality he first stole from the Dragon King and then defied the Kings of Hell by wiping the names of all his subjects from the Book of Life and Death. When the Pantokrator heard of his antics he granted him the title 'Keeper of the Heavenly Horses' to mollify him and to keep a close eye on him, which pleased the Monkey King. He soon found however that he was in fact a lowly stable-boy and he became furious. He rebelled and led a group of lesser deities against the forces of Heaven until he was captured and sealed below a mountain. Now, with the Pantokrator gone the Monkey King will soon escape to vie for control of the Throne of Heaven. He rides a magic cloud that bears him through the skies, and his strength is legendary. The Monkey King is skilled in the magic of the wind, the water and the earth."
@@ -30848,7 +30863,7 @@ Casts Bloody Rage in battles (50% of mortals on battlefield must pass easy MR ch
 #end
 
 
-#newmonster 6818
+#newmonster 5995
 #copystats 627 -- Faery Queen
 #copyspr 627 -- Faery Queen
 #drawsize 10
@@ -30900,7 +30915,7 @@ Fay Princes & Queens gain H2 after summoning
 
 #newevent
 #rarity 5
-#req_godismnr 6818
+#req_godismnr 5995
 #req_friendlyench 140 -- Dreamwild Demesne 1187
 #req_nositenbr 2000
 #req_land 1
@@ -30917,7 +30932,7 @@ Fay Princes & Queens gain H2 after summoning
 
 #newevent
 #rarity 5
-#req_godisnotmnr 6818 -- Seelie
+#req_godisnotmnr 5995 -- Seelie
 #req_site 1
 #nation -2
 #req_pop0ok
@@ -30944,7 +30959,7 @@ Fay Princes & Queens gain H2 after summoning
 ---------
 #newevent
 #rarity 5
-#req_godismnr 6818
+#req_godismnr 5995
 #req_site 1
 #req_temple 1
 #req_forest 0
@@ -30960,7 +30975,7 @@ Fay Princes & Queens gain H2 after summoning
 
 #newevent
 #rarity 5
-#req_godismnr 6818
+#req_godismnr 5995
 #req_site 1
 #req_temple 1
 #req_forest 1
@@ -30976,7 +30991,7 @@ Fay Princes & Queens gain H2 after summoning
 
 #newevent
 #rarity 5
-#req_godismnr 6818
+#req_godismnr 5995
 #req_land 1
 #req_site 1
 #req_temple 1
@@ -30996,7 +31011,7 @@ Fay Princes & Queens gain H2 after summoning
 
 #newevent
 #rarity 5
-#req_godismnr 6818
+#req_godismnr 5995
 #req_targmnr 3904 -- Fay Prince
 #req_targmnr 627 -- Faery Queen
 #req_targnopath1 9 -- Not Priest
@@ -31009,7 +31024,7 @@ Fay Princes & Queens gain H2 after summoning
 #holyboost -1
 #end
 
-#newmonster 6819
+#newmonster 5996
 #copystats 3997 -- Queen of Winter
 #copyspr 3997 -- Queen of Winter
 #clearmagic
@@ -31043,13 +31058,13 @@ Unseelie Princes & Queens of Winter gain H2 after summoning
 #startdom 2
 #pathcost 40
 #homerealm 2
-#makemonsters1 6821 -- unseelie Knight
+#makemonsters1 5993 -- unseelie Knight
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 6819 -- Unseelie Empress
-#req_targmnr 6819 -- Unseelie Empress
+#req_godismnr 5996 -- Unseelie Empress
+#req_targmnr 5996 -- Unseelie Empress
 #req_land 1
 #req_dominion 1
 #req_domchance 4
@@ -31060,38 +31075,7 @@ Unseelie Princes & Queens of Winter gain H2 after summoning
 #com 3909 -- Unseelie Prince
 #end
 
-#newsite 1891
-#name "Unseelie Fortress"
-#path 7
-#level 0
-#rarity 5
-#mon 6820 -- unseelie Soldier
-#mon 6821 -- unseelie Knight
-#com 6821 -- unseelie Knight
-#com 6822 -- Mischief Maker
-#wallcom 3998 -- Unseelie Sprite
-#wallunit 3998 -- Unseelie Sprite
-#wallmult 10
-#look 7
-#end
-
-#newmonster 6820
-#copystats 3906 -- unseelie Soldier
-#copyspr 3906 -- unseelie Soldier
-#gcost 20
-#rpcost 20
-#okmagicleader
-#end
-
-#newmonster 6821
-#copystats 3907 -- unseelie Knight
-#copyspr 3907 -- unseelie Knight
-#gcost 10050
-#goodmagicleader
-#magicskill 7 1
-#end
-
-#newmonster 6822
+#newmonster
 #copystats 3998 -- Unseelie Sprite
 #copyspr 3998 -- Unseelie Sprite
 #name "Unseelie Mischief-Maker"
@@ -31103,9 +31087,40 @@ Unseelie Princes & Queens of Winter gain H2 after summoning
 #custommagic 4608 100 -- 100% A/W/D
 #end
 
+#newsite 1891
+#name "Unseelie Fortress"
+#path 7
+#level 0
+#rarity 5
+#mon 5994 -- unseelie Soldier
+#mon 5993 -- unseelie Knight
+#com 5993 -- unseelie Knight
+#com "Unseelie Mischief-Maker" -- Mischief Maker
+#wallcom 3998 -- Unseelie Sprite
+#wallunit 3998 -- Unseelie Sprite
+#wallmult 10
+#look 7
+#end
+
+#newmonster 5994
+#copystats 3906 -- unseelie Soldier
+#copyspr 3906 -- unseelie Soldier
+#gcost 20
+#rpcost 20
+#okmagicleader
+#end
+
+#newmonster 5993
+#copystats 3907 -- unseelie Knight
+#copyspr 3907 -- unseelie Knight
+#gcost 10050
+#goodmagicleader
+#magicskill 7 1
+#end
+
 #newevent
 #rarity 5
-#req_godismnr 6819 -- Unseelie Empress
+#req_godismnr 5996 -- Unseelie Empress
 #req_friendlyench 130 -- Immaculate Fort
 #req_thronesite 1
 #req_fort 1
@@ -31122,7 +31137,7 @@ Unseelie Princes & Queens of Winter gain H2 after summoning
 
 #newevent
 #rarity 5
-#req_godismnr 6819 -- Unseelie Empress
+#req_godismnr 5996 -- Unseelie Empress
 #req_friendlyench 111 -- Forgotten Fortress
 #req_thronesite 1
 #req_fort 1
@@ -31139,7 +31154,7 @@ Unseelie Princes & Queens of Winter gain H2 after summoning
 
 #newevent
 #rarity 5
-#req_godisnotmnr 6819 -- Unseelie Empress
+#req_godisnotmnr 5996 -- Unseelie Empress
 #req_site 1
 #req_mindef 1
 #nation -2
@@ -31167,7 +31182,7 @@ Unseelie Princes & Queens of Winter gain H2 after summoning
 
 #newevent
 #rarity 5
-#req_godismnr 6819 -- Unseelie Empress
+#req_godismnr 5996 -- Unseelie Empress
 #req_targmnr 3909 -- Uunseelie Prince
 #req_targmnr 3997 -- Queen of Winter
 #req_targnopath1 9 -- Not Priest
@@ -31180,7 +31195,7 @@ Unseelie Princes & Queens of Winter gain H2 after summoning
 #holyboost -1
 #end
 
-#newmonster 6823
+#newmonster
 #copystats 2783 -- Drakon
 #clearweapons
 #clearmagic
@@ -31224,8 +31239,8 @@ Starting item: Strong Sake (grants Berseker but may also become Confused at batt
 
 #newevent
 #rarity 5
-#req_godismnr 6823 -- Orochi
-#req_targmnr 6823 -- Orochi
+#req_godismnr "Orochi" -- Orochi
+#req_targmnr "Orochi" -- Orochi
 #req_thronesite 1
 #req_nositenbr 1887
 #req_mindef 1
@@ -31557,7 +31572,7 @@ A Draug Jarl may appear at capital Barrow during Winter months (Candles x 4% cha
 #domsummon 315 -- Soulless Giant
 #end
 
-#newmonster 6784
+#newmonster
 #copystats 3194 -- Jotun Draug
 #copyspr 3194 -- Jotun Draug
 #name "Niefel Draug"
@@ -31594,7 +31609,7 @@ A Draug Jarl may appear at capital Barrow during Winter months (Candles x 4% cha
 #msg "Draug appears [Frozen Barrow]"
 #notext
 #nolog
-#1unit 6784 -- Niefel Draug
+#1unit "Niefel Draug" -- Niefel Draug
 #end
 
 #newevent
@@ -31654,7 +31669,7 @@ A Draug Jarl may appear at capital Barrow during Winter months (Candles x 4% cha
 #msg "During a snowstorm a great Jarl has reawoken from the barrow and has pledged service to ##godname##!"
 #notext
 #nolog
-#com 6784 -- Jotun Draug
+#com "Niefel Draug" -- Jotun Draug
 #delay 0
 #end
 
@@ -31665,7 +31680,7 @@ A Draug Jarl may appear at capital Barrow during Winter months (Candles x 4% cha
 #req_season 3 -- Winter
 #nation -2
 #req_pop0ok
-#req_targmnr 6784
+#req_targmnr "Niefel Draug"
 #req_targnopath2 9
 #msg "A great Jarl has reawoken from the barrow and has pledged service to ##godname##!"
 #nolog
@@ -31725,7 +31740,7 @@ Temples may spawn 1D6 longdead (Candles x 10% chance, additional chance per Deat
 #diseaseres 100
 #end
 
-#newmonster 5101 -- Banefire Dracolich
+#newmonster -- Banefire Dracolich
 #copystats 178
 #drawsize -55
 #spr1 "./ExtraPretenders/dragon_banelich.tga"
@@ -31772,8 +31787,8 @@ Each month a FD mage present with the Banefire Dracolich in province may gain +1
 
 #newevent
 #rarity 5
-#req_godismnr 5101 -- Banefire Dracolich
-#req_monster 5101 -- Banefire Dracolich
+#req_godismnr "Banefire Dracolich" -- Banefire Dracolich
+#req_monster "Banefire Dracolich" -- Banefire Dracolich
 #req_targgod 0
 #req_targnopath3 0 -- Fire
 #req_targpath1 0 -- Fire
@@ -31789,8 +31804,8 @@ Each month a FD mage present with the Banefire Dracolich in province may gain +1
 
 #newevent
 #rarity 5
-#req_godismnr 5101 -- Banefire Dracolich
-#req_monster 5101 -- Banefire Dracolich
+#req_godismnr "Banefire Dracolich" -- Banefire Dracolich
+#req_monster "Banefire Dracolich" -- Banefire Dracolich
 #req_targgod 0
 #req_targnopath3 5 -- Death
 #req_targpath1 0 -- Fire
@@ -31804,7 +31819,7 @@ Each month a FD mage present with the Banefire Dracolich in province may gain +1
 #deathboost -1
 #end
 
-#newmonster 5100 -- Ghost Dragon
+#newmonster -- Ghost Dragon
 #copystats 566 -- Ghost
 #drawsize -50
 #spr1 "./ExtraPretenders/dragon_ghost.tga"
@@ -31857,7 +31872,7 @@ Whilst Pretender in capital will attract adventurers (Adventurer assassins may a
 
 #newevent
 #rarity 5
-#req_godisnotmnr 5100
+#req_godisnotmnr "Ghost Dragon"
 #nation -2
 #msg "Ghost Dragon curse haunts the province! Strong Dominion will help us to cleanse it. [Cursed Treasure Hoard]"
 #unrest 10
@@ -31881,7 +31896,7 @@ Whilst Pretender in capital will attract adventurers (Adventurer assassins may a
 
 #newevent
 #rarity 5
-#req_godisnotmnr 5100
+#req_godisnotmnr "Ghost Dragon"
 #req_dominion 7
 #nation -2
 #msg "Ghost Dragon curse has be cleansed in the name of True God! [Cursed Treasure Hoard]"
@@ -31909,7 +31924,7 @@ Whilst Pretender in capital will attract adventurers (Adventurer assassins may a
 
 #newevent
 #rarity 5
-#req_godismnr 5100 -- Ghost Dragon
+#req_godismnr "Ghost Dragon" -- Ghost Dragon
 #req_godismnr 216 -- Dragon
 #req_godismnr 265 -- Dragon
 #req_godismnr 266 -- Dragon
@@ -31927,8 +31942,8 @@ Whilst Pretender in capital will attract adventurers (Adventurer assassins may a
 
 #newevent
 #rarity 5
-#req_godismnr 5100 -- Ghost Dragon
-#req_targmnr 5100 -- Ghost Dragon
+#req_godismnr "Ghost Dragon" -- Ghost Dragon
+#req_targmnr "Ghost Dragon" -- Ghost Dragon
 #req_godismnr 216 -- Dragon
 #req_targmnr 216 -- Dragon
 #req_godismnr 265 -- Dragon
@@ -31949,8 +31964,8 @@ Whilst Pretender in capital will attract adventurers (Adventurer assassins may a
 
 #newevent
 #rarity 5
-#req_godismnr 5100 -- Ghost Dragon
-#req_targmnr 5100 -- Ghost Dragon
+#req_godismnr "Ghost Dragon" -- Ghost Dragon
+#req_targmnr "Ghost Dragon" -- Ghost Dragon
 #req_godismnr 3641 -- Dragon 
 #req_targmnr 3641 -- Dragon 
 #req_godismnr 3710 -- Dragon
@@ -31969,8 +31984,8 @@ Whilst Pretender in capital will attract adventurers (Adventurer assassins may a
 
 #newevent
 #rarity 5
-#req_godismnr 5100 -- Ghost Dragon
-#req_targmnr 5100 -- Ghost Dragon
+#req_godismnr "Ghost Dragon" -- Ghost Dragon
+#req_targmnr "Ghost Dragon" -- Ghost Dragon
 #req_godismnr 216 -- Dragon
 #req_targmnr 216 -- Dragon
 #req_godismnr 265 -- Dragon
@@ -31989,8 +32004,8 @@ Whilst Pretender in capital will attract adventurers (Adventurer assassins may a
 
 #newevent
 #rarity 5
-#req_godismnr 5100 -- Ghost Dragon
-#req_targmnr 5100 -- Ghost Dragon
+#req_godismnr "Ghost Dragon" -- Ghost Dragon
+#req_targmnr "Ghost Dragon" -- Ghost Dragon
 #req_godismnr 3641 -- Dragon 
 #req_targmnr 3641 -- Dragon 
 #req_godismnr 3710 -- Dragon
@@ -32117,8 +32132,8 @@ Whilst Pretender in capital will attract adventurers (Adventurer assassins may a
 
 #newevent
 #rarity 5
-#req_godismnr 5100 -- Ghost Dragon
-#req_targmnr 5100 -- Ghost Dragon
+#req_godismnr "Ghost Dragon" -- Ghost Dragon
+#req_targmnr "Ghost Dragon" -- Ghost Dragon
 #req_godismnr 216 -- Dragon
 #req_targmnr 216 -- Dragon
 #req_godismnr 265 -- Dragon
@@ -32138,8 +32153,8 @@ Whilst Pretender in capital will attract adventurers (Adventurer assassins may a
 
 #newevent
 #rarity 5
-#req_godismnr 5100 -- Ghost Dragon
-#req_targmnr 5100 -- Ghost Dragon
+#req_godismnr "Ghost Dragon" -- Ghost Dragon
+#req_targmnr "Ghost Dragon" -- Ghost Dragon
 #req_godismnr 3641 -- Dragon 
 #req_targmnr 3641 -- Dragon 
 #req_godismnr 3710 -- Dragon
@@ -32157,8 +32172,8 @@ Whilst Pretender in capital will attract adventurers (Adventurer assassins may a
 
 #newevent
 #rarity 5
-#req_godismnr 5100 -- Ghost Dragon
-#req_targmnr 5100 -- Ghost Dragon
+#req_godismnr "Ghost Dragon" -- Ghost Dragon
+#req_targmnr "Ghost Dragon" -- Ghost Dragon
 #req_godismnr 216
 #req_godismnr 226
 #req_godismnr 266 -- Dragon
@@ -32177,7 +32192,7 @@ Whilst Pretender in capital will attract adventurers (Adventurer assassins may a
 
 #newevent
 #rarity 5
-#req_godismnr 5100 -- Ghost Dragon
+#req_godismnr "Ghost Dragon" -- Ghost Dragon
 #req_owncapital 1
 #req_gold 1000
 #nation -2
@@ -32448,7 +32463,7 @@ Each month a High Priest of C’tis in province with Saurolich becomes Undead (D
 #inccorpses -5
 #end
 
-#newmonster 6780
+#newmonster 5992
 #copystats 185 -- Bane
 #copyspr 320 -- Saurolich
 #cleararmor
@@ -32480,7 +32495,7 @@ Each month a High Priest of C’tis in province with Saurolich becomes Undead (D
 #req_pop0ok
 #msg "##targname## the High Priest underwent the sacred rites in the capital and is now blessed with undeath!"
 #nolog
-#transform 6780 -- Undead High Priest
+#transform 5992 -- Undead High Priest
 #deathboost -1
 #holyboost -1
 #end
@@ -32495,7 +32510,7 @@ Each month a High Priest of C’tis in province with Saurolich becomes Undead (D
 #req_pop0ok
 #msg "##targname## the High Priest underwent the sacred rites in the capital and is now blessed with undeath!"
 #nolog
-#transform 6780 -- Undead High Priest
+#transform 5992 -- Undead High Priest
 #deathboost -1
 #holyboost -1
 #end
@@ -33263,7 +33278,7 @@ Grove Warriors can be recruited at forted forest temples
 #woundfend 2
 #end
 
-#newmonster 6778
+#newmonster
 #copystats 540 -- White Minotaur
 #copyspr 540 -- White Minotaur
 #name "Grove Warrior"
@@ -33280,7 +33295,7 @@ Grove Warriors can be recruited at forted forest temples
 #path 6
 #level 0
 #rarity 5
-#mon 6778
+#mon "Grove Warrior"
 #look 2
 #end
 
@@ -34184,7 +34199,7 @@ Capital gains +5F income, +5 Recall god bonus
 #diseaseres 100
 #end
 
-#newmonster 6750
+#newmonster
 #copystats 2557 -- Airya Seraphine
 #copyspr 416 -- Seraphine Prophetshape
 #clearmagic
@@ -34203,7 +34218,7 @@ Capital gains +5F income, +5 Recall god bonus
 #rarity 5
 #gems 0 5
 #recallgod 5
-#homecom 6750 -- High Seraphine
+#homecom "High Seraphine of the Oath" -- High Seraphine
 #end
 
 #newevent
@@ -34215,7 +34230,7 @@ Capital gains +5F income, +5 Recall god bonus
 #msg "Sacred Flame appears"
 #notext
 #nolog
-#com 6750 -- High Seraphine
+#com "High Seraphine of the Oath" -- High Seraphine
 #end
 
 #selectmonster 2554 --  Ahura of the Waters
@@ -34412,6 +34427,21 @@ When Awakens summons 5-15 Yazads, 2 Yazad commanders & creates Gateway (S1, 20% 
 #addsite 700 -- Gateway
 #end
 
+#newmonster
+#copystats 2630 -- Daeva
+#spr1 "./ExtraPretenders/BloodyDaev.tga"
+#spr2 "./ExtraPretenders/BloodyDaev2.tga"
+#clearweapons
+#cleararmor
+#name "Bloody Daeva"
+#descr "The Daevas were demonic beings of an earlier age and the ancestors of the Mairya Clan Caelians. Their power was broken by the previous Pantokrator and they were banished ages ago. Daevas don enchanted golden armor and wield magical armaments. They are attuned to fire and are surrounded by an aura of fear. They are servants of the Destructive Spirit and their powers are greater in lands of turmoil and strife. These Daevas serve the Daeva of Wrath and bear a great bloody mace that will sap the spirit of those it strikes."
+#armor 75 -- Fire Plate
+#weapon 616 -- The Bloody Mace
+#berserk 2
+#magicskill 0 1
+#magicskill 8 1 -- Blood 1
+#magicskill 9 2 -- Holy 2
+#end
 
 #selectmonster 2608 -- Azi
 #descr "The Azi is the progeny of the Destructive Spirit. It is a three-headed dragon sprung from corrupted flames. When the previous Pantokrator banished the Daeva of Daevas, his offspring was imprisoned lest the world would be destroyed. Now with the Pantokrator gone, the shackles of the Daevic Dragon are weakening and the Marshal of Destruction shall once more lay the world waste in ashes.
@@ -34440,8 +34470,8 @@ When Azi is at a Throne will summon 5-15 Daeva and Bloody Daeva & 1 Daeva Champi
 #req_pop0ok
 #msg "##godname## has drawn on the power of the Throne to summon a Daevic host to witness his inevitable ascension!"
 #nolog
-#1unit 6798 -- Bloody Daeva
-#1d3units 6798 -- Bloody Daeva
+#1unit "Bloody Daeva" -- Bloody Daeva
+#1d3units "Bloody Daeva" -- Bloody Daeva
 #1d6units 2630 -- Daeva
 #2d3units 2630 -- Daeva
 #com 2630 -- Daeva (may be (D1F1H1))?
@@ -34560,26 +34590,10 @@ A Bloody Daeva commander may appear each month when in Turmoil scales (B1F1H2, C
 #invulnerable 20
 #woundfend 5
 #incscale 0 -- +Turmoil
-#summon1 6798 -- Bloody Daeva
-#raredomsummon 6798 -- Bloody Daeva
+#summon1 "Bloody Daeva" -- Bloody Daeva
+#raredomsummon "Bloody Daeva" -- Bloody Daeva
 #onebattlespell 189 -- Daeva Rage
-#batstartsum1d6 6798 -- Bloody Daeva
-#end
-
-#newmonster 6798
-#copystats 2630 -- Daeva
-#spr1 "./ExtraPretenders/BloodyDaev.tga"
-#spr2 "./ExtraPretenders/BloodyDaev2.tga"
-#clearweapons
-#cleararmor
-#name "Bloody Daeva"
-#descr "The Daevas were demonic beings of an earlier age and the ancestors of the Mairya Clan Caelians. Their power was broken by the previous Pantokrator and they were banished ages ago. Daevas don enchanted golden armor and wield magical armaments. They are attuned to fire and are surrounded by an aura of fear. They are servants of the Destructive Spirit and their powers are greater in lands of turmoil and strife. These Daevas serve the Daeva of Wrath and bear a great bloody mace that will sap the spirit of those it strikes."
-#armor 75 -- Fire Plate
-#weapon 616 -- The Bloody Mace
-#berserk 2
-#magicskill 0 1
-#magicskill 8 1 -- Blood 1
-#magicskill 9 2 -- Holy 2
+#batstartsum1d6 "Bloody Daeva" -- Bloody Daeva
 #end
 
 #newevent
@@ -34594,7 +34608,7 @@ A Bloody Daeva commander may appear each month when in Turmoil scales (B1F1H2, C
 #req_pop0ok
 #msg "A Bloody Daeva has appeared to serve ##godname##."
 #nolog
-#com 6798 -- Bloody Daeva
+#com "Bloody Daeva" -- Bloody Daeva
 #end
 
 #selectmonster 2693 -- Heavenly Condor
@@ -34779,7 +34793,7 @@ Bless gains darkvision
 #2com 2660 -- Mallqui
 #end
 
-#newmonster 6751
+#newmonster 5991
 #copystats 2756 -- Bolon-ti-ku
 #copyspr 2756 -- Bolon-ti-ku
 #clearmagic
@@ -34822,7 +34836,7 @@ Each winter will summon another Bolon-ti-ku (D2B2H2 +100%EDB, max 8 per game)
 #req_unique 8
 #msg "One of the lesser Bolon-ti-ku has escaped imprisonment and appeared to serve ##godname##!"
 #nolog
-#com 6751 -- Lesser Bolon-ti-ku
+#com 5991 -- Lesser Bolon-ti-ku
 #end
 
 
@@ -35292,6 +35306,23 @@ Garnet Tribe provinces generate double income and always contain a temple
 #gcost 0
 #end
 
+#newmonster
+#copystats 612 -- Gryphon Rider
+#copyspr 612 -- Gryphon Rider
+#cleararmor
+#name "Gryphon Knight"
+#descr "The Gryphon Knights are dedicated to the worship of the Celestial Gryphon. They are trained to ride the sacred flock of Gryphons that follow their Lord and are skilled in aerial combat. Should the rider be slain the gryphon will fight on before flying away at the end of the battle. Gryphon Knights can fly through any storm and are partially resistant to lightning."
+#gcost 10000
+#fireres 0
+#shockres 5
+#stormimmune
+#magicskill 9 1 -- Holy 1
+#goodleader
+#armor 49 -- Light scale armor
+#armor 20 -- Iron Cap
+#armor 2 -- Shield
+#end
+
 #newevent
 #rarity 5
 #req_godismnr 2786 -- Celestial Gryphon
@@ -35302,11 +35333,11 @@ Garnet Tribe provinces generate double income and always contain a temple
 #msg "Gryphon Knights"
 #notext
 #nolog
-#com 6786 -- Gryphon Knight
-#1unit 6786 -- Gryphon Knight
-#1d3units 6786 -- Gryphon Knight
-#1d6units 6786 -- Gryphon Knight
-#2d3units 6786 -- Gryphon Knight
+#com "Gryphon Knight" -- Gryphon Knight
+#1unit "Gryphon Knight" -- Gryphon Knight
+#1d3units "Gryphon Knight" -- Gryphon Knight
+#1d6units "Gryphon Knight" -- Gryphon Knight
+#2d3units "Gryphon Knight" -- Gryphon Knight
 #end
 
 #newevent
@@ -35326,31 +35357,14 @@ Garnet Tribe provinces generate double income and always contain a temple
 #custommagic 2048 50
 #end
 
-#newmonster 6786
-#copystats 612 -- Gryphon Rider
-#copyspr 612 -- Gryphon Rider
-#cleararmor
-#name "Gryphon Knight"
-#descr "The Gryphon Knights are dedicated to the worship of the Celestial Gryphon. They are trained to ride the sacred flock of Gryphons that follow their Lord and are skilled in aerial combat. Should the rider be slain the gryphon will fight on before flying away at the end of the battle. Gryphon Knights can fly through any storm and are partially resistant to lightning."
-#gcost 10000
-#fireres 0
-#shockres 5
-#stormimmune
-#magicskill 9 1 -- Holy 1
-#goodleader
-#armor 49 -- Light scale armor
-#armor 20 -- Iron Cap
-#armor 2 -- Shield
-#end
-
 #newsite 1981
 #name "Eyrie of the Gryphon"
 #path 1
 #level 0
 #look 8
 #rarity 5
-#com 6786 -- Gryphon Knight
-#mon 6786 -- Gryphon Knight
+#com "Gryphon Knight" -- Gryphon Knight
+#mon "Gryphon Knight" -- Gryphon Knight
 #end
 
 #newevent
@@ -35498,7 +35512,7 @@ Prophet gains +1 Blood each month (Max B4) and becomes a Flesh Eater (must eat p
 #1unit 2130 -- Manticore
 #end
 
-#newmonster 6805 -- Raven of the Underworld
+#newmonster 5981 -- Raven of the Underworld
 #copystats 2789 -- Raven of the Underworld
 #spr1 "./ExtraPretenders/RavenTC.tga"
 #drawsize 50
@@ -35534,10 +35548,10 @@ Whilst has more than 600hp reanimates those it kills in battles, summon Longdead
 
 #newevent
 #rarity 5
-#req_godismnr 6805 -- Raven of the Underworld
-#req_godismnr 6806 -- Raven of the Underworld
-#req_godismnr 6807 -- Raven of the Underworld
-#req_mnr 6805
+#req_godismnr 5981 -- Raven of the Underworld
+#req_godismnr 5980 -- Raven of the Underworld
+#req_godismnr 5979 -- Raven of the Underworld
+#req_mnr 5981
 #req_dominion 1
 #req_domchance 10
 #nation -2
@@ -35550,10 +35564,10 @@ Whilst has more than 600hp reanimates those it kills in battles, summon Longdead
 
 #newevent
 #rarity 5
-#req_godismnr 6805 -- Raven of the Underworld
-#req_godismnr 6806 -- Raven of the Underworld
-#req_godismnr 6807 -- Raven of the Underworld
-#req_mnr 6805
+#req_godismnr 5981 -- Raven of the Underworld
+#req_godismnr 5980 -- Raven of the Underworld
+#req_godismnr 5979 -- Raven of the Underworld
+#req_mnr 5981
 #req_temple 1
 #req_dominion 1
 #req_domchance 10
@@ -35565,7 +35579,7 @@ Whilst has more than 600hp reanimates those it kills in battles, summon Longdead
 #2d6units -2 -- Longdead
 #end
 
-#newmonster 6806 -- Raven of the Underworld
+#newmonster 5980 -- Raven of the Underworld
 #copystats 2789 -- Raven of the Underworld
 #spr1 "./ExtraPretenders/RavenTB.tga"
 #drawsize 25
@@ -35596,7 +35610,7 @@ Whilst has more than 600hp reanimates those it kills in battles, summon Longdead
 #maxdeadhp 1000
 #end
 
-#newmonster 6807 -- Raven of the Underworld
+#newmonster 5979 -- Raven of the Underworld
 #copystats 2789 -- Raven of the Underworld
 #copyspr 2789 -- Raven of the Underworld
 #clearweapons
@@ -35626,31 +35640,31 @@ Whilst has more than 600hp reanimates those it kills in battles, summon Longdead
 #end
 
 #selectnation 124 -- Chaco
-#addgod 6807
+#addgod 5979
 #end
 
 #selectnation 125 -- Ong
-#addgod 6807
+#addgod 5979
 #end
 
 #selectnation 126 -- Ong
-#addgod 6807
+#addgod 5979
 #end
 
 #selectnation 127 -- Nahullo
-#addgod 6807
+#addgod 5979
 #end
 
 #selectnation 132 -- Fenno
-#addgod 6807
+#addgod 5979
 #end
 
 #selectnation 136 -- Alchera
-#addgod 6807
+#addgod 5979
 #end
 
 #selectnation 168 -- Gondwana
-#addgod 6807
+#addgod 5979
 #end
 
 #selectmonster 2790 -- Myrmecoleon
@@ -35857,7 +35871,7 @@ Cannot start awake
 #homerealm 0
 #end
 
-#newmonster 6808 -- Dog of the Underworld
+#newmonster 5978 -- Dog of the Underworld
 #copystats 2795 -- Dog of the Underworld
 #spr1 "./ExtraPretenders/DogTC.tga"
 #drawsize 50
@@ -35887,7 +35901,7 @@ Whilst has more than 600hp Thrones in your Dominion spawn 1D6 ghosts each month 
 
 #newevent
 #rarity 5
-#req_godismnr 6809 -- Dog of the Underworld 
+#req_godismnr 5977 -- Dog of the Underworld 
 #req_thronesite 1
 #req_mindef 1
 #req_dominion 1
@@ -35903,7 +35917,7 @@ Whilst has more than 600hp Thrones in your Dominion spawn 1D6 ghosts each month 
 
 #newevent
 #rarity 5
-#req_godismnr 6809 -- Dog of the Underworld 
+#req_godismnr 5977 -- Dog of the Underworld 
 #req_thronesite 1
 #req_mindef 1
 #req_dominion 1
@@ -35918,8 +35932,8 @@ Whilst has more than 600hp Thrones in your Dominion spawn 1D6 ghosts each month 
 
 #newevent
 #rarity 5
-#req_godismnr 6808 -- Dog of the Underworld 
-#req_monster 6808 -- Dog of the Underworld 
+#req_godismnr 5978 -- Dog of the Underworld 
+#req_monster 5978 -- Dog of the Underworld 
 #req_thronesite 1
 #req_mindef 1
 #req_land 1
@@ -35931,7 +35945,7 @@ Whilst has more than 600hp Thrones in your Dominion spawn 1D6 ghosts each month 
 #2d6units 566 -- Ghost
 #end
 
-#newmonster 6809 -- Dog of the Underworld
+#newmonster 5977 -- Dog of the Underworld
 #copystats 2795 -- Dog of the Underworld
 #spr1 "./ExtraPretenders/DogTB.tga"
 #drawsize 25
@@ -35962,8 +35976,8 @@ Whilst has more than 600hp Thrones in your Dominion spawn 1D6 ghosts each month 
 
 #newevent
 #rarity 5
-#req_godismnr 6809 -- Dog of the Underworld 
-#req_monster 6809 -- Dog of the Underworld 
+#req_godismnr 5977 -- Dog of the Underworld 
+#req_monster 5977 -- Dog of the Underworld 
 #req_thronesite 1
 #req_mindef 1
 #req_land 1
@@ -35975,7 +35989,7 @@ Whilst has more than 600hp Thrones in your Dominion spawn 1D6 ghosts each month 
 #2d6units 566 -- Ghost
 #end
 
-#newmonster 6810 -- Dog of the Underworld
+#newmonster 5976 -- Dog of the Underworld
 #copystats 2795 -- Dog of the Underworld
 #copyspr 2795 -- Dog of the Underworld
 #clearweapons 
@@ -37821,7 +37835,7 @@ Whilst at an UW laboratory may create an Amulet of the Fish each month (Candles 
 #homerealm 0
 #end
 
-#newmonster 6765
+#newmonster 5990
 #copystats 2815 -- Mermage
 #copyspr 2815 -- Mermage
 #clearmagic
@@ -37832,11 +37846,11 @@ Whilst at an UW laboratory may create an Amulet of the Fish each month (Candles 
 #magicskill 1 2 -- Air 2
 #magicskill 2 2
 #custommagic 9984 100 -- 100% roll at Air, Water, Earth, Nature
-#landshape 6766
+#landshape 5989
 #monpresentrec 4913
 #end
 
-#newmonster 6766
+#newmonster 5989
 #copystats 2816 -- Mermage
 #copyspr 2816 -- Mermage
 #clearmagic
@@ -37847,7 +37861,7 @@ Whilst at an UW laboratory may create an Amulet of the Fish each month (Candles 
 #magicskill 1 2 -- Air 2
 #magicskill 2 2
 #custommagic 9984 100 -- 100% roll at Air, Water, Earth, Nature
-#watershape 6765
+#watershape 5990
 #end
 
 #newsite 1940
@@ -37856,7 +37870,7 @@ Whilst at an UW laboratory may create an Amulet of the Fish each month (Candles 
 #level 0
 #look 6
 #rarity 5
-#com 6765
+#com 5990
 #end
 
 #newevent
@@ -37885,6 +37899,14 @@ Whilst at an UW laboratory may create an Amulet of the Fish each month (Candles 
 #msg "##godname## has taken residence in a great air-filled cavern. Mermages flock to learn the secrets of the closed realm."
 #nolog
 #addsite 1940
+#end
+
+#newmonster
+#copystats 1481 -- Tengu Warrior
+#copyspr 1481 -- Tengu Warrior
+#name "Tengu Samurai"
+#descr "Tengu serve the Tengu Kings and are sacred to the followers of the Tengu Kunshu. Clad in samurai armor they are fierce warriors and act as shock troops in battle. Like all Tengu, it is able to fly during storms."
+#gcost 10020
 #end
 
 #newmonster 8312
@@ -37923,31 +37945,13 @@ Whilst awake, Mountain Forts in Dominion gain a Temple if not one present
 #armor 148
 #magicskill 1 1 -- Air 1
 #magicboost 53 1
-#batstartsum1d6 6801 -- Tengu Samurai
+#batstartsum1d6 "Tengu Samurai" -- Tengu Samurai
 #batstartsum3d6 1481 -- Tengu Warrior
 #startdom 1
 #pathcost 10
 #end
 
-#newsite 1968
-#name "Tengu Stronghold"
-#path 1
-#level 0
-#rarity 5
-#look 8
-#mon 6801 -- Tengu Samurai
-#com 6802 -- Tengu King
-#end
-
-#newmonster 6801
-#copystats 1481 -- Tengu Warrior
-#copyspr 1481 -- Tengu Warrior
-#name "Tengu Samurai"
-#descr "Tengu serve the Tengu Kings and are sacred to the followers of the Tengu Kunshu. Clad in samurai armor they are fierce warriors and act as shock troops in battle. Like all Tengu, it is able to fly during storms."
-#gcost 10020
-#end
-
-#newmonster 6802
+#newmonster
 #copystats 1479 -- Konoha Tengu
 #copyspr 3246 -- Tengu King
 #name "Tengu King"
@@ -37958,6 +37962,16 @@ Whilst awake, Mountain Forts in Dominion gain a Temple if not one present
 #inspirational 1
 #gcost 10020
 #magicskill 9 2 -- Holy 2
+#end
+
+#newsite 1968
+#name "Tengu Stronghold"
+#path 1
+#level 0
+#rarity 5
+#look 8
+#mon "Tengu Samurai" -- Tengu Samurai
+#com "Tengu King" -- Tengu King
 #end
 
 #newevent
@@ -38434,11 +38448,11 @@ UW or coastal Temple forts may spawn a Mermage (Candles x 5% per month, W1 + 100
 #look 3
 #rarity 5
 #gems 6 2
-#com 6792 -- Mermaid
+#com 5988 -- Mermaid
 #enchcost 20
 #end
 
-#newmonster 6792
+#newmonster 5988
 #copystats 1046 -- Merman
 #clearweapons
 #spr1 "./ExtraPretenders/EEMermaid.tga"
@@ -38450,7 +38464,7 @@ UW or coastal Temple forts may spawn a Mermage (Candles x 5% per month, W1 + 100
 #magicskill 2 2
 #magicskill 6 1
 #magicskill 9 1 -- Holy 1
-#custommagic 8379 100 -- 100% roll at Air, Water, Nature
+#custommagic 8960 100 -- 100% roll at Air, Water, Nature
 #custommagic 25088 100 -- 100% roll at Water, Nature, Glamour
 #awe 1
 #mr 16
@@ -38463,10 +38477,10 @@ UW or coastal Temple forts may spawn a Mermage (Candles x 5% per month, W1 + 100
 #giftofwater 30
 #nametype 108 -- Arco female
 #weapon 389 -- Pearl Trident
-#landshape 6793
+#landshape 5987
 #end
 
-#newmonster 6793
+#newmonster 5987
 #copystats 1047 -- Merman
 #clearweapons
 #spr1 "./ExtraPretenders/EEMermaidLand.tga"
@@ -38478,7 +38492,7 @@ UW or coastal Temple forts may spawn a Mermage (Candles x 5% per month, W1 + 100
 #magicskill 2 2
 #magicskill 6 1
 #magicskill 9 1 -- Holy 1
-#custommagic 8379 100 -- 100% roll at Air, Water, Nature
+#custommagic 8960 100 -- 100% roll at Air, Water, Nature
 #custommagic 25088 100 -- 100% roll at Water, Nature, Glamour
 #awe 1
 #mr 16
@@ -38491,7 +38505,7 @@ UW or coastal Temple forts may spawn a Mermage (Candles x 5% per month, W1 + 100
 #giftofwater 30
 #nametype 108 -- Arco female
 #weapon 389 -- Pearl Trident
-#watershape 6792
+#watershape 5988
 #end
 
 #newevent
@@ -38560,7 +38574,7 @@ UW or coastal Temple forts may spawn a Mermage (Candles x 5% per month, W1 + 100
 #com 2420 -- Mermage
 #end
 
-#newmonster 8922 -- Wight on Leviathan
+#newmonster -- Wight on Leviathan
 #copystats 299 -- Wight Mage
 #clearweapons
 #clearmagic
@@ -38597,7 +38611,7 @@ Whilst controls Remnants in the Depths, UW provinces with Death scales generate 
 
 #newevent
 #rarity 5
-#req_godismnr 8922
+#req_godismnr "Lacedon Mage"
 #req_land 0
 #nation -2
 #req_pop0ok
@@ -38612,7 +38626,7 @@ Whilst controls Remnants in the Depths, UW provinces with Death scales generate 
 
 #newevent
 #rarity 5
-#req_godismnr 8922
+#req_godismnr "Lacedon Mage"
 #req_temple 1
 #req_land 0
 #nation -2
@@ -38629,7 +38643,7 @@ Whilst controls Remnants in the Depths, UW provinces with Death scales generate 
 
 #newevent
 #rarity 5
-#req_godismnr 8922
+#req_godismnr "Lacedon Mage"
 #req_friendlyench 124 -- Remnants in the Depths
 #req_land 0
 #nation -2
@@ -38643,7 +38657,7 @@ Whilst controls Remnants in the Depths, UW provinces with Death scales generate 
 
 #newevent
 #rarity 5
-#req_godismnr 8922
+#req_godismnr "Lacedon Mage"
 #req_friendlyench 124 -- Remnants in the Depths
 #req_land 0
 #nation -2
@@ -39155,6 +39169,18 @@ No path reduction when separated
 #pathcost 20
 #end
 
+#newmonster "Berserk Markata"
+#copystats 1118 -- Markata
+#copyspr 1118 -- Markata
+#clearweapons
+#name "Berserk Markata"
+#descr "This is a ferocious markata that has had the fear instinct bred out of it through a long process of experimentation. The Berserk Markata will run into the enemy and attack headlong, fearless of its own safety. It is, however, still only a markata."
+#mor 12
+#weapon 9 -- dagger
+#weapon 360 -- Sticks & Stones
+#berserk 2
+#end
+
 #newmonster 8345
 #copystats 246 -- Freak Lord
 #clearmagic
@@ -39184,7 +39210,7 @@ Each month whilst at a laboratory may create a box of exploding arrows (25% chan
 #douse 3
 #beastmaster 1
 #crossbreeder 10
-#domsummon 5268 -- Berserk Markata
+#domsummon "Berserk Markata" -- Berserk Markata
 #summon5 1120 -- Markata Archer
 #domsummon2 8344 -- Markata Freak
 #startdom 1
@@ -39207,18 +39233,6 @@ Each month whilst at a laboratory may create a box of exploding arrows (25% chan
 #animal
 #end
 
-#newmonster 5268
-#copystats 1118 -- Markata
-#copyspr 1118 -- Markata
-#clearweapons
-#name "Berserk Markata"
-#descr "This is a ferocious markata that has had the fear instinct bred out of it through a long process of experimentation. The Berserk Markata will run into the enemy and attack headlong, fearless of its own safety. It is, however, still only a markata."
-#mor 12
-#weapon 9 -- dagger
-#weapon 360 -- Sticks & Stones
-#berserk 2
-#end
-
 #newevent
 #rarity 5
 #req_godismnr 8345 -- Markata Master
@@ -39235,7 +39249,7 @@ Each month whilst at a laboratory may create a box of exploding arrows (25% chan
 #1unit 8344 -- Markata Freak
 #1d6units -12 -- Foul Spawn
 #2d6units 1120 -- Markata Archer
-#4d6units 5268 -- Berserk Markata
+#4d6units "Berserk Markata" -- Berserk Markata
 #com 1119 -- Markata Scout
 #end
 
@@ -39253,7 +39267,7 @@ Each month whilst at a laboratory may create a box of exploding arrows (25% chan
 #magicitem 9
 #end
 
-#newmonster 8903
+#newmonster
 #copystats 302 -- Wizard of High Magics
 #clearmagic
 #clearweapons
@@ -39301,7 +39315,7 @@ Temples with labs may spawn a Drake each month (Swamp Drake in swamps, Cave Drak
 
 #newevent
 #rarity 5
-#req_godismnr 8903 -- Drake Breeder
+#req_godismnr "Drake Breeder" -- Drake Breeder
 #req_pretawake 1
 #req_owncapital 1
 #req_land 1
@@ -39318,7 +39332,7 @@ Temples with labs may spawn a Drake each month (Swamp Drake in swamps, Cave Drak
 
 #newevent
 #rarity 5
-#req_godismnr 8903 -- Drake Breeder
+#req_godismnr "Drake Breeder" -- Drake Breeder
 #req_pretawake 1
 #req_owncapital 1
 #req_land 1
@@ -39335,7 +39349,7 @@ Temples with labs may spawn a Drake each month (Swamp Drake in swamps, Cave Drak
 
 #newevent
 #rarity 5
-#req_godismnr 8903 -- Drake Breeder
+#req_godismnr "Drake Breeder" -- Drake Breeder
 #req_land 1
 #req_lab 1
 #req_temple 1
@@ -39355,7 +39369,7 @@ Temples with labs may spawn a Drake each month (Swamp Drake in swamps, Cave Drak
 
 #newevent
 #rarity 5
-#req_godismnr 8903 -- Drake Breeder
+#req_godismnr "Drake Breeder" -- Drake Breeder
 #req_land 1
 #req_lab 1
 #req_temple 1
@@ -39375,7 +39389,7 @@ Temples with labs may spawn a Drake each month (Swamp Drake in swamps, Cave Drak
 
 #newevent
 #rarity 5
-#req_godismnr 8903 -- Drake Breeder
+#req_godismnr "Drake Breeder" -- Drake Breeder
 #req_land 1
 #req_lab 1
 #req_temple 1
@@ -39393,7 +39407,7 @@ Temples with labs may spawn a Drake each month (Swamp Drake in swamps, Cave Drak
 
 #newevent
 #rarity 5
-#req_godismnr 8903 -- Drake Breeder
+#req_godismnr "Drake Breeder" -- Drake Breeder
 #req_land 1
 #req_lab 1
 #req_temple 1
@@ -39412,7 +39426,7 @@ Temples with labs may spawn a Drake each month (Swamp Drake in swamps, Cave Drak
 
 #newevent
 #rarity 5
-#req_godismnr 8903 -- Drake Breeder
+#req_godismnr "Drake Breeder" -- Drake Breeder
 #req_land 1
 #req_lab 1
 #req_temple 1
@@ -39510,7 +39524,7 @@ Elemental spells cast 3 provinces further
 #pathcost 60
 #end
 
-#newmonster 6752
+#newmonster
 #copystats 98 -- Pyromancer
 #copyspr 98 -- Pyromancer
 #clearmagic
@@ -39529,7 +39543,7 @@ Elemental spells cast 3 provinces further
 #level 0
 #rarity 5
 #look 8
-#com 6752 -- Apprentice
+#com "Apprentice Mage" -- Apprentice
 #elementrange 1
 #end
 
@@ -40376,43 +40390,7 @@ Starting item: Wand of Transmutation (Casts Curse of the Frog Prince)
 #holyboost -1
 #end
 
-#selectmonster 486 -- Great Warlock
-#clearmagic
-#clearweapons
-#descr "The Great Warlock is a mage of such great power that he has taken the role of a Pretender God. Great Warlocks are masters of magic and known to be adept in several of the magic paths. Each month he may teach the secrets of Blood Magic and the summoning of otherworldy beings to one of his disciples. Few realise he is actually a demonic infiltrator from the Abyss, come to lead the Abysian people into darkness. Upon revealing his true form he will become huge and bat winged, although invisible, and he will lose some of his magical skill.
-
-Paths known are increased by 1 in Abysian form
-Can reveal his true form as a stealthy, invisible Lord of Darkness
-Will train Warlock Apprentices in Abysian form (5% x candles chance per month)
-Summons 1 Fiend of Darkness per month in Lord of Darkness form
-"
-#gcost 180
-#magicskill 0 1
-#magicskill 4 1
-#magicskill 8 1 -- Blood 1
-#weapon 157 -- Oath Rod
-#magicboost 53 1
-#diseaseres 100
-#shapechange 6814
-#pathcost 40
-#end
-
-#newevent
-#rarity 5
-#req_godismnr 486 -- Great Warlock
-#req_godismnr 6814 -- Fiend form
-#req_monster 486 -- Great Warlock
-#req_dominion 1
-#req_domchance 5
-#req_land 1
-#nation -2
-#req_pop0ok
-#msg "##godname## has trained an apprentice in the ways of blood magic."
-#nolog
-#com 923 -- Warlock Apprentice
-#end
-
-#newmonster 6814
+#newmonster
 #copystats 88 -- Fiend of Darkness
 #copyspr 492 -- Mastema
 #clearweapons
@@ -40448,6 +40426,42 @@ Summons 1 Fiend of Darkness per month in Lord of Darkness form
 #startdom 1
 #end
 
+#selectmonster 486 -- Great Warlock
+#clearmagic
+#clearweapons
+#descr "The Great Warlock is a mage of such great power that he has taken the role of a Pretender God. Great Warlocks are masters of magic and known to be adept in several of the magic paths. Each month he may teach the secrets of Blood Magic and the summoning of otherworldy beings to one of his disciples. Few realise he is actually a demonic infiltrator from the Abyss, come to lead the Abysian people into darkness. Upon revealing his true form he will become huge and bat winged, although invisible, and he will lose some of his magical skill.
+
+Paths known are increased by 1 in Abysian form
+Can reveal his true form as a stealthy, invisible Lord of Darkness
+Will train Warlock Apprentices in Abysian form (5% x candles chance per month)
+Summons 1 Fiend of Darkness per month in Lord of Darkness form
+"
+#gcost 180
+#magicskill 0 1
+#magicskill 4 1
+#magicskill 8 1 -- Blood 1
+#weapon 157 -- Oath Rod
+#magicboost 53 1
+#diseaseres 100
+#shapechange "Lord of Darkness"
+#pathcost 40
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 486 -- Great Warlock
+#req_godismnr "Lord of Darkness" -- Fiend form
+#req_monster 486 -- Great Warlock
+#req_dominion 1
+#req_domchance 5
+#req_land 1
+#nation -2
+#req_pop0ok
+#msg "##godname## has trained an apprentice in the ways of blood magic."
+#nolog
+#com 923 -- Warlock Apprentice
+#end
+
 #selectmonster 500 -- Skratti
 #descr "The Skratti is an ancient giant of great power who has taken the role of a Pretender God. The Skratti is a master of magic rituals and very tough, but not as strong as dragons or demigods. The Skratti can summon great Jotun Wolf-men from the depths of the forest, and he will call them to serve him. He will bestow his blessing on the Jotun Skratti that serve him, and whilst in the same province will grant them a magical charm holding some of his power.
 
@@ -40460,10 +40474,10 @@ Whilst controls Illwinter, temples will summon Jotun Werewolves (10% x candles) 
 #heal
 #masterrit 1
 #diseaseres 100
-#makemonsters1 6753 -- Jotun Werewolf
+#makemonsters1 5986 -- Jotun Werewolf
 #end
 
-#newmonster 6753
+#newmonster 5986
 #copystats 3443 -- Jotun Werewolf
 #copyspr 3443 -- Jotun Werewolf
 #clearmagic
@@ -40537,10 +40551,10 @@ Whilst controls Illwinter, temples will summon Jotun Werewolves (10% x candles) 
 #nation -2
 #msg "##godname## howled to the moon from his tower and a pack of Jotun Werewolves has appeared to serve him"
 #nolog
-#1unit 6753 -- Jotun Werewolf
-#1d3units 6753 -- Jotun Werewolf
-#1d6units 6753 -- Jotun Werewolf
-#2d3units 6753 -- Jotun Werewolf
+#1unit 5986 -- Jotun Werewolf
+#1d3units 5986 -- Jotun Werewolf
+#1d6units 5986 -- Jotun Werewolf
+#2d3units 5986 -- Jotun Werewolf
 #addsite 932 -- Tower of the Moon
 #end
 
@@ -40556,7 +40570,7 @@ Whilst controls Illwinter, temples will summon Jotun Werewolves (10% x candles) 
 #msg "Illwinter summon"
 #notext
 #nolog
-#1unit 6753 -- Jotun Werewolf
+#1unit 5986 -- Jotun Werewolf
 #end
 
 #newevent
@@ -40578,42 +40592,7 @@ Whilst controls Illwinter, temples will summon Jotun Werewolves (10% x candles) 
 #bloodboost -1
 #end
 
-#selectmonster 2852 -- King of Frozen Bones
-#descr "The King of Frozen Bones is an ancient Angakok who discovered the remnants of a dead god on the Forsaken Coast and claimed its vast powers as his. Donning a godly mantle, he has taken the role of a Pretender God. He rules the Forsaken Coast and all its inhabitants including the great bears and fierce killer whales. Each month sacred bears and whales will appear to serve him as his Dominion grows strong. The King is surrounded by the cold of the Forsaken Coast, and in battle will quickly freeze all those present that are not resistant to the cold. Should the seas be covered in ice Polar Bears will appear in coastal provinces where the Dominion of the King grows strong.
-
-Paths known are increased by 1
-Summons Sacred Polar Bears (on land) or Sacred Orcas(UW) up to Dominion candles each month
-Casts Grip of Winter in battles
-Whilst controls Sea of Ice coastal provinces may spawn a Sacred Polar Bear each month (Candles x 10% chance)
-"
-#gcost 150
-#magicboost 53 1
-#beastmaster 2
-#diseaseres 100
-#heal
-#onebattlespell "Grip of Winter"
-#domsummon 6754 -- Sacred Polar Bears
-#domsummon2 6755 -- Sacred Orca
-#domsummon20 6755 -- Sacred Orca
-#end
-
-#newevent
-#rarity 5
-#req_godismnr 2852 -- King of Frozen Bones
-#req_mnr 2852 -- King of Frozen Bones
-#req_friendlyench 28 -- Sea of Ice
-#req_coast 1
-#req_land 1
-#nation -2
-#req_pop0ok
-#req_rare 10
-#msg "Bear appears"
-#notext
-#nolog
-#1unit 6754 -- Sacred Polar Bear
-#end
-
-#newmonster 6754
+#newmonster
 #copystats 694 -- Great Bear
 #spr1 "./ExtraPretenders/EEPolar.tga"
 #spr2 "./ExtraPretenders/EEPolar2.tga"
@@ -40629,36 +40608,39 @@ Whilst controls Sea of Ice coastal provinces may spawn a Sacred Polar Bear each 
 #nametype 141 -- Inuit
 #end
 
-#newmonster 6755
-#spr1 "./ExtraPretenders/EEKiller.tga"
-#spr2 "./ExtraPretenders/EEKiller2.tga"
-#name "Sacred Orca"
-#descr "Orcas are aquatic carnivores also known as Killer Whales. They hunt in pods and feed on fish and marine animals. They are respected by hunters as Lords of the Frozen Sea."
-#snake
-#holy
-#gcost 0
-#hp 55
-#size 8
-#prot 8
-#mr 9
-#mor 15
-#str 22
-#att 11
-#def 10
-#prec 5
-#enc 2
-#mapmove 20
-#ap 20
-#stealthy 0
-#coldres 15
-#weapon 20 -- Bite
-#weapon 589 -- Tail Slap
-#undisciplined
-#animal
-#aquatic
-#neednoteat
-#itemslots 786432 -- 2 misc
-#nametype 141 -- Inuit
+#selectmonster 2852 -- King of Frozen Bones
+#descr "The King of Frozen Bones is an ancient Angakok who discovered the remnants of a dead god on the Forsaken Coast and claimed its vast powers as his. Donning a godly mantle, he has taken the role of a Pretender God. He rules the Forsaken Coast and all its inhabitants including the great bears and fierce killer whales. Each month sacred bears and whales will appear to serve him as his Dominion grows strong. The King is surrounded by the cold of the Forsaken Coast, and in battle will quickly freeze all those present that are not resistant to the cold. Should the seas be covered in ice Polar Bears will appear in coastal provinces where the Dominion of the King grows strong.
+
+Paths known are increased by 1
+Summons Sacred Polar Bears (on land) or Sacred Orcas(UW) up to Dominion candles each month
+Casts Grip of Winter in battles
+Whilst controls Sea of Ice coastal provinces may spawn a Sacred Polar Bear each month (Candles x 10% chance)
+"
+#gcost 150
+#magicboost 53 1
+#beastmaster 2
+#diseaseres 100
+#heal
+#onebattlespell "Grip of Winter"
+#domsummon "Sacred Polar Bear" -- Sacred Polar Bears
+#domsummon2 "Sacred Orca" -- Sacred Orca
+#domsummon20 "Sacred Orca" -- Sacred Orca
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 2852 -- King of Frozen Bones
+#req_mnr 2852 -- King of Frozen Bones
+#req_friendlyench 28 -- Sea of Ice
+#req_coast 1
+#req_land 1
+#nation -2
+#req_pop0ok
+#req_rare 10
+#msg "Bear appears"
+#notext
+#nolog
+#1unit "Sacred Polar Bear" -- Sacred Polar Bear
 #end
 
 #selectmonster 509 -- Arch Seraph
@@ -40674,7 +40656,7 @@ Whilst at a Temple fort creates Temple of the Sacred Band (Recruit Sacred Band)
 #diseaseres 100
 #end
 
-#newmonster 6756
+#newmonster
 #copystats 421 -- Storm Guard
 #copyspr 421 -- Storm Guard
 #name "Sacred Band"
@@ -40690,7 +40672,7 @@ Whilst at a Temple fort creates Temple of the Sacred Band (Recruit Sacred Band)
 #level 0
 #look 2
 #rarity 5
-#mon 6756 -- Sacred Band
+#mon "Sacred Band" -- Sacred Band
 #end
 
 #newevent
@@ -41100,7 +41082,7 @@ Creates Oracles Lair (Reveal magic graphs) and summons 2 Seer Hierophants (S1H3,
 #onebattlespell 884
 #end
 
-#newmonster 6788
+#newmonster
 #copystats 104 -- Deep Seer
 #copyspr 104 -- Deep Seer
 #clearmagic
@@ -41124,7 +41106,7 @@ Creates Oracles Lair (Reveal magic graphs) and summons 2 Seer Hierophants (S1H3,
 #req_pop0ok
 #msg "##godname## has completed his construction in the capital. From his new abode he and his students will monitor the magics of the world."
 #addsite 1110 -- Oracles Lair
-#2com 6788 -- Seer Adept
+#2com "Seer Hierophant" -- Seer Adept
 #end
 
 #selectmonster 1896 -- Lawgiver
@@ -41606,7 +41588,7 @@ When in Werehyena form eats corpses to gain hp and becomes a stealthy assassin
 #diseaseres 100
 #end
 
-#newmonster 6759
+#newmonster 5985
 #copystats 2293 -- Bouda
 #copyspr 2293 -- Bouda
 #name "Bouda"
@@ -41614,10 +41596,10 @@ When in Werehyena form eats corpses to gain hp and becomes a stealthy assassin
 #holy
 #masterrit 1
 #heretic 0
-#shapechange 6760
+#shapechange 5984
 #end
 
-#newmonster 6760
+#newmonster 5984
 #copystats 2294 -- Bouda
 #copyspr 2294 -- Bouda
 #name "Werehyena"
@@ -41626,12 +41608,12 @@ When in Werehyena form eats corpses to gain hp and becomes a stealthy assassin
 #heretic 0
 #assassin
 #patience 1
-#shapechange 6759
+#shapechange 5985
 #end
 
 #newevent
 #rarity 5
-#req_godismnr 6759 -- Bouda Father
+#req_godismnr 5985 -- Bouda Father
 #req_owncapital 1
 #req_pretawake 1
 #req_unique 1
@@ -41655,7 +41637,7 @@ When in Werehyena form eats corpses to gain hp and becomes a stealthy assassin
 #notext
 #nolog
 #holyboost -1
-#transform 6759
+#transform 5985
 #end
 
 #newevent
@@ -41670,7 +41652,7 @@ When in Werehyena form eats corpses to gain hp and becomes a stealthy assassin
 #notext
 #nolog
 #holyboost -1
-#transform 6759
+#transform 5985
 #end
 
 #newevent
@@ -41685,7 +41667,7 @@ When in Werehyena form eats corpses to gain hp and becomes a stealthy assassin
 #notext
 #nolog
 #holyboost -1
-#transform 6759
+#transform 5985
 #end
 
 #newevent
@@ -41700,7 +41682,7 @@ When in Werehyena form eats corpses to gain hp and becomes a stealthy assassin
 #notext
 #nolog
 #holyboost -1
-#transform 6759
+#transform 5985
 #end
 
 #selectmonster 2549 -- Maharishi
@@ -42077,25 +42059,7 @@ Land forts can recruit Kernou
 #removesite 1935
 #end
 
-#selectmonster 2955 -- Leader of the Closed Council
-#descr "The Leader of the Closed Council is an ancient Oracle of the Deep, hailed as the greatest mage of the ages. Donning a godly mantle, the Oracle has taken the role of a Pretender God to lead Agartha to a promised future. The Oracle is able to foresee things that have not yet come to pass and can prevent disasters. As long as he is not dormant or imprisoned Ancient Ones will emerge from the deep caves to swell the ranks of his army. As leader of the Closed Council he is able to marshal their magical talents whilst at the capital, granting more powerful spellcasting ability, however these powers are lost whilst away from the capital.
-
-Ancient Lord gains H2E1W1 after recruitment
-Cave Forts gain 5PD per month (max 20) and can always recruit Ancient Ones + Ancient Lord
-Gains Fortune Teller 75%, Master Ritualist 2 & +2 Spell Range when at capital
-Summons Ancient Ones up to candles each month when at capital
-"
-#gcost 120
-#diseaseres 100
-#nobadevents 75
-#masterrit 2
-#allrange 2
-#foreignshape 6791
-#domsummon 1469 -- Ancient One
-#domsummon2 2189 -- Ancient Stone Hurler
-#end
-
-#newmonster 6791 -- Leader of the Closed Council
+#newmonster -- Leader of the Closed Council
 #copystats 2955 -- Leader of the Closed Council
 #copyspr 2955 -- Leader of the Closed Council
 #name "Leader of the Closed Council"
@@ -42114,6 +42078,24 @@ Summons Ancient Ones up to candles each month when at capital
 #homeshape 2955
 #end
 
+#selectmonster 2955 -- Leader of the Closed Council
+#descr "The Leader of the Closed Council is an ancient Oracle of the Deep, hailed as the greatest mage of the ages. Donning a godly mantle, the Oracle has taken the role of a Pretender God to lead Agartha to a promised future. The Oracle is able to foresee things that have not yet come to pass and can prevent disasters. As long as he is not dormant or imprisoned Ancient Ones will emerge from the deep caves to swell the ranks of his army. As leader of the Closed Council he is able to marshal their magical talents whilst at the capital, granting more powerful spellcasting ability, however these powers are lost whilst away from the capital.
+
+Ancient Lord gains H2E1W1 after recruitment
+Cave Forts gain 5PD per month (max 20) and can always recruit Ancient Ones + Ancient Lord
+Gains Fortune Teller 75%, Master Ritualist 2 & +2 Spell Range when at capital
+Summons Ancient Ones up to candles each month when at capital
+"
+#gcost 120
+#diseaseres 100
+#nobadevents 75
+#masterrit 2
+#allrange 2
+#foreignshape "Leader of the Closed Council"
+#domsummon 1469 -- Ancient One
+#domsummon2 2189 -- Ancient Stone Hurler
+#end
+
 #newsite 1893
 #name "Cavern of the Ancients"
 #path 3
@@ -42127,7 +42109,7 @@ Summons Ancient Ones up to candles each month when at capital
 #newevent
 #rarity 5
 #req_godismnr 2955 -- Leader of the Closed Council
-#req_godismnr 6791 -- Leader of the Closed Council
+#req_godismnr "Leader of the Closed Council" -- Leader of the Closed Council
 #req_fornation 102 -- LA Agartha
 #req_owncapital 1
 #req_fort 1
@@ -42146,7 +42128,7 @@ Summons Ancient Ones up to candles each month when at capital
 #newevent
 #rarity 5
 #req_godismnr 2955 -- Leader of the Closed Council
-#req_godismnr 6791 -- Leader of the Closed Council
+#req_godismnr "Leader of the Closed Council" -- Leader of the Closed Council
 #req_notfornation 15 -- EA Agartha
 #req_freesites 1
 #req_owncapital 0
@@ -42166,7 +42148,7 @@ Summons Ancient Ones up to candles each month when at capital
 #newevent
 #rarity 5
 #req_godismnr 2955 -- Leader of the Closed Council
-#req_godismnr 6791 -- Leader of the Closed Council
+#req_godismnr "Leader of the Closed Council" -- Leader of the Closed Council
 #req_fort 1
 #req_cave 1
 #req_land 1
@@ -42182,7 +42164,7 @@ Summons Ancient Ones up to candles each month when at capital
 #newevent
 #rarity 5
 #req_godisnotmnr 2955 -- Leader of the Closed Council
-#req_godisnotmnr 6791 -- Leader of the Closed Council
+#req_godisnotmnr "Leader of the Closed Council" -- Leader of the Closed Council
 #req_mindef 1
 #req_site 1
 #nation -2
@@ -42197,7 +42179,7 @@ Summons Ancient Ones up to candles each month when at capital
 #newevent
 #rarity 5
 #req_godismnr 2955 -- Leader of the Closed Council
-#req_godismnr 6791 -- Leader of the Closed Council
+#req_godismnr "Leader of the Closed Council" -- Leader of the Closed Council
 #req_targmnr 1470 -- Ancient Lord
 #req_targmnr 2506 -- Ancient Lord
 #req_targnopath1 9
@@ -42290,6 +42272,23 @@ When Awakens will found a Forest Observatory in capital (2N2S, Allows Scrying, R
 #nobadevents 50
 #end
 
+#newmonster
+#copystats 2479 -- Centaur Sage
+#copyspr 2977
+#clearmagic
+#name "Centaur Loremaster"
+#descr "When the Centaur Sage brought the ways of men to the ancient woods, the centaurs were the first to adopt the new practices. As his teachings spread, some centaurs forgot the old ways in their attempt to mimic human society. Curious of the magic of men, these centaur sages left their woods in search of other paths of magic. Trained by the greatest Sage, they have become skilled at research and the magic of the stars, but most also have some skills in the ancient paths of the wild."
+#gcost 9980
+#rpcost 2
+#magicskill 4 2
+#magicskill 6 1
+#magicskill 9 1 -- Holy 1
+#custommagic 12032 100 -- 100% roll at Air, Water, Earth, Astral, Nature
+#custommagic 12032 10 -- 10% roll at Air, Water, Earth, Astral, Nature
+#researchbonus 4
+#nobadevents 15
+#end
+
 #newsite 1936
 #name "Forest Observatory"
 #path 4
@@ -42300,7 +42299,7 @@ When Awakens will found a Forest Observatory in capital (2N2S, Allows Scrying, R
 #gems 6 2
 #scry 1
 #scryrange 10
-#homecom 6761
+#homecom "Centaur Loremaster"
 #end
 
 #newevent
@@ -42332,23 +42331,6 @@ When Awakens will found a Forest Observatory in capital (2N2S, Allows Scrying, R
 #msg "##godname## has constructed a great Observatory in the capital, and now trains Centaur Loremasters in the wisdom of the stars!"
 #nolog
 #addsite 1936
-#end
-
-#newmonster 6761
-#copystats 2479 -- Centaur Sage
-#copyspr 2977
-#clearmagic
-#name "Centaur Loremaster"
-#descr "When the Centaur Sage brought the ways of men to the ancient woods, the centaurs were the first to adopt the new practices. As his teachings spread, some centaurs forgot the old ways in their attempt to mimic human society. Curious of the magic of men, these centaur sages left their woods in search of other paths of magic. Trained by the greatest Sage, they have become skilled at research and the magic of the stars, but most also have some skills in the ancient paths of the wild."
-#gcost 9980
-#rpcost 2
-#magicskill 4 2
-#magicskill 6 1
-#magicskill 9 1 -- Holy 1
-#custommagic 12032 100 -- 100% roll at Air, Water, Earth, Astral, Nature
-#custommagic 12032 10 -- 10% roll at Air, Water, Earth, Astral, Nature
-#researchbonus 4
-#nobadevents 15
 #end
 
 #selectmonster 1260 -- Ko Oni
@@ -42477,6 +42459,20 @@ Will grant a Sorcerer in same province a Book of Dark Secrets each month (Allows
 -- #summonlvl2 1274 -- Kuro Oni
 -- #end
 
+#newmonster
+#copystats 2092 -- Shikigami
+#copyspr 1380 -- Great Hawk
+#name "Shikioji"
+#descr "The Shikioji is a familiar spirit conjured by the Onmyo Hakase that manifests as a great supernatural hawk. They are more powerful than Shikigami and cannot be summoned by less powerful mages, however they will serve them if instructed by their summoner. They will aid their masters in spellcasting and in battle will lend their strength to a master that casts the Communion Master spell."
+#comslave
+#holy
+#size 3
+#hp 15
+#str 11
+#regeneration 10
+#reinvigoration 5
+#end
+
 #selectmonster 2979 -- Onmyo Hakase
 #descr "The Onmyo Hakase claims to be the inventor of Onmyo astrology. He arrived with the first men to the land of the Bakemono and brought with him an ancient an powerful magical tradition. Sequestered in his mountain home for centuries he has emerged again to take the role of a Pretender God. Each month he can summmon Shikioji, powerful familiar spirits that will lend their strength to a master that casts the Communion Master spell. The Onmyo Hakase will always join any Communion as its Master.
 
@@ -42492,23 +42488,9 @@ Each month will grant a book of wise sayings to an Onmyo-ji in the same province
 #masterrit 2
 #diseaseres 100
 #commaster
-#summon1 6762 -- Shikioji
-#makemonsters2 6762 -- Shikioji
-#batstartsum2 6762 -- Shikioji
-#end
-
-#newmonster 6762
-#copystats 2092 -- Shikigami
-#copyspr 1380 -- Great Hawk
-#name "Shikioji"
-#descr "The Shikioji is a familiar spirit conjured by the Onmyo Hakase that manifests as a great supernatural hawk. They are more powerful than Shikigami and cannot be summoned by less powerful mages, however they will serve them if instructed by their summoner. They will aid their masters in spellcasting and in battle will lend their strength to a master that casts the Communion Master spell."
-#comslave
-#holy
-#size 3
-#hp 15
-#str 11
-#regeneration 10
-#reinvigoration 5
+#summon1 "Shikioji" -- Shikioji
+#makemonsters2 "Shikioji" -- Shikioji
+#batstartsum2 "Shikioji" -- Shikioji
 #end
 
 #newevent
@@ -42620,26 +42602,7 @@ Whilst site searching may discover 150 gold and 1D6 of each elemental gem (Candl
 #earthboost -1
 #end
 
-#selectmonster 3054 -- Firstborn of the Star
-#descr "The Firstborn of the Star was the first Starspawn to emerge from the Fallen Star. Time after time the Firstborn has returned to uncover and master the secrets of the Star. Mastering unfathomable arcana, it has donned a godly mantle and taken the role of a Pretender God. With the emergence of the Firstborn strange void-tainted Illithids have begun to appear. None yet know if this foretells victory or doom for the worshipers of the Void.
-
-Paths known are increased by 1 (Astral increased by 2)
-When awakens opens a Void Warp in Capital (Recruit Sacred Voidborn Illithids with Invulnerable 20, Magic Power and Life Drain attacks, S mage may summon 2 Elder Things)
-Summons 3 Voidborn Illithids each month
-Thrones within Dominion summon 1D6 Voidvborn Illithids each month
-"
-#gcost 120
-#startitem 253 -- Robe of Shadows
-#magicboost 53 1
-#magicboost 4 1
-#magicpower 1
-#diseaseres 100
-#undisleader 1
-#taskmaster 3
-#summon3 6763
-#end
-
-#newmonster 6763
+#newmonster
 #copystats 331 -- Illithid
 #copyspr 332 -- Starspawn
 #clearweapons
@@ -42659,6 +42622,25 @@ Thrones within Dominion summon 1D6 Voidvborn Illithids each month
 #weapon 63 -- Life Drain
 #end
 
+#selectmonster 3054 -- Firstborn of the Star
+#descr "The Firstborn of the Star was the first Starspawn to emerge from the Fallen Star. Time after time the Firstborn has returned to uncover and master the secrets of the Star. Mastering unfathomable arcana, it has donned a godly mantle and taken the role of a Pretender God. With the emergence of the Firstborn strange void-tainted Illithids have begun to appear. None yet know if this foretells victory or doom for the worshipers of the Void.
+
+Paths known are increased by 1 (Astral increased by 2)
+When awakens opens a Void Warp in Capital (Recruit Sacred Voidborn Illithids with Invulnerable 20, Magic Power and Life Drain attacks, S mage may summon 2 Elder Things)
+Summons 3 Voidborn Illithids each month
+Thrones within Dominion summon 1D6 Voidvborn Illithids each month
+"
+#gcost 120
+#startitem 253 -- Robe of Shadows
+#magicboost 53 1
+#magicboost 4 1
+#magicpower 1
+#diseaseres 100
+#undisleader 1
+#taskmaster 3
+#summon3 "Voidborn"
+#end
+
 #newsite 1938
 #name "Void Warp"
 #path 4
@@ -42667,7 +42649,7 @@ Thrones within Dominion summon 1D6 Voidvborn Illithids each month
 #rarity 5
 #summon 752 -- Elder Thing
 #summon 752 -- Elder Thing
-#homemon 6763 -- Voidborn
+#homemon "Voidborn" -- Voidborn
 #end
 
 #newevent
@@ -42709,7 +42691,7 @@ Thrones within Dominion summon 1D6 Voidvborn Illithids each month
 #msg "Strange Illithids are being born."
 #notext
 #nolog
-#1d6units 6763 -- Voidborn
+#1d6units "Voidborn" -- Voidborn
 #end
 
 #selectmonster 3055 -- Grand Hydromancer
@@ -42944,7 +42926,7 @@ Magisters will always have S1 when recruited
 #diseaseres 100
 #end
 
-#newmonster 6764
+#newmonster
 #copystats 1646 -- Magister Arcane
 #copyspr 3059 -- Magister Supreme
 #clearmagic
@@ -42966,7 +42948,7 @@ Magisters will always have S1 when recruited
 #level 0
 #look 8
 #rarity 5
-#homecom 6764
+#homecom "Arcane Rector"
 #end
 
 #newevent
@@ -43264,7 +43246,7 @@ Temple forts within Dominion spawn slave units & mages whilst First Spawn is in 
 #montag 5333
 #end
 
-#newmonster 5311
+#newmonster 5983
 #copystats 720 -- Slave
 #copyspr 720 -- Slave
 #name "Lobo Guard"
@@ -43799,7 +43781,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #level 0
 #look 8
 #rarity 5
-#com 6752 -- Apprentice
+#com "Apprentice Mage" -- Apprentice
 #elementrange 1
 #end
 
@@ -43943,7 +43925,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #level 0
 #look 8
 #rarity 5
-#com 6752 -- Apprentice
+#com "Apprentice Mage" -- Apprentice
 #elementrange 1
 #end
 
@@ -44051,8 +44033,8 @@ Starting item Tome of Lore (Casts Record of Creation)
 #selectnation 10 -- Fomoria
 #addgod 8455 -- Sacred Grove
 #addgod 8349 -- Great Gull
-#cheapgod20 6807 -- Raven of the Underworld
-#cheapgod20 6810 -- Dog of the Underworld
+#cheapgod20 5979 -- Raven of the Underworld
+#cheapgod20 5976 -- Dog of the Underworld
 #end
 
 #selectnation 11 -- Tir Na nOg
@@ -44097,7 +44079,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #addgod 8456 -- Bloodstained Edifice
 #delgod 8449 -- Idol of the Sun
 #delgod 8448 -- Statue of the Sun and Rain
-#delgod 6807 -- Raven of the Underworld
+#delgod 5979 -- Raven of the Underworld
 #delgod 8261 -- Great Bear
 #cheapgod20 8454 -- Spirit of the Well
 #cheapgod20 156 -- Chthonic Cyclops
@@ -44221,7 +44203,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 245 -- Master Enchanter
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
-#delgod 6807 -- Raven of the Underworld
+#delgod 5979 -- Raven of the Underworld
 #addgod 8339 -- Lord of the Carrion Dead
 #addgod 8263 -- Mountain Lion
 #cheapgod20 8448 -- Statue of the Sun & Rain
@@ -44234,7 +44216,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 245 -- Master Enchanter
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
-#delgod 6807 -- Raven of the Underworld
+#delgod 5979 -- Raven of the Underworld
 #delgod 8261 -- Great Bear
 #cheapgod20 8353 -- Night Hunter
 #cheapgod20 8906 -- Monstrous Dog
@@ -44297,7 +44279,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #addgod 8348 -- First Valkyrie
 #addgod 8349 -- Great Gull
 #cheapgod20 8348 -- First Valkyrie
-#cheapgod20 6807 -- Raven of the Underworld
+#cheapgod20 5979 -- Raven of the Underworld
 #end
 
 #selectnation 32 -- EA Rus
@@ -44447,8 +44429,8 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 485 -- Great Enchantress
 #cheapgod20 8473 -- Unholy Reliquary
 #cheapgod20 8394 -- Returned King
-#cheapgod20 5100 -- Ghost Dragon
-#cheapgod20 5101 -- Banefire Dracolich
+#cheapgod20 "Ghost Dragon" -- Ghost Dragon
+#cheapgod20 "Banefire Dracolich" -- Banefire Dracolich
 #end
 
 #selectnation 55 -- Sceleria
@@ -44496,7 +44478,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #addgod 8456 -- Bloodstained Edifice
 #delgod 8449 -- Idol of the Sun
 #delgod 8448 -- Statue of the Sun and Rain
-#delgod 6807 -- Raven of the Underworld
+#delgod 5979 -- Raven of the Underworld
 #delgod 8261 -- Great Bear
 #cheapgod20 8410 -- Onyx Statue
 #cheapgod20 156 -- Chthonic Cyclops
@@ -44592,7 +44574,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #end
 
 #selectnation 67 -- Ind
-#delgod 8903 -- Drake Breeder
+#delgod "Drake Breeder" -- Drake Breeder
 #delgod 8307 -- Stone Magus
 #delgod 8509 -- Great Sage
 #delgod 8510 -- Crone
@@ -44666,7 +44648,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 8261 -- Great Bear
 #cheapgod20 8263
 #cheapgod20 8449 -- Statue of the Sun
-#cheapgod20 5100 -- Ghost Dragon
+#cheapgod20 "Ghost Dragon" -- Ghost Dragon
 #end
 
 #selectnation 73 -- MA Mictlan
@@ -44676,7 +44658,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 245 -- Master Enchanter
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
-#delgod 6807 -- Raven of the Underworld
+#delgod 5979 -- Raven of the Underworld
 #addgod 8263 -- Mountain Lion
 #cheapgod20 8445 -- Idol of Sustenance
 #cheapgod20 8448 -- Statue of Sun & Rain
@@ -44691,7 +44673,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 245 -- Master Enchanter
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
-#delgod 6807 -- Raven of the Underworld
+#delgod 5979 -- Raven of the Underworld
 #delgod 8261 -- Great Bear
 #cheapgod20 8373 -- Great Toad
 #cheapgod20 8353 -- Night Hunter
@@ -44864,8 +44846,8 @@ Starting item Tome of Lore (Casts Record of Creation)
 #end
 
 #selectnation 99 -- LA Lemuria
-#cheapgod20 5100 -- Ghost Dragon
-#cheapgod20 5101 -- Banefire Dracolich
+#cheapgod20 "Ghost Dragon" -- Ghost Dragon
+#cheapgod20 "Banefire Dracolich" -- Banefire Dracolich
 #addgod 8450 -- Emissary of Antrax
 #addgod 8473 -- Unholy Reliquary
 #addgod 8409 -- Tartarian
@@ -44896,7 +44878,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #addgod 8411 -- Antumbral
 #delgod 8449 -- Idol of the Sun
 #delgod 8448 -- Statue of the Sun and Rain
-#delgod 6807 -- Raven of the Underworld
+#delgod 5979 -- Raven of the Underworld
 #delgod 8261 -- Great Bear
 #cheapgod20 8411 -- Antumbral
 #end
@@ -44951,7 +44933,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #selectnation 106 -- LA Caelum
 #addgod 8418 -- Peacock Angel
 #delgod 8261 -- Great Bear
-#cheapgod20 6807 -- Raven of the Underworld
+#cheapgod20 5979 -- Raven of the Underworld
 #end
 
 #selectnation 107 -- Gath
@@ -45019,7 +45001,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 245 -- Master Enchanter
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
-#delgod 6807 -- Raven of the Underworld
+#delgod 5979 -- Raven of the Underworld
 #addgod 8263 -- Mountain Lion
 #cheapgod20 8373 -- Great Toad
 #cheapgod20 8448 -- Statue of Sun & Rain
@@ -45033,7 +45015,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 245 -- Master Enchanter
 #delgod 244 -- Arch Mage
 #delgod 485 -- Great Enchantress
-#delgod 6807 -- Raven of the Underworld
+#delgod 5979 -- Raven of the Underworld
 #delgod 8261 -- Great Bear
 #cheapgod20 8353 -- Night Hunter
 #cheapgod20 8373 -- Great Toad
@@ -45140,7 +45122,7 @@ Starting item Tome of Lore (Casts Record of Creation)
 #delgod 8512 -- Arch Mage
 #delgod 8513 -- Great Enchantress
 #delgod 8361 -- Divine Turtle
-#delgod 8922 -- Lacedon Mage
+#delgod "Lacedon Mage" -- Lacedon Mage
 #delgod 8317 -- Mermaid Watershape
 #addgod 8318 -- Mermaid Landshape
 #delgod 8261 -- Great Bear
