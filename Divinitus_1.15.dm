@@ -9975,14 +9975,14 @@ At end of each year followers will construct a Lumber Construct in the capital (
 Grandmother and Mother spawn Enlarged Spawn whilst Queen is awake (Amphibious, gain paralyze attack, lose 20% hp each month on land, on death Paralyze with aoe 4)
 "
 #gcost 170
-#domsummon 6730
+#domsummon 8506
 #magicskill 2 1
 #magicskill 4 3
 #woundfend 5
 #diseaseres 100
 #end
 
-#newmonster 6730
+#newmonster 8506
 #copystats 1404 -- Polypal Spawn
 #copyspr 1404 -- Polypal Spawn
 #drawsize 20
@@ -10002,24 +10002,24 @@ Grandmother and Mother spawn Enlarged Spawn whilst Queen is awake (Amphibious, g
 #weapon 672 -- Tiny Tentacle
 #end
 
-#selectmonster 6731
+#newmonster 5969
 #copystats 1401
 #copyspr 1401
 #name "Polypal Mother"
 #descr "The Polypal Mothers are the mothers of the whole race of the Aboleths. From their branches grow young polypal spawns that will grow into Aboleths over the centuries. The Mothers are immobile and do not communicate in any way. A constant mental wail that seems to have some effects on their spawns surrounds them, but even the oldest of the Aboleth Mind Lords do not fully comprehend the will of the Mothers. The Polypal Mother spawns a handful of polypal spawn each month. With the growing power of the Reawakened God, the numbers of monthly spawn are increasing. If a Polypal Mother is slain, she will let out a death wail that stuns everyone nearby."
 #domsummon 0
 #domsummon2 0
-#domsummon 6730
+#domsummon 8506
 #end
 
-#selectmonster 6732
+#newmonster 5968
 #copystats 2886
 #copyspr 2886
 #name "Grandmother"
 #descr "The Polypal Mothers are the mothers of the whole race of the Aboleths. From their branches grow young polypal spawns that will grow into Aboleths over the centuries. The Mothers are immobile and do not communicate in any way. A constant mental wail that seems to have some effects on their spawns surrounds them, but even the oldest of the Aboleth Mind Lords do not fully comprehend the will of the Mothers. The Polypal Mother spawns a handful of polypal spawn each month. With the growing power of the Reawakened God, the numbers of monthly spawn are increasing. If a Polypal Mother is slain, she will let out a death wail that stuns everyone nearby. The Grandmothers are ancient Polypal Mothers. They seem to have a strange understanding of the arcane arts."
 #domsummon 0
 #domsummon2 0
-#domsummon2 6730
+#domsummon2 8506
 #end
 
 #newevent
@@ -10032,7 +10032,7 @@ Grandmother and Mother spawn Enlarged Spawn whilst Queen is awake (Amphibious, g
 #msg "Transform Mother"
 #notext
 #nolog
-#transform 6731
+#transform 5969
 #end
 
 #newevent
@@ -10045,12 +10045,12 @@ Grandmother and Mother spawn Enlarged Spawn whilst Queen is awake (Amphibious, g
 #msg "Transform Mother"
 #notext
 #nolog
-#transform 6731
+#transform 5969
 #end
 
 #newevent
 #rarity 5
-#req_targmnr 6731
+#req_targmnr 5969
 #req_nomnr 1402 -- Polypal Queen
 #nation -2
 #req_pop0ok
@@ -10070,7 +10070,7 @@ Grandmother and Mother spawn Enlarged Spawn whilst Queen is awake (Amphibious, g
 #msg "Transform Grandmother"
 #notext
 #nolog
-#transform 6732
+#transform 5968
 #end
 
 #newevent
@@ -10083,12 +10083,12 @@ Grandmother and Mother spawn Enlarged Spawn whilst Queen is awake (Amphibious, g
 #msg "Transform Grandmother"
 #notext
 #nolog
-#transform 6732
+#transform 5968
 #end
 
 #newevent
 #rarity 5
-#req_targmnr 6732
+#req_targmnr 5968
 #req_nomnr 1402 -- Polypal Queen
 #nation -2
 #req_pop0ok
@@ -10217,17 +10217,19 @@ Idol summons Sacred Boars & Wolves each month, up to Dominion candles)
 #moregrowth 1
 #undisleader 1
 #onebattlespell 187
-#domsummon 6797 -- Sacred Wolf
+#domsummon 7762 -- Sacred Wolf
 #domsummon2 1807 -- Sacred Boar
 #domsummon20 1309 -- Jotun Wolf
 #end
 
-#newmonster 6797
+#newmonster 7762
 #copystats 1224 -- Dire Wolf
 #copyspr 1224 -- Dire Wolf
 #name "Sacred Wolf"
 #descr "A great and ferocious wolf, sacred to the followers of the Awakening God."
 #holy
+#transformation 0
+#montag 1036
 #end
 
 #newevent
@@ -11188,7 +11190,7 @@ Whilst Sea of Ice is cast, Ice elementals will attack coastal provinces owned by
 #itemslots 794624 -- 2 misc, head
 #end
 
-#newmonster 6816
+#newmonster 5966
 #copystats 1233 -- Lord of the Waves
 #copyspr 2847 -- Protogenos of the Sea
 #name "Protogenos of the Sea"
@@ -11236,14 +11238,14 @@ Whilst Sea of Ice is cast, Ice elementals will attack coastal provinces owned by
 #msg "Protogenos gains amphibian."
 #notext
 #nolog
-#forcetransform 6816
+#forcetransform 5966
 #end
 
 #newevent
 #rarity 5
 #req_godismnr 2847 -- Protogenos of the Sea
-#req_godismnr 6816 -- Protogenos of the Sea
-#req_targmnr 6816 -- Protogenos of the Sea
+#req_godismnr 5966 -- Protogenos of the Sea
+#req_targmnr 5966 -- Protogenos of the Sea
 #req_noench 18 -- Wrath of the Sea
 #nation -2
 #req_pop0ok
@@ -11256,8 +11258,8 @@ Whilst Sea of Ice is cast, Ice elementals will attack coastal provinces owned by
 #newevent
 #rarity 5
 #req_godismnr 2847 -- Protogenos of the Sea
-#req_godismnr 6816 -- Protogenos of the Sea
-#req_targmnr 6816 -- Protogenos of the Sea
+#req_godismnr 5966 -- Protogenos of the Sea
+#req_targmnr 5966 -- Protogenos of the Sea
 #req_hostileench 18 -- Wrath of the Sea
 #nation -2
 #req_pop0ok
@@ -11271,7 +11273,7 @@ Whilst Sea of Ice is cast, Ice elementals will attack coastal provinces owned by
 #rarity 5
 #req_mnr 2847 -- Protogenos of the Sea
 #req_godisnotmnr 2847 -- Protogenos of the Sea
-#req_godisnotmnr 6816 -- Protogenos of the Sea
+#req_godisnotmnr 5966 -- Protogenos of the Sea
 #req_friendlyench 47
 #req_owncapital 1
 #nation -2
@@ -11284,9 +11286,9 @@ Whilst Sea of Ice is cast, Ice elementals will attack coastal provinces owned by
 
 #newevent
 #rarity 5
-#req_mnr 6816 -- Protogenos of the Sea
+#req_mnr 5966 -- Protogenos of the Sea
 #req_godisnotmnr 2847 -- Protogenos of the Sea
-#req_godisnotmnr 6816 -- Protogenos of the Sea
+#req_godisnotmnr 5966 -- Protogenos of the Sea
 #req_friendlyench 47
 #req_owncapital 1
 #nation -2
@@ -11301,8 +11303,8 @@ Whilst Sea of Ice is cast, Ice elementals will attack coastal provinces owned by
 #rarity 5
 #req_godismnr 2847 -- Protogenos of the Sea
 #req_targmnr 2847 -- Protogenos of the Sea
-#req_godismnr 6816 -- Protogenos of the Sea
-#req_targmnr 6816 -- Protogenos of the Sea
+#req_godismnr 5966 -- Protogenos of the Sea
+#req_targmnr 5966 -- Protogenos of the Sea
 #req_hostileench 47
 #req_owncapital 1
 #nation -2
@@ -11316,7 +11318,7 @@ Whilst Sea of Ice is cast, Ice elementals will attack coastal provinces owned by
 #rarity 5
 #req_mnr 2847 -- Protogenos of the Sea
 #req_godisnotmnr 2847 -- Protogenos of the Sea
-#req_godisnotmnr 6816 -- Protogenos of the Sea
+#req_godisnotmnr 5966 -- Protogenos of the Sea
 #req_ench 28 -- Sea of Ice
 #req_coast 1
 #nation 2
@@ -11333,9 +11335,9 @@ Whilst Sea of Ice is cast, Ice elementals will attack coastal provinces owned by
 
 #newevent
 #rarity 5
-#req_mnr 6816 -- Protogenos of the Sea
+#req_mnr 5966 -- Protogenos of the Sea
 #req_godisnotmnr 2847 -- Protogenos of the Sea
-#req_godisnotmnr 6816 -- Protogenos of the Sea
+#req_godisnotmnr 5966 -- Protogenos of the Sea
 #req_ench 28 -- Sea of Ice
 #req_coast 1
 #nation 2
@@ -11673,7 +11675,7 @@ If controls Second Sun may summon another Sun Spirit each month (candles x 5% ch
 #moreheat 2
 #end
 
-#newmonster 6733
+#newmonster 5967
 #copystats 2626 -- Flame Spirit
 #copyspr 2626 -- Flame Spirit
 #clearmagic
@@ -11703,7 +11705,7 @@ If controls Second Sun may summon another Sun Spirit each month (candles x 5% ch
 #1d3units 527 -- Will o' the Wisp
 #1d6units 527 -- Will o' the Wisp
 #2d3units 527 -- Will o' the Wisp
-#2com 6733 -- Sun Spirits
+#2com 5967 -- Sun Spirits
 #end
 
 #newevent
@@ -11719,7 +11721,7 @@ If controls Second Sun may summon another Sun Spirit each month (candles x 5% ch
 #nolog
 #1unit 527 -- Will o' the Wisp
 #2d3units 527 -- Will o' the Wisp
-#com 6733 -- Sun Spirit
+#com 5967 -- Sun Spirit
 #end
 
 #newevent
@@ -12131,6 +12133,14 @@ Casts Master Enslave vs 25% of enemies in battle (Void Sanity grants immunity)
 #holyboost -1
 #end
 
+#newmonster
+#copystats 3775
+#copyspr 3775
+#name "Crystal Battery"
+#descr "This crystal formation has been attuned to the Crystal Soul and can be used by spellcasters. The resonance will enhance their magical skills."
+#comslave
+#end
+
 #selectmonster 3639 -- Crystal Soul
 #descr "The Crystal Soul is a powerful spirit that inhabits an enormous subterranean crystal. The crystal was found by a subterranean race a long time ago and has been worshiped as the protector of their cavernous realm. The spirit cannot leave the crystal it inhabits, but it can possess willing targets in order to make its will heard and to perform tasks such as forging items for enchantment. The spirit is tremendously strong in its Dominion and is also magically powerful. In a physical battle, the crystal would be difficult to destroy, even though it cannot fight back. The Soul is connected to its followers and will empower all friendly mages in battle. Furthermore, around its temples will form crystals that resonate with the soul, allowing mages to tap into the resonance for greater power. It is worshipped by Crystal Priests that serve it in the Crystal Cavern, a cave rich in gemstones that will provide great wealth and magical power to its followers.
 
@@ -12142,7 +12152,7 @@ Temple cave provinces will gain a Crystal Battery each month (25hp Comslave, max
 #diseaseres 100
 #woundfend 5
 #commaster
-#batstartsum2d6 6729
+#batstartsum2d6 "Crystal Battery"
 #magicpower 1
 #onebattlespell 194 -- Battle Power of Spheres
 #end
@@ -12178,14 +12188,6 @@ Temple cave provinces will gain a Crystal Battery each month (25hp Comslave, max
 #look 6
 #end
 
-#newmonster 6729
-#copystats 3775
-#copyspr 3775
-#name "Crystal Battery"
-#descr "This crystal formation has been attuned to the Crystal Soul and can be used by spellcasters. The resonance will enhance their magical skills."
-#comslave
-#end
-
 #newevent
 #rarity 5
 #req_godismnr 3639 -- Crystal Soul
@@ -12203,7 +12205,7 @@ Temple cave provinces will gain a Crystal Battery each month (25hp Comslave, max
 #newevent
 #rarity 5
 #req_godismnr 3639 -- Crystal Soul
-#req_5monsters 6729 -- Crystal Battery
+#req_5monsters "Crystal Battery" -- Crystal Battery
 #req_site 1
 #nation -2
 #req_pop0ok
@@ -12222,7 +12224,7 @@ Temple cave provinces will gain a Crystal Battery each month (25hp Comslave, max
 #msg "Battery appear. [Unusual Crystal Formation]"
 #notext
 #nolog
-#1unit 6729
+#1unit "Crystal Battery"
 #end
 
 #newevent
@@ -12247,7 +12249,7 @@ Temple cave provinces will gain a Crystal Battery each month (25hp Comslave, max
 #msg "Crystal Priest."
 #notext
 #nolog
-#2d6units 6729
+#2d6units "Crystal Battery"
 #end
 
 #selectmonster 3876 -- Sacred Geyser
@@ -18893,7 +18895,7 @@ May forge magic items whilst at a laboratory (5% x candles chance each month, le
 #magicitem 4
 #end
 
-#newmonster 6783
+#newmonster
 #copystats 3111 -- Gigante Lochos
 #copyspr 3110 -- Gigante Hoplite
 #name "Forge Brother"
@@ -18908,7 +18910,7 @@ May forge magic items whilst at a laboratory (5% x candles chance each month, le
 #path 0
 #level 0
 #rarity 5
-#com 6783
+#com "Forge Brother"
 #look 5
 #end
 
@@ -20517,7 +20519,7 @@ Priests preaching in a Forest province may summon 1D6 Sacred Wolves & Sacred Boa
 #magicboost 6 1
 #moregrowth 2
 #diseaseres 100
-#domsummon 6797 -- Sacred Wolf
+#domsummon 7762 -- Sacred Wolf
 #domsummon2 1807 -- Sacred Boar
 #domsummon20 1084 -- Moose
 #end
@@ -20554,7 +20556,7 @@ Priests preaching in a Forest province may summon 1D6 Sacred Wolves & Sacred Boa
 #msg "Forest preach summons"
 #notext
 #nolog
-#1d6units 6797 -- Sacred Wolf
+#1d6units 7762 -- Sacred Wolf
 #1unit 1807 -- Sacred Boar
 #end
 
@@ -21984,7 +21986,7 @@ Capital gains Primal Forest site (N3, summon Woodland Spirit)
 Golden Boar (E2H3, Domsummons Boars), Rams Head Serpent (N2H3, Domsummons Cerastes) and Great White Stag (G2H3, Domsummons Deer) all appear in first year
 "
 #gcost 250
-#domsummon 6797 -- Sacred Wolf
+#domsummon 7762 -- Sacred Wolf
 #heal
 #att 14
 #def 11
@@ -25041,7 +25043,7 @@ Temples gain Desert Statue priest-commander (Immobile, S2H2, Casts Solar Eclipse
 #diseaseres 100
 #end
 
-#newmonster 6782
+#newmonster
 #copystats 768 -- Watcher
 #copyspr 768 -- Watcher
 #name "Desert Statue"
@@ -25057,13 +25059,13 @@ Temples gain Desert Statue priest-commander (Immobile, S2H2, Casts Solar Eclipse
 #req_godismnr 3388 -- Ilah of the Moon
 #req_land 1
 #req_targorder 19 -- Build Temple
-#req_nomonster 6782 -- Statue
+#req_nomonster "Desert Statue" -- Statue
 #nation -2
 #req_pop0ok
 #msg "Statue Built"
 #notext
 #nolog
-#com 6782 -- Statue
+#com "Desert Statue" -- Statue
 #end
 
 #newevent
@@ -25073,9 +25075,9 @@ Temples gain Desert Statue priest-commander (Immobile, S2H2, Casts Solar Eclipse
 #req_dominion 1
 #req_domchance 5
 #nation -2
-#req_nomonster 6782 -- Statue
+#req_nomonster "Desert Statue" -- Statue
 #msg "A divine statue has been erected at the temple in ##landname##."
-#com 6782 -- Statue
+#com "Desert Statue" -- Statue
 #end
 
 #newevent
@@ -32761,7 +32763,7 @@ Werewolf commanders in Dominion gain N1S1H2
 #magicskill 4 1
 #magicskill 6 1
 #domsummon2 633 -- Werewolves
-#domsummon 6797 -- Sacred Wolf
+#domsummon 7762 -- Sacred Wolf
 #heal
 #diseaseres 100
 #onebattlespell 190 -- Blessing of the Bitch Queen
@@ -32778,7 +32780,7 @@ Werewolf commanders in Dominion gain N1S1H2
 #msg "Upon completion of the temple the high priest has gained the blessing of Lycanthropy."
 #nolog
 #com 633 -- Werewolf
-#6d6units 6797 -- Sacred Wolf
+#6d6units 7762 -- Sacred Wolf
 #end
 
 #newevent
