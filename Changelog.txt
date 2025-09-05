@@ -1,3 +1,15 @@
+V1.15.1
+
+Fountain of Blood: Sanguine Horrors gained disease resistance
+Firstborn of the Star: Cost 120 -> 190
+Living Reef: More recruitable coral gurad variants at the Coral Barracks
+Added descriptions to variants of Master Enchanter, Arch Mage, Great Sage and Great Enchantress
+Fixed Oracle's Seer description
+Fixed Neter of the Moon and Annunaki of the Morning Star special item ids
+DE:
+Disabled some unmodded pretenders
+Fixed some duplicates
+
 V1.15.0
 
 Dominions Enhanced compatability (enable Divinitus DE version after DE itself)
