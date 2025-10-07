@@ -1,3 +1,51 @@
+V1.15.2
+
+--- Thanks to nsteens for Sombre Warhammer mod compatibility ---
+
+Baphomet: Cost: 180 -> 170; Summons Fallen Angel on the next turn after awakening
+Banefire Dracolich: Cost: 250 -> 260; Lost poor amphibian; Fear 15 -> 10
+Emissary of Antrax: Cost 230 -> 250; Fixed mobile form
+Cromlech: Now amphibian
+Grigori: 
+	Cost: 260 -> 280
+	Magic paths: 1E -> 1W, 1N -> 1G
+	Can start imprisoned only 
+	While awake: Blood 9 research level is reached and 177 blood slaves are ready for sacrifice, Lords of Civilization will be released one after another at the capital; 50d6 slaves will be sacrificed each time
+Unseelie Empress: 
+	Cost: 180 -> 220; 
+	Got seduction
+	Got Fay Royalty 2
+    Unseelie Fortress: spreads cold & doesnt need to be at throne now, recruitment of unseelie soldiers, knights and mischief-makers requires min cold (1-3); 
+    Unseelie knights: Name: Winter Knight; Cost: 75 -> 130; Holy, holy cost 2; Requre Unseelie Empress in the game to recruit; Better leader; Rides sacred hovering steed
+    Unseelie soldiers: Cost: 20 -> 45
+    Forgotten Palace enchantment removed form requriments for Unseelie Fort
+Seelie Empress: Got Fay Royalty 2
+Matrona of the Healing Spring: Fixed starting item
+Raven of the Underworld: Fixed growing forms
+Dog of the Underworld: Fixed growing forms
+Horned One: Great White Stag name changed
+Great Creator: Fixed description
+Worm Soul: Fixed transformation
+Solar Disc: Fixed description
+Wyrm: Fixed starting site
+Tathagata of Light: Fixed
+Fixed some typos
+
+--- Dominions Enhanced ---
+White Tiger: Should be Divinitus version now
+
+V1.15.1
+
+Fountain of Blood: Sanguine Horrors gained disease resistance
+Firstborn of the Star: Cost 120 -> 190
+Living Reef: More recruitable coral gurad variants at the Coral Barracks
+Added descriptions to variants of Master Enchanter, Arch Mage, Great Sage and Great Enchantress
+Fixed Oracle's Seer description
+Fixed Neter of the Moon and Annunaki of the Morning Star special item ids
+DE:
+Disabled some unmodded pretenders
+Fixed some duplicates
+
 V1.15.0
 
 Dominions Enhanced compatability (enable Divinitus DE version after DE itself)
