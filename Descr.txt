@@ -20,4 +20,8 @@ Monster IDs: 5966+
 [h3]Now Dominions Enhanced compatible![/h3] (Almost fully, only DE team can help make it full)
 Just use DE mod version and enable it after DE itself. 
 
+[h3]Now Sombre Warhammer compatible![/h3]
+Thanks to nsteens
+Just use Warhammer mod version and enable it after Sombre Warhammer itself. 
+
 Github: https://github.com/RonhulMaggot/Divinitus
