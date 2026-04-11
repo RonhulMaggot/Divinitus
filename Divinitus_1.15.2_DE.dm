@@ -1,5 +1,5 @@
 #modname "Divinitus_1.15.2_DE"
-#description "Use with Dominions Enchanced only. Load first. A mod revising Pretenders to grant them all more unique and interesting powers. Including additional Pretenders from Pretenders Enhanced, please report any bugs or balance issues to Ronhul Maggot."
+#description "Use with Dominions Enhanced only. Load first. A mod revising Pretenders to grant them all more unique and interesting powers. Including additional Pretenders from Pretenders Enhanced, please report any bugs or balance issues to Ronhul Maggot."
 #icon "Dbanner.tga"
 #version 1.15.2
 
@@ -8783,7 +8783,7 @@ If controls Perpetual Storm, Coastal forts generate 100% more tax than usual
 #req_godismnr 8259 -- Lighthouse
 #req_coast 1
 #req_fort 1
-#req_friendlyench 16 -- Perpetual Storm
+#req_friendlyench 708 -- Perpetual Storm
 #req_coast 1
 #nation -2
 #req_dominion 1
@@ -9024,7 +9024,7 @@ Other glamour mages at temples within friendly dominion will gain glamour boosts
 #decscale 4 -- +Luck
 #end
 
-#newmonster 6796
+#newmonster 6000
 #copystats 2468 -- Druid
 #copyspr 326 -- Blood Slave
 #clearmagic
@@ -9060,7 +9060,7 @@ Other glamour mages at temples within friendly dominion will gain glamour boosts
 #newevent
 #rarity 5
 #req_godismnr 158 -- Oracle
-#req_targmnr 6796 -- Seer
+#req_targmnr 6000 -- Seer
 #req_targnopath4 7
 #req_temple 1
 #nation -2
@@ -9068,7 +9068,7 @@ Other glamour mages at temples within friendly dominion will gain glamour boosts
 #msg "##godname## has taught ##targname## secrets of glamour magic!"
 #notext
 #nolog
-#glamourboost 6796
+#glamourboost 6000
 #end
 
 #newevent
@@ -9078,11 +9078,11 @@ Other glamour mages at temples within friendly dominion will gain glamour boosts
 #req_owncapital 1
 #req_temple 1
 #nation -2
-#req_nomonster 6796
+#req_nomonster 6000
 #msg "Seer Appears!"
 #notext
 #nolog
-#com 6796 -- Seer
+#com 6000 -- Seer
 #end
 
 #newevent
@@ -9093,11 +9093,11 @@ Other glamour mages at temples within friendly dominion will gain glamour boosts
 #req_targorder 19 -- Build Temple
 #nation -2
 #req_pop0ok
-#req_nomonster 6796
+#req_nomonster 6000
 #msg "Druidic Seer Appears!"
 #notext
 #nolog
-#com 6796 -- Seer
+#com 6000 -- Seer
 #end
 
 #newevent
@@ -9105,9 +9105,9 @@ Other glamour mages at temples within friendly dominion will gain glamour boosts
 #req_godismnr 158
 #req_temple 1
 #nation -2
-#req_nomonster 6796
+#req_nomonster 6000
 #msg "A new seer has been appointed to the temple at ##landname##."
-#com 6796 -- Seer
+#com 6000 -- Seer
 #end
 
 -- ORIGINAL DOM 4 -- 
@@ -27505,7 +27505,7 @@ Coastal provinces may be settled by Kappa, displacing original inhabitants (1% x
 #taxboost 100
 #end
 
-#selectmonster 7282 -- White Tiger
+#selectmonster 3928 -- White Tiger
 #descr "The White Tiger is one of the Legendary Guardian animals that manifested at the dawn of time, when monsters and giants roamed the world. Worshiped by the first men as Divine protectors, the Guardian animals allowed mankind to develop civilization free from the predation of monstrous beings. When the previous Pantokrator rose to power he imprisoned and banished all that threatened his power and the Legendary Guardian animals were forever imprisoned. Now, with the Pantokrator gone, the White Tiger is breaking free to once again protect its subjects by donning the mantle of God itself. It is taller than an elephant and can tear through the heaviest armor with its teeth and claws, however it is also a stealthy hunter that can pass unnoticed. The White Tiger is a symbol of the Autumn and is stronger in the fall months. The roar of the beast strikes fear into the hearts of the enemy. It is surrounded by sacred tigers and more will flock to it as its Dominion grows strong. Provinces where these tigers gather will see their fortunes rise and auspicious events will become common.
 
 Summons sacred White Tigers up to Dominion candles each month (Bringer of Fortune 1%)
@@ -27521,7 +27521,7 @@ Provinces containing at least 5 White Tigers gain +1 Luck scale & Growth scale e
 #domsummon 7528 -- White Tiger
 #end
 
-#selectmonster 3928
+#selectmonster 7528
 #spr1 "./ExtraPretenders/EEWTiger.tga"
 #spr2 "./ExtraPretenders/EEWTiger2.tga"
 #name "White Tiger"
@@ -44232,3 +44232,1597 @@ Starting item: Wand of Transmutation (Casts Curse of the Frog Prince)
 #selectmonster 8603 -- Titan of the Underworld Rivers
 #homerealm 0
 #end
+
+--#region EXTRA NATIONAL PRETENDERS
+
+#selectmonster 6523 -- Marid Sultan
+#descr "The Marid Sultan is an ancient being from the dawn of time. He is among the first of the children of Iblis and his sovereignty over the Jinn was uncontested until the rise of the Ifrit and the War of the Unseen. After losing his throne he was banished from the City of Brass along with his brethren and closest servants. Fleeing, they found refuge beneath the waves and have lain hidden there for millenia. The water Jinn known as Ghawwas serve him and one will venture from the depths each month to serve him. Now, with the Pantokrator gone the Marid Sultan can once more ascend the throne, however this time it will be the Throne of Heaven and all shall bow before his might.
+
+Summons 1 Ghawwas each month."
+#gcost 250
+#djinn -- bodytype for hit locations
+#summon1 6512 -- Ghawwas
+#end
+
+
+#selectmonster 8255 -- Great Dreamer
+#descr "The Great Dreamer is a Dreamspeaker of great power and vision. He has foreseen the Ascension War and determined that he must lead his people to protect them from the ravages of the false Pretenders. His knowledge of the Dreamtime is unparalleled and he has now mastered his own mortality to take on the mantle of a Pretender God. He can foresee the future in dreams and prophetic visions and can reach through the dreaming with his spells to far places. His connection to the Dreamtime grants him special powers, however this connection is weakened in lands hostile to magic. The Great Dreamer is a master of magical research and is often adept in several of the magic paths. His Dreaming is so strong that other Dreamers will find their powers increased as their connection to the Dreamtime grows stronger.
+
+Magic paths known are increased by 1.
+Gains +5 research per magic scale.
+Dreamers become S2 after recruitment."
+#humanoid
+#gcost 150
+#magicpower 1
+#magicstudy 5
+#magicboost 53 1
+#startage 100
+#nobadevents 75
+#allrange 2
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8255 -- Great Dreamer
+#req_targmnr 6693 -- Dreamer
+#req_targnopath2 4 -- S1
+#nation -2
+#req_pop0ok
+#msg "Astral boost"
+#notext
+#nolog
+#astralboost -1
+#end
+
+
+#selectmonster 8256  -- Great Ancestor
+#descr "This being is the ancestor of the Alcheran people and has existed in the Dreamtime since the days when Monsters and Giants roamed the earth. Perhaps it was once human, or perhaps it is the being from which all humans were formed. Now it has returned from the Dreamtime to lead Alchera as a Pretender God, in order to extend its Dominion from the Dreamtime to the world of men. The Ancestor is ethereal and is almost impossible to destroy within its Dominion. Should its body be physically destroyed it will reform in the Dreamtime.
+
+Summons Yowie up to Dominion candles each month.
+If awake, appears with 2 Dreamhunters (A1S1D1H1, 100%FASN assassins).
+Each month a Dreamhunter may appear in the capital (5% x candles chance)."
+#humanoid
+#gcost 190
+#domsummon 6704 -- Yowie
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8256
+#req_monster 8256 -- Great Ancestor
+#req_pregame
+#req_owncapital 1
+#nation -2
+#msg "Starting Dreamhunters"
+#notext
+#nolog
+#2com 6700 -- Dreamhunter
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8256
+#req_owncapital 1
+#req_dominion 1
+#req_domchance 5
+#req_pop0ok
+#nation -2
+#msg "A Dreamhunter has appeared from the Dreamtime to serve ##godname##."
+#nolog
+#com 6700 -- Dreamhunter
+#end
+
+#selectmonster 8257 -- Uluru
+#descr "The Uluru is a great spirit that inhabits a stone sacred to the people of Alchera. It has stood for millenia and is strongly connected to the Dreamtime. The spirit cannot leave the stone, but it can possess willing targets in order to make its will heard and to perform tasks such as forging items for enchantment. The spirit is tremendously strong in its Dominion and it is also magically powerful. Bunyips, creatures of both the Dreamtime and of this world, serve it and will appear at the foot of the Uluru and at its temple as its Dominion grows strong. In a physical battle, the Uluru would probably be almost impossible to destroy.  The Uluru is completely immobile and cannot move even by magic.
+
+Summons Bunyips up to half Dominion candles each month.
+Temples may summon a Bunyip each month (8% x candles chance)."
+#domsummon2 6706 -- Bunyips
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8257 -- Uluru
+#req_land 1
+#req_temple 1
+#req_dominion 1
+#req_domchance 8
+#req_pop0ok
+#nation -2
+#msg "A Bunyip has appeared from the Dreamtime to serve ##godname##."
+#notext
+#nolog
+#1unit 6706 -- Bunyip
+#end
+
+#selectmonster 8258 -- Great Burrower
+#descr "Once there was a great warrior that was entrusted with the guardianship of Alchera by the Pantokrator. The warrior defended the land well, however over time he grew proud and arrogant. He was soon approached by a cloaked stranger who asked to share his tent and food on a cold and stormy night. The guardian refused, reasoning that one as mighty as he should not have to share. However, the stranger revealed itself as the Pantokrator and punished the warrior for his pride. He was given the form of a great beast and made to burrow in the earth for shelter and food forevermore. Now, with the Pantokrator gone, reason is returning to the Great Burrower and he has returned to guard the land once more. Worshipped by the tribes he seeks the Throne of Heaven to restore his form and to rule over all. When confronted by a defensive fortification he will burrow beneath it to weaken the foundations, acting as 100 men during the siege. The blessing of the Burrower will always grant health and physical prowess in addition to any other blessings chosen.
+
+Bless gains +4hp, +2str."
+#godsite 1974
+#end
+
+
+
+#selectmonster 8259 -- Lighthouse
+#descr "The Lighthouse is a powerful spirit that inhabits a enormous stone building and acts as a guide to sailors. The spirit is tremendously strong in its Dominion and has power over starry skies and stormy seas. In a physical battle, the lighthouse would probably be impossible to destroy, even though it cannot strike back without using magic. Across the world the beams will light the way and those that travel by sea will find their journeys safer and less perilous. The Lighthouse is completely immobile and cannot move even by magic. The beams of light will reveal many secrets and those present with the Lighthouse may gain in magical knowledge. Should a Perpetual Storm be brought down upon the world sailors would surely flock to the lighthouse for safety.
+
+Teaches commanders in same province in Astral (1% x candles, max 1) Air (3% x candles, max 2) and Water (5% x candles, max 3).
+Cannot move via teleportation.
+Captains, Admirals, Chartmakers and Navigators gain Windcatcher Sail (+1 sailing distance).
+If Perpetual Storm in play, Lighthouse's province generates 50% more tax than usual."
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8259 -- Lighthouse
+#req_monster 8259 -- Lighthouse
+#req_targgod 0
+#req_targnopath4 1
+#req_land 1
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 3
+#msg "##godname## has taught ##targname## secrets of air magic!"
+#nolog
+#airboost -1
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8259 -- Lighthouse
+#req_monster 8259 -- Lighthouse
+#req_targgod 0
+#req_targnopath4 2
+#req_land 1
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 5
+#msg "##godname## has taught ##targname## secrets of water magic!"
+#nolog
+#waterboost -1
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8259 -- Lighthouse
+#req_monster 8259 -- Lighthouse
+#req_targgod 0
+#req_targnopath4 4
+#req_land 1
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 1
+#msg "##godname## has taught ##targname## secrets of astral magic!"
+#nolog
+#astralboost -1
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8259 -- Lighthouse
+#req_targnoitem 1047 -- Windcatcher Sail
+#req_targmnr 6727 -- Captain
+#req_targmnr 6728 -- Admiral
+#req_targmnr 6737 -- Chartmaker
+#req_targmnr 6738 -- Navigator
+#nation -2
+#req_pop0ok
+#msg "Commander Gains [Windborne Sail]"
+#notext
+#nolog
+#addequip 9
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8259 -- Lighthouse
+#req_monster 8259 -- Lighthouse
+#req_ench 16 -- Perpetual Storm
+#req_coast 1
+#nation -2
+#req_dominion 1
+#msg "Beams of light from ##godname## have pierced the great storm raging across the world and sailors flock to ##landname##!"
+#nolog
+#taxboost 50
+#end
+
+-- Chaco Gods
+
+#selectmonster 8260 -- Totem
+#descr "The Totem is a spirit inhabiting a carved pole decorated with many historical and mythological figures. Throughout history the pole has been carved to commemorate great events and the spirit within has grown strong. Now it commands power over the air, the earth and death itself to better serve those that offer it worship. The spirit cannot leave the Totem, but it can possess willing targets in order to make its will heard and to perform tasks such as forging items for enchantment. The spirit is tremendously strong in its Dominion and it is also magically powerful, able to bestow great blessings up its followers. In a physical battle, the Totem would be difficult to destroy, and will curse all those that mean it harm even though it cannot strike back.
+
+Air, Earth and Death paths start 1 higher when choosing blessings.
+Casts Doom in battles."
+#miscshape
+#gcost 230
+#onebattlespell 883 -- Doom
+#magicskill 1 2
+#magicboost 1 -1
+#magicskill 3 2
+#magicboost 3 -1
+#magicskill 5 2
+#magicboost 5 -1
+#end
+
+#selectmonster 8264 -- Wuya of the Clouds and Land
+#descr "The Wuya are magically powerful spirit beings and are the leaders of the Kátsinam. The Wuya of the Clouds and Land was given power over the movement of the clouds by a previous Pantokrator. So great was this power that mankind turned away from the Pantokrator and gave the Wuya their prayers instead. Furiously he imprisoned the Wuya for eternity. But now, with the Pantokrator gone, the prison is crumbling and the Wuya can return to lead his people. As spirits of nature the Kátsinam are protected against mundane weapons and will cause nearby plants to ensnare attackers. The Wuya can call a Kátsina Warrior to serve him each month. He is always surrounded by a raging storm in battle and can call lightning from the clouds. His highest priests will be granted a special charm that will grant flight through even the most severe storm.
+
+Casts Storm in battles.
+H3 Priests gain Cloud Charm (Grants Stormpower 3, Shock resist 5 and Flying).
+May call 1 Katsina Warrior each month.
+Entangles attackers."
+#stormpower 3
+#onebattlespell 545 -- Storm
+#makemonsters1 6794 -- Katsina Warrior
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8264 -- Wuya of the Clouds and Land
+#req_targpath3 9
+#req_targnoitem 1048
+#nation -2
+#req_pop0ok
+#msg "H3 Priests gain [Cloud Charm]"
+#notext
+#nolog
+#addequip 9
+#end
+
+#selectmonster 8265 -- Wuya of the Winter
+#descr "The Wuya are magically powerful spirit beings and are the leaders of the Kátsinam. The Wuya of the Winter was given power over the coming of winter by a previous Pantokrator. In fear mankind turned away from the Pantokrator and gave the Wuya their prayers instead. Furiously he imprisoned the Wuya for eternity. But now, with the Pantokrator gone, the prison is crumbling and the Wuya can return to lead his people. As spirits of nature the Kátsinam are protected against mundane weapons and will cause nearby plants to ensnare attackers. The Wuya emits the freezing cold of midwinter, and can call Kátsina Warriors to serve him. His blessings will always grant protection from both the cold and the burning heat in addition to other blessings chosen. During the winter provinces containing a temple dedicated to the Wuya of Winter will find water gems appearing amongst the snowdrifts.
+
+Bless gains 10 cold resist & 10 fire resist.
+Temples in winter create 1D3 water gems.
+May call 1 Katsina Warrior each month.
+Entangles attackers."
+#makemonsters1 6794 -- Katsina Warrior
+#godsite 1918 -- Blessing of the Lord
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8265
+#req_temple 1
+#req_land 1
+#nation -2
+#req_pop0ok
+#req_season 3
+#msg "Temple gems"
+#notext
+#nolog
+#1d3vis 5 -- death gems
+#end
+
+
+#selectmonster 8266 -- Wuya of the Sun
+#descr "The Wuya are magically powerful spirit beings and are the leaders of the Kátsinam. The Wuya of the Sun was given power over the warmth and power of the sun by a previous Pantokrator. The Wuya was generous with his gifts and eventually mankind turned away from the Pantokrator and gave the Wuya their prayers instead. Furiously he imprisoned the Wuya for eternity. But now, with the Pantokrator gone, the prison is crumbling and the Wuya can return to lead his people. As spirits of nature the Kátsinam are protected against mundane weapons and will cause nearby plants to ensnare attackers. The Wuya is surrounded by the aura of the sun, and can call Kátsina Warriors to serve him. The sun always shines in the province where he is located and heat will increase all year round. In battle he will manifest the power of the sun as three gems containing Fire magic for spellcasting. The priesthood of the Wuya will be granted a special Golden Band. The Band glows with intense brilliance when exposed to the sun, and should the wearer be slain in battle they will explode with brilliant light that will burn demonic and undead creatures to cinders.
+
+In battles gains 3 Fire gems.
+Priests gain Golden Band (Grants Sun awe 1 & Inner Sun, allows casting Sun Rays).
+May call 1 Katsina Warrior each month.
+Entangles attackers."
+#makemonsters1 6794 -- Katsina Warrior
+#tmpfiregems 3
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8266 -- Wuya of the Sun
+#req_targpath1 9
+#req_targnoitem 1032
+#nation -2
+#req_pop0ok
+#msg "Priest Gains [Golden Band]"
+#notext
+#nolog
+#addequip 9
+#end
+
+#selectmonster 8267 -- Wuya of Nature
+#name "Wuya of Nature"
+#descr "The Wuya are magically powerful spirit beings and are the leaders of the Kátsinam. The Wuya of Nature was given power over all growing things by a previous Pantokrator. The Wuya was generous with his gifts and eventually mankind turned away from the Pantokrator and gave the Wuya their prayers instead. Furiously he imprisoned the Wuya for eternity. But now, with the Pantokrator gone, the prison is crumbling and the Wuya can return to lead his people.  As spirits of nature the Kátsinam are protected against mundane weapons and will cause nearby plants to ensnare attackers. The Wuya will ensure a good harvest and cause all things to grow in the province where he is located, and can call Kátsina Warriors to serve him. At temples dedicated to the Wuya sacred Katsina Ogres will occasionally appear as his Dominion grows strong. They will be more likely to appear at temples constructed in forests or farmland, but never in swamps or wastes.
+
+Temples (except in wastes/swamps) may spawn a Katsina Ogre (3% x candles chance per month, or 6% x candles in farmlands/forests).
+May call 1 Katsina Warrior each month.
+Entangles attackers."
+#makemonsters1 6794 -- Katsina Warrior
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8267 -- Wuya of Nature
+#req_land 1
+#req_temple 1
+#req_swamp 0
+#req_waste 0
+#req_farm 0
+#req_forest 0
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 3
+#msg "Ogre appears"
+#notext
+#nolog
+#1unit 6827 -- Katsina Ogre
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8267 -- Wuya of Nature
+#req_land 1
+#req_temple 1
+#req_swamp 0
+#req_waste 0
+#req_farm 1
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 6
+#msg "Ogre appears"
+#notext
+#nolog
+#1unit 6827 -- Katsina Ogre
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8267 -- Wuya of Nature
+#req_land 1
+#req_temple 1
+#req_swamp 0
+#req_waste 0
+#req_forest 1
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 6
+#msg "Ogre appears"
+#notext
+#nolog
+#1unit 6827 -- Katsina Ogre
+#end
+
+#selectmonster 8268 -- Kátsin-mana of Rain
+#descr "The Kátsin-mana are magically powerful spirit beings and are the counterparts of the Wuya. The Kátsin-mana of Rain was given power over the rainfall by a previous Pantokrator. Eventually mankind turned away from the Pantokrator and gave the Kátsin-mana their prayers to ensure the coming of the life-giving rain. Furiously he imprisoned the Kátsin-mana for eternity. But now, with the Pantokrator gone, the prison is crumbling and the Kátsin-mana can return to lead her people. As spirits of nature the Kátsinam are protected against mundane weapons and will cause nearby plants to ensnare attackers. The Kátsin-mana will cause a healing rain to fall in the province curing the ills of her followers, and she can call a cohort of Kátsina Warriors to serve her. In combat she will manifest gems of Air, Water and Nature magic to aid in spellcasting.
+
+Casts Rain in battles.
+Summons 1 Katsina Warrior each month.
+May call 3 Katsina Warriors each month.
+Entangles attackers."
+#onebattlespell 661 -- Rain
+#summon1 6794 -- Katsina Warrior
+#makemonsters3 6794 -- Katsina Warrior
+#end
+
+#selectmonster 8269 -- Kátsin-mana of Spring
+#descr "The Kátsin-mana are magically powerful spirit beings and are the counterparts of the Wuya. The Kátsin-mana of Spring was known as the Butterfly Maiden and was given the responsbility of heralding the coming of spring by a previous Pantokrator. Eventually mankind turned away from the Pantokrator and gave the Kátsin-mana their prayers to ensure the coming of the spring. Furiously he imprisoned the Kátsin-mana for eternity. But now, with the Pantokrator gone, the prison is crumbling and the Kátsin-mana can return to lead her people. As spirits of nature the Kátsinam are protected against mundane weapons and will cause nearby plants to ensnare attackers. The Kátsin-mana can fly to enable her to pollenate the flowers and plants of the mesa, and she can call Kátsina Warriors to serve her. During the spring season the local province will be full of life and will bloom, generating additional tax revenue and Nature gems. Katsina Ogres will even appear to serve her during these months.
+
+During spring if within Dominion gains 1-6 nature gems & 1-3 Katsina Ogres, also local province gains 25% extra tax income.
+May call 1 Katsina Warrior each month.
+Entangles attackers."
+#makemonsters1 6794 -- Katsina Warrior
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8269
+#req_monster 8269
+#req_land 1
+#nation -2
+#req_dominion 1
+#req_season 0
+#msg "The province blooms in the spring in the presence of ##godname##!"
+#nolog
+#taxboost 25
+#1d6vis 6
+#1d3units 6827 -- Katsina Ogre
+#end
+
+#selectmonster 8270 -- Eldest Povosqa
+#descr "The Eldest Povosqa is a shaman that has survived a most perilous vision quest and entered the realm of the Gods. He has now returned to take on the mantle a Pretender God. He is a master of magic and is particularly skilled in Earth magic. His skill in magical rituals is unsurpassed and he can see future events with great clarity. During a battle he will foresee the first damaging attack against each friendly warrior and will extend his protection to the entire army.
+
+In battle casts Twist Fate over entire friendly army.
+Povosqa may undergo a Vision Quest whilst at a temple (5% x candles chance per temple, grants Fortune Teller 15% and Master Ritualist 1)."
+#onebattlespell 884 -- Will of the Fates
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8270
+#req_targmnr 6803 -- Povosqa
+#req_land 1
+#req_temple 1
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 5
+#msg "##targname## has undergone a perilous vision quest! He has gained knowledge of magical rituals and gained glimpses of future events."
+#nolog
+#transform 6811 -- Povosqa
+#end
+
+#selectmonster 8271 -- Eldest Powaqa
+#descr "The Eldest Powaqa is a shaman of great power that has learnt ancient secrets and has now taken on the role of a Pretender God. He is a master of Sorcery and is particularly skilled in Death and Astral magic. His magical skills in Sorcery will be increased by one, and each month he will obtain two astral pearls through contact with the spirit world. He bears a magical wand that can curse those that oppose him. Powaqa serve him as priests and can be recruited from his larger temples.
+
+Sorcery paths known are increased by 1.
+Starting item: Wand of Transformation.
+Fort temples allow recruitment of Powaqa (F1A1D1N1H2 100%FADN, Bird form)."
+#gcost 140
+#magicboost 52 1 -- Sorcery
+#gemprod 4 2
+#startitem 1023 -- Wand of transformation
+#end
+
+#newsite 2002
+#name "Temple of the Powaqa" 
+#path 8
+#level 5
+#rarity 5
+#com 6845 -- Powaqa
+#end
+
+#selectmonster 6845 -- Powaqa in Human Form
+#clear
+#copystats 29 -- Light Infantry
+#clearweapons
+#cleararmor
+#spr1 "./chaco/HopiPowaqa.tga"
+#spr2 "./chaco/HopiPowaqa2.tga"
+#name "Powaqa"
+#descr "The Powaqa are sorcerers and witches that have chosen to use their gifts for selfish or harmful goals. Traditionally they have been outcasts, however since the coming of the invaders they are occasionally tolerated. They are known to consort with evil spirits and even the spirits of the dead. This Powaqa has gained secret knowledge and can even change their form to that of an animal through dark magic. It is said that the careless use of witchcraft was one of the reasons for the destruction of the previous worlds, and therefore most people will avoid contact with one that practices it."
+#gcost 200
+#rpcost 2
+#att 10
+#def 10
+#mor 11
+#mr 15
+#poorleader
+#spiritsight
+#stealthy 0
+#maxage 100
+#magicskill 0 1
+#magicskill 1 1
+#magicskill 5 1
+#magicskill 6 1
+#magicskill 9 2
+#custommagic 12672 100 -- 100% FADN
+#weapon 238 -- Magic Staff
+#mountainsurvival
+#nametype 178 -- Chaco
+#shapechange 6846
+#end
+
+#selectmonster 6846 -- Powaqa in Bird Form
+#copystats 1380 -- Great Hawk
+#copyspr 1380
+#name "Powaqa"
+#descr "The Powaqa are sorcerers and witches that have chosen to use their gifts for selfish or harmful goals. Traditionally they have been outcasts, however since the coming of the invaders they are occasionally tolerated. They are known to consort with evil spirits and even the spirits of the dead. This Powaqa has gained secret knowledge and can even change their form to that of an animal through dark magic. It is said that the careless use of witchcraft was one of the reasons for the destruction of the previous worlds, and therefore most people will avoid contact with one that practices it."
+#gcost 200
+#rpcost 2
+#mor 11
+#mr 15
+#poorleader
+#spiritsight
+#stealthy 0
+#maxage 100
+#magicskill 0 1
+#magicskill 1 1
+#magicskill 5 1
+#magicskill 6 1
+#magicskill 9 2
+#custommagic 12672 100 -- 100% FADN
+#transformation 0
+#nametype 178 -- Chaco
+#shapechange 6845
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8271 -- Powaqa
+#req_temple 1
+#req_fort 1
+#req_freesites 1
+#req_nositenbr 2002
+#req_pop0ok
+#nation -2
+#msg "Temple appears"
+#notext
+#nolog
+#addsite 2002
+#end
+
+#newevent
+#rarity 5
+#req_site 1
+#req_temple 0
+#nation -2
+#req_pop0ok
+#msg "Temple disappears [Temple of the Powaqa]"
+#notext
+#nolog
+#removesite 2002
+#end
+
+#newevent
+#rarity 5
+#req_site 1
+#req_godisnotmnr 8271
+#nation -2
+#req_pop0ok
+#msg "Temple disappears [Temple of the Powaqa]"
+#notext
+#nolog
+#removesite 2002
+#end
+
+#selectmonster 8272 -- Eldest Coyote Shaman
+#descr "The Eldest Coyote Shaman is a shaman of great power that has communed with the Coyote spirit. He has gained knowledge of many secrets including the power to take on the form of the Coyote. He is a master of magic and is particularly skilled in Nature and Death magic. Coyotes will flock to him as his Dominion grows strong, and whilst in human form he may grant a priest of great standing a special charm if they are present in his province. In coyote form he can call to his brethren in battle, and they will arrive to aid him as the battle rages.
+
+Nature path is increased by 2.
+Summons sacred wolves up to candles each month.
+Human form may grant Charm of the Crescent Moon to a H3 priest in province (Candles x 5% chance each month, grants all wolves in battle Invulnerable 15)
+Wolf form casts Howl in battles."
+#magicboost 6 2
+#domsummon 7762 -- Sacred Wolf
+#shapechange 8273
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8272
+#req_monster 8272
+#req_targgod 0
+#req_targpath3 9
+#req_targnoitem 686
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 5
+#msg "H3 Priest gains [Charm of the Crescent Moon]"
+#notext
+#nolog
+#addequip 9
+#end
+
+#selectmonster 8273 -- Eldest Coyote Shaman in Coyote Form
+#clear
+#copystats 284 -- Wolf
+#copyspr 284 -- Wolf
+#name "Eldest Coyote Shaman"
+#descr "The Eldest Coyote Shaman is a shaman of great power that has communed with the Coyote spirit. He has gained knowledge of many secrets including the power to take on the form of the Coyote. He is a master of magic and is particularly skilled in Nature and Death magic. Coyotes will flock to him as his Dominion grows strong, and whilst in human form he may grant a priest of great standing a special charm if they are present in his province. In coyote form he can call to his brethren in battle, and they will arrive to aid him as the battle rages.
+
+Nature path is increased by 2.
+Summons sacred wolves up to candles each month.
+Human form may grant Charm of the Crescent Moon to a H3 priest in province (Candles x 5% chance each month, grants all wolves in battle Invulnerable 15)
+Wolf form casts Howl in battles."
+#quadruped
+#rpcost 2
+#gcost 130
+#hp 10
+#mor 30
+#mr 18
+#beastmaster 1
+#goodleader
+#spiritsight
+#mountainsurvival
+#magicskill 5 1
+#magicskill 6 1
+#nametype 178 -- Chaco
+#diseaseres 100
+#domsummon 7762 -- Sacred Wolf
+#onebattlespell 1014 -- Howl
+#transformation 0
+#startage 100
+#maxage 500
+#pathcost 10
+#startdom 1
+#homerealm 0
+#shapechange 8272
+#end
+
+-- #selectmonster 6831
+-- #copystats 3009 -- Buffalo
+-- #spr1 "./chaco/Bison.tga"
+-- #spr2 "./chaco/Bison2.tga"
+-- #name "Bison"
+-- #descr "Bison are strong and fierce and can be quite aggressive when they perceive a threat. They roam the plains in great herds and a stampede can crush a man to death."
+-- #quadruped
+-- #transformation 0
+-- #end
+-- 
+-- #selectmonster 6832
+-- #copystats 1380 -- Great Hawk
+-- #spr1 "./chaco/BaldEagleSmall.tga"
+-- #spr2 "./chaco/BaldEagleSmall2.tga"
+-- #name "Sacred Eagle"
+-- #descr "The Eagle is sacred to the people of the mesa. Its feathers are treasured for their power as paho, prayer feathers and it is considered good luck to see an eagle in flight. The sacred bird is sometimes summoned by the shamen to aid armies or to patrol the lands."
+-- #gcost 0
+-- #bird
+-- #mr 8
+-- #att 12
+-- #stealthy 0
+-- #patrolbonus 10
+-- #holy
+-- #transformation 0
+-- #end
+
+#selectmonster 8274 -- Eldest Eagle Shaman
+#descr "The Eldest Eagle Shaman is a shaman of great power that has communed with the Eagle spirit. He has gained knowledge of many secrets including the power to take on the form of the Eagle. He is a master of magic and is particularly skilled in Air and Water magic. Each month sacred eagles will arrive to serve him as his Dominion grows strong. In human form his command of the elements is unmatched, whilst in eagle form he will call to the lords of the eagles to serve him as his priests.
+
+Summons sacred eagles each month up to Dominion candles.
+In human form elemental paths known are increased by 1.
+In eagle form may call sacred eagle commanders (H1, 5% x candles chance each month)."
+#magicboost 51 1 -- +1 Elemental
+#domsummon 6832 -- Sacred Eagle
+#nametype 178 -- Chaco
+#shapechange 8275
+#end
+
+#selectmonster 8275 -- Eldest Eagle Shaman in Eagle Form
+#clear
+#copystats 1380 -- Great Hawk
+#spr1 "./chaco/BaldEagleSmall.tga"
+#spr2 "./chaco/BaldEagleSmall2.tga"
+#name "Eldest Eagle Shaman"
+#descr "The Eldest Eagle Shaman is a shaman of great power that has communed with the Eagle spirit. He has gained knowledge of many secrets including the power to take on the form of the Eagle. He is a master of magic and is particularly skilled in Air and Water magic. Each month sacred eagles will arrive to serve him as his Dominion grows strong. In human form his command of the elements is unmatched, whilst in eagle form he will call to the lords of the eagles to serve him as his priests.
+
+Summons sacred eagles each month up to Dominion candles.
+In human form elemental paths known are increased by 1.
+In eagle form may call sacred eagle commanders (H1, 5% x candles chance each month)."
+#bird
+#rpcost 2
+#gcost 130
+#att 12
+#mor 30
+#mr 18
+#goodleader
+#domsummon 6832 -- Sacred Eagle
+#beastmaster 3
+#spiritsight
+#mountainsurvival
+#magicskill 1 1
+#magicskill 2 1
+#nametype 178 -- Chaco
+#diseaseres 100
+#startage 100
+#maxage 500
+#pathcost 10
+#startdom 1
+#homerealm 0
+#transformation 0
+#shapechange 8274
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8274
+#req_monster 8274
+#req_land 1
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 5
+#msg "Eagle appears"
+#notext
+#nolog
+#com 6832 -- Sacred Eagle
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8274
+#req_targmnr 6832 -- Sacred Eagle
+#req_targnopath1 9 -- No H
+#req_land 1
+#nation -2
+#req_pop0ok
+#msg "Eagle priest"
+#notext
+#nolog
+#holyboost -1
+#end
+
+#selectmonster 8276 -- Great Horned Serpent
+#descr "The Great Horned Serpent is a monstrous serpent born at the dawn of time, when monsters and giants roamed the world. It has power over the rain and sometimes lives underwater for a time before emerging back onto dry land. It is the sworn enemy of the Diyin Dine'é of the Sky and the two have fought many times. Eventually the Pantokator grew tired of their constant warring and imprisoned them both for eternity. Now with the Pantokrator gone, the shackles are weakening and the Serpent is once more free to roam the world. Great Serpents can shed their skin and regenerate their wounds, and this one is no exception. It can also divine the future and its horns are reputed to have mystical powers. Each month the lesser kin of the Serpent, revered by its followers as divine children, will slither from their homes to serve it.
+
+Summons Sacred Serpents up to dominion candles each month."
+#domsummon 295 -- Sacred Serpent
+#end
+
+#selectmonster 8277 -- Diyin Dine'é of Rain
+#descr "The Diyin Dine'é are giants of divine heritage born in the First World. The Diyin Dine'é of Rain has power over the life giving rain and can call forth showers from a clear sky. Together with his brother the Diyin Dine'é of Dawn they performed many great feats in the worlds before this one, and upon coming to this world slew many fierce monsters. The Diyin Dine'é of Rain is mischevious and loves to play pranks by soaking the pompous with a sudden rainfall. However, when he used his power upon the Pantokrator he was imprisoned for his trouble. Now the bonds binding the Diyin Dine'é are weakening and he can once more return to claim this world as his. The Diyin Dine'é is a great hunter and has knowledge of the entire world including the future. He is always surrounded by a rain storm that hinders fire magic and makes it harder to fly. In battle he will catch the rain and manifest gems of water magic to aid in spellcasting. The priests of the Diyin Dine'é will be granted a special stick that can be used to call down refreshing summer rain.
+
+Casts Rain in battles.
+Gains 3 temporary water gems in battles.
+Priests gain Rain Stick (Allows casting Summer Rain)."
+#fixedname "Tó Neinilii"
+#tmpwatergems 3
+#onebattlespell 661 -- Rain
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8277
+#req_targpath1 9
+#req_targnoitem 1049
+#nation -2
+#req_pop0ok
+#msg "Priest Gains [Rain Stick]"
+#notext
+#nolog
+#addequip 9
+#end
+
+
+#selectmonster 8278 -- Diyin Dine'é of the Sky
+#descr "The Diyin Dine'é are giants of divine heritage born in the First World. The Diyin Dine'é of the Sky has power over the sky and storms and can call down lightning to smite his enemies. His bow shoots arrows of fire and he is the sworn enemy of the Great Horned Serpent. Many times he has hunted the great beast, however he has not yet managed to slay it. Eventually the Pantokrator tired of their battles and imprisoned both for eternity. Now the bonds binding the Diyin Dine'é are weakening and he can once more return to claim this world as his. The Diyin Dine'é can fly through the sky and is not hindered by the fiercest storms. In battle a flock of sacred eagles will defend him from harm, and at temples dedicated to the Diyin Dine'é eagles will appear as his Dominion grows strong.
+
+Temples may summon a sacred eagle (10% x candles chance per month)."
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8278
+#req_dominion 1
+#req_temple 1
+#req_land 1
+#req_domchance 10
+#nation -2
+#req_pop0ok
+#msg "Summon Eagle"
+#notext
+#nolog
+#1unit 6832 -- Sacred Eagle
+#end
+
+
+#selectmonster 8279 -- Diyin Dine'é of Twilight
+#descr "The Diyin Dine'é are giants of divine heritage born in the First World. The Diyin Dine'é of Twilight has power over the stars and death. His axe can release blasts of lightning to smite his enemies. The Diyin Dine'é is a great warrior and has slain many foes. Eventually the Pantokrator grew fearful of his power and imprisoned him for eternity. Now the bonds binding the Diyin Dine'é are weakening and he can once more return to claim this world as his. Death follows him and the surrounding province will feel its icy grasp. The Diyin Dine'é can summon the spirits of warriors long dead from the nether realms to serve him, and each month he will draw three gems from the underworld.
+
+Summons Longdead, Shade Beasts and Ghosts up to candles each month.
+May call 2 Ghosts each month."
+#incscale 3 -- +Death
+#gemprod 5 3
+#domsummon -2 -- Longdead
+#domsummon2 442 -- Shade Beasts
+#domsummon20 566 -- Ghost
+#summon1 566 -- Ghost
+#makemonsters2 566 -- Ghost
+#end
+
+#selectmonster 8280 -- Diyin Dine'é of the Sun
+#descr "The Diyin Dine'é are giants of divine heritage born in the First World. The Diyin Dine'é of the Sun was granted power over the rising of the sun. His bride is the Diyin Dine'é of the Earth and together they brought warmth and life to the mountains and the plains. He maintains great herds of Bison and a herd of Bison will accompany him in battle. Eventually the people of the world began to worship him and the Pantokrator grew jealous, imprisoning him for eternity. Now the bonds binding the Diyin Dine'é are weakening and he can once more return to claim this world as his. He can summon rays from the sun to smite his enemies and can call Bison from his great herd to serve him each month. The Diyin Dine'é is served by a Sun Spirit skilled in the magic of the sun and the sky.
+
+Starting commander: Sun Spirit (F3H3, Flying, Domimmortal).
+May call 3 bison each month."
+#batstartsum2d6 6831 -- Bison
+#makemonsters3 6831 -- Bison
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8280
+#req_pregame
+#req_owncapital 1
+#req_land 1
+#nation -2
+#req_pop0ok
+#msg "Sun Spirit appears."
+#notext
+#nolog
+#com 5967 -- Sun Spirit
+#end
+
+#selectmonster 8281 -- Diyin Dine'é of Dawn
+#descr "The Diyin Dine'é are giants of divine heritage born in the First World. The Diyin Dine'é of Dawn has power over new beginnings and is very old and wise. Together with his brother the Diyin Dine'é of Rain they performed many great feats in the worlds before this one, and upon coming to this world slew many fierce monsters. The Diyin Dine'é cares deeply for his followers and watches over those under his care. However, when he protested against the punishment of his brother by the Pantokrator for a foolish prank he was imprisoned for his trouble. Now the bonds binding the Diyin Dine'é are weakening and he can once more return to claim this world as his. He is skilled in the ways of magic and will gain one additional level in each magic path he knows. He is skilled in many arts including healing, and if slain has given special instructions to his followers that will allow them to return him to life during the next spring.
+
+Magic paths known are increased by 1.
+If slain will reform in the capital during Spring."
+#magicboost 53 1
+#immortal
+#springimmortal
+#end
+
+#selectmonster 8282 -- Diyin Dine'é of the Earth
+#descr "The Diyin Dine'é are giants of divine heritage born in the First World. The Diyin Dine'é of Earth is a divine spirit of the land and the bride of the Diyin Dine'é of the Sun. When they are in harmony the land is fertile and calm, however when they are in dispute the weather is foul and the land in turmoil. One day their squabble was so great that they unleashed a storm that engulfed the entire world. In a fit of rage the Pantokrator imprisoned the Diyin Dine'é as punishment. Now the bonds are weakening and she can once more return to lead her people. The Diyin Dine'é will cause growing things to sprout and bloom, ensuring a good harvest and calming the populace of the province. She is skilled in the arts of healing and herb lore, and each month will distill magical nature gems from sacred plants. Each month provinces within her Dominion will become more prosperous and productive, and from the ground an elemental servant will emerge to serve her.
+
+Dominion increases permanent gold & resources of provinces (candles x 10% chance for +1 gold, +1 res)
+Summons 1 size 8 Earth Elemental each month."
+#gemprod 6 2
+#summon1 3739 -- Size 8 Earth Elemental
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8282
+#req_dominion 1
+#nation -2
+#req_pop0ok
+#req_domchance 10
+#msg "Fertility increases"
+#notext
+#nolog
+#landgold 1
+#landprod 1
+#end
+
+#selectmonster 8283 -- Solar Bison
+#descr "Born at the dawn of time the Solar Bison represents an earlier era, when monsters and giants roamed the world. It is a symbol of the sun and wanders the plains guiding its lesser kin in thousand-strong herds. Eventually the Pantokrator decided to exile all those that threatened his power and he imprisoned the beast for eternity. Now with the Pantokrator gone the Bison is free to roam the plains once more and claim the world for his own. The Solar Bison radiates the heat of the sun and the ground it stands upon will be scorched and blackened. Each month he will focus the power of the sun into two magical gems of Fire, and he will be more powerful under the summer sun. The blessing of the Bison will always offer protection from the heat in addition to other blessings chosen. As his Dominion grows strong his herd will swell.
+
+Blessing always grants 10 Fire resist.
+Summons Bison up to Dominion candles each month."
+#godsite 1912
+#domsummon 6831 -- Bison
+#gemprod 0 2
+#end
+
+--*BC: how come Chaco/Ong get the other Diyin Dine'e and not the one of War?
+
+#selectmonster 8284 -- Diyin Dine'é of War
+#descr "The Diyin Dine'é are giants of divine heritage born in the First World. The Diyin Dine'é of War is a master of conflict and combat. He commands the might of fire, air, and blood, and can smite his enemies with lightning from his eyes or the tip of his spear. In times past he lead massive armies and conquered many lands, but the Pantokrator imprisoned him lest his empire grow too large. Now the bonds are weakening and he can once more return to lead his people. The Diyin Dine'é is skilled in the arts of war, and as his Dominion grows warriors will flock to his service. Each month his followers will bring him captives of pure blood.
+
+Starting army gains 6-22 Tomahawk Warriors.
+Generates 3 blood slaves each month.
+Dominion spawns Tomahawk Warriors in Turmoil scales (10% chance per candle for D3 Tomahawk Warriors each month)."
+#gemprod 8 3
+#domsummon 6597 -- Tomahawk Warrior
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8284
+#req_owncapital 1
+#req_pregame
+#nation -2
+#msg "Warriors appear"
+#notext
+#nolog
+#1unit 6597 -- Tomahawk Warrior
+#1d3units 6597 -- Tomahawk Warrior
+#2d3units 6597 -- Tomahawk Warrior
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8284
+#req_owncapital 1
+#req_pregame
+#nation -2
+#msg "Warriors appear"
+#notext
+#nolog
+#1unit 6597 -- Tomahawk Warrior
+#1d3units 6597 -- Tomahawk Warrior
+#2d3units 6597 -- Tomahawk Warrior
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8284
+#req_owncapital 1
+#req_pregame
+#nation -2
+#msg "Warriors appear"
+#notext
+#nolog
+#1unit 6597 -- Tomahawk Warrior
+#1d3units 6597 -- Tomahawk Warrior
+#2d3units 6597 -- Tomahawk Warrior
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8284
+#req_land 1
+#req_fort 0
+#req_chaos 1
+#req_dominion 1
+#req_domchance 10
+#nation -2
+#req_pop0ok
+#msg "Warriors appear"
+#notext
+#nolog
+#1d3units 6597 -- Tomahawk Warrior
+#end
+
+
+#selectmonster 8285 -- First Man
+#descr "The First Man is a humanoid demigod from another world. He is known by many names to many tribes, but what is certain is that he came to this world many ages ago and sired the First People of Nihuala. However, the Pantokrator became jealous of his creations, and banished him back to his original home. With the Pantokrator gone, the First Man has returned to claim this world as his own. Each month he may teach commanders in the province in the ways of the Air or the Earth. His knowledge of the world is great, and whilst searching for magical sites he may uncover ancient caches of gold or magical gems from ages past.
+
+Teaches commanders in province in Earth/Air magic (Candles x 5% chance for each path, to a max of 3).
+Whilst site searching in Dominion may uncover 100 gold and 1d6 of each gem (Candles x 5% chance)."
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8285
+#req_monster 8285
+#req_targgod 0
+#req_targnopath3 2
+#req_land 1
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 5
+#msg "##godname## has taught ##targname## the secrets of Air Magic!"
+#nolog
+#airboost -1
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8285
+#req_monster 8285
+#req_targgod 0
+#req_targnopath3 2
+#req_land 1
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 5
+#msg "##godname## has taught ##targname## the secrets of Earth Magic!"
+#nolog
+#earthboost -1
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8285
+#req_targmnr 8285
+#req_land 1
+#req_targorder 7 -- Site Searching
+#req_dominion 1
+#req_domchance 5
+#nation -2
+#req_pop0ok
+#msg "Whilst searching the province ##godname## has discovered a secret cache of treasure thought lost to the ages."
+#nolog
+#gold 100
+#1d6vis 56
+#end
+
+
+#selectmonster 8286 -- First Woman
+#descr "The First Woman is a humanoid demigod from another world. She is known by many names to many tribes, but what is certain is that she came to this world many ages ago and birthed the First People of Nihuala.  However, the Pantokrator became jealous of her creations, and banished her back to her original home. With the Pantokrator gone, the First Woman has returned to claim this world as her own. Each month she may teach commanders in the province in the lore of Water or of Nature to increase their magical skills. She has great knowledge of magic and will inspire other mages to research magical wonders.
+
+Inspiring Research +4 to all other researching mages.
+Teaches commanders in province in Water/Nature magic (Candles x 5% chance for each path, to a max of 3)."
+#inspiringres 4
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8286
+#req_monster 8286
+#req_targgod 0
+#req_targnopath3 2
+#req_land 1
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 5
+#msg "##godname## has taught ##targname## the secrets of the streams and rivers!"
+#nolog
+#waterboost -1
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8286
+#req_monster 8286
+#req_targgod 0
+#req_targnopath3 2
+#req_land 1
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 5
+#msg "##godname## has taught ##targname## in plant lore and the hidden secrets of Nature!"
+#nolog
+#natureboost -1
+#end
+
+------------------------------------------------------------------------------
+-- NEW SHAMBHALA PRETENDERS
+------------------------------------------------------------------------------
+
+
+#selectmonster 8287 -- Ascended Master
+#descr "After studying for centuries, the Ascended Master has not only mastered his own mortality, but has achieved such an enlightened state that he has almost reached divinity. With the Pantokrator gone, nothing will stop the Ascended Master on his road to true spiritual ascension. Though he is not as physically powerful as many other pretenders, and is less magically-skilled than archmages and other magicians, he is essentially a spiritual being, near-immortal within his Dominion and difficult to destroy. He has mastered the powers of spirit and mind, and wields the Dörje, a small, sacred mace used to smite the sinful and the ignorant with the thunderbolt of enlightenment. The temples erected by followers of the Master are grand and opulent, with golden fittings and a great domed roof that will awe onlookers.
+
+Spreads Dominion like 3 temples.
+Immortal within Dominion.
+Temples spread Dominion like 2 temples, generate 50 gold each month."
+#inspiringres 2
+#spreaddom 3
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8287 -- Ascended Master
+#req_temple 1
+#req_freesites 1
+#req_nositenbr 1946
+#nation -2
+#req_pop0ok
+#msg "Grand Temples"
+#notext
+#nolog
+#addsite 1946
+#end
+
+#newevent
+#rarity 5
+#req_temple 0
+#req_site 1
+#nation -2
+#req_pop0ok
+#msg "Remove [Grand Temple]"
+#notext
+#nolog
+#removesite 1946
+#end
+
+
+#selectmonster 8288 -- Bodhisattva of Keen Awareness 
+#illusion -1
+#descr "The Bodhisattva of Keen Awareness is a being of semi-divine origin who has achieved such a state of spiritual enlightenment that he has transcended his own mortality and all mortal needs. With the old Pantokrator alive, he could not ascend to true godhood and complete his enlightenment, and he retired to a secret place to meditate. Now, with the Pantokrator gone, the Bodhisattva is ready to resume his quest for ascension and to bring hope and solace to mankind. Though he is not physically as powerful as many other divine beings, the Bodhisattva has a strong dominion and is a powerful Astral mage because of his spiritual perfection. Furthermore, his aspect is such that few would dare to strike him, and his mere presence instills serenity in the hearts of mortals. In one hand he bears the sword of truth, which cuts through falsehood and destroys ignorance, and in the other he holds the stem of a lotus flower upon which is written a book on the attainment of transcendent wisdom. The Dominion of the Bodisattva will bring peace and enlightenment to the populace, reducing tensions and cultivating a positive mindset amongst the populace.
+
+Spreads Dominion like 3 temples.
+Dominion grants approx. -1 unrest and +1% tax per candle."
+#inspiringres 3
+#researchbonus 20
+#spreaddom 3
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8288
+#nation -2
+#req_dominion 1
+#req_domchance 10
+#msg "Bodhisattva taxboost"
+#notext
+#nolog
+#unrest -10
+#taxboost 10
+#end
+
+
+#selectmonster 8289 -- Mother of Mountains
+#descr "The Mother of Mountains is a giant of divine heritage who claims dominion over mountains and heights. The powers of earth, air and water are hers to claim, and she is constantly surrounded by the cold of her native mountains. With the Pantokrator gone, the Mother of Mountains will soon rule all of creation. Mi Gö revere her and will emerge from the mountains to serve her as her Dominion grows strong. In combat she can manifest magical gems of air, water and earth to aid in spellcasting.
+
+Earth path starts at 4 when choosing blessings.
+Summons Mi Gö up to candles each month, plus 2 Mi Dred.
+Mountain Temples in Dominion with cold scales summon a Mi Dred each month."
+#domsummon 6885 -- Mi Gö
+#summon2 6887 -- Mi Dred
+#magicskill 1 1 -- A1
+#magicskill 2 1 -- W1
+#magicskill 3 4 -- E1
+#magicboost 3 -1
+#tmpairgems 1
+#tmpwatergems 1
+#tmpearthgems 1
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8289
+#req_temple 1
+#req_land 1
+#req_cold 1
+#req_mountain 1
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#msg "Mountain temple summons"
+#notext
+#nolog
+#1unit 6887 -- Mi Dred
+#end
+
+
+#selectmonster 8290 -- Lama of the Frozen Heights
+#descr "Having attained spiritual ascension, the Lama of the Frozen Heights has become something of an Ascended Master himself. The Frozen Lama, as he is sometimes reverently called, keeps the former color of his hat a secret, as it is now the ice blue of the element which he has taken into his very nature. With the Pantokrator gone, he now comes to throw that very hat into the ring in his bid for complete divinity. The Lama of the Frozen Heights is a highly-skilled mage, and is nearly immortal within his Dominion. He exudes an aura of icy cold said to aid the spiritual improvement of those around him by sheer ascetic glory. Each month ice crystals will form that can be used as magical water gems, and those granted his blessing will be shielded from both ice and flame in addition to any other blessings chosen. 
+
+Bless gains 10 cold resist and 10 fire resist.
+Immortal within Dominion.
+Starts with Anointed Dörje."
+#godsite 1918
+#startitem 850 -- Dorje
+#end
+
+
+---------- GONDWANA PRETENDER -------------
+
+#selectmonster 8291 -- God-Beast of the Forest
+#descr "Born at the dawn of time the God-Beast represents an earlier era, when monsters and giants roamed the world. It lived amongst the deep forests at the dawn of time, ruling over lesser beasts and men that offered it worship. When the previous Pantokrator rose to power he imprisoned and banished all that threatened his creation and the monstrous creature was banished to a shrouded land from whence it could not escape. The people of Gondwana worship the God-Beasts as the source of N'um and the most powerful of all creatures. Now, with the Pantokrators prison weakening the God-Beast of the Forest will emerge to claim the world as its own.
+
+Blessing gains +10hp."
+#godsite 1910
+#end
+
+#selectmonster 8292 -- God-Beast of the Plains
+#descr "Born at the dawn of time the God-Beast represents an earlier era, when monsters and giants roamed the world. It has roamed the plains since the earliest days, ruling over lesser creatures and men that offered it worship. When the previous Pantokrator rose to power he imprisoned and banished all that threatened his creation and the monstrous creature was banished to a shrouded land from whence it could not escape. The people of Gondwana worship the God-Beasts as the source of N'um and the most powerful of all creatures. Now, with the Pantokrators prison weakening the God-Beast of the Plains will emerge to claim the world as its own.
+
+Fire and Glamour paths start at 2 when choosing blessings."
+#magicskill 0 2
+#magicskill 7 2
+#magicskill 6 1
+#magicboost 0 -1
+#magicboost 7 -1
+#end
+
+#selectmonster 8293 -- God-Beast of the Mountains
+#descr "Born at the dawn of time the God-Beast represents an earlier era, when monsters and giants roamed the world. It has lurked in the coldest mountains for eons, preying on lesser creatures and worshipped by primitive mountain tribes. When the previous Pantokrator rose to power he imprisoned and banished all that threatened his creation and the monstrous creature was banished to a shrouded land from whence it could not escape. The people of Gondwana worship the God-Beasts as the source of N'um and the most powerful of all creatures. Now, with the Pantokrators prison weakening the God-Beast of the Mountains will emerge to claim the world as its own. It will bring the cold of the mountain peaks, and spirits of the ice will amass in the mountains under the Dominion of the God-Beast.
+
+Casts Grip of Winter in battles.
+Mountains in Cold scales may spawn 1 Winter Wolf (5% x candles chance each month)."
+#onebattlespell 1195 -- Grip of Winter
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8293 -- Beast of the Mountain
+#req_cold 1
+#req_mountain 1
+#nation -2
+#req_pop0ok
+#req_land 1
+#req_dominion 1
+#req_domchance 5
+#msg "Winter Wolf Appears"
+#notext
+#nolog
+#1unit 511 -- Winter Wolf
+#end
+
+#selectmonster 8294 -- God-Beast of the Hunt
+#descr "Born at the dawn of time the God-Beast represents an earlier era, when monsters and giants roamed the world. This great beast has hunted Gods and titanic creatures alike, until the Pantokrator himself feared for his existence. When the previous Pantokrator rose to power he imprisoned and banished all that threatened his creation and the monstrous creature was banished to a shrouded land from whence it could not escape. The people of Gondwana worship the God-Beasts as the source of N'um and the most powerful of all creatures. Now, with the Pantokrators prison weakening the God-Beast of the Hunt will emerge to claim the world as its own. The pride of the beast will swell as its Dominion grows strong, and it will incite sacred animals that fight alongside it to fight with wild abandon. 
+
+Summons Sabre Tooths up to candles each month.
+Casts Spirit of the Hunt in battles (All friendly sacred animals become enlarged and go berserk)."
+#batstartsum1d6 6989 -- Sabre Tooths
+#domsummon 6989 -- Sabre Tooths
+#onebattlespell 2490 -- Marverni Spirit of the Boar
+#end
+
+#selectmonster 8295 -- Great Queen
+#descr "The Great Queen is an ancient queen of Gondwana. She has learnt much of magic to extend her lifespan and has now claimed the mantle of Godhood. She can perform ritual dances to increase the power of her spellcasting, and she is a master of many paths of magic. She is greatly beloved of the people and each month the palace coffers will swell with tributes and offerings. The capital city has grown to great size under her rule and lands under her Dominion will be well managed and fruitful. She carries with her a sphere with which she can see distant lands.
+
+Casts rituals at 2 levels higher than usual.
+Generates 100 gold per month.
+If taken awake capital population increased by 5,000.
+Dominion grants permanent gold and resources increases to friendly provinces each month (Candles x 10% chance for +2/+2)."
+#masterrit 2
+#researchbonus 20
+#gold 100
+#startitem 391 -- Stone Sphere
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8295 -- Great Queen
+#req_monster 8295 -- Great Queen
+#req_owncapital 1
+#req_pregame
+#nation -2
+#msg "Cap Increase"
+#notext
+#nolog
+#incpop 500
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8295
+#req_dominion 1
+#req_domchance 10
+#req_mindef 1
+#msg "Great Queen province improvements"
+#landgold 2
+#landprod 2
+#nolog
+#notext
+#end
+
+#selectmonster 8296 -- Eldest Babalawo
+#descr "The Eldest Babalawo is a great Shaman of Gondwana that has claimed the mantle of Godhood. He is a master of ritual magic and can greatly increase his spellcasting power through trance dances. He can predict the future and can use this to avoid bad events in the province. The Eldest Babalawo has learned many paths of magic through his long study and is an expert at magical research.
+
+Casts rituals at 3 levels higher than usual.
+Teaches Babalawo in province (3 chances to teach Air/Nature/Glamour, 5% x candles chance for each path up to max of lvl 3)."
+#masterrit 3
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8296
+#req_monster 8296 -- Eldest Babalawo
+#req_targmnr 6983 -- Babalawo
+#req_targnopath3 1
+#req_land 1
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 5
+#msg "##godname## has taught ##targname## secrets of Air magic!"
+#nolog
+#airboost -1
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8296
+#req_monster 8296 -- Eldest Babalawo
+#req_targmnr 6983 -- Babalawo
+#req_targnopath3 6
+#req_land 1
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 5
+#msg "##godname## has taught ##targname## secrets of Nature magic!"
+#nolog
+#natureboost -1
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8296
+#req_monster 8296 -- Eldest Babalawo
+#req_targmnr 6983 -- Babalawo
+#req_targnopath3 7
+#req_land 1
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 5
+#msg "##godname## has taught ##targname## secrets of Glamour magic!"
+#nolog
+#glamourboost -1
+#end
+
+----------- SAWAIIKI PRETENDERS ---------------
+
+#selectmonster 8297 -- Spirit of Ruin-
+#descr "The Spirit of Ruin is a mighty being born from the fiery depths when the isles of Sawaiiki were created. She has great skills in the paths of earth and fire. Wild and untamed, she has taken many lovers and slain many that displeased her. Her priestesses dwell in the untamed wilds so as to practice their arts without distraction or violation of the Kapu, and she will grant them greater authority and control over the elements.In battle she will manifest gems of earth and fire from the land to aid in spellcasting.
+
+Gains 2 Fire and Earth gems in battles.
+Priestesses of Ruin gain +1H and +1F once recruited.
+May create a Consort of Lava commander (F1E1 100%F/E) each month (4% x candles chance)."
+#tmpfiregems 2
+#tmpearthgems 2
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8297
+#req_targmnr 7054 -- Priestess of Ruin
+#req_targnopath2 8
+#req_land 1
+#nation -2
+#req_pop0ok
+#msg "Priestess pathboost"
+#notext
+#nolog
+#fireboost -1
+#holyboost -1
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8297
+#req_monster 8297 -- Spirit of Ruin
+#req_land 1
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 4
+#msg "A mortal lover of ##godname## has returned as a Consort of Lava."
+#nolog
+#com 7060 -- Consort of Lava
+#end
+
+#selectmonster 8298 -- Heiau of the Uncreated
+#descr "The Four are the Uncreated Beings of the Eternal Sea. They are the main guiding force of the mana inherent within the land, and now they seek dominion of all its flow within this world. The Heiau is a sacred place and only the Kahuna and certain sacred Ali’i are allowed to enter and receive the blessing of the Four. Any that approach the Heiau with ill intent will be cursed for the violation of Kapu and would suffer misfortune or worse for the rest of their lives. The power of the Heiau will claim any Throne under their Dominion without the need for a priest.
+
+Spreads Dominion like 5 temples.
+Casts Doom in battles.
+Thrones in friendly provinces within Dominion are claimed automatically."
+#onebattlespell 883 -- Doom
+#startdom 5
+#spreaddom 5
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8298 -- Heiau of the Uncreated
+#req_thronesite 1
+#req_dominion 1
+#nation -2
+#req_pop0ok
+#msg "The power of ##godname## has claimed this Throne!"
+#notext
+#nolog
+#claimthrone
+#end
+
+----- Juhera / Iram Pretenders ---------
+
+#selectmonster 8299 -- Marid Sultan
+#descr "The Marid Sultan is an ancient being from the dawn of time. He is among the first of the children of Iblis and his sovereignty over the Jinn was uncontested until the rise of the Ifrit and the War of the Unseen. After losing his throne he was banished from the City of Brass along with his brethren and closest servants. Fleeing, they found the Emerald mountain and settled there out of sight of the Ifrit and their lackeys until the divine decree that sealed the gates of Ubar. Now, with the Pantokrator gone, he is free to use his vast magics to claim godhood and restore the kingdom of the Jinn to glory.
+
+Air and Fire magics gain 1 level.
+Summons 1d6 Qutrub in battle."
+#batstartsum1d6 7138 -- Qutrub
+#magicboost 0 1
+#magicboost 1 1
+#end
+
+#newmonster 7138
+#copystats 3354 -- Jinn Warrior
+#cleararmor
+#clearweapons
+#name "Qutrub"
+#nametype 172
+#descr "The Qutrub are shapeshifting Jinn who undertake clandestine missions for the Marids of the Emerald Mountain. Their holy duty is to influence men to evil acts. Subtle and discreet, they whisper in the ears of the innocent, enticing them to sin, tempting them to envy and adultery and greed. They appear as jackal-headed spirit beings, or more often as wisps of flame, entering peoples' minds and making them turn on their neighbours. Their presence causes strife among the populace, who gradually become violent and rebellious. The Qutrub are elite zealots, devout and unshakeable of their faith in the Awakening God and sacred to the people of Juhera. Despite this they are often unwelcome in lands already conquered, for their duty extends to all men, even those who have sworn fealty to the armies of Juhera."
+#djinn -- bodytype for hit locations
+#gcost 80
+#reclimit 3
+#rpcost 42
+#rcost 8
+#mr 15
+#mor 15
+#float
+#mountainsurvival
+#holy
+#incunrest 20
+#spr1 "juhera/shayatin1.tga"
+#spr2 "juhera/shayatin2.tga"
+#weapon "Throw Flames"
+#weapon "Flame scimitar"
+#weapon "Lightning swarm"
+#invulnerable 5
+#end
+
+
+#selectmonster 8300 -- Ghul Lich
+#descr "A Ghul Lich is the dried husk of a Ghul Sorcerer adept in Death magic. Through dark rituals, the Ghul succeeded in mastering one of the Jinn's oldest and most urgent goals: to defeat death. By removing its viscera and hiding it outside its body, the Lich is virtually impossible to slay. Should the body be physically destroyed, a new one is formed from the dust of dead Ghuls. Being immortal, there is nothing left to acquire but godhood. The Ghul Lich is magically stronger than other Ghuls and its magically empowered body is very hard to destroy.
+
+Immortal (3 month reform time).
+Summons Nasnas and soulless up to candles each month.
+Teaches other commanders in province in Death magic (10% x candles chance each month, up to lvl 3)."
+#startitem 373 -- Amulet of the Dead
+#domsummon 7172 -- Nasnas
+#domsummon2 -15 -- Soulless no corpses needed
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8300
+#req_monster 8300
+#req_targnopath3 5
+#req_land 1
+#nation -2
+#req_pop0ok
+#req_dominion 1
+#req_domchance 10
+#msg "##godname## has taught ##targname## secrets of Death magic!"
+#nolog
+#deathboost -1
+#end
+
+#selectmonster 8301 -- Grand Artificer
+#clear
+#name "Grand Artificer"
+#nametype 172
+#spr1 "juhera/grand_artificer1.tga"
+#spr2 "juhera/grand_artificer2.tga"
+#descr "The Grand Artificer is an artificer of such great power that he has taken the role of a Pretender God. He is a master of magic item forging and often adept in several of the magic paths.
+
+Paths are increased by 2 when forging items.
+Grants 100 resources whilst in a fort.
+May forge an item each month whilst at a lab (10% x candles chance, may forge more powerful items over time)."
+#resources 100
+#startitem 29 -- Dwarven Hammer
+#forgebonus 25
+#mastersmith 2
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8301
+#req_monster 8301
+#req_lab 1
+#req_dominion 1
+#req_domchance 10
+#nation -2
+#req_pop0ok
+#req_maxturn 9
+#msg "##godname## has possessed a willing servant that has toiled in the forge all month. An item of power has been created and transported to the treasury!"
+#nolog
+#magicitem 0
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8301
+#req_monster 8301
+#req_lab 1
+#req_dominion 1
+#req_domchance 10
+#nation -2
+#req_pop0ok
+#req_turn 10
+#req_maxturn 18
+#msg "##godname## has possessed a willing servant that has toiled in the forge all month. An item of power has been created and transported to the treasury!"
+#nolog
+#magicitem 1
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8301
+#req_monster 8301
+#req_lab 1
+#req_dominion 1
+#req_domchance 10
+#nation -2
+#req_pop0ok
+#req_turn 19
+#req_maxturn 27
+#msg "##godname## has possessed a willing servant that has toiled in the forge all month. An item of power has been created and transported to the treasury!"
+#nolog
+#magicitem 2
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8301
+#req_monster 8301
+#req_lab 1
+#req_dominion 1
+#req_domchance 10
+#nation -2
+#req_pop0ok
+#req_turn 28
+#req_maxturn 36
+#msg "##godname## has possessed a willing servant that has toiled in the forge all month. An item of power has been created and transported to the treasury!"
+#nolog
+#magicitem 3
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8301
+#req_monster 8301
+#req_lab 1
+#req_dominion 1
+#req_domchance 10
+#nation -2
+#req_pop0ok
+#req_turn 37
+#msg "##godname## has possessed a willing servant that has toiled in the forge all month. An item of power has been created and transported to the treasury!"
+#nolog
+#magicitem 4
+#end
+
+#selectmonster 8302 -- Master Alchemist
+#descr "The Master Alchemist is an alchemist of such great power that he has taken the role of a Pretender God. He is a master of magical alchemy and often adept in several of the magic paths. At his temples alchemical secrets are researched and each can act as an Arcane laboratory when required. Each month he will create valuable alchemical tinctures in search of his magnum opus, and whilst at a laboratory he may create Alchemical wonders. Should he be in possession of the Alchemists Stone, the greatest of all Alchemical wonders, he will be able to create alchemical creatures every month he is at an arcane laboratory.
+
+Temples will generate a laboratory in the province if none is present.
+May create gold (25% chance), vitriol creatures (20% chance), Cure All Elixirs (15% chance) or Chamber of Changes site (5% chance, grants 20% Alteration discount) whilst at a laboratory.
+If carrying the Alchemists Stone creates 2D3 Green Lions & 1D6 Gelatinous Cubes/month."
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8302 -- Master Alchemist
+#req_land 1
+#req_temple 1
+#req_lab 0
+#nation -2
+#req_pop0ok
+#msg "An arcane laboratory was included as part of the temple construction."
+#nolog
+#lab 1
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8302 -- Master Alchemist
+#req_monster 8302 -- Master Alchemist
+#req_land 1
+#req_lab 1
+#req_mindef 1
+#nation -2
+#req_pop0ok
+#req_rare 25
+#msg "##godname## has succeeded in synthesising gold from base metals! A large nugget was created and transported to the treasury."
+#gold 100
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8302 -- Master Alchemist
+#req_monster 8302 -- Master Alchemist
+#req_targnoitem 439 -- Alchemists Stone
+#req_land 1
+#req_lab 1
+#req_mindef 1
+#nation -2
+#req_pop0ok
+#req_rare 20
+#msg "##godname## has brewed a quantity of vitriolic liquid from which he has created life!"
+#1d3units 1983 -- Green Lion
+#2d6units 2159 -- Cubes
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8302 -- Master Alchemist
+#req_monster 8302 -- Master Alchemist
+#req_targitem 439 -- Alchemists Stone
+#req_land 1
+#req_lab 1
+#req_mindef 1
+#nation -2
+#req_pop0ok
+#msg "##godname## has brewed a quantity of vitriolic liquid from which he has created life!"
+#2d3units 1983 -- Green Lion
+#1d6units 2159 -- Cubes
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8302 -- Master Alchemist
+#req_monster 8302 -- Master Alchemist
+#req_land 1
+#req_lab 1
+#req_mindef 1
+#nation -2
+#req_pop0ok
+#req_rare 15
+#msg "##godname## has refined a magical elixir that can cure diseases of all kinds! [Miraculous Cure All Elixir]"
+#magicitem 9
+#end
+
+#newevent
+#rarity 5
+#req_godismnr 8302 -- Master Alchemist
+#req_monster 8302 -- Master Alchemist
+#req_land 1
+#req_lab 1
+#req_mindef 1
+#req_freesites 1
+#req_nositenbr 642 -- Chamber of Changes
+#nation -2
+#req_pop0ok
+#req_rare 5
+#msg "##godname## has constructed a Chamber suitable for alchemical works and Alterations of all kinds."
+#addsite 642 -- Chamber of Changes
+#end
+
+
+-- TODO: Pretenders to go with national reworks do not have enhancements!
+-- * Atua of the Maggot-Mouthed (Sawaiiki)
+-- * Atua of the Bountiful White (Sawaiiki)
+-- * Atua of the Mystic Deep (Sawaiiki)
+-- * Atua of the Endless Sky (Sawaiiki)
+-- * Diwata of the Volcano (Sawaiiki)
+-- * Diwata of Darkness (Sawaiiki)
+-- * Bacobaco (Sawaiiki)
+-- * Lord of Stagnant Waters (Sawaiiki)
+-- * Lord of Ferocity (Sawaiiki)
+-- * Buraq (Iram)
+
+--#endregion EXTRA NATIONAL PRETENDERS
+
