@@ -12157,17 +12157,7 @@ Temple cave provinces will gain a Crystal Battery each month (25hp Comslave, max
 #onebattlespell 194 -- Battle Power of Spheres
 #end
 
-#selectsite "The Crystal Cavern"
-#gems 2 1
-#gems 3 2
-#gems 4 1
-#gems 7 3
-#gold 100
-#res 100
-#homecom 8616 -- Crystal Priest
-#end
-
-#newmonster 8616
+#newmonster "Crystal Priest"
 #copystats 340 -- Crystal Mage
 #copyspr 340 -- Crystal Mage
 #clearmagic
@@ -12179,6 +12169,16 @@ Temple cave provinces will gain a Crystal Battery each month (25hp Comslave, max
 #magicskill 7 2
 #magicskill 9 2
 #commaster
+#end
+
+#selectsite "The Crystal Cavern"
+#gems 2 1
+#gems 3 2
+#gems 4 1
+#gems 7 3
+#gold 100
+#res 100
+#homecom "Crystal Priest"
 #end
 
 #newsite 1886
